@@ -1,0 +1,419 @@
+/* ==========================================================
+   GLOBAL FIXES — Single source of truth for mobile + desktop
+   
+   DESKTOP (>768px): Topbar + navbar with hover dropdowns
+   MOBILE  (≤768px): Fixed navbar + native <details> dropdown
+   
+   NO hamburger, NO sliding panel, NO overlay.
+   Zero JavaScript needed for mobile menu.
+   Last updated: 2026-03-23 (v15 — comprehensive mobile fix)
+   ========================================================== */
+
+/* ==================== DESKTOP (>768px) ==================== */
+@media (min-width: 769px) {
+  /* Hide mobile-only elements */
+  .mobile-controls {
+    display: none !important;
+  }
+  
+  /* Show desktop nav */
+  .nav-links {
+    display: flex !important;
+    align-items: center !important;
+    gap: 24px !important;
+  }
+  .nav-links a,
+  .nav-dropdown > a {
+    white-space: nowrap !important;
+  }
+  .nav-cta {
+    white-space: nowrap !important;
+    font-size: 13px !important;
+    padding: 8px 16px !important;
+  }
+
+  /* Legacy cleanup: hide old hamburger and overlay */
+  .hamburger,
+  .mobile-overlay {
+    display: none !important;
+  }
+}
+
+/* ==================== MOBILE (≤768px) ==================== */
+@media (max-width: 768px) {
+
+  /* ——— HIDE ALL DESKTOP-ONLY ELEMENTS ——— */
+  .topbar {
+    display: none !important;
+  }
+  .nav-links {
+    display: none !important;
+  }
+  /* Old hamburger system: kill everything */
+  .hamburger,
+  .mobile-overlay {
+    display: none !important;
+  }
+  /* Desktop language dropdown in topbar (already hidden via .topbar,
+     but be explicit in case any page has it elsewhere) */
+  .lang-dropdown {
+    display: none !important;
+  }
+
+  /* ——— PREVENT ALL HORIZONTAL OVERFLOW ——— */
+  html {
+    overflow-x: hidden !important;
+  }
+  body {
+    overflow-x: hidden !important;
+    padding-top: 100px !important;
+    max-width: 100vw !important;
+  }
+  * {
+    max-width: 100vw;
+  }
+  .container {
+    max-width: 100% !important;
+    overflow-x: hidden !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+  img {
+    max-width: 100% !important;
+    height: auto !important;
+  }
+
+  /* ——— FIXED MOBILE NAVBAR ——— */
+  .navbar {
+    position: fixed !important;
+    top: 0 !important;
+    left: 0 !important;
+    right: 0 !important;
+    z-index: 1000 !important;
+    background: var(--navy, #1a1a2e) !important;
+  }
+  .navbar .container {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: space-between !important;
+    height: 100px !important;
+    padding: 0 12px !important;
+    gap: 8px !important;
+    max-width: none !important;
+  }
+
+  /* ——— LOGO: big and visible, bigger than footer ——— */
+  .navbar .logo-link img,
+  .navbar .container > a:first-child img,
+  .navbar .container > a.logo img,
+  .navbar .container > a.active img {
+    width: 200px !important;
+    max-width: 200px !important;
+    min-width: 160px !important;
+    height: auto !important;
+    max-height: 90px !important;
+    object-fit: contain !important;
+    display: block !important;
+  }
+  .navbar .logo-link,
+  .navbar .container > a:first-child,
+  .navbar .container > a.logo,
+  .navbar .container > a.active {
+    flex: 0 1 auto !important;
+    display: flex !important;
+    align-items: center !important;
+    min-width: 0 !important;
+  }
+
+  /* ——— MOBILE CONTROLS (lang select + menu toggle) ——— */
+  .mobile-controls {
+    display: flex !important;
+    align-items: center !important;
+    gap: 8px !important;
+    flex-shrink: 0 !important;
+  }
+
+  /* Language select */
+  .mobile-lang-select {
+    background: rgba(255,255,255,0.1);
+    color: #fff;
+    border: 1px solid rgba(255,255,255,0.2);
+    border-radius: 6px;
+    padding: 5px 8px;
+    font-size: 13px;
+    cursor: pointer;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+    background-image: url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' width='10' height='6'%3E%3Cpath d='M0 0l5 6 5-6z' fill='rgba(255,255,255,0.6)'/%3E%3C/svg%3E");
+    background-repeat: no-repeat;
+    background-position: right 6px center;
+    padding-right: 20px;
+    max-width: 70px;
+  }
+  .mobile-lang-select option {
+    background: #1a1a2e;
+    color: #fff;
+  }
+
+  /* ——— MENU TOGGLE BUTTON (the <summary> inside <details>) ——— */
+  .mobile-menu {
+    position: static;
+  }
+  /* Target ALL summary formats: both .mobile-menu-toggle class
+     and bare <summary> inside .mobile-menu */
+  .mobile-menu-toggle,
+  .mobile-menu > summary {
+    display: flex !important;
+    align-items: center !important;
+    justify-content: center !important;
+    width: 44px !important;
+    height: 44px !important;
+    background: rgba(255,255,255,0.15) !important;
+    border: 2px solid rgba(255,255,255,0.3) !important;
+    border-radius: 8px !important;
+    color: #fff !important;
+    cursor: pointer !important;
+    list-style: none !important;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    /* CRITICAL: Hide any text like "Menu" that overflows */
+    font-size: 0 !important;
+    line-height: 0 !important;
+    overflow: hidden !important;
+    position: relative !important;
+  }
+  /* Remove default <details> marker/triangle */
+  .mobile-menu-toggle::-webkit-details-marker,
+  .mobile-menu > summary::-webkit-details-marker {
+    display: none !important;
+  }
+  /* Show ☰ icon via pseudo-element (immune to HTML text content) */
+  .mobile-menu > summary::before {
+    content: '☰' !important;
+    font-size: 24px !important;
+    line-height: 1 !important;
+    color: #fff !important;
+    position: absolute !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+  }
+  /* When open: highlight + show × */
+  .mobile-menu[open] > .mobile-menu-toggle,
+  .mobile-menu[open] > summary {
+    background: rgba(232,88,28,0.15) !important;
+  }
+  .mobile-menu[open] > summary::before {
+    content: '✕' !important;
+    color: var(--orange, #e8581c) !important;
+  }
+
+  /* ——— MENU SHEET (drops below navbar) ——— */
+  .mobile-menu-sheet,
+  .mobile-menu-body {
+    position: fixed !important;
+    top: 100px !important;
+    left: 0 !important;
+    right: 0 !important;
+    background: var(--navy, #1a1a2e) !important;
+    border-top: 3px solid var(--orange, #e8581c) !important;
+    z-index: 999 !important;
+    box-shadow: 0 12px 40px rgba(0,0,0,0.6) !important;
+    max-height: calc(100vh - 100px) !important;
+    max-height: calc(100dvh - 100px) !important;
+    overflow-y: auto !important;
+    -webkit-overflow-scrolling: touch;
+  }
+
+  /* ——— MENU ITEMS (direct links inside menu sheet) ——— */
+  .mobile-menu-sheet > a,
+  .mobile-menu-body > a {
+    display: block !important;
+    padding: 15px 20px !important;
+    color: rgba(255,255,255,0.9) !important;
+    text-decoration: none !important;
+    border-bottom: 1px solid rgba(255,255,255,0.06) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-menu-sheet > a:hover,
+  .mobile-menu-body > a:hover,
+  .mobile-menu-sheet > a:active,
+  .mobile-menu-body > a:active {
+    background: rgba(255,255,255,0.04) !important;
+    color: var(--orange, #e8581c) !important;
+  }
+  .mobile-menu-sheet > a::after,
+  .mobile-menu-body > a::after {
+    display: none !important;
+  }
+
+  /* ——— SUBMENU (nested <details>) ——— */
+  .mobile-submenu {
+    border-bottom: 1px solid rgba(255,255,255,0.06);
+  }
+  .mobile-submenu > summary {
+    padding: 15px 20px !important;
+    color: rgba(255,255,255,0.9) !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    cursor: pointer !important;
+    list-style: none !important;
+    display: flex !important;
+    justify-content: space-between !important;
+    align-items: center !important;
+    -webkit-user-select: none;
+    user-select: none;
+    -webkit-tap-highlight-color: transparent;
+    /* Override parent font-size:0 if nested */
+    line-height: normal !important;
+  }
+  .mobile-submenu > summary::-webkit-details-marker {
+    display: none !important;
+  }
+  .mobile-submenu > summary::after {
+    content: '▾' !important;
+    font-size: 12px !important;
+    opacity: 0.5;
+    transition: transform 0.2s ease;
+  }
+  /* Reset ::before for submenu summaries (they should NOT have ☰) */
+  .mobile-submenu > summary::before {
+    content: none !important;
+  }
+  .mobile-submenu[open] > summary::after {
+    transform: rotate(180deg);
+  }
+  .mobile-submenu[open] > summary {
+    color: var(--orange, #e8581c) !important;
+  }
+
+  /* Sub-items with left accent border */
+  .mobile-submenu > a {
+    display: block !important;
+    padding: 12px 20px 12px 36px !important;
+    color: rgba(255,255,255,0.7) !important;
+    text-decoration: none !important;
+    font-size: 14px !important;
+    border-bottom: 1px solid rgba(255,255,255,0.04) !important;
+    border-left: 3px solid var(--orange, #e8581c) !important;
+    margin-left: 20px !important;
+    -webkit-tap-highlight-color: transparent;
+  }
+  .mobile-submenu > a:hover,
+  .mobile-submenu > a:active {
+    color: var(--orange, #e8581c) !important;
+    background: rgba(232,88,28,0.06) !important;
+  }
+  .mobile-submenu > a::after {
+    display: none !important;
+  }
+
+  /* ——— CTA BUTTON ——— */
+  .mobile-cta {
+    display: block !important;
+    background: var(--orange, #e8581c) !important;
+    color: #fff !important;
+    text-align: center !important;
+    padding: 14px 20px !important;
+    font-weight: 600 !important;
+    font-size: 15px !important;
+    margin: 12px 16px !important;
+    border-radius: 8px !important;
+    text-decoration: none !important;
+    border-bottom: none !important;
+  }
+  .mobile-cta:hover,
+  .mobile-cta:active {
+    background: var(--orange-hover, #d04a12) !important;
+  }
+  .mobile-cta::after {
+    display: none !important;
+  }
+
+  /* ——— HERO SECTION FIX ——— */
+  .hero,
+  .hero-content,
+  .hero .container {
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  .hero h1 {
+    font-size: 24px !important;
+    line-height: 1.3 !important;
+    word-break: break-word !important;
+  }
+  .hero p {
+    font-size: 14px !important;
+    line-height: 1.6 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+  }
+
+  /* ——— STATS GRID FIX ——— */
+  .hero-stats,
+  .stats-grid,
+  .stats {
+    display: grid !important;
+    grid-template-columns: 1fr 1fr !important;
+    gap: 10px !important;
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  .stat-card,
+  .stat-item {
+    min-width: 0 !important;
+    overflow: hidden !important;
+    padding: 16px 12px !important;
+  }
+  .stat-number {
+    font-size: 24px !important;
+    white-space: nowrap !important;
+    overflow: hidden !important;
+    text-overflow: ellipsis !important;
+    letter-spacing: -0.5px !important;
+  }
+  .stat-label {
+    font-size: 12px !important;
+    line-height: 1.4 !important;
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
+  /* ——— SERVICE/SECTION CARDS ——— */
+  .section-title,
+  .section-header h2,
+  h2, h3 {
+    word-break: break-word !important;
+    overflow-wrap: break-word !important;
+    hyphens: auto !important;
+  }
+
+  /* ——— FOOTER FIX ——— */
+  .footer .container,
+  footer .container {
+    max-width: 100% !important;
+    overflow: hidden !important;
+  }
+  .footer-brand .logo img,
+  footer .logo img {
+    width: 180px !important;
+    max-width: 180px !important;
+    height: auto !important;
+  }
+}
+
+/* ===== Dropdown text readability (all sizes) ===== */
+.dropdown-menu a {
+  color: rgba(255,255,255,0.85) !important;
+}
+.dropdown-menu a:hover {
+  color: var(--orange, #e8581c) !important;
+}
+.dropdown-menu a::after {
+  display: none !important;
+}
