@@ -1,0 +1,1415 @@
+[
+  {
+    "id": 1,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/banner_4x_4-1.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Unleashing Success Together",
+    "downloaded": 0
+  },
+  {
+    "id": 2,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/banner_4x_1-2.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Smart Technology Distribution",
+    "downloaded": 0
+  },
+  {
+    "id": 3,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/banner_4x_2-1.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Smart Technology",
+    "downloaded": 0
+  },
+  {
+    "id": 4,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/10/DSC_7249-Exposure-min.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Reliably at your company side",
+    "downloaded": 0
+  },
+  {
+    "id": 5,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/banner_4x_5-1.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Individual handling",
+    "downloaded": 0
+  },
+  {
+    "id": 6,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/banner_4x_6-1.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Efficient connection",
+    "downloaded": 0
+  },
+  {
+    "id": 7,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/banner_4x_7-1.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Fast hassle-free deliveries",
+    "downloaded": 0
+  },
+  {
+    "id": 8,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/banner_4x_8-1.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Benefit from just one distributor",
+    "downloaded": 0
+  },
+  {
+    "id": 9,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/banner_4x_9-1.jpg",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "home",
+    "alt_text": "Hero slide - Innovative company",
+    "downloaded": 0
+  },
+  {
+    "id": 10,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new2-scaled.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "home",
+    "alt_text": "About us section image",
+    "downloaded": 0
+  },
+  {
+    "id": 11,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new3-jpg.webp",
+    "local_path": null,
+    "image_type": "service",
+    "page_slug": "home",
+    "alt_text": "Logistic service image",
+    "downloaded": 0
+  },
+  {
+    "id": 12,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new4-jpg.webp",
+    "local_path": null,
+    "image_type": "service",
+    "page_slug": "home",
+    "alt_text": "Marketing service image",
+    "downloaded": 0
+  },
+  {
+    "id": 13,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new5-jpg.webp",
+    "local_path": null,
+    "image_type": "service",
+    "page_slug": "home",
+    "alt_text": "Partner Connectivity service image",
+    "downloaded": 0
+  },
+  {
+    "id": 14,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/peculiarities-icon1.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "home",
+    "alt_text": "Multiple Country Distribution icon",
+    "downloaded": 0
+  },
+  {
+    "id": 15,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/peculiarities-icon2.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "home",
+    "alt_text": "Warehousing icon",
+    "downloaded": 0
+  },
+  {
+    "id": 16,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/peculiarities-icon3.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "home",
+    "alt_text": "Key Retailers Access icon",
+    "downloaded": 0
+  },
+  {
+    "id": 17,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/peculiarities-icon4.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "home",
+    "alt_text": "Marketing icon",
+    "downloaded": 0
+  },
+  {
+    "id": 18,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/peculiarities-icon5.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "home",
+    "alt_text": "Local Office support icon",
+    "downloaded": 0
+  },
+  {
+    "id": 19,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new7-scaled.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "home",
+    "alt_text": "Network Highlights image",
+    "downloaded": 0
+  },
+  {
+    "id": 20,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new11-scaled.webp",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "about",
+    "alt_text": "About page hero image",
+    "downloaded": 0
+  },
+  {
+    "id": 21,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new12-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "about",
+    "alt_text": "About us section image 1",
+    "downloaded": 0
+  },
+  {
+    "id": 22,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new8-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "about",
+    "alt_text": "About us section image 2",
+    "downloaded": 0
+  },
+  {
+    "id": 23,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/info-icon1.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Major brands icon",
+    "downloaded": 0
+  },
+  {
+    "id": 24,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/info-icon2.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Multilingual expert team icon",
+    "downloaded": 0
+  },
+  {
+    "id": 25,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/info-icon3.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Excellent Availability icon",
+    "downloaded": 0
+  },
+  {
+    "id": 26,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/info-icon4.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Logistical performance icon",
+    "downloaded": 0
+  },
+  {
+    "id": 27,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/values-icon.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Flexibility value icon",
+    "downloaded": 0
+  },
+  {
+    "id": 28,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/values-icon2.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Innovation value icon",
+    "downloaded": 0
+  },
+  {
+    "id": 29,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/values-icon3.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Reliability value icon",
+    "downloaded": 0
+  },
+  {
+    "id": 30,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/values-icon4.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Integrity value icon",
+    "downloaded": 0
+  },
+  {
+    "id": 31,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/values-icon5.svg",
+    "local_path": null,
+    "image_type": "icon",
+    "page_slug": "about",
+    "alt_text": "Honesty value icon",
+    "downloaded": 0
+  },
+  {
+    "id": 32,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new13-scaled.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "about",
+    "alt_text": "Our values image",
+    "downloaded": 0
+  },
+  {
+    "id": 33,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new14-scaled.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "about",
+    "alt_text": "Our Customers image",
+    "downloaded": 0
+  },
+  {
+    "id": 34,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image1-jpg.webp",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "about",
+    "alt_text": "Mark Schwarzgorn CEO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 35,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/11/1.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "contact",
+    "alt_text": "Contact page image 1",
+    "downloaded": 0
+  },
+  {
+    "id": 36,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/image11-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "contact",
+    "alt_text": "Contact page image 2",
+    "downloaded": 0
+  },
+  {
+    "id": 37,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new17-scaled.webp",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "services",
+    "alt_text": "Services page hero",
+    "downloaded": 0
+  },
+  {
+    "id": 38,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/image1-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "services",
+    "alt_text": "Services intro image",
+    "downloaded": 0
+  },
+  {
+    "id": 39,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new18-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "services",
+    "alt_text": "Retailer benefits image 1",
+    "downloaded": 0
+  },
+  {
+    "id": 40,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new19-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "services",
+    "alt_text": "Retailer benefits image 2",
+    "downloaded": 0
+  },
+  {
+    "id": 41,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/image3-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "services",
+    "alt_text": "Vendor benefits image 1",
+    "downloaded": 0
+  },
+  {
+    "id": 42,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new20-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "services",
+    "alt_text": "Vendor benefits image 2",
+    "downloaded": 0
+  },
+  {
+    "id": 43,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new21-scaled.webp",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "services-partner-connectivity",
+    "alt_text": "Partner Connectivity hero",
+    "downloaded": 0
+  },
+  {
+    "id": 44,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new24-scaled.webp",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "services-logistics",
+    "alt_text": "Logistics hero",
+    "downloaded": 0
+  },
+  {
+    "id": 45,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new26-scaled.webp",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "services-marketing",
+    "alt_text": "Marketing hero",
+    "downloaded": 0
+  },
+  {
+    "id": 46,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/image_new28-scaled.webp",
+    "local_path": null,
+    "image_type": "hero",
+    "page_slug": "career",
+    "alt_text": "Career page hero",
+    "downloaded": 0
+  },
+  {
+    "id": 47,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/Xiaomi-2.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Xiaomi logo",
+    "downloaded": 0
+  },
+  {
+    "id": 48,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/03/VI_PNG_OPPO-Logo_White_CMYK_20191204-01-2.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "OPPO logo",
+    "downloaded": 0
+  },
+  {
+    "id": 49,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/on-hover-2.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "POCO logo",
+    "downloaded": 0
+  },
+  {
+    "id": 50,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/amazfit-2.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Amazfit logo",
+    "downloaded": 0
+  },
+  {
+    "id": 51,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/realme-logo.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Realme logo",
+    "downloaded": 0
+  },
+  {
+    "id": 52,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/icon-brand-oneplus.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "OnePlus logo",
+    "downloaded": 0
+  },
+  {
+    "id": 53,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/oclean-logo.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Oclean logo",
+    "downloaded": 0
+  },
+  {
+    "id": 54,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/anker.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Anker logo",
+    "downloaded": 0
+  },
+  {
+    "id": 55,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/Nothing.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Nothing logo",
+    "downloaded": 0
+  },
+  {
+    "id": 56,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/Group.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Roborock logo",
+    "downloaded": 0
+  },
+  {
+    "id": 57,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/Narwal-1.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Narwal logo",
+    "downloaded": 0
+  },
+  {
+    "id": 58,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/Imiki.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "IMIKI logo",
+    "downloaded": 0
+  },
+  {
+    "id": 59,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/Renpro.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "RENPHO logo",
+    "downloaded": 0
+  },
+  {
+    "id": 60,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/DYU.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "DYU logo",
+    "downloaded": 0
+  },
+  {
+    "id": 61,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2025/03/Mask-group-2.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Govee logo",
+    "downloaded": 0
+  },
+  {
+    "id": 62,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/MYVU.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "MYVU logo",
+    "downloaded": 0
+  },
+  {
+    "id": 63,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/SFP-1.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "SFP logo",
+    "downloaded": 0
+  },
+  {
+    "id": 64,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/Panasonic.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Panasonic logo",
+    "downloaded": 0
+  },
+  {
+    "id": 65,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/HMD.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "HMD logo",
+    "downloaded": 0
+  },
+  {
+    "id": 66,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/sony.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "Sony logo",
+    "downloaded": 0
+  },
+  {
+    "id": 67,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2025/11/DJI-ROMO.svg",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "vendors",
+    "alt_text": "DJI ROMO logo",
+    "downloaded": 0
+  },
+  {
+    "id": 68,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/xiaomi_bg-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Xiaomi background",
+    "downloaded": 0
+  },
+  {
+    "id": 69,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/oppo.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "OPPO background",
+    "downloaded": 0
+  },
+  {
+    "id": 70,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/08/poco-2.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "POCO background",
+    "downloaded": 0
+  },
+  {
+    "id": 71,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/amazfit_bg-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Amazfit background",
+    "downloaded": 0
+  },
+  {
+    "id": 72,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/realme_bg-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Realme background",
+    "downloaded": 0
+  },
+  {
+    "id": 73,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/oneplus_bg-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "OnePlus background",
+    "downloaded": 0
+  },
+  {
+    "id": 74,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/oclean_bg-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Oclean background",
+    "downloaded": 0
+  },
+  {
+    "id": 75,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Anker_bg-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Anker background",
+    "downloaded": 0
+  },
+  {
+    "id": 76,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/nothing_bg-jpg.webp",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Nothing background",
+    "downloaded": 0
+  },
+  {
+    "id": 77,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/3eb9ca14b75698a5197a5d07ff87fd8b.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Roborock background",
+    "downloaded": 0
+  },
+  {
+    "id": 78,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/a8f131925ee4f759e636c99fdbcce4c6.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Narwal background",
+    "downloaded": 0
+  },
+  {
+    "id": 79,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/bbbc240f453e5becc4098326ae851c48.jpeg",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "IMIKI background",
+    "downloaded": 0
+  },
+  {
+    "id": 80,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/38a444420680af9adfa6751332370f11.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "RENPHO background",
+    "downloaded": 0
+  },
+  {
+    "id": 81,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/98999b50860f542d41d52d312ed1f333.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "DYU background",
+    "downloaded": 0
+  },
+  {
+    "id": 82,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2025/03/govee.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Govee background",
+    "downloaded": 0
+  },
+  {
+    "id": 83,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/5c03093d789768d4cac331ce849b155b.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "MYVU background",
+    "downloaded": 0
+  },
+  {
+    "id": 84,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/a11fae9e9c9f32debc8741029b36d3d9.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "SFP background",
+    "downloaded": 0
+  },
+  {
+    "id": 85,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/655adcea23ea7dc0bdafd6744b4d926a.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Panasonic background",
+    "downloaded": 0
+  },
+  {
+    "id": 86,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/188a76ae58a729161068cdd8924287e2.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "HMD background",
+    "downloaded": 0
+  },
+  {
+    "id": 87,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/08/1ecf5b8014b1e6ed446b163e8b3a982c.png",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "Sony background",
+    "downloaded": 0
+  },
+  {
+    "id": 88,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2025/11/170b377c572b948a8a66adbff97470f10963cef5.jpg",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "vendors",
+    "alt_text": "DJI ROMO background",
+    "downloaded": 0
+  },
+  {
+    "id": 89,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Tecno.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Tecno logo",
+    "downloaded": 0
+  },
+  {
+    "id": 90,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Tecno-1.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Tecno hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 91,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/aqara_logo_white-1-2.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Aqara logo",
+    "downloaded": 0
+  },
+  {
+    "id": 92,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/aqara_logo_white-1-orange.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Aqara hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 93,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/zepp.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Zepp logo",
+    "downloaded": 0
+  },
+  {
+    "id": 94,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/zepp-orange.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Zepp hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 95,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-enabot.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Enabot logo",
+    "downloaded": 0
+  },
+  {
+    "id": 96,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-enabot-1.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Enabot hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 97,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Haylou-1.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Haylou logo",
+    "downloaded": 0
+  },
+  {
+    "id": 98,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Haylou-1-1.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Haylou hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 99,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/mibro-logo.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Mibro logo",
+    "downloaded": 0
+  },
+  {
+    "id": 100,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/mibro-logo-1.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Mibro hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 101,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/viomi-2-1.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Viomi logo",
+    "downloaded": 0
+  },
+  {
+    "id": 102,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/viomi-orange-2.png",
+    "local_path": null,
+    "image_type": "brand-logo",
+    "page_slug": "home",
+    "alt_text": "Viomi hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 103,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-amazon-1-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Amazon logo",
+    "downloaded": 0
+  },
+  {
+    "id": 104,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-amazon-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Amazon hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 105,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-Ebay-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "eBay logo",
+    "downloaded": 0
+  },
+  {
+    "id": 106,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-Ebay.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "eBay hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 107,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/metro-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Metro logo",
+    "downloaded": 0
+  },
+  {
+    "id": 108,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/metro.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Metro hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 109,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/media-market-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Media Markt logo",
+    "downloaded": 0
+  },
+  {
+    "id": 110,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/media-market.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Media Markt hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 111,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/A1-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "A1 logo",
+    "downloaded": 0
+  },
+  {
+    "id": 112,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/A1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "A1 hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 113,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Decathlon-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Decathlon logo",
+    "downloaded": 0
+  },
+  {
+    "id": 114,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Decathlon.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Decathlon hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 115,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/lidl-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Lidl logo",
+    "downloaded": 0
+  },
+  {
+    "id": 116,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/lidl.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Lidl hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 117,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/otto-3.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Otto logo",
+    "downloaded": 0
+  },
+  {
+    "id": 118,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/otto-orange-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Otto hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 119,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Euronics-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Euronics logo",
+    "downloaded": 0
+  },
+  {
+    "id": 120,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Euronics.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Euronics hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 121,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Mobilcom-Debitel-1-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Mobilcom Debitel logo",
+    "downloaded": 0
+  },
+  {
+    "id": 122,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Mobilcom-Debitel-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Mobilcom Debitel hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 123,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-Telefonica-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Telefonica logo",
+    "downloaded": 0
+  },
+  {
+    "id": 124,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-Telefonica.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Telefonica hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 125,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/yettel-logo-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Yettel logo",
+    "downloaded": 0
+  },
+  {
+    "id": 126,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/yettel-logo.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Yettel hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 127,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/notebooksbilliger.de-logo-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Notebooksbilliger.de logo",
+    "downloaded": 0
+  },
+  {
+    "id": 128,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/notebooksbilliger.de-logo.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Notebooksbilliger.de hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 129,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Expert_Logo-1-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Expert logo",
+    "downloaded": 0
+  },
+  {
+    "id": 130,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Expert_Logo-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Expert hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 131,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/tink-logo-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Tink logo",
+    "downloaded": 0
+  },
+  {
+    "id": 132,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/tink-logo.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Tink hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 133,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/1_1_logo-1-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "1&1 logo",
+    "downloaded": 0
+  },
+  {
+    "id": 134,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/1_1_logo-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "1&1 hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 135,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/aldi-sud-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Aldi Süd logo",
+    "downloaded": 0
+  },
+  {
+    "id": 136,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/aldi-sud.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Aldi Süd hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 137,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/ALDI-Nord-Logo-2021.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Aldi Nord logo",
+    "downloaded": 0
+  },
+  {
+    "id": 138,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/ALDI-Nord.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Aldi Nord hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 139,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/saturn-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Saturn logo",
+    "downloaded": 0
+  },
+  {
+    "id": 140,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/saturn.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Saturn hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 141,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/electronic4you_logo_flat_normal-1-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Electronic 4 you logo",
+    "downloaded": 0
+  },
+  {
+    "id": 142,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/electronic4you_logo_flat_normal-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Electronic 4 you hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 143,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Vodafone_2017_logo-1-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Vodafone logo",
+    "downloaded": 0
+  },
+  {
+    "id": 144,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/Vodafone_2017_logo-1.png",
+    "local_path": null,
+    "image_type": "customer-logo",
+    "page_slug": "about",
+    "alt_text": "Vodafone hover logo",
+    "downloaded": 0
+  },
+  {
+    "id": 145,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/photo.png",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "management-board",
+    "alt_text": "Mark Schwarzgorn CEO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 146,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2024/11/e345ba0a-c251-4619-bd7b-e06b967f6ceb.jpg",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "management-board",
+    "alt_text": "Margarete Nigl CBTO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 147,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image3-jpg.webp",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "management-board",
+    "alt_text": "Aleksandar Mitic CBSO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 148,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-11-at-14.24.15.jpeg",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "management-board",
+    "alt_text": "Frank Rösner CSO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 149,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2026/02/6693.jpg-e1770816167378.jpeg",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "management-board",
+    "alt_text": "Daniel Dorner CSCO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 150,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image4-jpg.webp",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "management-board",
+    "alt_text": "Gerhard Belousek CLO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 151,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image5-jpg.webp",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "management-board",
+    "alt_text": "Gerhard Amtmann CFO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 152,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image8-jpg.webp",
+    "local_path": null,
+    "image_type": "team-photo",
+    "page_slug": "management-board",
+    "alt_text": "Suzana Bozovic CPCO photo",
+    "downloaded": 0
+  },
+  {
+    "id": 153,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/Mark-Schwarzgorn-MBA.svg",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "management-board",
+    "alt_text": "Mark Schwarzgorn name SVG",
+    "downloaded": 0
+  },
+  {
+    "id": 154,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/Aleksandar-Mitic.svg",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "management-board",
+    "alt_text": "Aleksandar Mitic name SVG",
+    "downloaded": 0
+  },
+  {
+    "id": 155,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/Dr.-Gerhard-Belousek-MBA.svg",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "management-board",
+    "alt_text": "Gerhard Belousek name SVG",
+    "downloaded": 0
+  },
+  {
+    "id": 156,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/Gerhard-Amtmann-MBA.svg",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "management-board",
+    "alt_text": "Gerhard Amtmann name SVG",
+    "downloaded": 0
+  },
+  {
+    "id": 157,
+    "source_url": "https://tekpoint.com/wp-content/uploads/2023/06/Suzana-Bozovic-MA.svg",
+    "local_path": null,
+    "image_type": "general",
+    "page_slug": "management-board",
+    "alt_text": "Suzana Bozovic name SVG",
+    "downloaded": 0
+  }
+]

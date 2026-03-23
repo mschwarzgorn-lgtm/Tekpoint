@@ -1,0 +1,66 @@
+[
+  {
+    "id": 1,
+    "name": "Mark Schwarzgorn",
+    "title": "CEO Tekpoint Group, Owner",
+    "photo_url": "https://tekpoint.com/wp-content/uploads/2023/06/photo.png",
+    "name_svg_url": "https://tekpoint.com/wp-content/uploads/2023/06/Mark-Schwarzgorn-MBA.svg",
+    "sort_order": 1
+  },
+  {
+    "id": 2,
+    "name": "Margarete Nigl",
+    "title": "CBTO, Chief Business Operations & Transformation Officer",
+    "photo_url": "https://tekpoint.com/wp-content/uploads/2024/11/e345ba0a-c251-4619-bd7b-e06b967f6ceb.jpg",
+    "name_svg_url": null,
+    "sort_order": 2
+  },
+  {
+    "id": 3,
+    "name": "Aleksandar Mitic",
+    "title": "CBSO, Chief Brand & Strategy Officer",
+    "photo_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image3-jpg.webp",
+    "name_svg_url": "https://tekpoint.com/wp-content/uploads/2023/06/Aleksandar-Mitic.svg",
+    "sort_order": 3
+  },
+  {
+    "id": 4,
+    "name": "Frank Rösner",
+    "title": "CSO, Chief Sales Officer",
+    "photo_url": "https://tekpoint.com/wp-content/uploads/2026/02/WhatsApp-Image-2026-02-11-at-14.24.15.jpeg",
+    "name_svg_url": null,
+    "sort_order": 4
+  },
+  {
+    "id": 5,
+    "name": "Daniel Dorner",
+    "title": "CSCO, Chief Supply Chain Officer",
+    "photo_url": "https://tekpoint.com/wp-content/uploads/2026/02/6693.jpg-e1770816167378.jpeg",
+    "name_svg_url": null,
+    "sort_order": 5
+  },
+  {
+    "id": 6,
+    "name": "Gerhard Belousek",
+    "title": "CLO, Chief Legal Officer",
+    "photo_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image4-jpg.webp",
+    "name_svg_url": "https://tekpoint.com/wp-content/uploads/2023/06/Dr.-Gerhard-Belousek-MBA.svg",
+    "sort_order": 6
+  },
+  {
+    "id": 7,
+    "name": "Gerhard Amtmann",
+    "title": "CFO, Chief Financial Officer",
+    "photo_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image5-jpg.webp",
+    "name_svg_url": "https://tekpoint.com/wp-content/uploads/2023/06/Gerhard-Amtmann-MBA.svg",
+    "sort_order": 7
+  },
+  {
+    "id": 8,
+    "name": "Suzana Bozovic",
+    "title": "CPCO, Chief People & Culture Officer",
+    "photo_url": "https://tekpoint.com/wp-content/uploads/2023/07/team-image8-jpg.webp",
+    "name_svg_url": "https://tekpoint.com/wp-content/uploads/2023/06/Suzana-Bozovic-MA.svg",
+    "sort_order": 8
+  }
+]

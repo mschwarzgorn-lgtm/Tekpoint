@@ -1,0 +1,272 @@
+[
+  {
+    "code": "en",
+    "name": "English",
+    "native_name": "English",
+    "flag": "🇬🇧",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 1
+  },
+  {
+    "code": "de",
+    "name": "German",
+    "native_name": "Deutsch",
+    "flag": "🇩🇪",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 2
+  },
+  {
+    "code": "nl",
+    "name": "Dutch",
+    "native_name": "Nederlands",
+    "flag": "🇳🇱",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 3
+  },
+  {
+    "code": "fr",
+    "name": "French",
+    "native_name": "Français",
+    "flag": "🇫🇷",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 4
+  },
+  {
+    "code": "es",
+    "name": "Spanish",
+    "native_name": "Español",
+    "flag": "🇪🇸",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 5
+  },
+  {
+    "code": "it",
+    "name": "Italian",
+    "native_name": "Italiano",
+    "flag": "🇮🇹",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 6
+  },
+  {
+    "code": "sr",
+    "name": "Serbian",
+    "native_name": "Srpski",
+    "flag": "🇷🇸",
+    "is_eu": 0,
+    "is_active": 1,
+    "priority": 7
+  },
+  {
+    "code": "da",
+    "name": "Danish",
+    "native_name": "Dansk",
+    "flag": "🇩🇰",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 8
+  },
+  {
+    "code": "sv",
+    "name": "Swedish",
+    "native_name": "Svenska",
+    "flag": "🇸🇪",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 9
+  },
+  {
+    "code": "no",
+    "name": "Norwegian",
+    "native_name": "Norsk",
+    "flag": "🇳🇴",
+    "is_eu": 0,
+    "is_active": 1,
+    "priority": 10
+  },
+  {
+    "code": "fi",
+    "name": "Finnish",
+    "native_name": "Suomi",
+    "flag": "🇫🇮",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 11
+  },
+  {
+    "code": "is",
+    "name": "Icelandic",
+    "native_name": "Íslenska",
+    "flag": "🇮🇸",
+    "is_eu": 0,
+    "is_active": 1,
+    "priority": 12
+  },
+  {
+    "code": "pl",
+    "name": "Polish",
+    "native_name": "Polski",
+    "flag": "🇵🇱",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 13
+  },
+  {
+    "code": "ro",
+    "name": "Romanian",
+    "native_name": "Română",
+    "flag": "🇷🇴",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 14
+  },
+  {
+    "code": "cs",
+    "name": "Czech",
+    "native_name": "Čeština",
+    "flag": "🇨🇿",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 15
+  },
+  {
+    "code": "hu",
+    "name": "Hungarian",
+    "native_name": "Magyar",
+    "flag": "🇭🇺",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 16
+  },
+  {
+    "code": "hr",
+    "name": "Croatian",
+    "native_name": "Hrvatski",
+    "flag": "🇭🇷",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 17
+  },
+  {
+    "code": "bg",
+    "name": "Bulgarian",
+    "native_name": "Български",
+    "flag": "🇧🇬",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 18
+  },
+  {
+    "code": "sk",
+    "name": "Slovak",
+    "native_name": "Slovenčina",
+    "flag": "🇸🇰",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 19
+  },
+  {
+    "code": "sl",
+    "name": "Slovenian",
+    "native_name": "Slovenščina",
+    "flag": "🇸🇮",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 20
+  },
+  {
+    "code": "zh",
+    "name": "Chinese Simplified",
+    "native_name": "简体中文",
+    "flag": "🇨🇳",
+    "is_eu": 0,
+    "is_active": 1,
+    "priority": 20
+  },
+  {
+    "code": "pt",
+    "name": "Portuguese",
+    "native_name": "Português",
+    "flag": "🇵🇹",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 21
+  },
+  {
+    "code": "el",
+    "name": "Greek",
+    "native_name": "Ελληνικά",
+    "flag": "🇬🇷",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 22
+  },
+  {
+    "code": "et",
+    "name": "Estonian",
+    "native_name": "Eesti",
+    "flag": "🇪🇪",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 23
+  },
+  {
+    "code": "lv",
+    "name": "Latvian",
+    "native_name": "Latviešu",
+    "flag": "🇱🇻",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 24
+  },
+  {
+    "code": "lt",
+    "name": "Lithuanian",
+    "native_name": "Lietuvių",
+    "flag": "🇱🇹",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 25
+  },
+  {
+    "code": "ga",
+    "name": "Irish",
+    "native_name": "Gaeilge",
+    "flag": "🇮🇪",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 26
+  },
+  {
+    "code": "mt",
+    "name": "Maltese",
+    "native_name": "Malti",
+    "flag": "🇲🇹",
+    "is_eu": 1,
+    "is_active": 1,
+    "priority": 27
+  },
+  {
+    "code": "ja",
+    "name": "Japanese",
+    "native_name": "日本語",
+    "flag": "🇯🇵",
+    "is_eu": 0,
+    "is_active": 1,
+    "priority": 99
+  },
+  {
+    "code": "ko",
+    "name": "Korean",
+    "native_name": "한국어",
+    "flag": "🇰🇷",
+    "is_eu": 0,
+    "is_active": 1,
+    "priority": 99
+  }
+]

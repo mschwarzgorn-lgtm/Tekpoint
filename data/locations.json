@@ -1,0 +1,26 @@
+[
+  {
+    "id": 1,
+    "region": "Germany",
+    "company_name": "Tekpoint GmbH",
+    "address": "Am Seestern 8, 40547 Düsseldorf",
+    "phone": "+49 211 36183789-0",
+    "email": "dach@tekpoint.com"
+  },
+  {
+    "id": 2,
+    "region": "Austria",
+    "company_name": "Tekpoint GmbH",
+    "address": "Leopold Ungar Platz 2, 1190 Vienna, Austria",
+    "phone": "+43 136 16670",
+    "email": "dach@tekpoint.com"
+  },
+  {
+    "id": 3,
+    "region": "Balkan",
+    "company_name": "West Balkan Distribution Doo",
+    "address": "Augusta Cesarca 5, 110 50 Belgrade, Serbia",
+    "phone": null,
+    "email": "info@tekpoint.com"
+  }
+]

@@ -1,0 +1,132 @@
+[
+  {
+    "id": 1,
+    "category": "logistics",
+    "service_name": "Fulfillment",
+    "target_group": "MNO, Retail, Etail",
+    "challenge": "You want to outsource your logistics to a distributor.",
+    "solution": "Tekpoint takes care of your complete warehousing.",
+    "benefits": "Save storage costs and time to focus on your main business.",
+    "sort_order": 1
+  },
+  {
+    "id": 2,
+    "category": "logistics",
+    "service_name": "Reverse Logistics",
+    "target_group": "MNO, Retail, Etail, B2B",
+    "challenge": "You spend a lot of time taking back and reselling used devices and resources, or you cannot find ideal options for recycling.",
+    "solution": "Tekpoint will buy your used devices and either recycle, or price and resell them.",
+    "benefits": "Easily regain tied capital from used devices.",
+    "sort_order": 2
+  },
+  {
+    "id": 3,
+    "category": "logistics",
+    "service_name": "Bundling",
+    "target_group": "MNO, Retail, Etail, B2B",
+    "challenge": "Tekpoint takes over your bundling, repacking, labeling and barcode generation activities.",
+    "solution": "Increase your sales and marketing efficiency by bundling different product categories, for example smartphones and IOT.",
+    "benefits": "Increase your sales through bundle-promotions, such as a mobile phone combined with a gadget.",
+    "sort_order": 3
+  },
+  {
+    "id": 4,
+    "category": "logistics",
+    "service_name": "Kitting",
+    "target_group": "MNO, Retail, Etail, B2B",
+    "challenge": "You want to repack certain products because of legal or customer requirements?",
+    "solution": "Tekpoint will take care for all opening, refilling, redesigning and resealing activities.",
+    "benefits": "Add value to your devices and adapt your products to special needs of your customers.",
+    "sort_order": 4
+  },
+  {
+    "id": 5,
+    "category": "logistics",
+    "service_name": "Dropshipping",
+    "target_group": "MNO, Retail, Etail, B2B",
+    "challenge": "You want to offer a broader product portfolio without the hassle and risks of warehousing and owning the stock?",
+    "solution": "Tekpoint will integrate with your platform and seamlessly deliver to your customers directly from our warehouses.",
+    "benefits": "Reduce overhead costs in logistics and warehousing while offering the latest products on the market.",
+    "sort_order": 5
+  },
+  {
+    "id": 6,
+    "category": "marketing",
+    "service_name": "Product / Launch",
+    "target_group": "Brands, ODM",
+    "challenge": "You are missing local contacts and have little expertise in European markets, and therefore there is a lack of price control.",
+    "solution": "As a national distributor, Tekpoint offers long-term contacts and develops the ideal placement strategy for your brand.",
+    "benefits": "You benefit from just one distributor for all Central and Eastern Europe who provides comprehensive support – from sell-in to sell-out.",
+    "sort_order": 6
+  },
+  {
+    "id": 7,
+    "category": "marketing",
+    "service_name": "Social Media / Online Marketing",
+    "target_group": "Brands, ODM, Retailer",
+    "challenge": "You require local product and brand experts who can develop individual, market-specific content. You neither have market-related empirical values in reporting and scaling nor opportunities for discounts or contacts to multipliers.",
+    "solution": "Market experts from our large, professional network and our internal creative team develop content that is relevant to the market and your brand's target groups.",
+    "benefits": "Use sales-promoting measures to your advantage and handle all of your sales and marketing activities through just one contact person.",
+    "sort_order": 7
+  },
+  {
+    "id": 8,
+    "category": "marketing",
+    "service_name": "PR",
+    "target_group": "Brands, ODM",
+    "challenge": "You find it difficult to choose the right partner and to carry out a target group analysis. As a middleman between sales and marketing, you are always involved and dependent on various agencies.",
+    "solution": "With our in-house network, we develop campaigns tailored to your brand and put together a suitable partner portfolio for your product and corporate PR.",
+    "benefits": "Benefit from obtaining comprehensive advice from just one contact person at any time – from briefing to implementation.",
+    "sort_order": 8
+  },
+  {
+    "id": 9,
+    "category": "marketing",
+    "service_name": "Retail Marketing",
+    "target_group": "Brands, ODM",
+    "challenge": "Without cooperating with a professional distributor, you will lack scalability and billing options, as well as cost controls.",
+    "solution": "We support you comprehensively – from dispatch to return. You use our financing and billing service as well as the advantage of guaranteed bookable slots.",
+    "benefits": "Save costs when activating campaigns with optimized effect. A holistic handling of sell-in, returns, repair and remarketing.",
+    "sort_order": 9
+  },
+  {
+    "id": 10,
+    "category": "marketing",
+    "service_name": "Outdoor Marketing (OOH)",
+    "target_group": "Brands, ODM",
+    "challenge": "As a foreign brand, you are not part of a network of well-known advertisers in Europe. You lack cost and placement optimizations with high initial CPM prices.",
+    "solution": "Tekpoint maintains long-term partnerships with the largest providers in the field of outdoor marketing. Existing contracts allow a preferred price batching.",
+    "benefits": "With Tekpoint as a partner, your product placement and due diligence are already in place. We receive lower prices for higher reach and longer campaign times.",
+    "sort_order": 10
+  },
+  {
+    "id": 11,
+    "category": "marketing",
+    "service_name": "Branding & Layout",
+    "target_group": "Retailer, Brands",
+    "challenge": "Your branding and corporate design does not exist or has to be adapted to the European market.",
+    "solution": "Our professional design team knows the specific requirements of tech and IT service providers well. They develop a targeted branding and corporate design for you.",
+    "benefits": "Thanks to our experience in tech, we already know your business model, requirements and target group. Save time with less coordination and only one contact person.",
+    "sort_order": 11
+  },
+  {
+    "id": 12,
+    "category": "marketing",
+    "service_name": "Launch Events",
+    "target_group": "Retailer, Brands, ODM",
+    "challenge": "You would like to publicly communicate the market entry of a new brand or product but you lack the right contacts to service providers and the press.",
+    "solution": "As a widely connected distributor, we not only have internal marketing resources, but also an established network of agencies and experience with launch events and PR coordination.",
+    "benefits": "We share our market knowledge with you, connect you with local contacts and carry out the planning and coordination of the event on site for you.",
+    "sort_order": 12
+  },
+  {
+    "id": 13,
+    "category": "partner-connectivity",
+    "service_name": "EDI Integration",
+    "target_group": "Partners requiring automated ordering",
+    "challenge": "Manual ordering, handling and invoicing is inefficient for high-quantity goods processing.",
+    "solution": "Full stack EDI processes with fast onboarding: ORDERS, ORDRSP, DESADV, INVOIC message types for automated order processing, confirmation, delivery notification, and invoicing.",
+    "benefits": "Automated standard business processes, reduced process costs, integration with ERP systems, standardised processes in supply and logistics chains.",
+    "sort_order": 13
+  }
+]

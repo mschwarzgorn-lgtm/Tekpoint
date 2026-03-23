@@ -1,0 +1,254 @@
+[
+  {
+    "id": 1,
+    "brand_name": "Xiaomi",
+    "description": "Xiaomi stands for high-quality technology at fair prices – from smartphones to AIoT smart home solutions and even the new EV ecosystem. With in-house manufacturing and strong R&D (including proprietary chips), Xiaomi delivers powerful products with seamless device connectivity – ideal for value-conscious buyers who refuse to compromise.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/Xiaomi-2.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/xiaomi_bg-jpg.webp",
+    "sort_order": 1
+  },
+  {
+    "id": 2,
+    "brand_name": "OPPO",
+    "description": "OPPO combines elegant design with industry-leading fast-charging technology (VOOC/SUPERVOOC) and advanced imaging – perfect for users seeking creative smartphone experiences and ultra-fast charging without overheating.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/03/VI_PNG_OPPO-Logo_White_CMYK_20191204-01-2.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/oppo.png",
+    "sort_order": 2
+  },
+  {
+    "id": 3,
+    "brand_name": "POCO",
+    "description": "POCO offers \"performance at a fair price\" – devices with top-tier chips, 120 Hz displays, and strong battery life, tailored especially for tech enthusiasts.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/on-hover-2.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/08/poco-2.png",
+    "sort_order": 3
+  },
+  {
+    "id": 4,
+    "brand_name": "Amazfit",
+    "description": "Amazfit (by Zepp Health) is known for smart wearables packed with extensive health and fitness features – heart rate, SpO2, sleep tracking, and more.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/amazfit-2.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/amazfit_bg-jpg.webp",
+    "sort_order": 4
+  },
+  {
+    "id": 5,
+    "brand_name": "Realme",
+    "description": "Realme delivers trendy, high-performance smartphones and smart products for a young community – growing rapidly and reaching millions of users worldwide.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/realme-logo.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/realme_bg-jpg.webp",
+    "sort_order": 5
+  },
+  {
+    "id": 6,
+    "brand_name": "OnePlus",
+    "description": "OnePlus stands for \"Fast & Smooth\": clean OxygenOS software, powerful hardware, and extremely fast, battery-friendly charging (up to SUPERVOOC 125 W).",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/icon-brand-oneplus.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/oneplus_bg-jpg.webp",
+    "sort_order": 6
+  },
+  {
+    "id": 7,
+    "brand_name": "Oclean",
+    "description": "Oclean combines high-performance magnetic sonic motors with smart feedback (including touch screens and voice guidance) – ensuring thorough yet comfortable oral care every day.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/oclean-logo.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/oclean_bg-jpg.webp",
+    "sort_order": 7
+  },
+  {
+    "id": 8,
+    "brand_name": "Anker",
+    "description": "Anker is the reference in charging: GaN technology (GaNPrime/Prime) delivers compact multi-device chargers that are fast, efficient, and safe.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/anker.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/Anker_bg-jpg.webp",
+    "sort_order": 8
+  },
+  {
+    "id": 9,
+    "brand_name": "Nothing",
+    "description": "Nothing focuses on iconic transparent design and seamless smart experiences – from earbuds with adaptive ANC to smartphones with the unique Glyph Interface.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/Nothing.png",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/nothing_bg-jpg.webp",
+    "sort_order": 9
+  },
+  {
+    "id": 10,
+    "brand_name": "Roborock",
+    "description": "Roborock stands for intelligent vacuum and mop robots with precise navigation, strong suction power, and clever docking solutions.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/Group.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/3eb9ca14b75698a5197a5d07ff87fd8b.png",
+    "sort_order": 10
+  },
+  {
+    "id": 11,
+    "brand_name": "Narwal",
+    "description": "Narwal specializes in self-cleaning vacuum and mop robots that minimize tangling and simplify maintenance.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/Narwal-1.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/a8f131925ee4f759e636c99fdbcce4c6.png",
+    "sort_order": 11
+  },
+  {
+    "id": 12,
+    "brand_name": "IMIKI",
+    "description": "IMIKI offers stylish, affordable wearables – from smartwatches and earbuds to lightweight AR glasses.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/Imiki.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/bbbc240f453e5becc4098326ae851c48.jpeg",
+    "sort_order": 12
+  },
+  {
+    "id": 13,
+    "brand_name": "RENPHO",
+    "description": "RENPHO provides smart health and wellness devices – from body scales to massage guns and eye massagers.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/Renpro.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/38a444420680af9adfa6751332370f11.png",
+    "sort_order": 13
+  },
+  {
+    "id": 14,
+    "brand_name": "DYU",
+    "description": "DYU builds compact, foldable e-bikes for the city – lightweight, practical, and with solid range.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/DYU.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/98999b50860f542d41d52d312ed1f333.png",
+    "sort_order": 14
+  },
+  {
+    "id": 15,
+    "brand_name": "Govee",
+    "description": "Govee makes lighting an experience: dynamic RGBIC LED solutions with app scenes, music sync, and Matter support.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2025/03/Mask-group-2.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2025/03/govee.png",
+    "sort_order": 15
+  },
+  {
+    "id": 16,
+    "brand_name": "MYVU",
+    "description": "MYVU offers ultra-light AR glasses with bright micro-LED displays – ideal for navigation, live translation, and real-time notifications.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/MYVU.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/5c03093d789768d4cac331ce849b155b.png",
+    "sort_order": 16
+  },
+  {
+    "id": 17,
+    "brand_name": "SFP",
+    "description": "SFP Mobile (Vienna) delivers robust enterprise device solutions and fit-for-purpose terminals for private and industrial networks.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/SFP-1.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/a11fae9e9c9f32debc8741029b36d3d9.png",
+    "sort_order": 17
+  },
+  {
+    "id": 18,
+    "brand_name": "Panasonic",
+    "description": "Panasonic combines consumer electronics and B2B solutions with a strong focus on sustainability (GREEN IMPACT).",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/Panasonic.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/655adcea23ea7dc0bdafd6744b4d926a.png",
+    "sort_order": 18
+  },
+  {
+    "id": 19,
+    "brand_name": "HMD",
+    "description": "HMD (Human Mobile Devices) – Europe's largest smartphone manufacturer – develops its own HMD phones and continues to produce Nokia devices.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/HMD.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/188a76ae58a729161068cdd8924287e2.png",
+    "sort_order": 19
+  },
+  {
+    "id": 20,
+    "brand_name": "Sony",
+    "description": "Sony represents excellence in imaging and audio technology – from Alpha cameras and BRAVIA TVs to premium audio.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/sony.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/1ecf5b8014b1e6ed446b163e8b3a982c.png",
+    "sort_order": 20
+  },
+  {
+    "id": 21,
+    "brand_name": "DJI ROMO",
+    "description": "DJI ROMO series represents a new standard in robotic cleaning, combining advanced technologies, elegant design, and intelligent features.",
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2025/11/DJI-ROMO.svg",
+    "logo_hover_url": null,
+    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2025/11/170b377c572b948a8a66adbff97470f10963cef5.jpg",
+    "sort_order": 21
+  },
+  {
+    "id": 22,
+    "brand_name": "Tecno",
+    "description": null,
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/07/Tecno.png",
+    "logo_hover_url": "https://tekpoint.com/wp-content/uploads/2023/07/Tecno-1.png",
+    "bg_image_url": null,
+    "sort_order": 22
+  },
+  {
+    "id": 23,
+    "brand_name": "Aqara",
+    "description": null,
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/07/aqara_logo_white-1-2.png",
+    "logo_hover_url": "https://tekpoint.com/wp-content/uploads/2023/07/aqara_logo_white-1-orange.png",
+    "bg_image_url": null,
+    "sort_order": 23
+  },
+  {
+    "id": 24,
+    "brand_name": "Zepp",
+    "description": null,
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/07/zepp.png",
+    "logo_hover_url": "https://tekpoint.com/wp-content/uploads/2023/07/zepp-orange.png",
+    "bg_image_url": null,
+    "sort_order": 24
+  },
+  {
+    "id": 25,
+    "brand_name": "Enabot",
+    "description": null,
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-enabot.png",
+    "logo_hover_url": "https://tekpoint.com/wp-content/uploads/2023/07/logo-enabot-1.png",
+    "bg_image_url": null,
+    "sort_order": 25
+  },
+  {
+    "id": 26,
+    "brand_name": "Haylou",
+    "description": null,
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/07/Haylou-1.png",
+    "logo_hover_url": "https://tekpoint.com/wp-content/uploads/2023/07/Haylou-1-1.png",
+    "bg_image_url": null,
+    "sort_order": 26
+  },
+  {
+    "id": 27,
+    "brand_name": "Mibro",
+    "description": null,
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/07/mibro-logo.png",
+    "logo_hover_url": "https://tekpoint.com/wp-content/uploads/2023/07/mibro-logo-1.png",
+    "bg_image_url": null,
+    "sort_order": 27
+  },
+  {
+    "id": 28,
+    "brand_name": "Viomi",
+    "description": null,
+    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/07/viomi-2-1.png",
+    "logo_hover_url": "https://tekpoint.com/wp-content/uploads/2023/07/viomi-orange-2.png",
+    "bg_image_url": null,
+    "sort_order": 28
+  }
+]
