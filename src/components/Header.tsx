@@ -34,7 +34,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0">
-          <img src="/images/tekpoint-logo.png" alt="Tekpoint" className="h-8 w-auto" />
+          <img src="/images/tekpoint-logo.svg" alt="Tekpoint" className="h-7 md:h-8 w-auto" />
         </Link>
 
         {/* Desktop Nav */}
