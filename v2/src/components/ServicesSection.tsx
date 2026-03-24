@@ -1,33 +1,32 @@
 'use client';
 import { useTranslations } from 'next-intl';
-import { usePathname } from 'next/navigation';
+
+const services = [
+  { icon: '🚚', titleKey: 'index_108', descKey: 'index_109', link: '/services/logistics' },
+  { icon: '📣', titleKey: 'index_111', descKey: 'index_112', link: '/services/marketing' },
+  { icon: '🔗', titleKey: 'index_113', descKey: 'index_114', link: '/services/partner-connectivity' },
+  { icon: '📊', titleKey: 'index_115', descKey: 'index_116', link: '/services/market-intelligence' },
+  { icon: '📦', titleKey: 'index_117', descKey: 'index_118', link: '/services/warehousing' },
+  { icon: '🛡️', titleKey: 'index_120', descKey: 'index_121', link: '/services/after-sales' },
+];
 
 export default function ServicesSection() {
   const t = useTranslations();
-  const locale = usePathname().split('/')[1] || 'en';
-
-  const services = [
-    { icon: '🚚', title: t('index_108'), desc: t('index_109') },
-    { icon: '📢', title: t('index_111'), desc: t('index_112') },
-    { icon: '🔗', title: t('index_113'), desc: t('index_114') },
-    { icon: '📊', title: t('index_115'), desc: t('index_116') },
-    { icon: '🏭', title: t('index_117'), desc: t('index_118') },
-    { icon: t('index_119'), title: t('index_120'), desc: t('index_121') },
-  ];
-
   return (
-    <section className="py-20 bg-[#0a0a15]">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <p className="text-orange-500 font-semibold mb-2">{t('index_105')}</p>
-        <h2 className="text-3xl lg:text-4xl font-bold mb-4">{t('index_106')}</h2>
-        <p className="text-gray-300 max-w-3xl mb-12">{t('index_107')}</p>
-        <div className="grid md:grid-cols-2 gap-6">
-          {services.map((svc, i) => (
-            <div key={i} className="bg-white/5 border border-white/10 rounded-xl p-6 hover:border-orange-500/30 transition-colors">
-              <span className="text-3xl mb-4 block">{svc.icon}</span>
-              <h3 className="text-lg font-bold text-white mb-2">{svc.title}</h3>
-              <p className="text-gray-400 text-sm mb-4">{svc.desc}</p>
-              <a href={`/${locale}/services`} className="text-orange-400 hover:text-orange-300 text-sm font-semibold">{t('index_110')}</a>
+    <section className="py-20 bg-gray-50">
+      <div className="max-w-6xl mx-auto px-4">
+        <div className="text-center mb-12">
+          <p className="text-orange-500 font-semibold uppercase tracking-wider mb-3">{t('index_105')}</p>
+          <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t('index_106')}</h2>
+          <p className="text-gray-600 max-w-2xl mx-auto">{t('index_107')}</p>
+        </div>
+        <div className="grid grid-cols-1 md:grid-cols-2 gap-6">
+          {services.map((svc) => (
+            <div key={svc.titleKey} className="bg-white rounded-xl p-8 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
+              <div className="text-4xl mb-4">{svc.icon}</div>
+              <h3 className="text-xl font-bold text-gray-900 mb-3">{t(svc.titleKey)}</h3>
+              <p className="text-gray-600 mb-4">{t(svc.descKey)}</p>
+              <a href={svc.link} className="text-orange-500 font-semibold hover:text-orange-600">{t('index_110')}</a>
             </div>
           ))}
         </div>

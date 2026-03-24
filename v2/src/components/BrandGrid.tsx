@@ -1,19 +1,13 @@
-"use client";
-import { brandData } from "@/data/brands";
+'use client';
+import Image from 'next/image';
+import { brandData } from '@/data/brands';
 
 export default function BrandGrid() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6">
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-6">
       {brandData.map((brand) => (
-        <div
-          key={brand.name}
-          className="bg-white/10 backdrop-blur-sm border border-white/10 rounded-xl p-8 flex items-center justify-center h-40 hover:border-orange-500/30 transition-all duration-300 group"
-        >
-          <img
-            src={brand.logo}
-            alt={brand.name}
-            className="max-h-16 max-w-[180px] object-contain grayscale group-hover:grayscale-0 transition-all duration-300 opacity-60 group-hover:opacity-100"
-          />
+        <div key={brand.name} className="bg-white rounded-xl p-8 flex items-center justify-center h-32 shadow-sm border border-gray-100">
+          <Image src={brand.logo} alt={brand.name} width={160} height={60} className="object-contain max-h-16" />
         </div>
       ))}
     </div>
