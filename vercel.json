@@ -1,5 +1,5 @@
 {
-  "buildCommand": "cd v2 && npm install && npm run build",
+  "buildCommand": "if [ -d v2 ]; then cd v2 && npm install && npm run build; else npm install && npm run build; fi",
   "outputDirectory": "v2/out",
   "installCommand": "echo skip"
 }
