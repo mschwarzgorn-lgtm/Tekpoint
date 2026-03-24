@@ -1,6 +1,6 @@
 {
-  "framework": null,
   "buildCommand": "cd v2 && npm install && npm run build",
   "outputDirectory": "v2/out",
-  "installCommand": "echo done"
+  "installCommand": "echo skip",
+  "framework": "nextjs"
 }
