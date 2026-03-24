@@ -12,76 +12,122 @@ export default function Header() {
   const [langOpen, setLangOpen] = useState(false);
 
   const navItems = [
-    { href: '/about', label: t('nav_about') },
-    { href: '/services', label: t('nav_services') },
-    { href: '/vendors', label: t('nav_vendors') },
-    { href: '/career', label: t('nav_career') },
-    { href: '/management-board', label: t('nav_management') },
-    { href: '/contact', label: t('nav_contact') },
+    { href: '/about' as const, label: t('nav_about') },
+    { href: '/vendors' as const, label: t('nav_vendors') },
+    { href: '/services' as const, label: t('nav_services') },
+    { href: '/career' as const, label: t('nav_career') },
+    { href: '/contact' as const, label: t('nav_contact') },
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50 bg-[#0a1628]/95 backdrop-blur-sm">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex items-center justify-between h-20">
-          <Link href="/" className="flex-shrink-0">
-            <img src="/images/tekpoint-logo.png" alt="Tekpoint" className="h-10 w-auto" />
+    <>
+      {/* Topbar */}
+      <div style={{ background: '#111122', borderBottom: '1px solid rgba(255,255,255,0.06)', fontSize: '13px', color: 'rgba(255,255,255,0.6)' }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '36px' }}>
+          <div>📍 Headquarters: Vienna, Austria &nbsp;|&nbsp; 📧 info@tekpoint.com</div>
+          <div style={{ position: 'relative' }}>
+            <button
+              onClick={() => setLangOpen(!langOpen)}
+              style={{ background: 'none', border: 'none', color: 'rgba(255,255,255,0.7)', cursor: 'pointer', fontSize: '13px', display: 'flex', alignItems: 'center', gap: '4px' }}
+            >
+              {locale.toUpperCase()} ▾
+            </button>
+            {langOpen && (
+              <div style={{
+                position: 'absolute', right: 0, top: '100%', marginTop: '4px',
+                background: '#fff', borderRadius: '8px', boxShadow: '0 8px 30px rgba(0,0,0,0.15)',
+                padding: '8px 0', maxHeight: '320px', overflowY: 'auto', width: '180px', zIndex: 200
+              }}>
+                {locales.map((l) => (
+                  <Link
+                    key={l} href={pathname || '/'} locale={l}
+                    style={{
+                      display: 'block', padding: '8px 16px', fontSize: '13px',
+                      color: l === locale ? '#e8581c' : '#343a40',
+                      fontWeight: l === locale ? 700 : 400,
+                    }}
+                    onClick={() => setLangOpen(false)}
+                  >
+                    {localeNames[l] || l.toUpperCase()}
+                  </Link>
+                ))}
+              </div>
+            )}
+          </div>
+        </div>
+      </div>
+
+      {/* Navbar */}
+      <nav style={{
+        background: '#1a1a2e', position: 'sticky', top: 0, zIndex: 100,
+        boxShadow: '0 2px 8px rgba(0,0,0,0.15)'
+      }}>
+        <div className="container" style={{ display: 'flex', alignItems: 'center', justifyContent: 'space-between', height: '96px' }}>
+          <Link href="/">
+            <img src="/images/tekpoint-logo.png" alt="Tekpoint" style={{ width: '270px', height: 'auto' }} />
           </Link>
 
-          {/* Desktop nav */}
-          <nav className="hidden lg:flex items-center gap-6">
+          {/* Desktop nav links */}
+          <div className="hidden lg:flex" style={{ gap: '32px', alignItems: 'center' }}>
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="text-white/80 hover:text-white text-sm font-medium transition-colors">
+              <Link
+                key={item.href} href={item.href}
+                style={{
+                  fontSize: '15px', fontWeight: 500, color: '#ffffff',
+                  transition: 'color 0.2s', position: 'relative'
+                }}
+                className="hover-nav-link"
+              >
                 {item.label}
               </Link>
             ))}
-          </nav>
-
-          <div className="flex items-center gap-3">
-            {/* Language switcher */}
-            <div className="relative">
-              <button onClick={() => setLangOpen(!langOpen)} className="flex items-center gap-1 text-white/80 hover:text-white text-sm">
-                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24"><circle cx="12" cy="12" r="10"/><path d="M2 12h20M12 2a15.3 15.3 0 014 10 15.3 15.3 0 01-4 10 15.3 15.3 0 01-4-10 15.3 15.3 0 014-10z"/></svg>
-                {locale.toUpperCase()}
-              </button>
-              {langOpen && (
-                <div className="absolute right-0 top-full mt-2 bg-white rounded-lg shadow-xl py-2 max-h-80 overflow-y-auto w-48 z-50">
-                  {locales.map((l) => (
-                    <Link key={l} href={pathname || '/'} locale={l} className={`block px-4 py-2 text-sm hover:bg-gray-100 ${l === locale ? 'text-blue-600 font-bold' : 'text-gray-700'}`} onClick={() => setLangOpen(false)}>
-                      {localeNames[l] || l.toUpperCase()}
-                    </Link>
-                  ))}
-                </div>
-              )}
-            </div>
-
-            <Link href="/become-a-partner" className="hidden sm:inline-flex px-5 py-2.5 bg-blue-600 text-white text-sm font-semibold rounded-full hover:bg-blue-700 transition-colors">
-              {t('nav_partner')}
+            <Link
+              href="/become-a-partner"
+              style={{
+                background: '#e8581c', color: '#fff', padding: '10px 24px',
+                borderRadius: '8px', fontWeight: 600, fontSize: '14px',
+                transition: 'all 0.2s', display: 'inline-flex', alignItems: 'center', gap: '6px'
+              }}
+            >
+              {t('nav_partner')} →
             </Link>
-
-            {/* Mobile menu button */}
-            <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden text-white p-2">
-              <svg className="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                {menuOpen ? <path strokeLinecap="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/> : <path strokeLinecap="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"/>}
-              </svg>
-            </button>
           </div>
+
+          {/* Mobile menu button */}
+          <button onClick={() => setMenuOpen(!menuOpen)} className="lg:hidden" style={{ background: 'none', border: 'none', color: '#fff', padding: '8px', cursor: 'pointer' }}>
+            <svg width="24" height="24" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+              {menuOpen
+                ? <path strokeLinecap="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12"/>
+                : <path strokeLinecap="round" strokeWidth={2} d="M4 6h16M4 12h16M4 18h16"/>}
+            </svg>
+          </button>
         </div>
 
         {/* Mobile menu */}
         {menuOpen && (
-          <div className="lg:hidden border-t border-white/10 py-4">
+          <div className="lg:hidden" style={{ borderTop: '1px solid rgba(255,255,255,0.1)', padding: '16px 24px' }}>
             {navItems.map((item) => (
-              <Link key={item.href} href={item.href} className="block py-3 text-white/80 hover:text-white text-base" onClick={() => setMenuOpen(false)}>
+              <Link
+                key={item.href} href={item.href}
+                style={{ display: 'block', padding: '12px 0', color: 'rgba(255,255,255,0.8)', fontSize: '16px' }}
+                onClick={() => setMenuOpen(false)}
+              >
                 {item.label}
               </Link>
             ))}
-            <Link href="/become-a-partner" className="block mt-4 text-center px-5 py-2.5 bg-blue-600 text-white font-semibold rounded-full" onClick={() => setMenuOpen(false)}>
-              {t('nav_partner')}
+            <Link
+              href="/become-a-partner"
+              style={{
+                display: 'block', marginTop: '16px', textAlign: 'center', background: '#e8581c',
+                color: '#fff', padding: '10px 24px', borderRadius: '8px', fontWeight: 600
+              }}
+              onClick={() => setMenuOpen(false)}
+            >
+              {t('nav_partner')} →
             </Link>
           </div>
         )}
-      </div>
-    </header>
+      </nav>
+    </>
   );
 }

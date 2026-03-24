@@ -1,26 +1,37 @@
 'use client';
-import { useState } from 'react';
 import { customerData } from '@/data/brands';
 
 export default function CustomerGrid() {
-  const [hoveredIndex, setHoveredIndex] = useState<number | null>(null);
-  
   return (
-    <div className="grid grid-cols-3 sm:grid-cols-4 md:grid-cols-5 lg:grid-cols-7 gap-8 items-center justify-items-center">
-      {customerData.map((customer, index) => (
-        <div
-          key={customer.name}
-          className="w-28 h-16 flex items-center justify-center transition-all duration-300 cursor-pointer"
-          onMouseEnter={() => setHoveredIndex(index)}
-          onMouseLeave={() => setHoveredIndex(null)}
-        >
-          <img
-            src={hoveredIndex === index ? customer.logoHover : customer.logo}
-            alt={customer.name}
-            className="max-h-12 max-w-full object-contain"
-          />
+    <section style={{
+      background: '#ffffff', borderBottom: '1px solid #e9ecef', padding: '40px 0'
+    }}>
+      <div className="container">
+        <p style={{
+          textAlign: 'center', fontSize: '13px', textTransform: 'uppercase',
+          letterSpacing: '2px', color: '#868e96', fontWeight: 600, marginBottom: '28px'
+        }}>
+          Trusted by Europe&apos;s leading retailers
+        </p>
+        <div style={{
+          display: 'flex', justifyContent: 'center', alignItems: 'center',
+          gap: '48px', flexWrap: 'wrap'
+        }}>
+          {customerData.map((customer) => (
+            <img
+              key={customer.name}
+              src={customer.logo}
+              alt={customer.name}
+              title={customer.name}
+              style={{
+                height: '32px', maxWidth: '120px', objectFit: 'contain',
+                filter: 'grayscale(100%) opacity(0.5)', transition: 'filter 0.3s'
+              }}
+              className="trust-logo-hover"
+            />
+          ))}
         </div>
-      ))}
-    </div>
+      </div>
+    </section>
   );
 }
