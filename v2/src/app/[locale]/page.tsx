@@ -24,10 +24,10 @@ export default function HomePage() {
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="grid lg:grid-cols-2 gap-12 items-center">
             <div>
-              <span className="inline-block bg-white/10 text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+              <span className="inline-block bg-white/10 max-w-full text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
                 {t('index_18')}
               </span>
-              <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+              <h1 className="text-3xl sm:text-4xl md:text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
                 {t('index_19')}{' '}
                 <span className="text-orange-500">{t('index_20')}</span>{' '}
                 {t('index_21')}<br />
@@ -57,7 +57,7 @@ export default function HomePage() {
               { value: '5+', label: t('index_30') },
             ].map((stat, i) => (
               <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
-                <div className="text-3xl font-bold text-orange-500">{stat.value}</div>
+                <div className="text-2xl sm:text-3xl font-bold text-orange-500">{stat.value}</div>
                 <div className="text-sm text-gray-400 mt-1">{stat.label}</div>
               </div>
             ))}

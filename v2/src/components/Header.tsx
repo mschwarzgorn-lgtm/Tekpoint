@@ -43,7 +43,7 @@ export default function Header() {
   ];
 
   return (
-    <header className="fixed top-0 left-0 right-0 z-50">
+    <header className="fixed top-0 left-0 right-0 z-50 overflow-x-hidden">
       {/* Topbar */}
       <div className="bg-[#0a0a15] border-b border-white/10 py-2 px-4">
         <div className="max-w-7xl mx-auto flex justify-between items-center text-xs sm:text-sm text-gray-400">

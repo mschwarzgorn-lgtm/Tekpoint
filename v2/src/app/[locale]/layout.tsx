@@ -33,7 +33,7 @@ export default async function LocaleLayout({
           rel="stylesheet"
         />
       </head>
-      <body className="min-h-screen flex flex-col overflow-x-hidden">
+      <body className="min-h-screen flex flex-col overflow-x-hidden max-w-[100vw]">
         <NextIntlClientProvider messages={messages}>
           <Header />
           <main className="flex-1 pt-24 sm:pt-28">{children}</main>
