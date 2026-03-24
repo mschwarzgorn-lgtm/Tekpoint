@@ -2,7 +2,6 @@
 
 import { useTranslations } from 'next-intl';
 import Header from '@/components/Header';
-import Footer from '@/components/Footer';
 import CustomerGrid from '@/components/CustomerGrid';
 import BrandGrid from '@/components/BrandGrid';
 import SegmentsSection from '@/components/SegmentsSection';
@@ -160,7 +159,6 @@ export default function HomePage() {
       {/* CTA */}
       <CtaSection />
 
-      <Footer />
     </div>
   );
 }
