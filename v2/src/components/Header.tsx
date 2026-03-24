@@ -111,7 +111,7 @@ export default function Header() {
             {/* Logo */}
             <Link href={`/${locale}`} className="flex-shrink-0">
               <img 
-                src="/images/tekpoint-logo-white.svg" 
+                src="/images/tekpoint-logo.png" 
                 alt="Tekpoint"
                 className="h-8 lg:h-10 w-auto"
                 onError={(e) => {
