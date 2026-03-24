@@ -33,6 +33,7 @@ export default function Footer() {
             <ul className="space-y-3 text-sm">
               <li><Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_11")}</Link></li>
               <li><Link href="/management-board" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_151")}</Link></li>
+              <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_152")}</Link></li>
               <li><Link href="/career" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_153")}</Link></li>
               <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_16")}</Link></li>
             </ul>
