@@ -1,75 +1,41 @@
-"use client";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
+import Link from 'next/link';
+
+const segments = [
+  { icon: '🏭', titleKey: 'index_96', descKey: 'index_97', ctaKey: 'index_98', href: '/vendors', color: 'from-blue-500/10 to-blue-600/5' },
+  { icon: '🏪', titleKey: 'index_99', descKey: 'index_100', ctaKey: 'index_101', href: '/vendors', color: 'from-green-500/10 to-green-600/5' },
+  { icon: '💻', titleKey: 'index_102', descKey: 'index_103', ctaKey: 'index_104', href: '/vendors', color: 'from-purple-500/10 to-purple-600/5' },
+];
 
 export default function SegmentsSection() {
   const t = useTranslations();
-  const segments = [
-    {
-      icon: '🏭',
-      title: t('index_108'),
-      desc: t('index_109'),
-      href: '/become-a-partner' as const,
-    },
-    {
-      icon: '🏬',
-      title: t('index_110'),
-      desc: t('index_111'),
-      href: '/become-a-partner' as const,
-    },
-    {
-      icon: '🛒',
-      title: t('index_112'),
-      desc: t('index_113'),
-      href: '/become-a-partner' as const,
-    },
-  ];
+  const locale = useLocale();
 
   return (
-    <section id="segments" style={{ padding: '96px 0', background: '#1a1a2e', color: '#fff' }}>
-      <div className="container">
-        <div style={{ textAlign: 'center', marginBottom: '48px' }}>
-          <div style={{
-            fontSize: '13px', fontWeight: 600, textTransform: 'uppercase',
-            letterSpacing: '2px', color: '#ff8c5a', marginBottom: '12px'
-          }}>
-            {t('index_99')}
-          </div>
-          <h2 style={{ fontSize: '36px', fontWeight: 800, color: '#fff', marginBottom: '16px' }}>
-            {t('index_100')}
-          </h2>
-          <p style={{ fontSize: '16px', color: 'rgba(255,255,255,0.65)', maxWidth: '600px', margin: '0 auto' }}>
-            {t('index_101')}
-          </p>
+    <section id="segments" className="py-16 lg:py-24 bg-gray-50">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <p className="text-[#e8581c] font-semibold text-sm mb-2">{t('index_93')}</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#1a1a2e] mb-4">{t('index_94')}</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">{t('index_95')}</p>
         </div>
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px'
-        }}>
-          {segments.map((seg) => (
-            <div key={seg.title} style={{
-              background: 'rgba(255,255,255,0.05)', border: '1px solid rgba(255,255,255,0.1)',
-              borderRadius: '20px', padding: '40px 32px', transition: 'all 0.3s'
-            }}>
-              <div style={{
-                width: '56px', height: '56px', background: 'rgba(232,88,28,0.15)',
-                borderRadius: '14px', display: 'flex', alignItems: 'center',
-                justifyContent: 'center', fontSize: '28px', marginBottom: '24px'
-              }}>
-                {seg.icon}
-              </div>
-              <h3 style={{ fontSize: '22px', fontWeight: 700, marginBottom: '12px' }}>
-                {seg.title}
-              </h3>
-              <p style={{
-                fontSize: '15px', color: 'rgba(255,255,255,0.6)', lineHeight: 1.7, marginBottom: '24px'
-              }}>
-                {seg.desc}
-              </p>
-              <Link href={seg.href} style={{
-                color: '#e8581c', fontWeight: 600, fontSize: '14px',
-                display: 'inline-flex', alignItems: 'center', gap: '6px'
-              }}>
-                Learn more →
+
+        {/* 3 Segment Cards */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
+          {segments.map((seg, i) => (
+            <div key={i} className={`bg-gradient-to-br ${seg.color} border border-gray-200 rounded-xl p-6 lg:p-8 hover:shadow-lg transition-all`}>
+              <div className="text-4xl mb-4">{seg.icon}</div>
+              <h3 className="text-xl font-bold text-[#1a1a2e] mb-3">{t(seg.titleKey)}</h3>
+              <p className="text-gray-600 text-sm leading-relaxed mb-5">{t(seg.descKey)}</p>
+              <Link
+                href={`/${locale}${seg.href}`}
+                className="inline-flex items-center text-[#e8581c] hover:text-[#d14e18] text-sm font-semibold transition-colors"
+              >
+                {t(seg.ctaKey)}
               </Link>
             </div>
           ))}

@@ -1,34 +1,25 @@
 'use client';
-import { customerData } from '@/data/brands';
+
+import { useTranslations } from 'next-intl';
+import { customers } from '@/data/customers';
 
 export default function CustomerGrid() {
+  const t = useTranslations();
+
   return (
-    <section style={{
-      background: '#ffffff', borderBottom: '1px solid #e9ecef', padding: '40px 0'
-    }}>
-      <div className="container">
-        <p style={{
-          textAlign: 'center', fontSize: '13px', textTransform: 'uppercase',
-          letterSpacing: '2px', color: '#868e96', fontWeight: 600, marginBottom: '28px'
-        }}>
-          Trusted by Europe&apos;s leading retailers
-        </p>
-        <div style={{
-          display: 'flex', justifyContent: 'center', alignItems: 'center',
-          gap: '48px', flexWrap: 'wrap'
-        }}>
-          {customerData.map((customer) => (
-            <img
-              key={customer.name}
-              src={customer.logo}
-              alt={customer.name}
-              title={customer.name}
-              style={{
-                height: '32px', maxWidth: '120px', objectFit: 'contain',
-                filter: 'grayscale(100%) opacity(0.5)', transition: 'filter 0.3s'
-              }}
-              className="trust-logo-hover"
-            />
+    <section className="py-10 lg:py-14 bg-gray-50 border-y border-gray-100">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-center text-sm text-gray-500 font-medium mb-8">{t('index_31')}</p>
+        <div className="flex flex-wrap justify-center items-center gap-6 lg:gap-10">
+          {customers.map((customer) => (
+            <div key={customer.id} className="flex items-center justify-center grayscale hover:grayscale-0 opacity-60 hover:opacity-100 transition-all">
+              <img
+                src={customer.logo}
+                alt={customer.name}
+                className="h-8 lg:h-10 w-auto max-w-[120px] object-contain"
+                loading="lazy"
+              />
+            </div>
           ))}
         </div>
       </div>

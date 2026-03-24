@@ -1,110 +1,150 @@
-import { getTranslations } from 'next-intl/server';
-import { Link } from '@/i18n/navigation';
+'use client';
 
-export default async function Footer() {
-  const t = await getTranslations();
+import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
+import Link from 'next/link';
+
+export default function Footer() {
+  const t = useTranslations();
+  const locale = useLocale();
+
+  const companyLinks = [
+    { label: t('about_11'), href: `/${locale}/about` },
+    { label: t('about_12'), href: `/${locale}/management-board` },
+    { label: t('about_13'), href: `/${locale}/contact` },
+    { label: t('about_20'), href: `/${locale}/career` },
+    { label: t('about_21'), href: `/${locale}/contact` },
+  ];
+
+  const servicesLinks = [
+    { label: t('about_18'), href: `/${locale}/services-logistics` },
+    { label: t('about_19'), href: `/${locale}/services-marketing` },
+    { label: t('about_17'), href: `/${locale}/services-partner-connectivity` },
+    { label: t('index_117'), href: `/${locale}/services` },
+    { label: t('index_115'), href: `/${locale}/services` },
+  ];
+
+  const partnersLinks = [
+    { label: t('about_110'), href: `/${locale}/vendors` },
+    { label: t('about_109'), href: `/${locale}/vendors` },
+    { label: t('index_102'), href: `/${locale}/vendors` },
+    { label: t('about_107'), href: `/${locale}/vendors` },
+    { label: t('about_108'), href: `/${locale}/become-a-partner` },
+  ];
 
   return (
-    <footer style={{ background: '#111122', color: 'rgba(255,255,255,0.6)', padding: '64px 0 32px' }}>
-      <div className="container">
-        <div style={{
-          display: 'grid', gridTemplateColumns: '2fr 1fr 1fr 1fr', gap: '48px', marginBottom: '48px'
-        }}>
-          {/* Brand column */}
-          <div>
-            <div style={{ marginBottom: '16px' }}>
-              <img
-                src="/images/tekpoint-logo.png" alt="Tekpoint"
-                style={{ width: '200px', height: 'auto', filter: 'brightness(1.2) contrast(1.1)' }}
-              />
-            </div>
-            <p style={{ fontSize: '14px', lineHeight: 1.7, marginBottom: '20px' }}>
-              {t('footer_description')}
+    <footer className="bg-[#1a1a2e] text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
+          {/* Brand Column */}
+          <div className="lg:col-span-2">
+            <Link href={`/${locale}`} className="inline-block mb-4">
+              <span className="text-2xl font-bold tracking-tight">{t('index_147')}</span>
+            </Link>
+            <p className="text-white/60 text-sm leading-relaxed max-w-sm mb-6">
+              {t('index_148')}
             </p>
+            
+            {/* Social Icons */}
+            <div className="flex items-center gap-3">
+              <a
+                href="https://www.linkedin.com/company/tekpoint-gmbh/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/10 hover:bg-[#0077b5] rounded-lg flex items-center justify-center transition-colors"
+                aria-label="LinkedIn"
+              >
+                <span className="text-sm font-bold">{t('index_149')}</span>
+              </a>
+              <a
+                href="https://www.xing.com/pages/tekpointgmbh"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/10 hover:bg-[#006567] rounded-lg flex items-center justify-center transition-colors"
+                aria-label="Xing"
+              >
+                <span className="text-sm font-bold">X</span>
+              </a>
+              <a
+                href="https://www.youtube.com/@tekpointgmbh8118"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="w-9 h-9 bg-white/10 hover:bg-[#ff0000] rounded-lg flex items-center justify-center transition-colors"
+                aria-label="YouTube"
+              >
+                <span className="text-sm">▶</span>
+              </a>
+            </div>
           </div>
 
-          {/* Company */}
+          {/* Company Column */}
           <div>
-            <h4 style={{
-              color: '#fff', fontSize: '14px', fontWeight: 700,
-              textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '20px'
-            }}>
-              {t('footer_company')}
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+              {t('index_150')}
             </h4>
-            <ul style={{ listStyle: 'none' }}>
-              {[
-                { href: '/about' as const, label: t('nav_about') },
-                { href: '/vendors' as const, label: t('nav_vendors') },
-                { href: '/career' as const, label: t('nav_career') },
-                { href: '/contact' as const, label: t('nav_contact') },
-              ].map((item) => (
-                <li key={item.href} style={{ marginBottom: '10px' }}>
-                  <Link href={item.href} style={{ fontSize: '14px', transition: 'color 0.2s' }}>
-                    {item.label}
+            <ul className="space-y-2.5">
+              {companyLinks.map((link) => (
+                <li key={link.label}>
+                  <Link href={link.href} className="text-sm text-white/60 hover:text-[#e8581c] transition-colors">
+                    {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Services */}
+          {/* Services Column */}
           <div>
-            <h4 style={{
-              color: '#fff', fontSize: '14px', fontWeight: 700,
-              textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '20px'
-            }}>
-              {t('footer_services')}
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+              {t('about_105')}
             </h4>
-            <ul style={{ listStyle: 'none' }}>
-              {[
-                { href: '/services/logistics' as const, label: t('services_logistics_title') },
-                { href: '/services/marketing' as const, label: t('services_marketing_title') },
-                { href: '/services/partner-connectivity' as const, label: t('services_partner_title') },
-              ].map((item) => (
-                <li key={item.href} style={{ marginBottom: '10px' }}>
-                  <Link href={item.href} style={{ fontSize: '14px', transition: 'color 0.2s' }}>
-                    {item.label}
+            <ul className="space-y-2.5">
+              {servicesLinks.map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="text-sm text-white/60 hover:text-[#e8581c] transition-colors">
+                    {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
 
-          {/* Legal */}
+          {/* Partners Column */}
           <div>
-            <h4 style={{
-              color: '#fff', fontSize: '14px', fontWeight: 700,
-              textTransform: 'uppercase', letterSpacing: '1px', marginBottom: '20px'
-            }}>
-              {t('footer_legal')}
+            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
+              {t('about_106')}
             </h4>
-            <ul style={{ listStyle: 'none' }}>
-              {[
-                { href: '/impressum' as const, label: t('nav_impressum') },
-                { href: '/privacy-policy' as const, label: t('nav_privacy') },
-                { href: '/terms-and-conditions' as const, label: t('nav_terms') },
-                { href: '/cookie-policy' as const, label: t('nav_cookies') },
-              ].map((item) => (
-                <li key={item.href} style={{ marginBottom: '10px' }}>
-                  <Link href={item.href} style={{ fontSize: '14px', transition: 'color 0.2s' }}>
-                    {item.label}
+            <ul className="space-y-2.5">
+              {partnersLinks.map((link, i) => (
+                <li key={i}>
+                  <Link href={link.href} className="text-sm text-white/60 hover:text-[#e8581c] transition-colors">
+                    {link.label}
                   </Link>
                 </li>
               ))}
             </ul>
           </div>
         </div>
+      </div>
 
-        {/* Footer bottom */}
-        <div style={{
-          borderTop: '1px solid rgba(255,255,255,0.08)', paddingTop: '24px',
-          display: 'flex', justifyContent: 'space-between', fontSize: '13px', flexWrap: 'wrap', gap: '12px'
-        }}>
-          <span>© {new Date().getFullYear()} Tekpoint e.U. All rights reserved.</span>
-          <div>
-            <Link href="/privacy-policy" style={{ marginLeft: '24px', transition: 'color 0.2s' }}>{t('nav_privacy')}</Link>
-            <Link href="/terms-and-conditions" style={{ marginLeft: '24px', transition: 'color 0.2s' }}>{t('nav_terms')}</Link>
-            <Link href="/impressum" style={{ marginLeft: '24px', transition: 'color 0.2s' }}>{t('nav_impressum')}</Link>
+      {/* Copyright Bar */}
+      <div className="border-t border-white/10">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
+          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
+            <p className="text-white/40 text-sm">
+              © 2026 Tekpoint GmbH. {t('index_156').replace(/©\s*2026\s*Tekpoint\.?\s*/i, '')}
+            </p>
+            <div className="flex items-center gap-6">
+              <Link href={`/${locale}/privacy-policy`} className="text-white/40 hover:text-white/70 text-sm transition-colors">
+                {t('index_157')}
+              </Link>
+              <Link href={`/${locale}/terms-and-conditions`} className="text-white/40 hover:text-white/70 text-sm transition-colors">
+                {t('index_158')}
+              </Link>
+              <Link href={`/${locale}/imprint`} className="text-white/40 hover:text-white/70 text-sm transition-colors">
+                {t('index_159')}
+              </Link>
+            </div>
           </div>
         </div>
       </div>

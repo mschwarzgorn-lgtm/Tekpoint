@@ -1,62 +1,46 @@
-"use client";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
+import Link from 'next/link';
+
+const services = [
+  { icon: '🚚', titleKey: 'index_108', descKey: 'index_109', href: '/services-logistics' },
+  { icon: '📢', titleKey: 'index_111', descKey: 'index_112', href: '/services-marketing' },
+  { icon: '🔗', titleKey: 'index_113', descKey: 'index_114', href: '/services-partner-connectivity' },
+  { icon: '📊', titleKey: 'index_115', descKey: 'index_116', href: '/services' },
+  { icon: '📦', titleKey: 'index_117', descKey: 'index_118', href: '/services' },
+  { icon: '🛡️', titleKey: 'index_120', descKey: 'index_121', href: '/services' },
+];
 
 export default function ServicesSection() {
   const t = useTranslations();
-  const services = [
-    { icon: '🔗', title: t("index_102"), desc: t("index_103"), href: '/services/partner-connectivity' as const },
-    { icon: '📦', title: t("index_104"), desc: t("index_105"), href: '/services/logistics' as const },
-    { icon: '📢', title: t("index_106"), desc: t("index_107"), href: '/services/marketing' as const },
-  ];
+  const locale = useLocale();
 
   return (
-    <section style={{ padding: '96px 0', background: '#f8f9fa', textAlign: 'center' }}>
-      <div className="container">
-        <div style={{
-          fontSize: '13px', fontWeight: 600, textTransform: 'uppercase',
-          letterSpacing: '2px', color: '#e8581c', marginBottom: '12px'
-        }}>
-          {t("index_99")}
+    <section id="services" className="py-16 lg:py-24 bg-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        {/* Header */}
+        <div className="text-center mb-12">
+          <p className="text-[#e8581c] font-semibold text-sm mb-2">{t('index_105')}</p>
+          <h2 className="text-3xl lg:text-4xl font-bold text-[#1a1a2e] mb-4">{t('index_106')}</h2>
+          <p className="text-gray-600 max-w-3xl mx-auto leading-relaxed">{t('index_107')}</p>
         </div>
-        <h2 style={{
-          fontSize: '36px', fontWeight: 800, color: '#1a1a2e', marginBottom: '16px'
-        }}>
-          {t("index_100")}
-        </h2>
-        <p style={{
-          fontSize: '16px', color: '#868e96', maxWidth: '600px', margin: '0 auto 48px'
-        }}>
-          {t("index_101")}
-        </p>
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(3, 1fr)', gap: '24px', textAlign: 'left'
-        }}>
-          {services.map((svc) => (
-            <Link key={svc.href} href={svc.href} style={{
-              background: '#ffffff', border: '1px solid #e9ecef', borderRadius: '20px',
-              padding: '40px 28px', transition: 'all 0.3s', display: 'block'
-            }}>
-              <div style={{
-                width: '52px', height: '52px', background: '#fff3ee', borderRadius: '14px',
-                display: 'flex', alignItems: 'center', justifyContent: 'center',
-                fontSize: '26px', marginBottom: '20px'
-              }}>
-                {svc.icon}
-              </div>
-              <h3 style={{ fontSize: '20px', fontWeight: 700, color: '#1a1a2e', marginBottom: '10px' }}>
-                {svc.title}
-              </h3>
-              <p style={{ fontSize: '14px', color: '#868e96', lineHeight: 1.7, marginBottom: '16px' }}>
-                {svc.desc}
-              </p>
-              <span style={{
-                color: '#e8581c', fontWeight: 600, fontSize: '14px',
-                display: 'inline-flex', alignItems: 'center', gap: '6px'
-              }}>
-                Learn more →
-              </span>
-            </Link>
+
+        {/* 6 Service Cards in 3x2 grid */}
+        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 lg:gap-8">
+          {services.map((svc, i) => (
+            <div key={i} className="bg-[#1a1a2e] rounded-xl p-6 lg:p-8 group hover:bg-[#22224a] transition-colors">
+              <div className="text-3xl mb-4">{svc.icon}</div>
+              <h3 className="text-lg font-bold text-white mb-3">{t(svc.titleKey)}</h3>
+              <p className="text-white/60 text-sm leading-relaxed mb-4">{t(svc.descKey)}</p>
+              <Link
+                href={`/${locale}${svc.href}`}
+                className="inline-flex items-center text-[#e8581c] hover:text-orange-400 text-sm font-semibold transition-colors group-hover:gap-2"
+              >
+                {t('index_110')}
+              </Link>
+            </div>
           ))}
         </div>
       </div>

@@ -1,47 +1,31 @@
-"use client";
-import { useTranslations } from "next-intl";
-import { Link } from "@/i18n/navigation";
+'use client';
+
+import { useTranslations } from 'next-intl';
+import { useLocale } from 'next-intl';
+import Link from 'next/link';
 
 export default function CtaSection() {
   const t = useTranslations();
+  const locale = useLocale();
+
   return (
-    <section id="contact" style={{
-      padding: '96px 0',
-      background: 'linear-gradient(135deg, #1a1a2e 0%, #16213e 100%)',
-      color: '#fff', textAlign: 'center'
-    }}>
-      <div className="container">
-        <div style={{
-          fontSize: '13px', fontWeight: 600, textTransform: 'uppercase',
-          letterSpacing: '2px', color: '#ff8c5a', marginBottom: '12px'
-        }}>
-          Let&apos;s Grow Together
-        </div>
-        <h2 style={{
-          fontSize: '36px', fontWeight: 800, color: '#fff', marginBottom: '16px'
-        }}>
-          {t("index_139")}
-        </h2>
-        <p style={{
-          fontSize: '18px', color: 'rgba(255,255,255,0.7)',
-          marginBottom: '40px', maxWidth: '600px', marginLeft: 'auto', marginRight: 'auto'
-        }}>
-          {t("index_140")}
-        </p>
-        <div style={{ display: 'flex', gap: '16px', justifyContent: 'center', flexWrap: 'wrap' }}>
-          <Link href="/become-a-partner" style={{
-            background: '#e8581c', color: '#fff', padding: '14px 32px',
-            borderRadius: '10px', fontWeight: 700, fontSize: '15px',
-            display: 'inline-flex', alignItems: 'center', gap: '8px'
-          }}>
-            {t("index_155")} →
+    <section id="partners" className="py-16 lg:py-24 bg-gradient-to-br from-[#1a1a2e] to-[#2d1810]">
+      <div className="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <p className="text-[#e8581c] font-semibold text-sm mb-3">{t('index_143')}</p>
+        <h2 className="text-3xl lg:text-4xl font-bold text-white mb-4">{t('index_144')}</h2>
+        <p className="text-white/60 max-w-2xl mx-auto mb-8 leading-relaxed">{t('index_145')}</p>
+        <div className="flex flex-col sm:flex-row gap-4 justify-center">
+          <Link
+            href={`/${locale}/become-a-partner`}
+            className="inline-flex items-center justify-center bg-[#e8581c] hover:bg-[#d14e18] text-white px-8 py-3.5 rounded-lg text-sm font-semibold transition-all hover:shadow-lg hover:shadow-orange-500/25"
+          >
+            {t('index_17')}
           </Link>
-          <Link href="/contact" style={{
-            background: 'rgba(255,255,255,0.08)', border: '1px solid rgba(255,255,255,0.2)',
-            color: '#fff', padding: '14px 32px', borderRadius: '10px',
-            fontWeight: 600, fontSize: '15px', display: 'inline-flex', alignItems: 'center', gap: '8px'
-          }}>
-            {t("index_16")}
+          <Link
+            href={`/${locale}/contact`}
+            className="inline-flex items-center justify-center border border-white/20 hover:border-white/40 text-white px-8 py-3.5 rounded-lg text-sm font-medium transition-colors hover:bg-white/5"
+          >
+            {t('index_146')}
           </Link>
         </div>
       </div>

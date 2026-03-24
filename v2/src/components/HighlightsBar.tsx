@@ -1,26 +1,30 @@
+'use client';
+
+import { useTranslations } from 'next-intl';
+
+const highlights = [
+  { icon: '🌍', titleKey1: 'index_122', titleKey2: 'Distribution' },
+  { icon: '📦', titleKey1: 'index_123', titleKey2: 'Warehousing' },
+  { icon: '🏪', titleKey1: 'index_124', titleKey2: 'index_125' },
+  { icon: '📢', titleKey1: 'index_126', titleKey2: 'Services' },
+  { icon: '🏢', titleKey1: 'index_127', titleKey2: 'index_128' },
+];
+
 export default function HighlightsBar() {
-  const highlights = [
-    { icon: '🌍', label: 'Multi-Country Distribution' },
-    { icon: '📦', label: 'Advanced Warehousing' },
-    { icon: '🏪', label: 'Key Retailers Access' },
-    { icon: '📢', label: 'Marketing Services' },
-    { icon: '🏢', label: 'Local Office Support' },
-  ];
+  const t = useTranslations();
 
   return (
-    <section style={{ padding: '64px 0', background: '#e8581c', color: '#fff' }}>
-      <div className="container">
-        <div style={{
-          display: 'grid', gridTemplateColumns: 'repeat(5, 1fr)', gap: '32px', textAlign: 'center'
-        }}>
-          {highlights.map((h) => (
-            <div key={h.label}>
-              <div style={{ fontSize: '36px', marginBottom: '12px' }}>{h.icon}</div>
-              <h3 style={{
-                fontSize: '14px', fontWeight: 700, textTransform: 'uppercase', letterSpacing: '1px'
-              }}>
-                {h.label}
-              </h3>
+    <section className="bg-[#e8581c] py-10 lg:py-12">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6 lg:gap-8">
+          {highlights.map((hl, i) => (
+            <div key={i} className="text-center text-white">
+              <div className="text-3xl lg:text-4xl mb-2">{hl.icon}</div>
+              <div className="text-sm lg:text-base font-bold leading-tight">
+                {t(hl.titleKey1)}
+                <br />
+                {hl.titleKey2.startsWith('index_') ? t(hl.titleKey2) : hl.titleKey2}
+              </div>
             </div>
           ))}
         </div>
