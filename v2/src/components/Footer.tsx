@@ -11,6 +11,7 @@ export default function Footer() {
     <footer className="bg-[#0a0a15] border-t border-white/10">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
         <div className="grid md:grid-cols-4 gap-10">
+          {/* Column 1: Logo + Description + Social */}
           <div>
             <h3 className="text-xl font-bold text-white mb-4">{t('index_147')}</h3>
             <p className="text-gray-400 text-sm mb-6">{t('index_148')}</p>
@@ -20,18 +21,20 @@ export default function Footer() {
               <a href="https://youtube.com" className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center text-white transition-colors text-sm font-bold">▶</a>
             </div>
           </div>
+          {/* Column 2: COMPANY */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">{t('index_150')}</h4>
             <ul className="space-y-3 text-sm text-gray-400">
-              <li><a href={`/${locale}/about`} className="hover:text-white transition-colors">{t('index_39')}</a></li>
+              <li><a href={`/${locale}/about`} className="hover:text-white transition-colors">{t('footer_about')}</a></li>
               <li><a href={`/${locale}/management-board`} className="hover:text-white transition-colors">{t('index_151')}</a></li>
               <li><a href={`/${locale}/about`} className="hover:text-white transition-colors">{t('index_152')}</a></li>
               <li><a href={`/${locale}/career`} className="hover:text-white transition-colors">{t('index_153')}</a></li>
-              <li><a href={`/${locale}/contact`} className="hover:text-white transition-colors">{t('nav_contact') || 'Contact'}</a></li>
+              <li><a href={`/${locale}/contact`} className="hover:text-white transition-colors">Contact</a></li>
             </ul>
           </div>
+          {/* Column 3: SERVICES (not "ALL SERVICES") */}
           <div>
-            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">All Services</h4>
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">{t('footer_services')}</h4>
             <ul className="space-y-3 text-sm text-gray-400">
               <li><a href={`/${locale}/services/logistics`} className="hover:text-white transition-colors">{t('index_154')}</a></li>
               <li><a href={`/${locale}/services/marketing`} className="hover:text-white transition-colors">{t('index_126')}</a></li>
@@ -40,6 +43,7 @@ export default function Footer() {
               <li><a href={`/${locale}/services`} className="hover:text-white transition-colors">{t('index_115')}</a></li>
             </ul>
           </div>
+          {/* Column 4: PARTNERS */}
           <div>
             <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">{t('index_14')}</h4>
             <ul className="space-y-3 text-sm text-gray-400">
@@ -52,6 +56,7 @@ export default function Footer() {
           </div>
         </div>
       </div>
+      {/* Copyright bar */}
       <div className="border-t border-white/10 py-6">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
           <span>{t('index_156')}</span>

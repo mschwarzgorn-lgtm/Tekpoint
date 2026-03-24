@@ -372,7 +372,7 @@
   "index_153": "Career",
   "index_154": "Logistics",
   "index_155": "Become a Partner",
-  "index_156": "© 2026 Tekpoint. All rights reserved.",
+  "index_156": "© 2026 Tekpoint GmbH. All rights reserved.",
   "index_157": "Privacy Policy",
   "index_158": "Terms & Conditions",
   "index_159": "Imprint",
@@ -1002,5 +1002,6 @@
   "footer_services": "Services",
   "footer_legal": "Legal",
   "stat_retailers_label": "Retail Partners",
-  "stat_founded_label": "Year Founded"
+  "stat_founded_label": "Year Founded",
+  "footer_about": "About"
 }
