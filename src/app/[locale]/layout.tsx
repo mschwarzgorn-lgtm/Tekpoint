@@ -4,6 +4,7 @@ import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
+import PasswordGate from "@/components/PasswordGate";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -35,9 +36,11 @@ export default async function LocaleLayout({
       </head>
       <body className="min-h-screen flex flex-col">
         <NextIntlClientProvider messages={messages}>
-          <Header />
-          <main className="flex-1">{children}</main>
-          <Footer />
+          <PasswordGate>
+            <Header />
+            <main className="flex-1">{children}</main>
+            <Footer />
+          </PasswordGate>
         </NextIntlClientProvider>
       </body>
     </html>
