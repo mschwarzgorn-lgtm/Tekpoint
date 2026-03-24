@@ -1,8 +1,8 @@
-
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import BrandGrid from "@/components/BrandGrid";
+import CustomerGrid from "@/components/CustomerGrid";
 import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
 import CtaSection from "@/components/CtaSection";
@@ -118,11 +118,29 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      {/* Services */}
-      <ServicesSection />
+      {/* Customer / Retail Partners */}
+      <section className="py-24 md:py-32 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center max-w-3xl mx-auto mb-16">
+            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-4 block">
+              {t("index_49")}
+            </span>
+            <h2 className="text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 mb-4">
+              {t("index_50")}
+            </h2>
+            <p className="text-lg text-gray-600">
+              {t("index_51")}
+            </p>
+          </div>
+          <CustomerGrid />
+        </div>
+      </section>
 
       {/* CTA */}
       <CtaSection />
+
+      {/* Services */}
+      <ServicesSection />
     </>
   );
 }
