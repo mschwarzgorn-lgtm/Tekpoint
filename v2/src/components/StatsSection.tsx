@@ -4,10 +4,10 @@ import { useTranslations } from "next-intl";
 export default function StatsSection() {
   const t = useTranslations();
   const stats = [
-    { value: "3.5M+", label: t("index_27"), subLabel: t("index_28") },
-    { value: "120+", label: t("index_30"), subLabel: t("index_31") },
-    { value: "30+", label: t("index_33"), subLabel: t("index_34") },
-    { value: "2009", label: t("index_36"), subLabel: t("index_37") },
+    { value: "3.5M+", label: t("index_28"), subLabel: "" },
+    { value: "120+", label: t("stat_retailers_label"), subLabel: t("index_31") },
+    { value: "30+", label: t("index_29"), subLabel: "" },
+    { value: "2009", label: t("stat_founded_label"), subLabel: "" },
   ];
 
   return (
@@ -18,7 +18,7 @@ export default function StatsSection() {
             <div key={stat.value} className="text-center">
               <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
               <div className="text-sm font-medium text-gray-900">{stat.label}</div>
-              <div className="text-xs text-gray-500 mt-1">{stat.subLabel}</div>
+              {stat.subLabel && <div className="text-xs text-gray-500 mt-1">{stat.subLabel}</div>}
             </div>
           ))}
         </div>
