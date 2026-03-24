@@ -1,0 +1,27 @@
+@import "tailwindcss";
+
+@theme inline {
+  --color-primary: oklch(0.45 0.15 250);
+  --color-primary-foreground: oklch(0.98 0 0);
+  --color-background: oklch(0.99 0 0);
+  --color-foreground: oklch(0.13 0 0);
+  --color-muted: oklch(0.96 0 0);
+  --color-muted-foreground: oklch(0.45 0 0);
+  --color-accent: oklch(0.55 0.12 195);
+  --color-accent-foreground: oklch(0.98 0 0);
+  --color-card: oklch(1 0 0);
+  --color-card-foreground: oklch(0.13 0 0);
+  --color-border: oklch(0.90 0 0);
+  --color-ring: oklch(0.45 0.15 250);
+  --font-sans: 'Inter', system-ui, -apple-system, sans-serif;
+}
+
+@layer base {
+  body {
+    @apply bg-background text-foreground antialiased;
+    font-family: var(--font-sans);
+  }
+  *:focus-visible {
+    @apply outline-none ring-2 ring-ring ring-offset-2 ring-offset-background;
+  }
+}
