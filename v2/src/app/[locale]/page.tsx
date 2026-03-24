@@ -1,77 +1,65 @@
-"use client";
-import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
-import Link from "next/link";
-import BrandGrid from "@/components/BrandGrid";
-import CustomerGrid from "@/components/CustomerGrid";
-import SegmentsSection from "@/components/SegmentsSection";
-import ServicesSection from "@/components/ServicesSection";
-import HighlightsBar from "@/components/HighlightsBar";
-import TestimonialSection from "@/components/TestimonialSection";
-import NewsSection from "@/components/NewsSection";
-import CtaSection from "@/components/CtaSection";
+'use client';
 
-const stats = [
-  { value: "10K+", labelKey: "hero.stat1_label" },
-  { value: "3.5M+", labelKey: "hero.stat2_label" },
-  { value: "28+", labelKey: "hero.stat3_label" },
-  { value: "5+", labelKey: "hero.stat4_label" },
-];
-
-const features = [
-  { icon: "📦", titleKey: "about.feature1_title", descKey: "about.feature1_desc" },
-  { icon: "🌍", titleKey: "about.feature2_title", descKey: "about.feature2_desc" },
-  { icon: "🤝", titleKey: "about.feature3_title", descKey: "about.feature3_desc" },
-];
-
-const officeLocations = [
-  { flag: "🇦🇹", name: "Vienna, Austria", role: "HQ" },
-  { flag: "🇩🇪", name: "Munich, Germany", role: "Office" },
-  { flag: "🇵🇱", name: "Warsaw, Poland", role: "Office" },
-  { flag: "🇷🇴", name: "Bucharest, Romania", role: "Office" },
-  { flag: "🇭🇺", name: "Budapest, Hungary", role: "Office" },
-];
-
-const markets = [
-  "🇦🇹","🇩🇪","🇨🇭","🇳🇱","🇧🇪","🇵🇱","🇨🇿","🇸🇰","🇭🇺","🇷🇴","🇧🇬","🇭🇷","🇸🇮","🇷🇸","🇧🇦","🇲🇰","🇦🇱","🇬🇷",
-];
+import { useTranslations } from 'next-intl';
+import Header from '@/components/Header';
+import Footer from '@/components/Footer';
+import CustomerGrid from '@/components/CustomerGrid';
+import BrandGrid from '@/components/BrandGrid';
+import SegmentsSection from '@/components/SegmentsSection';
+import ServicesSection from '@/components/ServicesSection';
+import HighlightsBar from '@/components/HighlightsBar';
+import TestimonialSection from '@/components/TestimonialSection';
+import NewsSection from '@/components/NewsSection';
+import CtaSection from '@/components/CtaSection';
 
 export default function HomePage() {
   const t = useTranslations();
-  const params = useParams();
-  const locale = (params?.locale as string) || "en";
 
   return (
-    <main>
-      {/* Hero */}
-      <section className="relative bg-[#1a1a2e] overflow-hidden">
-        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#2d1b3d] to-[#1a1a2e]"></div>
-        <div className="absolute inset-0 opacity-20" style={{backgroundImage: "url('/images/hero-bg.jpg')", backgroundSize: "cover", backgroundPosition: "center"}}></div>
-        <div className="relative max-w-7xl mx-auto px-4 py-20 md:py-28">
-          <div className="max-w-3xl">
-            <div className="inline-flex items-center gap-2 bg-orange-500/10 border border-orange-500/30 rounded-full px-5 py-2 mb-8">
-              <span>🚀</span>
-              <span className="text-orange-400 font-semibold text-sm tracking-wider uppercase">{t("hero.badge")}</span>
+    <div className="min-h-screen bg-[#0f0f1a] text-white">
+      <Header />
+
+      {/* Hero Section */}
+      <section className="relative overflow-hidden pt-32 pb-20">
+        <div className="absolute inset-0 bg-gradient-to-br from-[#1a1a2e] via-[#0f0f1a] to-[#2d1810]" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="grid lg:grid-cols-2 gap-12 items-center">
+            <div>
+              <span className="inline-block bg-white/10 text-orange-400 px-4 py-2 rounded-full text-sm font-medium mb-6">
+                {t('index_18')}
+              </span>
+              <h1 className="text-5xl lg:text-6xl font-extrabold leading-tight mb-6">
+                {t('index_19')}{' '}
+                <span className="text-orange-500">{t('index_20')}</span>{' '}
+                {t('index_21')}<br />
+                {t('index_22')}
+              </h1>
+              <p className="text-lg text-gray-300 mb-8 max-w-xl">
+                {t('index_23')}
+              </p>
+              <div className="flex flex-wrap gap-4">
+                <a href="/contact" className="bg-orange-500 hover:bg-orange-600 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                  {t('index_17')}
+                </a>
+                <a href="#about" className="border border-white/30 hover:border-white/60 text-white px-8 py-3 rounded-lg font-semibold transition-colors">
+                  {t('index_24')}
+                </a>
+              </div>
             </div>
-            <h1 className="text-4xl md:text-5xl lg:text-6xl font-extrabold text-white leading-tight mb-6">
-              {t("hero.title_line1")} <span className="text-orange-500">{t("hero.title_highlight")}</span> {t("hero.title_line2")}
-            </h1>
-            <p className="text-lg text-gray-300 leading-relaxed mb-10 max-w-2xl">{t("hero.subtitle")}</p>
-            <div className="flex flex-wrap gap-4">
-              <Link href={`/${locale}/contact`} className="bg-orange-500 hover:bg-orange-600 text-white font-semibold px-8 py-3.5 rounded-lg transition text-sm shadow-lg shadow-orange-500/25">
-                {t("nav.become_partner")} →
-              </Link>
-              <a href="#about" className="border border-gray-500 text-gray-300 hover:text-white hover:border-white font-semibold px-8 py-3.5 rounded-lg transition text-sm">
-                {t("hero.cta_secondary")} ↓
-              </a>
-            </div>
+            <div className="hidden lg:block" />
           </div>
-          {/* Stats */}
+
+          {/* Stats Row */}
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4 mt-16">
-            {stats.map((s) => (
-              <div key={s.labelKey} className="bg-white/5 backdrop-blur border border-white/10 rounded-xl p-6">
-                <div className="text-3xl font-extrabold text-orange-500 mb-1">{s.value}</div>
-                <div className="text-gray-400 text-sm">{t(s.labelKey)}</div>
+            {[
+              { value: t('index_25'), label: t('index_26') },
+              { value: t('index_27'), label: t('index_28') },
+              { value: '28+', label: t('index_29') },
+              { value: '5+', label: t('index_30') },
+            ].map((stat, i) => (
+              <div key={i} className="bg-white/5 backdrop-blur-sm border border-white/10 rounded-xl p-6 text-center">
+                <div className="text-3xl font-bold text-orange-500">{stat.value}</div>
+                <div className="text-sm text-gray-400 mt-1">{stat.label}</div>
               </div>
             ))}
           </div>
@@ -79,55 +67,65 @@ export default function HomePage() {
       </section>
 
       {/* Trust Bar */}
-      <CustomerGrid />
+      <section className="py-12 bg-[#0a0a15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-center text-sm uppercase tracking-widest text-gray-400 mb-8">
+            {t('index_31')}
+          </p>
+          <CustomerGrid />
+        </div>
+      </section>
 
-      {/* About */}
-      <section id="about" className="py-20 bg-white">
-        <div className="max-w-7xl mx-auto px-4">
-          <div className="text-center mb-12">
-            <p className="text-orange-500 font-semibold text-sm tracking-wider uppercase mb-3">{t("about.subtitle")}</p>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("about.title")}</h2>
-            <p className="text-gray-500 max-w-3xl mx-auto text-lg">{t("about.description")}</p>
-          </div>
-          {/* Vertical feature list - matching v1 */}
-          <div className="max-w-3xl mx-auto space-y-8 mt-12">
-            {features.map((f) => (
-              <div key={f.titleKey} className="flex items-start gap-5">
-                <span className="text-3xl flex-shrink-0 mt-1">{f.icon}</span>
+      {/* About Section */}
+      <section id="about" className="py-20 bg-[#0f0f1a]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-orange-500 font-semibold mb-2">{t('index_39')}</p>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">
+            {t('index_40')}{' '}
+            <span className="text-orange-500">{t('index_41')}</span>
+          </h2>
+          <p className="text-gray-300 max-w-3xl mb-12">{t('index_42')}</p>
+
+          {/* Features - Vertical list matching v1 */}
+          <div className="space-y-6 mb-16">
+            {[
+              { icon: '📦', title: t('index_43'), desc: t('index_44') },
+              { icon: '🌍', title: t('index_45'), desc: t('index_46') },
+              { icon: '⭐', title: t('index_47'), desc: t('index_48') },
+            ].map((f, i) => (
+              <div key={i} className="flex items-start gap-4 bg-white/5 border border-white/10 rounded-xl p-6">
+                <span className="text-3xl flex-shrink-0">{f.icon}</span>
                 <div>
-                  <h3 className="text-lg font-bold text-gray-900 mb-2">{t(f.titleKey)}</h3>
-                  <p className="text-gray-500 leading-relaxed">{t(f.descKey)}</p>
+                  <h3 className="text-lg font-bold text-white mb-1">{f.title}</h3>
+                  <p className="text-gray-400 text-sm">{f.desc}</p>
                 </div>
               </div>
             ))}
           </div>
-        </div>
-      </section>
 
-      {/* Map */}
-      <section className="py-16 bg-[#1a1a2e] text-white">
-        <div className="max-w-7xl mx-auto px-4 text-center">
-          <h2 className="text-3xl md:text-4xl font-bold mb-4">🌐 {t("map.title")}</h2>
-          <p className="text-gray-400 mb-12">{t("map.subtitle")}</p>
-          <div className="grid md:grid-cols-2 gap-12">
-            <div>
-              <h3 className="text-xl font-bold mb-6 text-orange-400">{t("map.offices_title")}</h3>
-              <div className="space-y-3">
-                {officeLocations.map((loc) => (
-                  <div key={loc.name} className="flex items-center gap-3 bg-white/5 rounded-lg px-4 py-3">
-                    <span className="text-xl">{loc.flag}</span>
-                    <span className="text-gray-200">{loc.name}</span>
-                    {loc.role === "HQ" && <span className="ml-auto bg-orange-500/20 text-orange-400 text-xs px-2 py-0.5 rounded-full font-semibold">HQ</span>}
-                  </div>
-                ))}
+          {/* Map Section */}
+          <div className="bg-white/5 border border-white/10 rounded-2xl p-8">
+            <h3 className="text-2xl font-bold mb-2">{t('index_49')}</h3>
+            <p className="text-gray-400 mb-6">{t('index_50')}</p>
+            <div className="grid md:grid-cols-2 gap-8">
+              <div>
+                <h4 className="text-orange-500 font-semibold mb-3">{t('index_51')}</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>{t('index_52')}</li>
+                  <li>{t('index_53')}</li>
+                  <li>{t('index_54')}</li>
+                </ul>
               </div>
-            </div>
-            <div>
-              <h3 className="text-xl font-bold mb-6 text-orange-400">{t("map.markets_title")}</h3>
-              <div className="flex flex-wrap gap-3 justify-center">
-                {markets.map((flag, i) => (
-                  <span key={i} className="text-3xl bg-white/5 rounded-lg p-2">{flag}</span>
-                ))}
+              <div>
+                <h4 className="text-orange-500 font-semibold mb-3">{t('index_55')}</h4>
+                <ul className="space-y-2 text-gray-300">
+                  <li>{t('index_56')}</li>
+                  <li>{t('index_57')}</li>
+                  <li>{t('index_58')}</li>
+                  <li>{t('index_59')}</li>
+                  <li>{t('index_60')}</li>
+                  <li>{t('index_61')}</li>
+                </ul>
               </div>
             </div>
           </div>
@@ -135,7 +133,14 @@ export default function HomePage() {
       </section>
 
       {/* Brand Portfolio */}
-      <BrandGrid />
+      <section className="py-20 bg-[#0a0a15]">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <p className="text-orange-500 font-semibold mb-2">{t('index_62')}</p>
+          <h2 className="text-3xl lg:text-4xl font-bold mb-4">{t('index_63')}</h2>
+          <p className="text-gray-300 max-w-3xl mb-12">{t('index_64')}</p>
+          <BrandGrid />
+        </div>
+      </section>
 
       {/* Segments */}
       <SegmentsSection />
@@ -154,6 +159,8 @@ export default function HomePage() {
 
       {/* CTA */}
       <CtaSection />
-    </main>
+
+      <Footer />
+    </div>
   );
 }

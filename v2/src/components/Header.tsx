@@ -1,86 +1,61 @@
-"use client";
-import { useTranslations } from "next-intl";
-import Link from "next/link";
-import { useParams, usePathname } from "next/navigation";
-import { useState, useRef, useEffect } from "react";
-import { locales } from "@/i18n/config";
+'use client';
 
-const localeNames: Record<string, string> = {
-  en: "EN", de: "DE", nl: "NL", fr: "FR", it: "IT", es: "ES", pt: "PT",
-  pl: "PL", cs: "CS", sk: "SK", hu: "HU", ro: "RO", bg: "BG", hr: "HR",
-  sl: "SL", sr: "SR", bs: "BS", mk: "MK", sq: "SQ", el: "EL", tr: "TR",
-  uk: "UK", da: "DA", sv: "SV", nb: "NB", fi: "FI", et: "ET", lv: "LV",
-  lt: "LT", ga: "GA"
-};
+import { useTranslations } from 'next-intl';
+import { usePathname, useRouter } from 'next/navigation';
+import Image from 'next/image';
+import { useState } from 'react';
+import { locales, localeNames } from '@/i18n/config';
 
-const localeFlags: Record<string, string> = {
-  en: "🇬🇧", de: "🇩🇪", nl: "🇳🇱", fr: "🇫🇷", it: "🇮🇹", es: "🇪🇸", pt: "🇵🇹",
-  pl: "🇵🇱", cs: "🇨🇿", sk: "🇸🇰", hu: "🇭🇺", ro: "🇷🇴", bg: "🇧🇬", hr: "🇭🇷",
-  sl: "🇸🇮", sr: "🇷🇸", bs: "🇧🇦", mk: "🇲🇰", sq: "🇦🇱", el: "🇬🇷", tr: "🇹🇷",
-  uk: "🇺🇦", da: "🇩🇰", sv: "🇸🇪", nb: "🇳🇴", fi: "🇫🇮", et: "🇪🇪", lv: "🇱🇻",
-  lt: "🇱🇹", ga: "🇮🇪"
+const flagMap: Record<string, string> = {
+  en: '🇬🇧', de: '🇩🇪', pl: '🇵🇱', cs: '🇨🇿', ro: '🇷🇴',
+  hu: '🇭🇺', sk: '🇸🇰', bg: '🇧🇬', hr: '🇭🇷', sl: '🇸🇮',
+  sr: '🇷🇸', bs: '🇧🇦', mk: '🇲🇰', sq: '🇦🇱', el: '🇬🇷',
+  tr: '🇹🇷', uk: '🇺🇦', nl: '🇳🇱', fr: '🇫🇷', it: '🇮🇹',
+  es: '🇪🇸', pt: '🇵🇹', sv: '🇸🇪', da: '🇩🇰', fi: '🇫🇮',
+  nb: '🇳🇴', et: '🇪🇪', lv: '🇱🇻', lt: '🇱🇹', ja: '🇯🇵',
 };
 
 export default function Header() {
   const t = useTranslations();
-  const params = useParams();
   const pathname = usePathname();
-  const locale = (params?.locale as string) || "en";
+  const router = useRouter();
   const [langOpen, setLangOpen] = useState(false);
-  const [mobileOpen, setMobileOpen] = useState(false);
-  const langRef = useRef<HTMLDivElement>(null);
 
-  useEffect(() => {
-    function handleClick(e: MouseEvent) {
-      if (langRef.current && !langRef.current.contains(e.target as Node)) setLangOpen(false);
-    }
-    document.addEventListener("mousedown", handleClick);
-    return () => document.removeEventListener("mousedown", handleClick);
-  }, []);
+  const currentLocale = pathname.split('/')[1] || 'en';
+  const flag = flagMap[currentLocale] || '🇬🇧';
+  const langCode = currentLocale.toUpperCase();
 
-  const switchLocale = (newLocale: string) => {
-    const pathWithoutLocale = pathname.replace(/^\/[a-z]{2}/, "") || "/";
-    window.location.href = `/${newLocale}${pathWithoutLocale}`;
+  const switchLocale = (locale: string) => {
+    const segments = pathname.split('/');
+    segments[1] = locale;
+    router.push(segments.join('/'));
+    setLangOpen(false);
   };
 
-  const navItems = [
-    { label: t("nav.about"), href: `/${locale}/about` },
-    { label: t("nav.vendors"), href: `/${locale}/vendors` },
-    { label: t("nav.services"), href: `/${locale}/services` },
-    { label: "Careers", href: `/${locale}/careers` },
-    { label: t("nav.contact"), href: `/${locale}/contact` },
-  ];
-
   return (
-    <header className="w-full">
+    <header className="fixed top-0 left-0 right-0 z-50">
       {/* Topbar */}
-      <div className="bg-[#0f0f1a] text-gray-300 text-sm py-2 border-b border-gray-800">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <div className="flex items-center gap-4">
-            <span>📍 {t("topbar.hq")}</span>
-            <span className="text-gray-600">|</span>
-            <a href="mailto:info@tekpoint.com" className="hover:text-white transition">📧 info@tekpoint.com</a>
-          </div>
-          {/* Language Selector */}
-          <div ref={langRef} className="relative">
+      <div className="bg-[#0a0a15] border-b border-white/10 py-2 px-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center text-sm text-gray-400">
+          <span>{t('index_5')}</span>
+          <div className="relative">
             <button
               onClick={() => setLangOpen(!langOpen)}
-              className="flex items-center gap-1.5 text-sm hover:text-white transition px-3 py-1 rounded"
+              className="flex items-center gap-1 hover:text-white transition-colors"
             >
-              <span>{localeFlags[locale]}</span>
-              <span>{localeNames[locale] || locale.toUpperCase()}</span>
-              <span className="text-xs">▾</span>
+              {flag} {langCode} ▾
             </button>
             {langOpen && (
-              <div className="absolute right-0 top-full mt-1 bg-[#1a1a2e] border border-gray-700 rounded-lg shadow-xl z-50 max-h-80 overflow-y-auto w-48">
+              <div className="absolute right-0 top-8 bg-[#1a1a2e] border border-white/20 rounded-lg shadow-xl py-2 w-48 max-h-64 overflow-y-auto z-50">
                 {locales.map((loc) => (
                   <button
                     key={loc}
-                    onClick={() => { switchLocale(loc); setLangOpen(false); }}
-                    className={`w-full text-left px-4 py-2 text-sm hover:bg-[#2a2a4a] transition flex items-center gap-2 ${loc === locale ? "text-orange-400 bg-[#2a2a4a]" : "text-gray-300"}`}
+                    onClick={() => switchLocale(loc)}
+                    className={`w-full text-left px-4 py-2 text-sm hover:bg-white/10 ${
+                      loc === currentLocale ? 'text-orange-400 font-bold' : 'text-gray-300'
+                    }`}
                   >
-                    <span>{localeFlags[loc]}</span>
-                    <span>{localeNames[loc] || loc.toUpperCase()}</span>
+                    {flagMap[loc] || '🏳️'} {localeNames[loc] || loc.toUpperCase()}
                   </button>
                 ))}
               </div>
@@ -90,60 +65,22 @@ export default function Header() {
       </div>
 
       {/* Main Nav */}
-      <nav className="bg-[#1a1a2e] py-4 sticky top-0 z-40 shadow-lg">
-        <div className="max-w-7xl mx-auto px-4 flex items-center justify-between">
-          <Link href={`/${locale}`} className="flex-shrink-0">
-            <img src="/images/tekpoint-logo.png" alt="Tekpoint" className="h-12" />
-          </Link>
-
-          {/* Desktop Nav */}
+      <nav className="bg-[#1a1a2e]/95 backdrop-blur-sm border-b border-white/10 py-4 px-4">
+        <div className="max-w-7xl mx-auto flex justify-between items-center">
+          <a href={`/${currentLocale}`} className="flex-shrink-0">
+            <Image src="/images/tekpoint-logo.png" alt="Tekpoint" width={180} height={40} className="h-10 w-auto" />
+          </a>
           <div className="hidden md:flex items-center gap-8">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="text-gray-200 hover:text-white font-medium transition text-[15px]"
-              >
-                {item.label}
-              </Link>
-            ))}
+            <a href={`/${currentLocale}/about`} className="text-gray-300 hover:text-white transition-colors">{t('nav_about') || 'About Us'}</a>
+            <a href={`/${currentLocale}/vendors`} className="text-gray-300 hover:text-white transition-colors">{t('nav_vendors') || 'Vendors'}</a>
+            <a href={`/${currentLocale}/services`} className="text-gray-300 hover:text-white transition-colors">{t('nav_services') || 'Services'}</a>
+            <a href={`/${currentLocale}/career`} className="text-gray-300 hover:text-white transition-colors">{t('nav_career') || 'Careers'}</a>
+            <a href={`/${currentLocale}/contact`} className="text-gray-300 hover:text-white transition-colors">{t('nav_contact') || 'Contact'}</a>
+            <a href={`/${currentLocale}/contact`} className="bg-orange-500 hover:bg-orange-600 text-white px-6 py-2.5 rounded-lg font-semibold transition-colors text-sm">
+              {t('index_17')}
+            </a>
           </div>
-
-          <Link
-            href={`/${locale}/contact`}
-            className="hidden md:inline-flex bg-orange-500 hover:bg-orange-600 text-white font-semibold px-6 py-2.5 rounded-lg transition text-sm"
-          >
-            {t("nav.become_partner")} →
-          </Link>
-
-          {/* Mobile toggle */}
-          <button onClick={() => setMobileOpen(!mobileOpen)} className="md:hidden text-white text-2xl">
-            {mobileOpen ? "✕" : "☰"}
-          </button>
         </div>
-
-        {/* Mobile Menu */}
-        {mobileOpen && (
-          <div className="md:hidden bg-[#1a1a2e] border-t border-gray-700 px-4 py-4 space-y-3">
-            {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                className="block text-gray-200 hover:text-white py-2 text-[15px]"
-                onClick={() => setMobileOpen(false)}
-              >
-                {item.label}
-              </Link>
-            ))}
-            <Link
-              href={`/${locale}/contact`}
-              className="block bg-orange-500 text-white text-center font-semibold px-6 py-2.5 rounded-lg"
-              onClick={() => setMobileOpen(false)}
-            >
-              {t("nav.become_partner")} →
-            </Link>
-          </div>
-        )}
       </nav>
     </header>
   );

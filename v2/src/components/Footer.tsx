@@ -1,150 +1,64 @@
 'use client';
-
 import { useTranslations } from 'next-intl';
-import { useLocale } from 'next-intl';
-import Link from 'next/link';
+import { usePathname } from 'next/navigation';
 
 export default function Footer() {
   const t = useTranslations();
-  const locale = useLocale();
-
-  const companyLinks = [
-    { label: t('about_11'), href: `/${locale}/about` },
-    { label: t('about_12'), href: `/${locale}/management-board` },
-    { label: t('about_13'), href: `/${locale}/contact` },
-    { label: t('about_20'), href: `/${locale}/career` },
-    { label: t('about_21'), href: `/${locale}/contact` },
-  ];
-
-  const servicesLinks = [
-    { label: t('about_18'), href: `/${locale}/services-logistics` },
-    { label: t('about_19'), href: `/${locale}/services-marketing` },
-    { label: t('about_17'), href: `/${locale}/services-partner-connectivity` },
-    { label: t('index_117'), href: `/${locale}/services` },
-    { label: t('index_115'), href: `/${locale}/services` },
-  ];
-
-  const partnersLinks = [
-    { label: t('about_110'), href: `/${locale}/vendors` },
-    { label: t('about_109'), href: `/${locale}/vendors` },
-    { label: t('index_102'), href: `/${locale}/vendors` },
-    { label: t('about_107'), href: `/${locale}/vendors` },
-    { label: t('about_108'), href: `/${locale}/become-a-partner` },
-  ];
+  const pathname = usePathname();
+  const locale = pathname.split('/')[1] || 'en';
 
   return (
-    <footer className="bg-[#1a1a2e] text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12 lg:py-16">
-        <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-5 gap-8 lg:gap-12">
-          {/* Brand Column */}
-          <div className="lg:col-span-2">
-            <Link href={`/${locale}`} className="inline-block mb-4">
-              <span className="text-2xl font-bold tracking-tight">{t('index_147')}</span>
-            </Link>
-            <p className="text-white/60 text-sm leading-relaxed max-w-sm mb-6">
-              {t('index_148')}
-            </p>
-            
-            {/* Social Icons */}
-            <div className="flex items-center gap-3">
-              <a
-                href="https://www.linkedin.com/company/tekpoint-gmbh/"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 bg-white/10 hover:bg-[#0077b5] rounded-lg flex items-center justify-center transition-colors"
-                aria-label="LinkedIn"
-              >
-                <span className="text-sm font-bold">{t('index_149')}</span>
-              </a>
-              <a
-                href="https://www.xing.com/pages/tekpointgmbh"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 bg-white/10 hover:bg-[#006567] rounded-lg flex items-center justify-center transition-colors"
-                aria-label="Xing"
-              >
-                <span className="text-sm font-bold">X</span>
-              </a>
-              <a
-                href="https://www.youtube.com/@tekpointgmbh8118"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="w-9 h-9 bg-white/10 hover:bg-[#ff0000] rounded-lg flex items-center justify-center transition-colors"
-                aria-label="YouTube"
-              >
-                <span className="text-sm">▶</span>
-              </a>
+    <footer className="bg-[#0a0a15] border-t border-white/10">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16">
+        <div className="grid md:grid-cols-4 gap-10">
+          <div>
+            <h3 className="text-xl font-bold text-white mb-4">{t('index_147')}</h3>
+            <p className="text-gray-400 text-sm mb-6">{t('index_148')}</p>
+            <div className="flex gap-3">
+              <a href="https://linkedin.com" className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center text-white transition-colors text-sm font-bold">{t('index_149')}</a>
+              <a href="https://xing.com" className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center text-white transition-colors text-sm font-bold">X</a>
+              <a href="https://youtube.com" className="w-10 h-10 rounded-full bg-white/10 hover:bg-orange-500 flex items-center justify-center text-white transition-colors text-sm font-bold">▶</a>
             </div>
           </div>
-
-          {/* Company Column */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              {t('index_150')}
-            </h4>
-            <ul className="space-y-2.5">
-              {companyLinks.map((link) => (
-                <li key={link.label}>
-                  <Link href={link.href} className="text-sm text-white/60 hover:text-[#e8581c] transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">{t('index_150')}</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li><a href={`/${locale}/about`} className="hover:text-white transition-colors">{t('index_39')}</a></li>
+              <li><a href={`/${locale}/management-board`} className="hover:text-white transition-colors">{t('index_151')}</a></li>
+              <li><a href={`/${locale}/about`} className="hover:text-white transition-colors">{t('index_152')}</a></li>
+              <li><a href={`/${locale}/career`} className="hover:text-white transition-colors">{t('index_153')}</a></li>
+              <li><a href={`/${locale}/contact`} className="hover:text-white transition-colors">{t('nav_contact') || 'Contact'}</a></li>
             </ul>
           </div>
-
-          {/* Services Column */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              {t('about_105')}
-            </h4>
-            <ul className="space-y-2.5">
-              {servicesLinks.map((link, i) => (
-                <li key={i}>
-                  <Link href={link.href} className="text-sm text-white/60 hover:text-[#e8581c] transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">All Services</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li><a href={`/${locale}/services/logistics`} className="hover:text-white transition-colors">{t('index_154')}</a></li>
+              <li><a href={`/${locale}/services/marketing`} className="hover:text-white transition-colors">{t('index_126')}</a></li>
+              <li><a href={`/${locale}/services/partner-connectivity`} className="hover:text-white transition-colors">{t('index_113')}</a></li>
+              <li><a href={`/${locale}/services`} className="hover:text-white transition-colors">{t('index_117')}</a></li>
+              <li><a href={`/${locale}/services`} className="hover:text-white transition-colors">{t('index_115')}</a></li>
             </ul>
           </div>
-
-          {/* Partners Column */}
           <div>
-            <h4 className="text-sm font-semibold uppercase tracking-wider text-white mb-4">
-              {t('about_106')}
-            </h4>
-            <ul className="space-y-2.5">
-              {partnersLinks.map((link, i) => (
-                <li key={i}>
-                  <Link href={link.href} className="text-sm text-white/60 hover:text-[#e8581c] transition-colors">
-                    {link.label}
-                  </Link>
-                </li>
-              ))}
+            <h4 className="text-sm font-bold text-white uppercase tracking-wider mb-4">{t('index_14')}</h4>
+            <ul className="space-y-3 text-sm text-gray-400">
+              <li><a href={`/${locale}/vendors`} className="hover:text-white transition-colors">{t('index_96')}</a></li>
+              <li><a href={`/${locale}/vendors`} className="hover:text-white transition-colors">{t('index_99')}</a></li>
+              <li><a href={`/${locale}/vendors`} className="hover:text-white transition-colors">{t('index_102')}</a></li>
+              <li><a href={`/${locale}/vendors`} className="hover:text-white transition-colors">{t('index_62')}</a></li>
+              <li><a href={`/${locale}/contact`} className="hover:text-white transition-colors">{t('index_155')}</a></li>
             </ul>
           </div>
         </div>
       </div>
-
-      {/* Copyright Bar */}
-      <div className="border-t border-white/10">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-5">
-          <div className="flex flex-col sm:flex-row justify-between items-center gap-3">
-            <p className="text-white/40 text-sm">
-              © 2026 Tekpoint GmbH. {t('index_156').replace(/©\s*2026\s*Tekpoint\.?\s*/i, '')}
-            </p>
-            <div className="flex items-center gap-6">
-              <Link href={`/${locale}/privacy-policy`} className="text-white/40 hover:text-white/70 text-sm transition-colors">
-                {t('index_157')}
-              </Link>
-              <Link href={`/${locale}/terms-and-conditions`} className="text-white/40 hover:text-white/70 text-sm transition-colors">
-                {t('index_158')}
-              </Link>
-              <Link href={`/${locale}/imprint`} className="text-white/40 hover:text-white/70 text-sm transition-colors">
-                {t('index_159')}
-              </Link>
-            </div>
+      <div className="border-t border-white/10 py-6">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 flex flex-col md:flex-row justify-between items-center text-sm text-gray-500">
+          <span>{t('index_156')}</span>
+          <div className="flex gap-6 mt-2 md:mt-0">
+            <a href={`/${locale}/privacy`} className="hover:text-white transition-colors">{t('index_157')}</a>
+            <a href={`/${locale}/terms`} className="hover:text-white transition-colors">{t('index_158')}</a>
+            <a href={`/${locale}/imprint`} className="hover:text-white transition-colors">{t('index_159')}</a>
           </div>
         </div>
       </div>

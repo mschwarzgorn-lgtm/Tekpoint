@@ -1,41 +1,32 @@
-"use client";
-import { useTranslations } from "next-intl";
-import { useParams } from "next/navigation";
-import Link from "next/link";
-
-const segments = [
-  { icon: "🏭", titleKey: "segments.manufacturers_title", descKey: "segments.manufacturers_desc", linkKey: "segments.manufacturers_link", href: "/vendors" },
-  { icon: "🏪", titleKey: "segments.retailers_title", descKey: "segments.retailers_desc", linkKey: "segments.retailers_link", href: "/retailers" },
-  { icon: "🛒", titleKey: "segments.etailers_title", descKey: "segments.etailers_desc", linkKey: "segments.etailers_link", href: "/etailers" },
-];
+'use client';
+import { useTranslations } from 'next-intl';
+import { usePathname } from 'next/navigation';
 
 export default function SegmentsSection() {
   const t = useTranslations();
-  const params = useParams();
-  const locale = (params?.locale as string) || "en";
+  const locale = usePathname().split('/')[1] || 'en';
+
+  const segments = [
+    { icon: '🏭', title: t('index_96'), desc: t('index_97'), cta: t('index_98'), href: `/${locale}/vendors` },
+    { icon: '🛒', title: t('index_99'), desc: t('index_100'), cta: t('index_101'), href: `/${locale}/vendors` },
+    { icon: '💻', title: t('index_102'), desc: t('index_103'), cta: t('index_104'), href: `/${locale}/vendors` },
+  ];
 
   return (
-    <section className="py-20 bg-[#0d0d1a]">
-      <div className="max-w-4xl mx-auto px-4">
-        <div className="text-center mb-12">
-          <p className="text-orange-500 font-semibold text-sm tracking-wider uppercase mb-3">{t("segments.subtitle")}</p>
-          <h2 className="text-3xl md:text-4xl font-bold text-white">{t("segments.title")}</h2>
-        </div>
-        <div className="space-y-6">
-          {segments.map((seg) => (
-            <div
-              key={seg.titleKey}
-              className="bg-[#1a1a2e] rounded-xl border-2 border-orange-500/40 p-10 text-center hover:border-orange-500 transition-all duration-300"
-            >
-              <span className="text-4xl mb-4 block">{seg.icon}</span>
-              <h3 className="text-2xl font-bold text-white mb-4">{t(seg.titleKey)}</h3>
-              <p className="text-gray-400 max-w-xl mx-auto mb-6 leading-relaxed">{t(seg.descKey)}</p>
-              <Link
-                href={`/${locale}${seg.href}`}
-                className="text-orange-400 hover:text-orange-300 font-semibold transition"
-              >
-                {t(seg.linkKey)} →
-              </Link>
+    <section className="py-20 bg-[#0f0f1a]">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <p className="text-orange-500 font-semibold mb-2">{t('index_93')}</p>
+        <h2 className="text-3xl lg:text-4xl font-bold mb-4">{t('index_94')}</h2>
+        <p className="text-gray-300 max-w-3xl mb-12">{t('index_95')}</p>
+        <div className="space-y-4">
+          {segments.map((seg, i) => (
+            <div key={i} className="bg-[#1a1a2e] border-l-4 border-orange-500 rounded-xl p-8 hover:bg-[#1e1e35] transition-colors">
+              <div className="flex items-center gap-4 mb-3">
+                <span className="text-3xl">{seg.icon}</span>
+                <h3 className="text-xl font-bold text-white">{seg.title}</h3>
+              </div>
+              <p className="text-gray-400 mb-4">{seg.desc}</p>
+              <a href={seg.href} className="text-orange-400 hover:text-orange-300 font-semibold">{seg.cta}</a>
             </div>
           ))}
         </div>
