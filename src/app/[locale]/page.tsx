@@ -44,13 +44,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
                 href="/become-a-partner"
                 className="inline-flex items-center justify-center bg-blue-500 hover:bg-blue-600 text-white h-14 px-10 text-lg font-semibold rounded-lg transition-colors"
               >
-                {t("index_155")}
+                {t("index_17")}
               </Link>
               <Link
                 href="/about"
                 className="inline-flex items-center justify-center border border-white/30 hover:bg-white/10 text-white h-14 px-10 text-lg font-semibold rounded-lg transition-colors"
               >
-                {t("index_24")}
+                {t("index_39")}
               </Link>
             </div>
           </div>
