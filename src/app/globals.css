@@ -13,7 +13,11 @@
   --color-card-foreground: oklch(0.13 0 0);
   --color-border: oklch(0.90 0 0);
   --color-ring: oklch(0.45 0.15 250);
-  --font-sans: var(--font-inter), system-ui, -apple-system, sans-serif;
+  --font-sans: var(--font-inter),
+      'PingFang SC', 'Noto Sans SC', 'Microsoft YaHei',
+      'Hiragino Kaku Gothic ProN', 'Noto Sans JP', 'Yu Gothic',
+      'Apple SD Gothic Neo', 'Noto Sans KR', 'Malgun Gothic',
+      system-ui, sans-serif;
 }
 
 @layer base {
