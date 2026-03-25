@@ -55,6 +55,7 @@ export default async function LocaleLayout({
             <OrganizationJsonLd />
             <WebsiteJsonLd />
             <Header />
+            <div className="h-16" aria-hidden="true" />
             <main id="main-content" className="flex-1" tabIndex={-1}>
               {children}
             </main>
