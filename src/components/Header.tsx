@@ -2,7 +2,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useRouter } from "@/i18n/navigation";
-import { useState } from "react";
+import { useState, useRef, useEffect } from "react";
 import { locales } from "@/i18n/config";
 
 const langNames: Record<string, string> = {
@@ -13,6 +13,17 @@ const langNames: Record<string, string> = {
   lv:"Latviešu",lt:"Lietuvių",ga:"Gaeilge",mt:"Malti",zh:"中文",ja:"日本語",ko:"한국어"
 };
 
+interface DropdownItem {
+  href: string;
+  label: string;
+}
+
+interface NavItem {
+  href: string;
+  label: string;
+  children?: DropdownItem[];
+}
+
 export default function Header() {
   const t = useTranslations();
   const locale = useLocale();
@@ -20,14 +31,51 @@ export default function Header() {
   const router = useRouter();
   const [mobileOpen, setMobileOpen] = useState(false);
   const [langOpen, setLangOpen] = useState(false);
+  const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
+  const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
+  const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
 
-  const navItems = [
-    { href: "/about", label: t("index_11") },
+  const navItems: NavItem[] = [
+    {
+      href: "/about",
+      label: t("index_11"),
+      children: [
+        { href: "/about", label: t("index_39") },
+        { href: "/management-board", label: t("index_151") },
+        { href: "/contact", label: t("index_152") },
+      ],
+    },
     { href: "/vendors", label: t("index_12") },
-    { href: "/services", label: t("index_13") },
+    {
+      href: "/services",
+      label: t("index_13"),
+      children: [
+        { href: "/services", label: t("services_24") },
+        { href: "/services", label: t("index_113") },
+        { href: "/services", label: t("index_154") },
+        { href: "/services", label: t("index_126") },
+      ],
+    },
     { href: "/career", label: t("index_153") },
     { href: "/contact", label: t("index_16") },
   ];
+
+  // Close dropdown when clicking outside
+  useEffect(() => {
+    const handleClick = () => { setActiveDropdown(null); setLangOpen(false); };
+    if (activeDropdown || langOpen) {
+      document.addEventListener("click", handleClick);
+      return () => document.removeEventListener("click", handleClick);
+    }
+  }, [activeDropdown, langOpen]);
+
+  const handleMouseEnter = (key: string) => {
+    if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current);
+    setActiveDropdown(key);
+  };
+  const handleMouseLeave = () => {
+    dropdownTimeout.current = setTimeout(() => setActiveDropdown(null), 150);
+  };
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-white/80 backdrop-blur-lg">
@@ -38,22 +86,52 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-8">
+        <nav className="hidden lg:flex items-center gap-1">
           {navItems.map((item) => (
-            <Link
-              key={item.href}
-              href={item.href}
-              className="text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors"
+            <div
+              key={item.href + item.label}
+              className="relative"
+              onMouseEnter={() => item.children ? handleMouseEnter(item.label) : undefined}
+              onMouseLeave={item.children ? handleMouseLeave : undefined}
             >
-              {item.label}
-            </Link>
+              <Link
+                href={item.href}
+                className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+              >
+                {item.label}
+                {item.children && (
+                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                  </svg>
+                )}
+              </Link>
+
+              {/* Desktop Dropdown */}
+              {item.children && activeDropdown === item.label && (
+                <div
+                  className="absolute left-0 top-full mt-0.5 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1.5 z-50"
+                  onMouseEnter={() => handleMouseEnter(item.label)}
+                  onMouseLeave={handleMouseLeave}
+                >
+                  {item.children.map((child, i) => (
+                    <Link
+                      key={i}
+                      href={child.href}
+                      className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
+                    >
+                      {child.label}
+                    </Link>
+                  ))}
+                </div>
+              )}
+            </div>
           ))}
         </nav>
 
         {/* Right side */}
         <div className="flex items-center gap-3">
           {/* Language selector */}
-          <div className="relative">
+          <div className="relative" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setLangOpen(!langOpen)}
               className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 px-2 py-1.5 rounded-md hover:bg-gray-100 transition-colors"
@@ -110,17 +188,53 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-gray-200 bg-white">
+        <div className="lg:hidden border-t border-gray-200 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto">
           <nav className="container mx-auto px-4 py-4 space-y-1">
             {navItems.map((item) => (
-              <Link
-                key={item.href}
-                href={item.href}
-                onClick={() => setMobileOpen(false)}
-                className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
-              >
-                {item.label}
-              </Link>
+              <div key={item.href + item.label}>
+                {item.children ? (
+                  <>
+                    {/* Parent with expand toggle */}
+                    <button
+                      onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+                      className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                    >
+                      <span>{item.label}</span>
+                      <svg
+                        className={`w-4 h-4 text-gray-400 transition-transform ${mobileExpanded === item.label ? "rotate-180" : ""}`}
+                        fill="none"
+                        viewBox="0 0 24 24"
+                        stroke="currentColor"
+                      >
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
+                      </svg>
+                    </button>
+                    {/* Expanded children */}
+                    {mobileExpanded === item.label && (
+                      <div className="ml-4 border-l-2 border-gray-200 pl-2 space-y-0.5">
+                        {item.children.map((child, i) => (
+                          <Link
+                            key={i}
+                            href={child.href}
+                            onClick={() => setMobileOpen(false)}
+                            className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-lg"
+                          >
+                            {child.label}
+                          </Link>
+                        ))}
+                      </div>
+                    )}
+                  </>
+                ) : (
+                  <Link
+                    href={item.href}
+                    onClick={() => setMobileOpen(false)}
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                  >
+                    {item.label}
+                  </Link>
+                )}
+              </div>
             ))}
             <Link
               href="/become-a-partner"
