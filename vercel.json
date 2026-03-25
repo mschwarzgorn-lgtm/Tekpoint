@@ -1,5 +1,12 @@
 {
   "buildCommand": "npm install && npm run build",
   "outputDirectory": "out",
-  "installCommand": "echo skip"
+  "installCommand": "echo skip",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/en/",
+      "permanent": false
+    }
+  ]
 }
