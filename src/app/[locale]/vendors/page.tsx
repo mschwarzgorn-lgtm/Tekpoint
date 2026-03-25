@@ -3,9 +3,23 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/vendors",
+    titleKey: "vendors_1",
+    descriptionKey: "vendors_2",
+    fallbackTitle: "Vendors — Brand Portfolio | Tekpoint",
+    fallbackDescription: "Explore Tekpoint's portfolio of 28+ leading technology brands.",
+  });
+}
+
 
 export default async function VendorsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

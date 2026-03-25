@@ -2,9 +2,21 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/become-a-partner",
+    fallbackTitle: "Become a Partner — Tekpoint",
+    fallbackDescription: "Partner with Tekpoint for technology distribution across Western, Central & Eastern Europe.",
+  });
+}
+
 
 export default async function BecomeAPartnerPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

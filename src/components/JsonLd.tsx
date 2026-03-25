@@ -8,9 +8,9 @@ export function OrganizationJsonLd() {
     description: "Leading B2B technology distributor covering Western, Central & Eastern Europe.",
     address: {
       "@type": "PostalAddress",
-      streetAddress: "Brehmstraße 12/4.OG",
+      streetAddress: "Leopold Ungar Platz 2/4.OG",
       addressLocality: "Vienna",
-      postalCode: "1110",
+      postalCode: "1190",
       addressCountry: "AT",
     },
     contactPoint: {

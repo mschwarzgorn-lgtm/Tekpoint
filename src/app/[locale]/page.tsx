@@ -9,9 +9,23 @@ import ServicesSection from "@/components/ServicesSection";
 import CtaSection from "@/components/CtaSection";
 
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "",
+    titleKey: "index_1",
+    descriptionKey: "index_2",
+    fallbackTitle: "Tekpoint — Smart Technology Distribution",
+    fallbackDescription: "Tekpoint is a leading technology distributor across Western, Central & Eastern Europe.",
+  });
+}
+
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

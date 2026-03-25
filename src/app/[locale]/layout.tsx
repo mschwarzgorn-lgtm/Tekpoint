@@ -36,18 +36,6 @@ export default async function LocaleLayout({
 
   return (
     <html lang={locale} className={inter.variable}>
-      <head>
-        {/* hreflang tags for all 30 languages */}
-        <link rel="alternate" hrefLang="x-default" href="https://tekpoint.com/en/" />
-        {routing.locales.map((l) => {
-          const hreflangMap: Record<string, string> = {
-            pt: 'pt-PT', no: 'nb', sr: 'sr-Latn', zh: 'zh-Hans',
-          };
-          return (
-            <link key={l} rel="alternate" hrefLang={hreflangMap[l] || l} href={`https://tekpoint.com/${l}/`} />
-          );
-        })}
-      </head>
       <body className="min-h-screen flex flex-col font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
           <PasswordGate>

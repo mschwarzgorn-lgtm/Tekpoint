@@ -1,9 +1,21 @@
 import { routing } from "@/i18n/routing";
 import TermsTabs from "./TermsTabs";
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/terms-and-conditions",
+    fallbackTitle: "Terms & Conditions — Tekpoint",
+    fallbackDescription: "General terms and conditions for Tekpoint GmbH.",
+  });
+}
+
 
 export default async function TermsAndConditionsPage() {
   return (

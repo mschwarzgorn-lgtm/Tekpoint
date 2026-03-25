@@ -3,9 +3,23 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/contact",
+    titleKey: "contact_1",
+    descriptionKey: "contact_2",
+    fallbackTitle: "Contact — Tekpoint",
+    fallbackDescription: "Get in touch with Tekpoint.",
+  });
+}
+
 
 const departments = [
   { icon: "📩", key: "contact_48", email: "info@tekpoint.com" },

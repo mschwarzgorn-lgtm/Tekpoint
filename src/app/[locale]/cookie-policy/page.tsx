@@ -1,8 +1,20 @@
 import { routing } from "@/i18n/routing";
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/cookie-policy",
+    fallbackTitle: "Cookie Policy — Tekpoint",
+    fallbackDescription: "Cookie and similar technologies policy for Tekpoint GmbH.",
+  });
+}
+
 
 export default async function CookiePolicyPage() {
   return (

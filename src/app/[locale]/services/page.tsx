@@ -4,9 +4,23 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/services",
+    titleKey: "services_1",
+    descriptionKey: "services_2",
+    fallbackTitle: "Services — Tekpoint",
+    fallbackDescription: "Tekpoint's comprehensive service portfolio: logistics, marketing, and partner connectivity.",
+  });
+}
+
 
 export default async function ServicesPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

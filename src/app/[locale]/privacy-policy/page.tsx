@@ -1,9 +1,21 @@
 import { routing } from "@/i18n/routing";
 import Link from "next/link";
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/privacy-policy",
+    fallbackTitle: "Privacy Policy — Tekpoint",
+    fallbackDescription: "Tekpoint GmbH privacy policy and data protection information.",
+  });
+}
+
 
 export default async function PrivacyPolicyPage({
   params,

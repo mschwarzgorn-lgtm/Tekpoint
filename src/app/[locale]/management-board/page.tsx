@@ -2,9 +2,23 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Link from "next/link";
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/management-board",
+    titleKey: "management-board_1",
+    descriptionKey: "management-board_2",
+    fallbackTitle: "Management Board — Tekpoint",
+    fallbackDescription: "Meet the Tekpoint management board.",
+  });
+}
+
 
 function LinkedInIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (

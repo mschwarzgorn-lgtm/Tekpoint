@@ -1,8 +1,20 @@
 import { routing } from "@/i18n/routing";
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/impressum",
+    fallbackTitle: "Impressum — Tekpoint",
+    fallbackDescription: "Legal notice and company information for Tekpoint GmbH.",
+  });
+}
+
 
 export default async function ImpressumPage() {
   return (

@@ -4,9 +4,23 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/about",
+    titleKey: "about_1",
+    descriptionKey: "about_2",
+    fallbackTitle: "About Us — Tekpoint",
+    fallbackDescription: "Learn about Tekpoint, experts in technology distribution across Western, Central & Eastern Europe.",
+  });
+}
+
 
 export default async function AboutPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;

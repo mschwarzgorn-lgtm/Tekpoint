@@ -2,9 +2,23 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 
+import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
+
+export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  return generatePageMetadata({
+    locale,
+    pagePath: "/career",
+    titleKey: "career_1",
+    descriptionKey: "career_2",
+    fallbackTitle: "Careers — Tekpoint",
+    fallbackDescription: "Join the Tekpoint team. Explore career opportunities.",
+  });
+}
+
 
 const vacancies = [
   { titleKey: "career_76", locationKey: "career_77", url: "https://tekpoint.com/de/career/account-manager-w-m-d-fur-baumarkte/" },
