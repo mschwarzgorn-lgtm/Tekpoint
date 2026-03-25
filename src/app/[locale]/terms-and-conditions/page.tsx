@@ -1,21 +1,27 @@
-import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import TermsTabs from "./TermsTabs";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
 }
 
-export default async function TermsPage({ params }: { params: Promise<{ locale: string }> }) {
-  const { locale } = await params;
-  setRequestLocale(locale);
+export default async function TermsAndConditionsPage() {
   return (
-    <section className="py-24 md:py-32 bg-white">
-      <div className="container mx-auto px-4 md:px-6 max-w-3xl">
-        <h1 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">Terms and Conditions</h1>
-        <div className="prose prose-gray max-w-none">
-          <p>Legal content to be populated from the original website.</p>
+    <main className="min-h-screen bg-white">
+      {/* Hero Section */}
+      <section className="bg-gray-50 border-b border-gray-200">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
+          <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
+            Terms and Conditions
+          </h1>
+          <p className="text-gray-500 text-lg">
+            Legal terms governing our business relationships
+          </p>
         </div>
-      </div>
-    </section>
+      </section>
+
+      {/* Tabs */}
+      <TermsTabs />
+    </main>
   );
 }
