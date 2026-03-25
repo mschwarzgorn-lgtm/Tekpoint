@@ -1,0 +1,8 @@
+# Tekpoint Website
+User-agent: *
+Allow: /
+
+Sitemap: https://tekpoint.com/sitemap.xml
+
+# Block admin/preview paths
+Disallow: /api/

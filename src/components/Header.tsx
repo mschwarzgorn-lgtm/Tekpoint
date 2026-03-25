@@ -2,7 +2,7 @@
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useRouter } from "@/i18n/navigation";
-import { useState, useRef, useEffect } from "react";
+import { useState, useRef, useEffect, useCallback } from "react";
 import { locales } from "@/i18n/config";
 
 const langNames: Record<string, string> = {
@@ -13,16 +13,8 @@ const langNames: Record<string, string> = {
   lv:"Latviešu",lt:"Lietuvių",ga:"Gaeilge",mt:"Malti",zh:"中文",ja:"日本語",ko:"한국어"
 };
 
-interface DropdownItem {
-  href: string;
-  label: string;
-}
-
-interface NavItem {
-  href: string;
-  label: string;
-  children?: DropdownItem[];
-}
+interface DropdownItem { href: string; label: string; }
+interface NavItem { href: string; label: string; children?: DropdownItem[]; }
 
 export default function Header() {
   const t = useTranslations();
@@ -34,6 +26,7 @@ export default function Header() {
   const [activeDropdown, setActiveDropdown] = useState<string | null>(null);
   const [mobileExpanded, setMobileExpanded] = useState<string | null>(null);
   const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
+  const mobileMenuRef = useRef<HTMLDivElement>(null);
 
   const navItems: NavItem[] = [
     {
@@ -51,16 +44,40 @@ export default function Header() {
       label: t("index_13"),
       children: [
         { href: "/services", label: t("services_24") },
-        { href: "/services", label: t("index_113") },
-        { href: "/services", label: t("index_154") },
-        { href: "/services", label: t("index_126") },
+        { href: "/services/partner-connectivity", label: t("index_113") },
+        { href: "/services/logistics", label: t("index_154") },
+        { href: "/services/marketing", label: t("index_126") },
       ],
     },
     { href: "/career", label: t("index_153") },
     { href: "/contact", label: t("index_16") },
   ];
 
-  // Close dropdown when clicking outside
+  // Body scroll lock when mobile menu is open
+  useEffect(() => {
+    if (mobileOpen) {
+      document.body.style.overflow = "hidden";
+    } else {
+      document.body.style.overflow = "";
+    }
+    return () => { document.body.style.overflow = ""; };
+  }, [mobileOpen]);
+
+  // Escape key closes mobile menu
+  const handleKeyDown = useCallback((e: KeyboardEvent) => {
+    if (e.key === "Escape") {
+      setMobileOpen(false);
+      setLangOpen(false);
+      setActiveDropdown(null);
+    }
+  }, []);
+
+  useEffect(() => {
+    document.addEventListener("keydown", handleKeyDown);
+    return () => document.removeEventListener("keydown", handleKeyDown);
+  }, [handleKeyDown]);
+
+  // Close dropdowns on outside click
   useEffect(() => {
     const handleClick = () => { setActiveDropdown(null); setLangOpen(false); };
     if (activeDropdown || langOpen) {
@@ -78,15 +95,15 @@ export default function Header() {
   };
 
   return (
-    <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-white/80 backdrop-blur-lg">
+    <header className="sticky top-0 z-50 w-full border-b border-gray-200/50 bg-white/80 backdrop-blur-lg" role="banner">
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         {/* Logo */}
-        <Link href="/" className="flex items-center gap-2 shrink-0">
-          <img src="/images/tekpoint-logo.svg" alt="Tekpoint" className="h-7 md:h-8 w-auto" />
+        <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Tekpoint — Home">
+          <img src="/images/tekpoint-logo.svg" alt="Tekpoint — Smart Technology Distribution" className="h-7 md:h-8 w-auto" width={180} height={32} />
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1">
+        <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
           {navItems.map((item) => (
             <div
               key={item.href + item.label}
@@ -94,21 +111,31 @@ export default function Header() {
               onMouseEnter={() => item.children ? handleMouseEnter(item.label) : undefined}
               onMouseLeave={item.children ? handleMouseLeave : undefined}
             >
-              <Link
-                href={item.href}
-                className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
-              >
-                {item.label}
-                {item.children && (
-                  <svg className="w-3.5 h-3.5 opacity-50" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              {item.children ? (
+                <button
+                  onClick={(e) => { e.stopPropagation(); setActiveDropdown(activeDropdown === item.label ? null : item.label); }}
+                  aria-expanded={activeDropdown === item.label}
+                  aria-haspopup="menu"
+                  className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                >
+                  {item.label}
+                  <svg className={`w-3.5 h-3.5 opacity-50 transition-transform ${activeDropdown === item.label ? "rotate-180" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                     <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                   </svg>
-                )}
-              </Link>
+                </button>
+              ) : (
+                <Link
+                  href={item.href}
+                  className="flex items-center gap-1 text-sm font-medium text-gray-600 hover:text-gray-900 transition-colors px-3 py-2 rounded-md hover:bg-gray-50"
+                >
+                  {item.label}
+                </Link>
+              )}
 
               {/* Desktop Dropdown */}
               {item.children && activeDropdown === item.label && (
                 <div
+                  role="menu"
                   className="absolute left-0 top-full mt-0.5 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1.5 z-50"
                   onMouseEnter={() => handleMouseEnter(item.label)}
                   onMouseLeave={handleMouseLeave}
@@ -117,6 +144,7 @@ export default function Header() {
                     <Link
                       key={i}
                       href={child.href}
+                      role="menuitem"
                       className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
                     >
                       {child.label}
@@ -134,18 +162,24 @@ export default function Header() {
           <div className="relative" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setLangOpen(!langOpen)}
+              aria-expanded={langOpen}
+              aria-haspopup="listbox"
+              aria-label="Select language"
               className="flex items-center gap-1.5 text-sm text-gray-600 hover:text-gray-900 px-2 py-1.5 rounded-md hover:bg-gray-100 transition-colors"
             >
-              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+              <svg className="w-4 h-4" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M21 12a9 9 0 01-9 9m9-9a9 9 0 00-9-9m9 9H3m9 9a9 9 0 01-9-9m9 9c1.657 0 3-4.03 3-9s-1.343-9-3-9m0 18c-1.657 0-3-4.03-3-9s1.343-9 3-9" />
               </svg>
               <span className="uppercase font-medium">{locale}</span>
             </button>
             {langOpen && (
-              <div className="absolute right-0 mt-2 w-48 max-h-80 overflow-y-auto bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
+              <div role="listbox" aria-label="Languages" className="absolute right-0 mt-2 w-48 max-h-80 overflow-y-auto bg-white rounded-lg shadow-lg border border-gray-200 py-1 z-50">
                 {locales.map((l) => (
                   <button
                     key={l}
+                    role="option"
+                    aria-selected={l === locale}
+                    lang={l}
                     onClick={() => {
                       router.replace(pathname, { locale: l });
                       setLangOpen(false);
@@ -166,16 +200,18 @@ export default function Header() {
             href="/become-a-partner"
             className="hidden md:inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white h-10 px-6 text-sm font-medium rounded-lg transition-colors"
           >
-            {t("index_155")}
+            {t("index_17")}
           </Link>
 
           {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 text-gray-600 hover:text-gray-900"
-            aria-label="Menu"
+            aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
+            aria-expanded={mobileOpen}
+            aria-controls="mobile-nav"
           >
-            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+            <svg className="w-6 h-6" fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true">
               {mobileOpen ? (
                 <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M6 18L18 6M6 6l12 12" />
               ) : (
@@ -188,36 +224,40 @@ export default function Header() {
 
       {/* Mobile Nav */}
       {mobileOpen && (
-        <div className="lg:hidden border-t border-gray-200 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto">
+        <div
+          id="mobile-nav"
+          ref={mobileMenuRef}
+          role="navigation"
+          aria-label="Mobile navigation"
+          className="lg:hidden border-t border-gray-200 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto"
+        >
           <nav className="container mx-auto px-4 py-4 space-y-1">
             {navItems.map((item) => (
               <div key={item.href + item.label}>
                 {item.children ? (
                   <>
-                    {/* Parent with expand toggle */}
                     <button
                       onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
-                      className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                      aria-expanded={mobileExpanded === item.label}
+                      className="flex items-center justify-between w-full px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium min-h-[44px]"
                     >
                       <span>{item.label}</span>
                       <svg
                         className={`w-4 h-4 text-gray-400 transition-transform ${mobileExpanded === item.label ? "rotate-180" : ""}`}
-                        fill="none"
-                        viewBox="0 0 24 24"
-                        stroke="currentColor"
+                        fill="none" viewBox="0 0 24 24" stroke="currentColor" aria-hidden="true"
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
                     </button>
-                    {/* Expanded children */}
                     {mobileExpanded === item.label && (
-                      <div className="ml-4 border-l-2 border-gray-200 pl-2 space-y-0.5">
+                      <div className="ml-4 border-l-2 border-gray-200 pl-2 space-y-0.5" role="menu">
                         {item.children.map((child, i) => (
                           <Link
                             key={i}
                             href={child.href}
+                            role="menuitem"
                             onClick={() => setMobileOpen(false)}
-                            className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-lg"
+                            className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-lg min-h-[44px] flex items-center"
                           >
                             {child.label}
                           </Link>
@@ -229,7 +269,7 @@ export default function Header() {
                   <Link
                     href={item.href}
                     onClick={() => setMobileOpen(false)}
-                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium"
+                    className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium min-h-[44px]"
                   >
                     {item.label}
                   </Link>
@@ -239,9 +279,9 @@ export default function Header() {
             <Link
               href="/become-a-partner"
               onClick={() => setMobileOpen(false)}
-              className="block px-4 py-3 text-blue-600 font-semibold"
+              className="block px-4 py-3 text-blue-600 font-semibold min-h-[44px]"
             >
-              {t("index_155")} →
+              {t("index_17")} →
             </Link>
           </nav>
         </div>

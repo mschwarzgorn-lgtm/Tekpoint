@@ -2,9 +2,19 @@ import { NextIntlClientProvider, hasLocale } from "next-intl";
 import { getMessages, setRequestLocale } from "next-intl/server";
 import { notFound } from "next/navigation";
 import { routing } from "@/i18n/routing";
+import { Inter } from "next/font/google";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import PasswordGate from "@/components/PasswordGate";
+import SkipLink from "@/components/SkipLink";
+import CookieConsent from "@/components/CookieConsent";
+import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
+
+const inter = Inter({
+  subsets: ["latin", "latin-ext", "cyrillic", "greek"],
+  display: "swap",
+  variable: "--font-inter",
+});
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -25,21 +35,26 @@ export default async function LocaleLayout({
   const messages = await getMessages();
 
   return (
-    <html lang={locale}>
+    <html lang={locale} className={inter.variable}>
       <head>
-        <link rel="preconnect" href="https://fonts.googleapis.com" />
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossOrigin="" />
-        <link
-          href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap"
-          rel="stylesheet"
-        />
+        {/* hreflang tags for all 30 languages */}
+        <link rel="alternate" hrefLang="x-default" href="https://tekpoint.com/en/" />
+        {routing.locales.map((l) => (
+          <link key={l} rel="alternate" hrefLang={l} href={`https://tekpoint.com/${l}/`} />
+        ))}
       </head>
-      <body className="min-h-screen flex flex-col">
+      <body className="min-h-screen flex flex-col font-sans antialiased">
         <NextIntlClientProvider messages={messages}>
           <PasswordGate>
+            <SkipLink />
+            <OrganizationJsonLd />
+            <WebsiteJsonLd />
             <Header />
-            <main className="flex-1">{children}</main>
+            <main id="main-content" className="flex-1" tabIndex={-1}>
+              {children}
+            </main>
             <Footer />
+            <CookieConsent />
           </PasswordGate>
         </NextIntlClientProvider>
       </body>
