@@ -16,7 +16,7 @@ export default function StatsSection() {
         <div className="bg-white rounded-2xl shadow-xl border border-gray-100 p-8 md:p-12 grid grid-cols-2 lg:grid-cols-4 gap-8">
           {stats.map((stat) => (
             <div key={stat.value} className="text-center">
-              <div className="text-3xl md:text-4xl font-bold text-blue-600 mb-2 min-h-[4.5rem] lg:min-h-0 flex items-end justify-center">{stat.value}</div>
+              <div className="text-2xl sm:text-3xl md:text-4xl font-bold text-blue-600 mb-2">{stat.value}</div>
               <div className="text-sm font-medium text-gray-700">{stat.label}</div>
             </div>
           ))}
