@@ -28,6 +28,14 @@ function LinkedInIcon({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
+function XIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+    </svg>
+  );
+}
+
 function GlobeIcon({ className = "w-5 h-5" }: { className?: string }) {
   return (
     <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
@@ -93,6 +101,17 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
                 >
                   <LinkedInIcon className="w-5 h-5" />
                   <span className="text-sm font-medium">LinkedIn</span>
+                </a>
+                <span className="text-gray-300">|</span>
+                <a
+                  href="https://x.com/MarkSchwarzgorn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-gray-800 hover:text-black transition-colors"
+                  aria-label="Mark Schwarzgorn on X"
+                >
+                  <XIcon className="w-5 h-5" />
+                  <span className="text-sm font-medium">X</span>
                 </a>
                 <span className="text-gray-300">|</span>
                 <a
