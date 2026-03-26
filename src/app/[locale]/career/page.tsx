@@ -78,12 +78,12 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center">
               <div className="bg-blue-50 rounded-2xl p-8">
-                <p className="text-4xl font-bold text-blue-600 mb-2">{t("career_23")}</p>
-                <p className="text-gray-600 text-sm">{t("career_24")}</p>
+                <p className="text-4xl font-bold text-blue-600 mb-2">80+</p>
+                <p className="text-gray-600 text-sm">{t("career_25")}</p>
               </div>
               <div className="bg-blue-50 rounded-2xl p-8">
                 <p className="text-4xl font-bold text-blue-600 mb-2">23+</p>
-                <p className="text-gray-600 text-sm">{t("career_25")}</p>
+                <p className="text-gray-600 text-sm">{t("career_39")}</p>
               </div>
               <div className="bg-blue-50 rounded-2xl p-8">
                 <p className="text-4xl font-bold text-blue-600 mb-2">10+</p>
