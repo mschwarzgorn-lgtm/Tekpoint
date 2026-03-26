@@ -43,18 +43,21 @@ const services = [
     descKey: "services_49",
     ctaKey: "services_50",
     icon: "📦",
+    href: "/services/logistics" as const,
   },
   {
     titleKey: "services_51",
     descKey: "services_52",
     ctaKey: "services_53",
     icon: "📢",
+    href: "/services/marketing" as const,
   },
   {
     titleKey: "services_54",
     descKey: "services_55",
     ctaKey: "services_56",
     icon: "🔗",
+    href: "/services/partner-connectivity" as const,
   },
 ];
 
@@ -151,12 +154,12 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
             {services.map((svc) => (
-              <div key={svc.titleKey} className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all">
+              <Link key={svc.titleKey} href={svc.href} className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all">
                 <div className="text-4xl mb-6">{svc.icon}</div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{t(svc.titleKey)}</h3>
                 <p className="text-gray-600 leading-relaxed mb-6">{t(svc.descKey)}</p>
                 <span className="text-blue-600 font-medium text-sm">{t(svc.ctaKey)}</span>
-              </div>
+              </Link>
             ))}
           </div>
         </div>
