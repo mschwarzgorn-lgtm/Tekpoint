@@ -87,7 +87,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
           </div>
 
           <div className="mt-16">
-            <h3 className="text-xl font-semibold text-gray-900 mb-8 text-center">More Partners</h3>
+            <h3 className="text-xl font-semibold text-gray-900 mb-8 text-center">{t("vendors_78")}</h3>
             <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-4 gap-6">
               {moreBrands.map((brand) => (
                 <div key={brand.name} className="bg-gray-50 rounded-xl border border-gray-200 p-6 flex items-center justify-center h-24">
