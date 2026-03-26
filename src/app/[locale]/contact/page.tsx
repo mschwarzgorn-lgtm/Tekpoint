@@ -59,7 +59,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
 
           {/* Market Map */}
           <div className="mb-16 rounded-2xl overflow-hidden shadow-lg">
-            <img src="/images/market-map.png" alt="Tekpoint office locations across Europe" className="w-full h-auto" />
+            <img src="/images/eu-coverage-map.jpg" alt="Tekpoint office locations across Europe" className="w-full h-auto" />
           </div>
 
           {/* Office Cards */}
