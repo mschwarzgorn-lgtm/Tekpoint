@@ -816,8 +816,8 @@
   "services_15": "Ryhdy kumppaniksi →",
   "services_16": "Palvelut-kansikuva",
   "services_17": "Meistä",
-  "services_18": "Yksilöllinen käsittely",
-  "services_19": "sinun",
+  "services_18": "sinun",
+  "services_19": "varastosi",
   "services_2": "Tekpointin kattava palveluvalikoima kattaa logistiikan, markkinoinnin ja kumppaniyhteydet — luotettavasti yrityksesi rinnalla.",
   "services_20": "varastosi",
   "services_21": "Kattavat palveluratkaisut, jotka kattavat koko teknologisen elinkaaren — logistiikasta markkinointiin ja kumppaniyhteyksiin.",
@@ -844,7 +844,7 @@
   "services_40": "Joustavat ja yksilöllisesti koordinoidut työprosessit",
   "services_41": "Kansainvälinen tiimi erinomaisilla viestintätaidoilla",
   "services_42": "Brändinrakennuksen ja markkinoinnin toteutus",
-  "services_43": "Digitaalinen ja nopea raportointi",
+  "services_43": "Ryhdy kumppaniksi →",
   "services_44": "Edut valmistajille",
   "services_45": "Palvelujemme pilarit",
   "services_46": "Tutustu ydinpalveluihimme",
@@ -1024,5 +1024,6 @@
   "become-a-partner_39": "Start Your Partnership Today",
   "become-a-partner_40": "Download our Trading Application Form, complete it, and send it to our distribution team. We look forward to partnering with you.",
   "become-a-partner_41": "Download Application Form",
-  "become-a-partner_42": "Contact Us"
+  "become-a-partner_42": "Contact Us",
+  "career_110": "Tekpoint Kununussa"
 }
