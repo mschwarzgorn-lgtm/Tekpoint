@@ -56,11 +56,11 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
                 </Link>
               </div>
             </div>
-            <div className="grid grid-cols-2 gap-4">
+            <div className="grid grid-cols-2 gap-4 items-start">
               <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-100">
-                <img src="/images/team-image1-jpg.webp" alt={t("about_33")} className="w-full h-full object-cover" />
+                <img src="/images/team/mark-schwarzgorn.png" alt={t("about_33")} className="w-full h-full object-cover" />
               </div>
-              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-100 mt-8">
+              <div className="aspect-[4/5] rounded-2xl overflow-hidden bg-gray-100 md:mt-8">
                 <img src="/images/DSC_7249-Exposure-min.jpg" alt={t("about_34")} className="w-full h-full object-cover" />
               </div>
             </div>
