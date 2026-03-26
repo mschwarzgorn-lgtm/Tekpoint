@@ -2,6 +2,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
+import { Mail, Handshake, Truck, Megaphone, Link2, ShoppingCart, Briefcase, MapPin, Phone, FilePenLine, RefreshCw } from "lucide-react";
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -22,13 +23,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 
 const departments = [
-  { icon: "📩", key: "contact_48", email: "info@tekpoint.com" },
-  { icon: "🤝", key: "contact_49", email: "distribution@tekpoint.com" },
-  { icon: "🚚", label: "Logistics", email: "logistik-kontaktformular@tekpoint.com" },
-  { icon: "📢", key: "contact_50", email: "marketing@tekpoint.com" },
-  { icon: "🔗", label: "Partner Connectivity", email: "partnerconnectivity@tekpoint.com" },
-  { icon: "🛒", key: "contact_51", email: "d2c@tekpoint.com" },
-  { icon: "💼", key: "contact_52", email: "jobs@tekpoint.com" },
+  { icon: <Mail className="w-5 h-5 text-blue-600" />, key: "contact_48", email: "info@tekpoint.com" },
+  { icon: <Handshake className="w-5 h-5 text-blue-600" />, key: "contact_49", email: "distribution@tekpoint.com" },
+  { icon: <Truck className="w-5 h-5 text-blue-600" />, label: "Logistics", email: "logistik-kontaktformular@tekpoint.com" },
+  { icon: <Megaphone className="w-5 h-5 text-blue-600" />, key: "contact_50", email: "marketing@tekpoint.com" },
+  { icon: <Link2 className="w-5 h-5 text-blue-600" />, label: "Partner Connectivity", email: "partnerconnectivity@tekpoint.com" },
+  { icon: <ShoppingCart className="w-5 h-5 text-blue-600" />, key: "contact_51", email: "d2c@tekpoint.com" },
+  { icon: <Briefcase className="w-5 h-5 text-blue-600" />, key: "contact_52", email: "jobs@tekpoint.com" },
 ];
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -71,15 +72,15 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <p className="text-sm text-blue-600 font-medium mb-4">{t("contact_32")}</p>
               <div className="space-y-3 text-sm text-gray-600">
                 <div className="flex items-start gap-2">
-                  <span>📍</span>
+                  <MapPin className="w-4 h-4 text-gray-400 shrink-0 mt-0.5" />
                   <span>{t("contact_33")}<br />{t("contact_34")}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span>📞</span>
+                  <Phone className="w-4 h-4 text-gray-400 shrink-0" />
                   <a href="tel:+4313616670" className="hover:text-blue-600 transition-colors">+43 136 16670</a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span>{t("contact_35")}</span>
+                  <Mail className="w-4 h-4 text-gray-400 shrink-0" />
                   <a href="mailto:dach@tekpoint.com" className="hover:text-blue-600 transition-colors">dach@tekpoint.com</a>
                 </div>
               </div>
@@ -92,15 +93,15 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <p className="text-sm text-blue-600 font-medium mb-4">{t("contact_37")}</p>
               <div className="space-y-3 text-sm text-gray-600">
                 <div className="flex items-start gap-2">
-                  <span>📍</span>
+                  <MapPin className="w-4 h-4 text-gray-400 shrink-0 mt-0.5" />
                   <span>{t("contact_38")}<br />{t("contact_39")}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span>📞</span>
+                  <Phone className="w-4 h-4 text-gray-400 shrink-0" />
                   <a href="tel:+4921136183789" className="hover:text-blue-600 transition-colors">+49 211 36183789-0</a>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span>{t("contact_35")}</span>
+                  <Mail className="w-4 h-4 text-gray-400 shrink-0" />
                   <a href="mailto:dach@tekpoint.com" className="hover:text-blue-600 transition-colors">dach@tekpoint.com</a>
                 </div>
               </div>
@@ -113,11 +114,11 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
               <p className="text-sm text-blue-600 font-medium mb-4">{t("contact_42")}</p>
               <div className="space-y-3 text-sm text-gray-600">
                 <div className="flex items-start gap-2">
-                  <span>📍</span>
+                  <MapPin className="w-4 h-4 text-gray-400 shrink-0 mt-0.5" />
                   <span>{t("contact_43")}<br />{t("contact_44")}</span>
                 </div>
                 <div className="flex items-center gap-2">
-                  <span>{t("contact_35")}</span>
+                  <Mail className="w-4 h-4 text-gray-400 shrink-0" />
                   <a href="mailto:info@tekpoint.com" className="hover:text-blue-600 transition-colors">info@tekpoint.com</a>
                 </div>
               </div>
@@ -137,7 +138,9 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-6">
             {departments.map((dept) => (
               <div key={dept.email} className="bg-white rounded-xl p-6 hover:shadow-md transition-shadow">
-                <div className="text-2xl mb-3">{dept.icon}</div>
+                <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-3">
+                  {dept.icon}
+                </div>
                 <p className="font-semibold text-gray-900 mb-2">{dept.key ? t(dept.key) : dept.label}</p>
                 <a href={`mailto:${dept.email}`} className="text-sm text-blue-600 hover:underline break-all">{dept.email}</a>
               </div>
@@ -156,14 +159,18 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
             <Link href="/become-a-partner" className="flex items-center gap-4 bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow group">
-              <span className="text-2xl">📝</span>
+              <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
+                <FilePenLine className="w-5 h-5 text-blue-600" />
+              </div>
               <div>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{t("contact_56")}</p>
                 <p className="text-sm text-gray-500">{t("contact_57")}</p>
               </div>
             </Link>
             <a href="mailto:logistik-kontaktformular@tekpoint.com" className="flex items-center gap-4 bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow group">
-              <span className="text-2xl">🔄</span>
+              <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center shrink-0">
+                <RefreshCw className="w-5 h-5 text-blue-600" />
+              </div>
               <div>
                 <p className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{t("contact_58")}</p>
                 <p className="text-sm text-gray-500">{t("contact_59")}</p>

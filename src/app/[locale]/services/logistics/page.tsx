@@ -3,6 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { generatePageMetadata } from "@/lib/seo";
+import { Package, RefreshCcw, Gift, Wrench, Rocket, Megaphone, Link2 } from "lucide-react";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const logisticsServices = [
   {
-    icon: "📦",
+    icon: <Package className="w-6 h-6 text-blue-600" />,
     titleKey: "services-logistics_42",
     targetKey: "services-logistics_43",
     challengeKey: "services-logistics_45",
@@ -30,7 +31,7 @@ const logisticsServices = [
     benefitsKey: "services-logistics_49",
   },
   {
-    icon: "♻️",
+    icon: <RefreshCcw className="w-6 h-6 text-blue-600" />,
     titleKey: "services-logistics_51",
     targetKey: "services-logistics_52",
     challengeKey: "services-logistics_53",
@@ -38,7 +39,7 @@ const logisticsServices = [
     benefitsKey: "services-logistics_55",
   },
   {
-    icon: "🎁",
+    icon: <Gift className="w-6 h-6 text-blue-600" />,
     titleKey: "services-logistics_56",
     targetKey: "services-logistics_52",
     challengeKey: "services-logistics_57",
@@ -46,7 +47,7 @@ const logisticsServices = [
     benefitsKey: "services-logistics_59",
   },
   {
-    icon: "🔧",
+    icon: <Wrench className="w-6 h-6 text-blue-600" />,
     titleKey: "services-logistics_60",
     targetKey: "services-logistics_52",
     challengeKey: "services-logistics_61",
@@ -54,7 +55,7 @@ const logisticsServices = [
     benefitsKey: "services-logistics_63",
   },
   {
-    icon: "🚀",
+    icon: <Rocket className="w-6 h-6 text-blue-600" />,
     titleKey: "services-logistics_64",
     targetKey: "services-logistics_52",
     challengeKey: "services-logistics_65",
@@ -145,7 +146,9 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {logisticsServices.map((svc) => (
               <div key={svc.titleKey} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
-                <div className="text-4xl mb-4">{svc.icon}</div>
+                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                  {svc.icon}
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(svc.titleKey)}</h3>
                 <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-blue-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
                   {t(svc.targetKey)}
@@ -153,19 +156,19 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
 
                 {/* Challenge */}
                 <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-lg p-4 mb-4">
-                  <p className="text-xs font-bold uppercase text-orange-700 mb-1">⚡ {t("services-logistics_44")}</p>
+                  <p className="text-xs font-bold uppercase text-orange-700 mb-1">{t("services-logistics_44")}</p>
                   <p className="text-sm text-gray-700">{t(svc.challengeKey)}</p>
                 </div>
 
                 {/* Solution */}
                 <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-4 mb-4">
-                  <p className="text-xs font-bold uppercase text-blue-700 mb-1">✅ {t("services-logistics_46")}</p>
+                  <p className="text-xs font-bold uppercase text-blue-700 mb-1">{t("services-logistics_46")}</p>
                   <p className="text-sm text-gray-700">{t(svc.solutionKey)}</p>
                 </div>
 
                 {/* Benefits */}
                 <div className="bg-green-50 border-l-4 border-green-400 rounded-r-lg p-4">
-                  <p className="text-xs font-bold uppercase text-green-700 mb-1">🏆 {t("services-logistics_48")}</p>
+                  <p className="text-xs font-bold uppercase text-green-700 mb-1">{t("services-logistics_48")}</p>
                   <p className="text-sm text-gray-700">{t(svc.benefitsKey)}</p>
                 </div>
               </div>
@@ -190,7 +193,9 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link href="/services/marketing" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="text-3xl mb-4">📢</div>
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                <Megaphone className="w-6 h-6 text-blue-600" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-logistics_71")}
               </h3>
@@ -198,7 +203,9 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
               <span className="text-[#1a6bc4] font-medium text-sm">{t("services-logistics_73")}</span>
             </Link>
             <Link href="/services/partner-connectivity" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="text-3xl mb-4">🔗</div>
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                <Link2 className="w-6 h-6 text-blue-600" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-logistics_17")}
               </h3>

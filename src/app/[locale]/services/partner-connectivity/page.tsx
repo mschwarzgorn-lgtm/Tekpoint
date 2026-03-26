@@ -3,6 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { generatePageMetadata } from "@/lib/seo";
+import { RefreshCw, Settings, Construction, Package, Megaphone } from "lucide-react";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -22,25 +23,25 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const ediSteps = [
   {
-    icon: "📋",
+    step: 1,
     stepKey: "services-partner-connectivity_48",
     titleKey: "services-partner-connectivity_49",
     descKey: "services-partner-connectivity_50",
   },
   {
-    icon: "✅",
+    step: 2,
     stepKey: "services-partner-connectivity_51",
     titleKey: "services-partner-connectivity_52",
     descKey: "services-partner-connectivity_53",
   },
   {
-    icon: "🚚",
+    step: 3,
     stepKey: "services-partner-connectivity_54",
     titleKey: "services-partner-connectivity_55",
     descKey: "services-partner-connectivity_56",
   },
   {
-    icon: "🧾",
+    step: 4,
     stepKey: "services-partner-connectivity_57",
     titleKey: "services-partner-connectivity_58",
     descKey: "services-partner-connectivity_59",
@@ -95,12 +96,14 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
           {/* 3 Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {[
-              { iconEmoji: "🔄", titleKey: "services-partner-connectivity_29", descKey: "services-partner-connectivity_30" },
-              { iconEmoji: "⚙️", titleKey: "services-partner-connectivity_31", descKey: "services-partner-connectivity_32" },
-              { iconEmoji: "🏗️", titleKey: "services-partner-connectivity_34", descKey: "services-partner-connectivity_35" },
+              { icon: <RefreshCw className="w-6 h-6 text-blue-600" />, titleKey: "services-partner-connectivity_29", descKey: "services-partner-connectivity_30" },
+              { icon: <Settings className="w-6 h-6 text-blue-600" />, titleKey: "services-partner-connectivity_31", descKey: "services-partner-connectivity_32" },
+              { icon: <Construction className="w-6 h-6 text-blue-600" />, titleKey: "services-partner-connectivity_34", descKey: "services-partner-connectivity_35" },
             ].map((feat, i) => (
               <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
-                <div className="text-4xl mb-4">{feat.iconEmoji}</div>
+                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4 mx-auto">
+                  {feat.icon}
+                </div>
                 <h3 className="text-lg font-semibold text-gray-900 mb-2">{t(feat.titleKey)}</h3>
                 <p className="text-sm text-gray-600 leading-relaxed">{t(feat.descKey)}</p>
               </div>
@@ -164,7 +167,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
                 )}
                 {/* Step number circle */}
                 <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1a6bc4] text-white flex items-center justify-center text-lg font-bold shadow-lg">
-                  {step.icon}
+                  {step.step}
                 </div>
                 {/* Content */}
                 <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex-1">
@@ -196,7 +199,9 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="text-3xl mb-4">📦</div>
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                <Package className="w-6 h-6 text-blue-600" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-partner-connectivity_18")}
               </h3>
@@ -204,7 +209,9 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
               <span className="text-[#1a6bc4] font-medium text-sm">{t("services-partner-connectivity_64")}</span>
             </Link>
             <Link href="/services/marketing" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="text-3xl mb-4">📢</div>
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                <Megaphone className="w-6 h-6 text-blue-600" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-partner-connectivity_19")}
               </h3>

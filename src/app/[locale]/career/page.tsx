@@ -1,6 +1,7 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import { Rocket, Lightbulb, Handshake, Scale, Gem } from "lucide-react";
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -31,11 +32,11 @@ const benefitKeys = [64, 65, 66, 67, 68, 69, 70, 72];
 const countryKeys = Array.from({ length: 21 }, (_, i) => `career_${41 + i}`);
 
 const valueKeys = [
-  { key: "career_30", icon: "🚀" },
-  { key: "career_31", icon: "💡" },
-  { key: "career_32", icon: "🤝" },
-  { key: "career_34", icon: "⚖️" },
-  { key: "career_35", icon: "💎" },
+  { key: "career_30", icon: <Rocket className="w-5 h-5 text-blue-600" /> },
+  { key: "career_31", icon: <Lightbulb className="w-5 h-5 text-blue-600" /> },
+  { key: "career_32", icon: <Handshake className="w-5 h-5 text-blue-600" /> },
+  { key: "career_34", icon: <Scale className="w-5 h-5 text-blue-600" /> },
+  { key: "career_35", icon: <Gem className="w-5 h-5 text-blue-600" /> },
 ];
 
 export default async function CareerPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -93,7 +94,9 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
           <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
             {valueKeys.map((v) => (
               <div key={v.key} className="bg-white rounded-xl px-6 py-4 shadow-sm flex items-center gap-3">
-                <span className="text-2xl">{v.icon}</span>
+                <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
+                  {v.icon}
+                </div>
                 <span className="font-medium text-gray-900">{t(v.key)}</span>
               </div>
             ))}

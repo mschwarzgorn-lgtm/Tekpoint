@@ -3,6 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { generatePageMetadata } from "@/lib/seo";
+import { Rocket, Smartphone, Newspaper, Store, Building2, Palette, PartyPopper, Package, Link2 } from "lucide-react";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -22,7 +23,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 
 const marketingServices = [
   {
-    icon: "🚀",
+    icon: <Rocket className="w-6 h-6 text-blue-600" />,
     titleKey: "services-marketing_38",
     targetKey: "services-marketing_40",
     challengeKey: "services-marketing_42",
@@ -30,7 +31,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_46",
   },
   {
-    icon: "📱",
+    icon: <Smartphone className="w-6 h-6 text-blue-600" />,
     titleKey: "services-marketing_47",
     targetKey: "services-marketing_48",
     challengeKey: "services-marketing_49",
@@ -38,7 +39,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_51",
   },
   {
-    icon: "📰",
+    icon: <Newspaper className="w-6 h-6 text-blue-600" />,
     titleKey: "services-marketing_52",
     targetKey: "services-marketing_40",
     challengeKey: "services-marketing_53",
@@ -46,7 +47,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_55",
   },
   {
-    icon: "🏪",
+    icon: <Store className="w-6 h-6 text-blue-600" />,
     titleKey: "services-marketing_56",
     targetKey: "services-marketing_40",
     challengeKey: "services-marketing_57",
@@ -54,7 +55,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_59",
   },
   {
-    icon: "🏙️",
+    icon: <Building2 className="w-6 h-6 text-blue-600" />,
     titleKey: "services-marketing_61",
     targetKey: "services-marketing_40",
     challengeKey: "services-marketing_62",
@@ -62,7 +63,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_64",
   },
   {
-    icon: "🎨",
+    icon: <Palette className="w-6 h-6 text-blue-600" />,
     titleKey: "services-marketing_65",
     targetKey: "services-marketing_66",
     challengeKey: "services-marketing_67",
@@ -70,7 +71,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_69",
   },
   {
-    icon: "🎉",
+    icon: <PartyPopper className="w-6 h-6 text-blue-600" />,
     titleKey: "services-marketing_70",
     targetKey: "services-marketing_71",
     challengeKey: "services-marketing_72",
@@ -165,7 +166,9 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
             {marketingServices.map((svc) => (
               <div key={svc.titleKey} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
-                <div className="text-4xl mb-4">{svc.icon}</div>
+                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                  {svc.icon}
+                </div>
                 <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(svc.titleKey)}</h3>
                 <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-blue-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
                   {t("services-marketing_39")} {t(svc.targetKey)}
@@ -210,7 +213,9 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="text-3xl mb-4">📦</div>
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                <Package className="w-6 h-6 text-blue-600" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-marketing_18")}
               </h3>
@@ -218,7 +223,9 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
               <span className="text-[#1a6bc4] font-medium text-sm">{t("services-marketing_79")}</span>
             </Link>
             <Link href="/services/partner-connectivity" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="text-3xl mb-4">🔗</div>
+              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
+                <Link2 className="w-6 h-6 text-blue-600" />
+              </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-marketing_17")}
               </h3>
