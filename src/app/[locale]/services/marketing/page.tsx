@@ -3,6 +3,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { generatePageMetadata } from "@/lib/seo";
+import Image from "next/image";
 import { Rocket, Smartphone, Newspaper, Store, Building2, Palette, PartyPopper, Package, Link2 } from "lucide-react";
 
 export function generateStaticParams() {
@@ -21,9 +22,21 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
+const iconMap = {
+  rocket: Rocket,
+  smartphone: Smartphone,
+  newspaper: Newspaper,
+  store: Store,
+  building2: Building2,
+  palette: Palette,
+  partyPopper: PartyPopper,
+  package: Package,
+  link2: Link2,
+};
+
 const marketingServices = [
   {
-    icon: <Rocket className="w-6 h-6 text-blue-600" />,
+    iconName: "rocket" as const,
     titleKey: "services-marketing_38",
     targetKey: "services-marketing_40",
     challengeKey: "services-marketing_42",
@@ -31,7 +44,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_46",
   },
   {
-    icon: <Smartphone className="w-6 h-6 text-blue-600" />,
+    iconName: "smartphone" as const,
     titleKey: "services-marketing_47",
     targetKey: "services-marketing_48",
     challengeKey: "services-marketing_49",
@@ -39,7 +52,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_51",
   },
   {
-    icon: <Newspaper className="w-6 h-6 text-blue-600" />,
+    iconName: "newspaper" as const,
     titleKey: "services-marketing_52",
     targetKey: "services-marketing_40",
     challengeKey: "services-marketing_53",
@@ -47,7 +60,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_55",
   },
   {
-    icon: <Store className="w-6 h-6 text-blue-600" />,
+    iconName: "store" as const,
     titleKey: "services-marketing_56",
     targetKey: "services-marketing_40",
     challengeKey: "services-marketing_57",
@@ -55,7 +68,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_59",
   },
   {
-    icon: <Building2 className="w-6 h-6 text-blue-600" />,
+    iconName: "building2" as const,
     titleKey: "services-marketing_61",
     targetKey: "services-marketing_40",
     challengeKey: "services-marketing_62",
@@ -63,7 +76,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_64",
   },
   {
-    icon: <Palette className="w-6 h-6 text-blue-600" />,
+    iconName: "palette" as const,
     titleKey: "services-marketing_65",
     targetKey: "services-marketing_66",
     challengeKey: "services-marketing_67",
@@ -71,7 +84,7 @@ const marketingServices = [
     benefitsKey: "services-marketing_69",
   },
   {
-    icon: <PartyPopper className="w-6 h-6 text-blue-600" />,
+    iconName: "partyPopper" as const,
     titleKey: "services-marketing_70",
     targetKey: "services-marketing_71",
     challengeKey: "services-marketing_72",
@@ -88,8 +101,10 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0a1628] via-[#0f2341] to-[#0a1628] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <Image src="/images/image_new26-scaled.webp" alt="" fill className="object-cover" priority />
+        <div className="absolute inset-0 bg-[#0a1628]/75" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-white transition-colors">{t("services-marketing_23")}</Link>
             <span>/</span>
@@ -164,35 +179,38 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {marketingServices.map((svc) => (
-              <div key={svc.titleKey} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
-                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
-                  {svc.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(svc.titleKey)}</h3>
-                <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-blue-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
-                  {t("services-marketing_39")} {t(svc.targetKey)}
-                </span>
+            {marketingServices.map((svc) => {
+              const Icon = iconMap[svc.iconName];
+              return (
+                <div key={svc.titleKey} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                    {Icon && <Icon className="w-6 h-6 text-blue-600" />}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(svc.titleKey)}</h3>
+                  <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-blue-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
+                    {t("services-marketing_39")} {t(svc.targetKey)}
+                  </span>
 
-                {/* Challenge */}
-                <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-lg p-4 mb-4">
-                  <p className="text-xs font-bold uppercase text-orange-700 mb-1">{t("services-marketing_41")}</p>
-                  <p className="text-sm text-gray-700">{t(svc.challengeKey)}</p>
-                </div>
+                  {/* Challenge */}
+                  <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-lg p-4 mb-4">
+                    <p className="text-xs font-bold uppercase text-orange-700 mb-1">{t("services-marketing_41")}</p>
+                    <p className="text-sm text-gray-700">{t(svc.challengeKey)}</p>
+                  </div>
 
-                {/* Solution */}
-                <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-4 mb-4">
-                  <p className="text-xs font-bold uppercase text-blue-700 mb-1">{t("services-marketing_43")}</p>
-                  <p className="text-sm text-gray-700">{t(svc.solutionKey)}</p>
-                </div>
+                  {/* Solution */}
+                  <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-4 mb-4">
+                    <p className="text-xs font-bold uppercase text-blue-700 mb-1">{t("services-marketing_43")}</p>
+                    <p className="text-sm text-gray-700">{t(svc.solutionKey)}</p>
+                  </div>
 
-                {/* Benefits */}
-                <div className="bg-green-50 border-l-4 border-green-400 rounded-r-lg p-4 mt-auto">
-                  <p className="text-xs font-bold uppercase text-green-700 mb-1">{t("services-marketing_45")}</p>
-                  <p className="text-sm text-gray-700">{t(svc.benefitsKey)}</p>
+                  {/* Benefits */}
+                  <div className="bg-green-50 border-l-4 border-green-400 rounded-r-lg p-4 mt-auto">
+                    <p className="text-xs font-bold uppercase text-green-700 mb-1">{t("services-marketing_45")}</p>
+                    <p className="text-sm text-gray-700">{t(svc.benefitsKey)}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -213,8 +231,8 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
-                <Package className="w-6 h-6 text-blue-600" />
+              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <Package className="w-5 h-5 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-marketing_18")}
@@ -223,8 +241,8 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
               <span className="text-[#1a6bc4] font-medium text-sm">{t("services-marketing_79")}</span>
             </Link>
             <Link href="/services/partner-connectivity" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
-                <Link2 className="w-6 h-6 text-blue-600" />
+              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <Link2 className="w-5 h-5 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-marketing_17")}

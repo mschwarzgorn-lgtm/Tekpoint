@@ -3,7 +3,8 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { generatePageMetadata } from "@/lib/seo";
-import { Package, RefreshCcw, Gift, Wrench, Rocket, Megaphone, Link2 } from "lucide-react";
+import Image from "next/image";
+import { Package, RefreshCcw, Gift, Wrench, Rocket, Zap, CheckCircle, Trophy, Megaphone, Link2 } from "lucide-react";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -21,9 +22,19 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
+const iconMap = {
+  package: Package,
+  refreshCcw: RefreshCcw,
+  gift: Gift,
+  wrench: Wrench,
+  rocket: Rocket,
+  megaphone: Megaphone,
+  link2: Link2,
+};
+
 const logisticsServices = [
   {
-    icon: <Package className="w-6 h-6 text-blue-600" />,
+    iconName: "package" as const,
     titleKey: "services-logistics_42",
     targetKey: "services-logistics_43",
     challengeKey: "services-logistics_45",
@@ -31,7 +42,7 @@ const logisticsServices = [
     benefitsKey: "services-logistics_49",
   },
   {
-    icon: <RefreshCcw className="w-6 h-6 text-blue-600" />,
+    iconName: "refreshCcw" as const,
     titleKey: "services-logistics_51",
     targetKey: "services-logistics_52",
     challengeKey: "services-logistics_53",
@@ -39,7 +50,7 @@ const logisticsServices = [
     benefitsKey: "services-logistics_55",
   },
   {
-    icon: <Gift className="w-6 h-6 text-blue-600" />,
+    iconName: "gift" as const,
     titleKey: "services-logistics_56",
     targetKey: "services-logistics_52",
     challengeKey: "services-logistics_57",
@@ -47,7 +58,7 @@ const logisticsServices = [
     benefitsKey: "services-logistics_59",
   },
   {
-    icon: <Wrench className="w-6 h-6 text-blue-600" />,
+    iconName: "wrench" as const,
     titleKey: "services-logistics_60",
     targetKey: "services-logistics_52",
     challengeKey: "services-logistics_61",
@@ -55,7 +66,7 @@ const logisticsServices = [
     benefitsKey: "services-logistics_63",
   },
   {
-    icon: <Rocket className="w-6 h-6 text-blue-600" />,
+    iconName: "rocket" as const,
     titleKey: "services-logistics_64",
     targetKey: "services-logistics_52",
     challengeKey: "services-logistics_65",
@@ -72,8 +83,10 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0a1628] via-[#0f2341] to-[#0a1628] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <Image src="/images/image_new24-scaled.webp" alt="" fill className="object-cover" priority />
+        <div className="absolute inset-0 bg-[#0a1628]/75" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-white transition-colors">{t("services-logistics_23")}</Link>
             <span>/</span>
@@ -144,35 +157,38 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
           </div>
 
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
-            {logisticsServices.map((svc) => (
-              <div key={svc.titleKey} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
-                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
-                  {svc.icon}
-                </div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(svc.titleKey)}</h3>
-                <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-blue-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
-                  {t(svc.targetKey)}
-                </span>
+            {logisticsServices.map((svc) => {
+              const Icon = iconMap[svc.iconName];
+              return (
+                <div key={svc.titleKey} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                    {Icon && <Icon className="w-6 h-6 text-blue-600" />}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(svc.titleKey)}</h3>
+                  <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-blue-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
+                    {t(svc.targetKey)}
+                  </span>
 
-                {/* Challenge */}
-                <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-lg p-4 mb-4">
-                  <p className="text-xs font-bold uppercase text-orange-700 mb-1">{t("services-logistics_44")}</p>
-                  <p className="text-sm text-gray-700">{t(svc.challengeKey)}</p>
-                </div>
+                  {/* Challenge */}
+                  <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-lg p-4 mb-4">
+                    <p className="text-xs font-bold uppercase text-orange-700 mb-1 flex items-center gap-1"><Zap className="w-3.5 h-3.5" /> {t("services-logistics_44")}</p>
+                    <p className="text-sm text-gray-700">{t(svc.challengeKey)}</p>
+                  </div>
 
-                {/* Solution */}
-                <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-4 mb-4">
-                  <p className="text-xs font-bold uppercase text-blue-700 mb-1">{t("services-logistics_46")}</p>
-                  <p className="text-sm text-gray-700">{t(svc.solutionKey)}</p>
-                </div>
+                  {/* Solution */}
+                  <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-4 mb-4">
+                    <p className="text-xs font-bold uppercase text-blue-700 mb-1 flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5" /> {t("services-logistics_46")}</p>
+                    <p className="text-sm text-gray-700">{t(svc.solutionKey)}</p>
+                  </div>
 
-                {/* Benefits */}
-                <div className="bg-green-50 border-l-4 border-green-400 rounded-r-lg p-4">
-                  <p className="text-xs font-bold uppercase text-green-700 mb-1">{t("services-logistics_48")}</p>
-                  <p className="text-sm text-gray-700">{t(svc.benefitsKey)}</p>
+                  {/* Benefits */}
+                  <div className="bg-green-50 border-l-4 border-green-400 rounded-r-lg p-4">
+                    <p className="text-xs font-bold uppercase text-green-700 mb-1 flex items-center gap-1"><Trophy className="w-3.5 h-3.5" /> {t("services-logistics_48")}</p>
+                    <p className="text-sm text-gray-700">{t(svc.benefitsKey)}</p>
+                  </div>
                 </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -193,8 +209,8 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link href="/services/marketing" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
-                <Megaphone className="w-6 h-6 text-blue-600" />
+              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <Megaphone className="w-5 h-5 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-logistics_71")}
@@ -203,8 +219,8 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
               <span className="text-[#1a6bc4] font-medium text-sm">{t("services-logistics_73")}</span>
             </Link>
             <Link href="/services/partner-connectivity" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
-                <Link2 className="w-6 h-6 text-blue-600" />
+              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <Link2 className="w-5 h-5 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-logistics_17")}

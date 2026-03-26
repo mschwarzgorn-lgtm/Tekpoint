@@ -3,7 +3,8 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { generatePageMetadata } from "@/lib/seo";
-import { RefreshCw, Settings, Construction, Package, Megaphone } from "lucide-react";
+import Image from "next/image";
+import { ClipboardList, CheckCircle2, Truck, FileText, RefreshCw, Settings, Building, Package, Megaphone } from "lucide-react";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -21,27 +22,40 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
+const ediIconMap = {
+  clipboardList: ClipboardList,
+  checkCircle2: CheckCircle2,
+  truck: Truck,
+  fileText: FileText,
+};
+
+const featureIconMap = {
+  refreshCw: RefreshCw,
+  settings: Settings,
+  building: Building,
+};
+
 const ediSteps = [
   {
-    step: 1,
+    iconName: "clipboardList" as const,
     stepKey: "services-partner-connectivity_48",
     titleKey: "services-partner-connectivity_49",
     descKey: "services-partner-connectivity_50",
   },
   {
-    step: 2,
+    iconName: "checkCircle2" as const,
     stepKey: "services-partner-connectivity_51",
     titleKey: "services-partner-connectivity_52",
     descKey: "services-partner-connectivity_53",
   },
   {
-    step: 3,
+    iconName: "truck" as const,
     stepKey: "services-partner-connectivity_54",
     titleKey: "services-partner-connectivity_55",
     descKey: "services-partner-connectivity_56",
   },
   {
-    step: 4,
+    iconName: "fileText" as const,
     stepKey: "services-partner-connectivity_57",
     titleKey: "services-partner-connectivity_58",
     descKey: "services-partner-connectivity_59",
@@ -56,8 +70,10 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0a1628] via-[#0f2341] to-[#0a1628] text-white py-24 md:py-32">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <Image src="/images/image_new2-scaled.webp" alt="" fill className="object-cover" priority />
+        <div className="absolute inset-0 bg-[#0a1628]/75" />
+        <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-white transition-colors">{t("services-partner-connectivity_23")}</Link>
             <span>/</span>
@@ -96,18 +112,21 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
           {/* 3 Feature Highlights */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {[
-              { icon: <RefreshCw className="w-6 h-6 text-blue-600" />, titleKey: "services-partner-connectivity_29", descKey: "services-partner-connectivity_30" },
-              { icon: <Settings className="w-6 h-6 text-blue-600" />, titleKey: "services-partner-connectivity_31", descKey: "services-partner-connectivity_32" },
-              { icon: <Construction className="w-6 h-6 text-blue-600" />, titleKey: "services-partner-connectivity_34", descKey: "services-partner-connectivity_35" },
-            ].map((feat, i) => (
-              <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
-                <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4 mx-auto">
-                  {feat.icon}
+              { iconName: "refreshCw" as const, titleKey: "services-partner-connectivity_29", descKey: "services-partner-connectivity_30" },
+              { iconName: "settings" as const, titleKey: "services-partner-connectivity_31", descKey: "services-partner-connectivity_32" },
+              { iconName: "building" as const, titleKey: "services-partner-connectivity_34", descKey: "services-partner-connectivity_35" },
+            ].map((feat, i) => {
+              const Icon = featureIconMap[feat.iconName];
+              return (
+                <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    {Icon && <Icon className="w-6 h-6 text-blue-600" />}
+                  </div>
+                  <h3 className="text-lg font-semibold text-gray-900 mb-2">{t(feat.titleKey)}</h3>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t(feat.descKey)}</p>
                 </div>
-                <h3 className="text-lg font-semibold text-gray-900 mb-2">{t(feat.titleKey)}</h3>
-                <p className="text-sm text-gray-600 leading-relaxed">{t(feat.descKey)}</p>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -159,26 +178,29 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
 
           {/* Vertical Timeline */}
           <div className="max-w-3xl mx-auto">
-            {ediSteps.map((step, i) => (
-              <div key={step.titleKey} className="relative flex gap-6 pb-12 last:pb-0">
-                {/* Timeline line */}
-                {i < ediSteps.length - 1 && (
-                  <div className="absolute left-6 top-14 w-0.5 h-[calc(100%-3.5rem)] bg-gradient-to-b from-[#1a6bc4] to-blue-200" />
-                )}
-                {/* Step number circle */}
-                <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1a6bc4] text-white flex items-center justify-center text-lg font-bold shadow-lg">
-                  {step.step}
+            {ediSteps.map((step, i) => {
+              const Icon = ediIconMap[step.iconName];
+              return (
+                <div key={step.titleKey} className="relative flex gap-6 pb-12 last:pb-0">
+                  {/* Timeline line */}
+                  {i < ediSteps.length - 1 && (
+                    <div className="absolute left-6 top-14 w-0.5 h-[calc(100%-3.5rem)] bg-gradient-to-b from-[#1a6bc4] to-blue-200" />
+                  )}
+                  {/* Step number circle */}
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1a6bc4] text-white flex items-center justify-center text-lg font-bold shadow-lg">
+                    {Icon && <Icon className="w-6 h-6 text-white" />}
+                  </div>
+                  {/* Content */}
+                  <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex-1">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-[#1a6bc4] mb-1 block">
+                      {t(step.stepKey)}
+                    </span>
+                    <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(step.titleKey)}</h3>
+                    <p className="text-gray-600 leading-relaxed">{t(step.descKey)}</p>
+                  </div>
                 </div>
-                {/* Content */}
-                <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex-1">
-                  <span className="text-xs font-semibold uppercase tracking-wide text-[#1a6bc4] mb-1 block">
-                    {t(step.stepKey)}
-                  </span>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(step.titleKey)}</h3>
-                  <p className="text-gray-600 leading-relaxed">{t(step.descKey)}</p>
-                </div>
-              </div>
-            ))}
+              );
+            })}
           </div>
         </div>
       </section>
@@ -199,8 +221,8 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
             <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
-                <Package className="w-6 h-6 text-blue-600" />
+              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <Package className="w-5 h-5 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-partner-connectivity_18")}
@@ -209,8 +231,8 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
               <span className="text-[#1a6bc4] font-medium text-sm">{t("services-partner-connectivity_64")}</span>
             </Link>
             <Link href="/services/marketing" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-12 h-12 rounded-xl bg-blue-50 flex items-center justify-center mb-4">
-                <Megaphone className="w-6 h-6 text-blue-600" />
+              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
+                <Megaphone className="w-5 h-5 text-blue-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-partner-connectivity_19")}

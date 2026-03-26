@@ -1,6 +1,7 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import Image from "next/image";
 import { Rocket, Lightbulb, Handshake, Scale, Gem } from "lucide-react";
 
 import { generatePageMetadata } from "@/lib/seo";
@@ -20,6 +21,13 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
+const iconMap = {
+  rocket: Rocket,
+  lightbulb: Lightbulb,
+  handshake: Handshake,
+  scale: Scale,
+  gem: Gem,
+};
 
 const vacancies = [
   { titleKey: "career_76", locationKey: "career_77", url: "https://tekpoint.com/de/career/account-manager-w-m-d-fur-baumarkte/" },
@@ -32,11 +40,11 @@ const benefitKeys = [64, 65, 66, 67, 68, 69, 70, 72];
 const countryKeys = Array.from({ length: 21 }, (_, i) => `career_${41 + i}`);
 
 const valueKeys = [
-  { key: "career_30", icon: <Rocket className="w-5 h-5 text-blue-600" /> },
-  { key: "career_31", icon: <Lightbulb className="w-5 h-5 text-blue-600" /> },
-  { key: "career_32", icon: <Handshake className="w-5 h-5 text-blue-600" /> },
-  { key: "career_34", icon: <Scale className="w-5 h-5 text-blue-600" /> },
-  { key: "career_35", icon: <Gem className="w-5 h-5 text-blue-600" /> },
+  { key: "career_30", iconName: "rocket" as const },
+  { key: "career_31", iconName: "lightbulb" as const },
+  { key: "career_32", iconName: "handshake" as const },
+  { key: "career_34", iconName: "scale" as const },
+  { key: "career_35", iconName: "gem" as const },
 ];
 
 export default async function CareerPage({ params }: { params: Promise<{ locale: string }> }) {
@@ -46,8 +54,16 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <Image
+          src="/images/image_new28-scaled.webp"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-[#0a1628]/75" />
+        <div className="relative container mx-auto px-4 md:px-6">
           <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">{t("career_16")}</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             {t("career_18")}
@@ -92,14 +108,17 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("career_29")}</p>
           </div>
           <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
-            {valueKeys.map((v) => (
-              <div key={v.key} className="bg-white rounded-xl px-6 py-4 shadow-sm flex items-center gap-3">
-                <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center">
-                  {v.icon}
+            {valueKeys.map((v) => {
+              const Icon = iconMap[v.iconName];
+              return (
+                <div key={v.key} className="bg-white rounded-xl px-6 py-4 shadow-sm flex items-center gap-3">
+                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
+                    {Icon && <Icon className="w-5 h-5 text-blue-600" />}
+                  </div>
+                  <span className="font-medium text-gray-900">{t(v.key)}</span>
                 </div>
-                <span className="font-medium text-gray-900">{t(v.key)}</span>
-              </div>
-            ))}
+              );
+            })}
           </div>
 
           {/* Quote */}

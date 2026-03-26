@@ -2,6 +2,8 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
+import Image from "next/image";
+import { Package, Megaphone, Link2 } from "lucide-react";
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -37,26 +39,32 @@ const vendorChecks = [
   "services_43", // Digital and fast reporting
 ];
 
+const iconMap = {
+  package: Package,
+  megaphone: Megaphone,
+  link2: Link2,
+};
+
 const services = [
   {
     titleKey: "services_48",
     descKey: "services_49",
     ctaKey: "services_50",
-    icon: "📦",
+    iconName: "package" as const,
     href: "/services/logistics" as const,
   },
   {
     titleKey: "services_51",
     descKey: "services_52",
     ctaKey: "services_53",
-    icon: "📢",
+    iconName: "megaphone" as const,
     href: "/services/marketing" as const,
   },
   {
     titleKey: "services_54",
     descKey: "services_55",
     ctaKey: "services_56",
-    icon: "🔗",
+    iconName: "link2" as const,
     href: "/services/partner-connectivity" as const,
   },
 ];
@@ -68,8 +76,16 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
-        <div className="container mx-auto px-4 md:px-6">
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <Image
+          src="/images/image_new25-scaled.webp"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-[#0a1628]/75" />
+        <div className="relative container mx-auto px-4 md:px-6">
           <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">{t("services_24")}</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             {t("services_18")} <span className="text-blue-300">{t("services_19")} {t("services_20")}</span>
@@ -153,14 +169,19 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("services_47")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-            {services.map((svc) => (
-              <Link key={svc.titleKey} href={svc.href} className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all">
-                <div className="text-4xl mb-6">{svc.icon}</div>
-                <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{t(svc.titleKey)}</h3>
-                <p className="text-gray-600 leading-relaxed mb-6">{t(svc.descKey)}</p>
-                <span className="text-blue-600 font-medium text-sm">{t(svc.ctaKey)}</span>
-              </Link>
-            ))}
+            {services.map((svc) => {
+              const Icon = iconMap[svc.iconName];
+              return (
+                <Link key={svc.titleKey} href={svc.href} className="group bg-white p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all">
+                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+                    {Icon && <Icon className="w-6 h-6 text-blue-600" />}
+                  </div>
+                  <h3 className="text-xl font-semibold text-gray-900 mb-4 group-hover:text-blue-600 transition-colors">{t(svc.titleKey)}</h3>
+                  <p className="text-gray-600 leading-relaxed mb-6">{t(svc.descKey)}</p>
+                  <span className="text-blue-600 font-medium text-sm">{t(svc.ctaKey)}</span>
+                </Link>
+              );
+            })}
           </div>
         </div>
       </section>

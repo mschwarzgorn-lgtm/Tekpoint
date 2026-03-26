@@ -1,6 +1,8 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import Image from "next/image";
+import { Handshake, Download, Mail, Phone, Lock, Building2, User, Briefcase, ScrollText } from "lucide-react";
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -17,6 +19,12 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
+const formSectionIconMap = {
+  building2: Building2,
+  user: User,
+  briefcase: Briefcase,
+  scrollText: ScrollText,
+};
 
 export default async function BecomeAPartnerPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -25,9 +33,17 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
   return (
     <>
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
-        <div className="container mx-auto px-4 md:px-6">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">🤝 Partnership Application</span>
+      <section className="relative text-white py-24 md:py-32 overflow-hidden">
+        <Image
+          src="/images/image_new4-jpg.webp"
+          alt=""
+          fill
+          className="object-cover"
+          priority
+        />
+        <div className="absolute inset-0 bg-[#0a1628]/75" />
+        <div className="relative container mx-auto px-4 md:px-6">
+          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block"><Handshake className="w-4 h-4 inline mr-1" /> Partnership Application</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             Become a<br /><span className="text-blue-300">Tekpoint Partner</span>
           </h1>
@@ -39,7 +55,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
             download
             className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-400 text-white h-14 px-8 font-semibold rounded-lg transition-colors text-lg"
           >
-            📥 Download Application Form (PDF)
+            <Download className="w-5 h-5" /> Download Application Form (PDF)
           </a>
         </div>
       </section>
@@ -54,7 +70,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-blue-600">①</span>
+                <span className="text-2xl font-bold text-blue-600">{"\u2460"}</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Download</h3>
               <p className="text-gray-600 mb-4">Download our Trading Application Form (PDF). The form is available in English and German.</p>
@@ -63,24 +79,24 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
                 download
                 className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700"
               >
-                📥 Download PDF
+                <Download className="w-4 h-4" /> Download PDF
               </a>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-blue-600">②</span>
+                <span className="text-2xl font-bold text-blue-600">{"\u2461"}</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Complete &amp; Sign</h3>
               <p className="text-gray-600">Fill in your company details, contacts, business description, and product interests. Have it signed and stamped by a company director.</p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
               <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-blue-600">③</span>
+                <span className="text-2xl font-bold text-blue-600">{"\u2462"}</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">Submit</h3>
               <p className="text-gray-600 mb-2">Send the completed form along with required documents to our distribution team.</p>
-              <p className="text-sm text-gray-500">📧 <a href="mailto:distribution@tekpoint.com" className="text-blue-600 hover:underline">distribution@tekpoint.com</a></p>
-              <p className="text-sm text-gray-500">📠 +43/1/3616670-902</p>
+              <p className="text-sm text-gray-500"><Mail className="w-4 h-4 inline mr-1" /> <a href="mailto:distribution@tekpoint.com" className="text-blue-600 hover:underline">distribution@tekpoint.com</a></p>
+              <p className="text-sm text-gray-500"><Phone className="w-4 h-4 inline mr-1" /> +43/1/3616670-902</p>
             </div>
           </div>
         </div>
@@ -114,7 +130,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
               </div>
             ))}
           </div>
-          <p className="text-center text-sm text-gray-500 mt-8">🔒 All information provided will be treated in the strictest confidence.</p>
+          <p className="text-center text-sm text-gray-500 mt-8"><Lock className="w-4 h-4 inline mr-1" /> All information provided will be treated in the strictest confidence.</p>
         </div>
       </section>
 
@@ -127,17 +143,22 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
             {[
-              { icon: "🏢", title: "Company Details", desc: "Company name, address, VAT number, delivery address, and website." },
-              { icon: "👤", title: "Key Contacts", desc: "Director, sales contact, purchase contact, and accounting department." },
-              { icon: "💼", title: "Business Profile", desc: "Business type, product categories, brands of interest, and stock preferences." },
-              { icon: "📜", title: "Terms & Conditions", desc: "General Conditions of Sale and Delivery in English and German." },
-            ].map((item) => (
-              <div key={item.title} className="bg-gray-50 rounded-xl p-6">
-                <div className="text-2xl mb-3">{item.icon}</div>
-                <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
-                <p className="text-sm text-gray-600">{item.desc}</p>
-              </div>
-            ))}
+              { iconName: "building2" as const, title: "Company Details", desc: "Company name, address, VAT number, delivery address, and website." },
+              { iconName: "user" as const, title: "Key Contacts", desc: "Director, sales contact, purchase contact, and accounting department." },
+              { iconName: "briefcase" as const, title: "Business Profile", desc: "Business type, product categories, brands of interest, and stock preferences." },
+              { iconName: "scrollText" as const, title: "Terms & Conditions", desc: "General Conditions of Sale and Delivery in English and German." },
+            ].map((item) => {
+              const Icon = formSectionIconMap[item.iconName];
+              return (
+                <div key={item.title} className="bg-gray-50 rounded-xl p-6">
+                  <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-3">
+                    {Icon && <Icon className="w-5 h-5 text-blue-600" />}
+                  </div>
+                  <h3 className="font-semibold text-gray-900 mb-2">{item.title}</h3>
+                  <p className="text-sm text-gray-600">{item.desc}</p>
+                </div>
+              );
+            })}
           </div>
         </div>
       </section>
@@ -155,7 +176,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
               download
               className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 h-12 px-8 font-medium rounded-lg hover:bg-blue-50 transition-colors"
             >
-              📥 Download Application Form
+              <Download className="w-5 h-5" /> Download Application Form
             </a>
             <a
               href="mailto:distribution@tekpoint.com"
@@ -165,7 +186,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
             </a>
           </div>
           <p className="text-sm text-blue-200 mt-6">
-            📧 distribution@tekpoint.com &nbsp;|&nbsp; 📞 +43/1/3616670 &nbsp;|&nbsp; 📠 +43/1/3616670-902
+            <Mail className="w-4 h-4 inline mr-1" /> distribution@tekpoint.com &nbsp;|&nbsp; <Phone className="w-4 h-4 inline mr-1" /> +43/1/3616670 &nbsp;|&nbsp; <Phone className="w-4 h-4 inline mr-1" /> +43/1/3616670-902
           </p>
         </div>
       </section>
