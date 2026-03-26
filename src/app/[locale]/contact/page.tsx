@@ -141,7 +141,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
                 <div className="w-10 h-10 rounded-lg bg-blue-50 flex items-center justify-center mb-3">
                   {dept.icon}
                 </div>
-                <p className="font-semibold text-gray-900 mb-2">{dept.key ? t(dept.key) : dept.label}</p>
+                <p className="font-semibold text-gray-900 mb-2">{t(dept.key)}</p>
                 <a href={`mailto:${dept.email}`} className="text-sm text-blue-600 hover:underline break-all">{dept.email}</a>
               </div>
             ))}
