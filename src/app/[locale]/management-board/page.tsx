@@ -28,6 +28,15 @@ function LinkedInIcon({ className = "w-5 h-5" }: { className?: string }) {
   );
 }
 
+function GlobeIcon({ className = "w-5 h-5" }: { className?: string }) {
+  return (
+    <svg className={className} fill="none" stroke="currentColor" strokeWidth={2} viewBox="0 0 24 24" aria-hidden="true">
+      <circle cx="12" cy="12" r="10" />
+      <path d="M2 12h20M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z" />
+    </svg>
+  );
+}
+
 export default async function ManagementBoardPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
@@ -74,16 +83,29 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
               <p className="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">{t("management-board_29")}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{t("management-board_28")}</h2>
               <p className="text-gray-500 font-medium text-sm mb-4">{t("management-board_30")}</p>
-              <a
-                href="https://www.linkedin.com/in/markschwarzgorn"
-                target="_blank"
-                rel="noopener noreferrer"
-                className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors mb-6"
-                aria-label="Mark Schwarzgorn on LinkedIn"
-              >
-                <LinkedInIcon className="w-5 h-5" />
-                <span className="text-sm font-medium">LinkedIn</span>
-              </a>
+              <div className="flex items-center justify-center md:justify-start gap-4 mb-6">
+                <a
+                  href="https://www.linkedin.com/in/markschwarzgorn"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
+                  aria-label="Mark Schwarzgorn on LinkedIn"
+                >
+                  <LinkedInIcon className="w-5 h-5" />
+                  <span className="text-sm font-medium">LinkedIn</span>
+                </a>
+                <span className="text-gray-300">|</span>
+                <a
+                  href="https://www.markschwarzgorn.com"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
+                  aria-label="Mark Schwarzgorn's Blog"
+                >
+                  <GlobeIcon className="w-5 h-5" />
+                  <span className="text-sm font-medium">Blog</span>
+                </a>
+              </div>
               <p className="text-gray-600 leading-relaxed text-base md:text-lg">{t("management-board_31")}</p>
             </div>
           </div>
