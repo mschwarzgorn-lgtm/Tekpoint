@@ -1,12 +1,5 @@
 {
-  "buildCommand": "npm install && npm run build",
+  "buildCommand": "npm install --include=dev && npm run build",
   "outputDirectory": "out",
-  "installCommand": "echo skip",
-  "redirects": [
-    {
-      "source": "/",
-      "destination": "/en/",
-      "permanent": false
-    }
-  ]
+  "framework": null
 }
