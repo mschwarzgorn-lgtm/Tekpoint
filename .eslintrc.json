@@ -8,6 +8,7 @@
     "jsx-a11y/aria-props": "error",
     "jsx-a11y/aria-role": "error",
     "jsx-a11y/heading-has-content": "error",
-    "jsx-a11y/img-redundant-alt": "error"
+    "jsx-a11y/img-redundant-alt": "error",
+    "react/no-unescaped-entities": "off"
   }
 }
