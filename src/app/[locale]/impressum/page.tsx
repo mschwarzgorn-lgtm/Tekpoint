@@ -1,4 +1,5 @@
 import { routing } from "@/i18n/routing";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -16,7 +17,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 
-export default async function ImpressumPage() {
+export default async function ImpressumPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations();
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -32,6 +36,11 @@ export default async function ImpressumPage() {
       {/* Content */}
       <section className="py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
+          {locale !== "en" && (
+            <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+              ℹ️ {t("legal_notice_1")}
+            </div>
+          )}
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
             <h2 className="text-2xl font-bold text-gray-900 mb-6">
               Tekpoint GmbH

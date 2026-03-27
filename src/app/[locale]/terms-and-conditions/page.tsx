@@ -1,4 +1,5 @@
 import { routing } from "@/i18n/routing";
+import { setRequestLocale, getTranslations } from "next-intl/server";
 import TermsTabs from "./TermsTabs";
 
 import { generatePageMetadata } from "@/lib/seo";
@@ -17,7 +18,10 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 }
 
 
-export default async function TermsAndConditionsPage() {
+export default async function TermsAndConditionsPage({ params }: { params: Promise<{ locale: string }> }) {
+  const { locale } = await params;
+  setRequestLocale(locale);
+  const t = await getTranslations();
   return (
     <main className="min-h-screen bg-white">
       {/* Hero Section */}
@@ -31,6 +35,15 @@ export default async function TermsAndConditionsPage() {
           </p>
         </div>
       </section>
+
+      {/* Notice for non-English */}
+      {locale !== "en" && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
+          <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+            ℹ️ {t("legal_notice_1")}
+          </div>
+        </div>
+      )}
 
       {/* Tabs */}
       <TermsTabs />
