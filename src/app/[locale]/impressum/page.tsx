@@ -111,12 +111,29 @@ export default async function ImpressumPage({ params }: { params: Promise<{ loca
               <p className="text-gray-700 leading-relaxed mb-1">
                 <strong>GDPR contact:</strong>
               </p>
-              <p className="text-gray-700 leading-relaxed">
+              <p className="text-gray-700 leading-relaxed mb-6">
                 <a
                   href="mailto:dsgvo@tekpoint.com"
                   className="text-orange-600 hover:text-orange-700 underline"
                 >
                   dsgvo@tekpoint.com
+                </a>
+              </p>
+            </div>
+
+            <div className="border-t border-gray-200 pt-6 mt-2">
+              <p className="text-gray-700 leading-relaxed mb-1">
+                <strong>EU Online Dispute Resolution:</strong>
+              </p>
+              <p className="text-gray-700 leading-relaxed">
+                The European Commission provides an online dispute resolution platform:{" "}
+                <a
+                  href="https://ec.europa.eu/consumers/odr"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="text-orange-600 hover:text-orange-700 underline"
+                >
+                  https://ec.europa.eu/consumers/odr
                 </a>
               </p>
             </div>

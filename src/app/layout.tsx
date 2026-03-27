@@ -4,7 +4,7 @@ import "./globals.css";
 export const metadata: Metadata = {
   title: {
     default: "Tekpoint — Smart Technology Distribution",
-    template: "%s | Tekpoint",
+    template: "%s",
   },
   description:
     "Tekpoint is a leading B2B technology distributor covering Western, Central & Eastern Europe (WEU/CEE). Partners include retailers, e-tailers, and system integrators across 28+ countries.",
