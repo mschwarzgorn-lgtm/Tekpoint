@@ -152,7 +152,7 @@ export default async function ServicesPage({ params }: { params: Promise<{ local
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("services_35")}</h2>
               <h3 className="text-xl text-blue-600 font-semibold mb-4">{t("services_36")}</h3>
               <p className="text-gray-600 leading-relaxed mb-8">{t("services_37")}</p>
-              <Link href="/partner" className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
+              <Link href="/become-a-partner" className="inline-flex items-center px-6 py-3 bg-blue-600 hover:bg-blue-700 text-white font-medium rounded-lg transition-colors">
                 {t("services_33")}
               </Link>
             </div>
