@@ -46,15 +46,15 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
   ];
 
   const moreBrands = [
-    { name: "Mi Scooter", logo: "mi-scooter.svg" },
-    { name: "Mi Eco", logo: "mi-eco.svg" },
-    { name: "ANTHBOT", logo: "anthbot.svg" },
-    { name: "Honor", logo: "honor.svg" },
-    { name: "Levoit", logo: "levoit.svg" },
-    { name: "Motorola", logo: "motorola.svg" },
-    { name: "Navimow", logo: "navimow.svg" },
-    { name: "NIU", logo: "niu.svg" },
-    { name: "eufy", logo: "eufy.svg" },
+    { name: "Mi Scooter", logo: "brands/mi-scooter.svg" },
+    { name: "Mi Eco", logo: "brands/mi-eco.svg" },
+    { name: "ANTHBOT", logo: "brands/anthbot.svg" },
+    { name: "Honor", logo: "brands/honor.svg" },
+    { name: "Levoit", logo: "brands/levoit.svg" },
+    { name: "Motorola", logo: "brands/motorola.svg" },
+    { name: "Navimow", logo: "brands/navimow.svg" },
+    { name: "NIU", logo: "brands/niu.svg" },
+    { name: "eufy", logo: "brands/eufy.svg" },
     { name: "Zepp", logo: "zepp.png" },
   ];
 
