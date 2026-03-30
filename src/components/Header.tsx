@@ -53,7 +53,6 @@ export default function Header() {
     { href: "/contact", label: t("index_16") },
   ];
 
-  // Body scroll lock when mobile menu is open
   useEffect(() => {
     if (mobileOpen) {
       document.body.style.overflow = "hidden";
@@ -63,7 +62,6 @@ export default function Header() {
     return () => { document.body.style.overflow = ""; };
   }, [mobileOpen]);
 
-  // Escape key closes mobile menu
   const handleKeyDown = useCallback((e: KeyboardEvent) => {
     if (e.key === "Escape") {
       setMobileOpen(false);
@@ -77,7 +75,6 @@ export default function Header() {
     return () => document.removeEventListener("keydown", handleKeyDown);
   }, [handleKeyDown]);
 
-  // Close dropdowns on outside click
   useEffect(() => {
     const handleClick = () => { setActiveDropdown(null); setLangOpen(false); };
     if (activeDropdown || langOpen) {
@@ -99,7 +96,7 @@ export default function Header() {
       <div className="container mx-auto flex h-16 items-center justify-between px-4 md:px-6">
         {/* Logo */}
         <Link href="/" className="flex items-center gap-2 shrink-0" aria-label="Tekpoint — Home">
-          <img src="/images/tekpoint-logo.svg" alt="Tekpoint — Smart Technology Distribution" className="h-7 md:h-8 w-auto" width={180} height={32} />
+          <img src="/images/tekpoint-logo.png" alt="Tekpoint — Smart Technology Distribution" className="h-7 md:h-8 w-auto" width={180} height={32} />
         </Link>
 
         {/* Desktop Nav */}
@@ -132,7 +129,6 @@ export default function Header() {
                 </Link>
               )}
 
-              {/* Desktop Dropdown */}
               {item.children && activeDropdown === item.label && (
                 <div
                   role="menu"
@@ -158,7 +154,6 @@ export default function Header() {
 
         {/* Right side */}
         <div className="flex items-center gap-3">
-          {/* Language selector */}
           <div className="relative" onClick={(e) => e.stopPropagation()}>
             <button
               onClick={() => setLangOpen(!langOpen)}
@@ -195,7 +190,6 @@ export default function Header() {
             )}
           </div>
 
-          {/* CTA */}
           <Link
             href="/become-a-partner"
             className="hidden md:inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white h-10 px-6 text-sm font-medium rounded-lg transition-colors"
@@ -203,7 +197,6 @@ export default function Header() {
             {t("index_17")}
           </Link>
 
-          {/* Mobile menu button */}
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
             className="lg:hidden p-2 text-gray-600 hover:text-gray-900"
@@ -222,7 +215,6 @@ export default function Header() {
         </div>
       </div>
 
-      {/* Mobile Nav */}
       {mobileOpen && (
         <div
           id="mobile-nav"

@@ -10,7 +10,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-12">
           {/* Brand */}
           <div className="lg:col-span-1">
-            <img src="/images/tekpoint-logo.svg" alt="Tekpoint" className="h-7 md:h-8 w-auto mb-6" />
+            <img src="/images/tekpoint-logo.png" alt="Tekpoint" className="h-7 md:h-8 w-auto mb-6" />
             <p className="text-gray-600 text-sm leading-relaxed mb-6">
               {t("index_148")}
             </p>
