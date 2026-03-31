@@ -43,19 +43,16 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
     { name: "Govee", logo: "Mask-group-2.svg", bg: "govee.png" },
     { name: "SFP", logo: "SFP-1.svg", bg: "a11fae9e9c9f32debc8741029b36d3d9.png" },
     { name: "DJI ROMO", logo: "DJI-ROMO.svg", bg: "170b377c572b948a8a66adbff97470f10963cef5.jpg" },
-  ];
-
-  const moreBrands = [
-    { name: "Mi Scooter", logo: "brands/mi-scooter.svg" },
-    { name: "Mi Eco", logo: "brands/mi-eco.svg" },
-    { name: "ANTHBOT", logo: "brands/anthbot.svg" },
-    { name: "Honor", logo: "brands/honor.svg" },
-    { name: "Levoit", logo: "brands/levoit.svg" },
-    { name: "Motorola", logo: "brands/motorola.svg" },
-    { name: "Navimow", logo: "brands/navimow.svg" },
-    { name: "NIU", logo: "brands/niu.svg" },
-    { name: "eufy", logo: "brands/eufy.svg" },
-    { name: "Zepp", logo: "zepp.png" },
+    { name: "Mi Scooter", logo: "brands/mi-scooter.svg", bg: "brands/mi-scooter-bg.webp" },
+    { name: "Mi Eco", logo: "brands/mi-eco.svg", bg: "brands/mi-eco-bg.webp" },
+    { name: "ANTHBOT", logo: "brands/anthbot.svg", bg: "brands/anthbot-bg.webp" },
+    { name: "Honor", logo: "brands/honor.svg", bg: "brands/honor-bg.webp" },
+    { name: "Levoit", logo: "brands/levoit.svg", bg: "brands/levoit-bg.webp" },
+    { name: "Motorola", logo: "brands/motorola.svg", bg: "brands/motorola-bg.webp" },
+    { name: "Navimow", logo: "brands/navimow.svg", bg: "brands/navimow-bg.webp" },
+    { name: "NIU", logo: "brands/niu.svg", bg: "brands/niu-bg.webp" },
+    { name: "eufy", logo: "brands/eufy.svg", bg: "brands/eufy-bg.webp" },
+    { name: "Zepp", logo: "zepp.png", bg: "brands/zepp-bg.webp" },
   ];
 
   return (
@@ -82,17 +79,6 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
                 </div>
               </div>
             ))}
-          </div>
-
-          <div className="mt-16">
-            <h3 className="text-xl font-semibold text-gray-900 mb-8 text-center">{t("vendors_78")}</h3>
-            <div className="grid grid-cols-2 sm:grid-cols-3 lg:grid-cols-5 gap-6">
-              {moreBrands.map((brand) => (
-                <div key={brand.name} className="bg-gray-50 rounded-xl border border-gray-200 p-6 flex items-center justify-center h-24">
-                  <img src={`/images/${brand.logo}`} alt={brand.name} className="max-h-10 w-auto object-contain" />
-                </div>
-              ))}
-            </div>
           </div>
         </div>
       </section>
