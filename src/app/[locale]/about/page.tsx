@@ -66,7 +66,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       {/* Stats */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="grid grid-cols-2 lg:grid-cols-4 gap-8">
+          <div className="grid grid-cols-2 lg:grid-cols-4 gap-6 md:gap-8">
             {[
               { top: t("about_36"), bottom: t("about_37") },
               { top: t("about_39"), bottom: t("about_40") },
@@ -74,8 +74,8 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               { top: t("about_45"), bottom: t("about_46") },
             ].map((s, i) => (
               <div key={i} className="text-center py-8">
-                <div className="text-2xl md:text-3xl font-bold text-blue-600">{s.top}</div>
-                <div className="text-sm text-gray-600 mt-2">{s.bottom}</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold text-blue-600 break-words">{s.top}</div>
+                <div className="text-xs sm:text-sm text-gray-600 mt-2">{s.bottom}</div>
               </div>
             ))}
           </div>
