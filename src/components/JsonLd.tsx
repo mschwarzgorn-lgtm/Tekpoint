@@ -4,7 +4,7 @@ export function OrganizationJsonLd() {
     "@type": "Organization",
     name: "Tekpoint GmbH",
     url: "https://tekpoint.com",
-    logo: "https://tekpoint.com/images/tekpoint-logo.svg",
+    logo: "https://tekpoint.com/images/tekpoint-logo-new-web.png",
     description: "Leading B2B technology distributor covering Western, Central & Eastern Europe.",
     address: {
       "@type": "PostalAddress",
@@ -24,7 +24,7 @@ export function OrganizationJsonLd() {
       "https://www.youtube.com/@tekpointgmbh8118",
     ],
     foundingDate: "2017",
-    numberOfEmployees: { "@type": "QuantitativeValue", value: 50 },
+    numberOfEmployees: { "@type": "QuantitativeValue", value: 120 },
     areaServed: {
       "@type": "Place",
       name: "Western, Central & Eastern Europe",
