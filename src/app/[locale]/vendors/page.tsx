@@ -75,7 +75,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
                 <img src={`/images/${brand.bg}`} alt={brand.name} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
                 <div className="absolute inset-0 flex items-center justify-center p-6">
-                  <img src={`/images/${brand.logo}`} alt={brand.name} className="max-h-12 md:max-h-16 w-auto object-contain brightness-0 invert" />
+                  <img src={`/images/${brand.logo}`} alt={brand.name} className="max-h-16 md:max-h-20 w-auto object-contain brightness-0 invert" />
                 </div>
               </div>
             ))}
