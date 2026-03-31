@@ -4,7 +4,7 @@ export function OrganizationJsonLd() {
     "@type": "Organization",
     name: "Tekpoint GmbH",
     url: "https://tekpoint.com",
-    logo: "https://tekpoint.com/images/tekpoint-logo-new-web.png",
+    logo: "https://tekpoint.com/images/tekpoint-logo.png",
     description: "Leading B2B technology distributor covering Western, Central & Eastern Europe.",
     address: {
       "@type": "PostalAddress",
