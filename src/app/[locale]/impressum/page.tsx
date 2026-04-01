@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return generatePageMetadata({
     locale,
     pagePath: "/impressum",
-    fallbackTitle: "Impressum — Tekpoint",
-    fallbackDescription: "Legal notice and company information for Tekpoint GmbH.",
+    fallbackTitle: "Impressum & Legal Notice | Tekpoint GmbH — Vienna, Austria",
+    fallbackDescription: "Legal notice and company information for Tekpoint GmbH. CEO Mark Schwarzgorn. Registered in Vienna, Austria. VAT ATU65412145. Whistleblowing & GDPR contacts.",
   });
 }
 
