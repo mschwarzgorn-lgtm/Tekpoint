@@ -46,7 +46,6 @@ export default function Footer() {
               <li><Link href="/services" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_13")}</Link></li>
               <li><Link href="/services/logistics" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_154")}</Link></li>
               <li><Link href="/services/marketing" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_126")}</Link></li>
-              <li><Link href="/vendors" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_12")}</Link></li>
             </ul>
           </div>
 

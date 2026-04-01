@@ -7,7 +7,7 @@ export default function StatsSection() {
     { value: t("index_25"), label: t("index_26") },
     { value: t("index_27"), label: t("index_28") },
     { value: "25+", label: t("index_29") },
-    { value: "5+", label: t("index_30") },
+    { value: "23", label: t("index_30") },
   ];
 
   return (
