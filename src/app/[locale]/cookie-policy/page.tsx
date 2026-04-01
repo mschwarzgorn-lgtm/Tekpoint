@@ -11,8 +11,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return generatePageMetadata({
     locale,
     pagePath: "/cookie-policy",
-    fallbackTitle: "Cookie Policy — Tekpoint",
-    fallbackDescription: "Cookie and similar technologies policy for Tekpoint GmbH.",
+    fallbackTitle: "Cookie & Similar Technologies Policy | Tekpoint GmbH",
+    fallbackDescription: "Understand how Tekpoint GmbH uses cookies, web beacons, and similar technologies. Manage your preferences and opt out of tracking across browsers and mobile devices.",
   });
 }
 

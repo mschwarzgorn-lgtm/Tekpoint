@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return generatePageMetadata({
     locale,
     pagePath: "/privacy-policy",
-    fallbackTitle: "Privacy Policy — Tekpoint",
-    fallbackDescription: "Tekpoint GmbH privacy policy and data protection information.",
+    fallbackTitle: "Privacy Policy & Data Protection | Tekpoint GmbH — GDPR Compliant",
+    fallbackDescription: "Learn how Tekpoint GmbH protects your personal data under GDPR and Austrian data protection law. Contact our GDPR team at dsgvo@tekpoint.com for inquiries.",
   });
 }
 

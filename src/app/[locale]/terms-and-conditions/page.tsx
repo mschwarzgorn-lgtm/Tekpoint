@@ -12,8 +12,8 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   return generatePageMetadata({
     locale,
     pagePath: "/terms-and-conditions",
-    fallbackTitle: "Terms & Conditions — Tekpoint",
-    fallbackDescription: "General terms and conditions for Tekpoint GmbH.",
+    fallbackTitle: "Terms & Conditions | Tekpoint GmbH — General Business Terms",
+    fallbackDescription: "General terms and conditions governing business relationships with Tekpoint GmbH, a smart technology distributor headquartered in Vienna, Austria.",
   });
 }
 
