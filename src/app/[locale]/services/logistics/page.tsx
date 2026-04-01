@@ -126,7 +126,7 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
           <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
             {[
               { valueKey: "services-logistics_31", labelKey: "services-logistics_32" },
-              { value: "5+", labelKey: "services-logistics_33" },
+              { value: "23", labelKey: "services-logistics_33" },
               { valueKey: "services-logistics_34", labelKey: "services-logistics_35" },
               { valueKey: "services-logistics_36", labelKey: "services-logistics_37" },
             ].map((stat, i) => (
