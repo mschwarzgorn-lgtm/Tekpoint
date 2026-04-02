@@ -144,8 +144,8 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
           </div>
           <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
             {retailers.map((retailer) => (
-              <div key={retailer.name} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex items-center justify-center aspect-[3/2] hover:shadow-md transition-shadow">
-                <img src={`/images/${retailer.logo}`} alt={retailer.name} className="max-h-12 max-w-full w-auto object-contain" />
+              <div key={retailer.name} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex items-center justify-center aspect-[3/2] hover:shadow-md transition-all group">
+                <img src={`/images/${retailer.logo}`} alt={retailer.name} className="max-h-12 max-w-full w-auto object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 transition-all duration-300" />
               </div>
             ))}
           </div>
