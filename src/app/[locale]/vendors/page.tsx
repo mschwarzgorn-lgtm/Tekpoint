@@ -55,6 +55,33 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
     { name: "Zepp", logo: "zepp.png", bg: "brands/zepp-bg.webp" },
   ];
 
+  const retailers = [
+    { name: "EDEKA", logo: "retailers/edeka.png" },
+    { name: "Coolblue", logo: "retailers/coolblue.png" },
+    { name: "bol.com", logo: "retailers/bol-com.png" },
+    { name: "T-Mobile", logo: "retailers/t-mobile.png" },
+    { name: "BAUHAUS", logo: "retailers/bauhaus.png" },
+    { name: "Fnac Vanden Borre", logo: "retailers/vanden-borre.png" },
+    { name: "Cyberport", logo: "retailers/cyberport.png" },
+    { name: "Medion", logo: "retailers/medion.png" },
+    { name: "Freenet", logo: "retailers/freenet.svg" },
+    { name: "Galaxus", logo: "retailers/galaxus.svg" },
+    { name: "Printus", logo: "retailers/printus.svg" },
+    { name: "Büromarkt Böttcher", logo: "retailers/boettcher.svg" },
+    { name: "JD.com", logo: "retailers/jd-com.png" },
+    { name: "e-tec", logo: "retailers/e-tec.svg" },
+    { name: "Powwow", logo: "retailers/powwow.svg" },
+    { name: "Wortmann Telecom", logo: "retailers/wortmann-telecom.svg" },
+    { name: "Terra Home & Living", logo: "retailers/terra-home-living.png" },
+    { name: "Farkind", logo: "retailers/farkind.png" },
+    { name: "Motion TM", logo: "retailers/motion-tm.png" },
+    { name: "Michael Telecom", logo: "retailers/michael-telecom.png" },
+    { name: "Köhler Teledata", logo: "retailers/koehler-teledata.svg" },
+    { name: "Lanckriet", logo: "retailers/lanckriet.png" },
+    { name: "MobielWerkt", logo: "retailers/mobielwerkt.png" },
+    { name: "Sunny Europe", logo: "retailers/sunny-europe.svg" },
+  ];
+
   return (
     <>
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
@@ -77,6 +104,25 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
                 <div className="absolute inset-0 flex items-center justify-center p-6">
                   <img src={`/images/${brand.logo}`} alt={brand.name} className="max-h-16 md:max-h-20 w-auto object-contain brightness-0 invert" />
                 </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </section>
+
+      <section className="py-24 md:py-32 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="text-center mb-16">
+            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-4 block">{t("vendors_104")}</span>
+            <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-4">
+              {t("vendors_105")}
+            </h2>
+            <p className="text-lg text-gray-600 max-w-2xl mx-auto">{t("vendors_106")}</p>
+          </div>
+          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6">
+            {retailers.map((retailer) => (
+              <div key={retailer.name} className="bg-white rounded-xl shadow-sm border border-gray-100 p-6 flex items-center justify-center aspect-[3/2] hover:shadow-md transition-shadow">
+                <img src={`/images/${retailer.logo}`} alt={retailer.name} className="max-h-12 max-w-full w-auto object-contain" />
               </div>
             ))}
           </div>
