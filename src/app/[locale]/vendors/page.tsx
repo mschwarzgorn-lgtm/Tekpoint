@@ -56,6 +56,29 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
   ];
 
   const retailers = [
+    /* === Major retailers (from homepage) === */
+    { name: "Amazon", logo: "logo-amazon-1.png" },
+    { name: "eBay", logo: "logo-Ebay.png" },
+    { name: "Metro", logo: "metro.png" },
+    { name: "Media Markt", logo: "media-market.png" },
+    { name: "A1", logo: "A1.png" },
+    { name: "Decathlon", logo: "Decathlon.png" },
+    { name: "Lidl", logo: "lidl.png" },
+    { name: "Otto", logo: "otto-orange-1.png" },
+    { name: "Euronics", logo: "Euronics.png" },
+    { name: "Mobilcom Debitel", logo: "Mobilcom-Debitel-1.png" },
+    { name: "Telefónica", logo: "logo-Telefonica.png" },
+    { name: "Yettel", logo: "yettel-logo.png" },
+    { name: "Notebooksbilliger.de", logo: "notebooksbilliger.de-logo.png" },
+    { name: "Expert", logo: "Expert_Logo-1.png" },
+    { name: "Tink", logo: "tink-logo.png" },
+    { name: "1&1", logo: "1_1_logo-1.png" },
+    { name: "Aldi Süd", logo: "aldi-sud.png" },
+    { name: "Aldi Nord", logo: "ALDI-Nord.png" },
+    { name: "Saturn", logo: "saturn.png" },
+    { name: "Electronic4you", logo: "electronic4you_logo_flat_normal-1.png" },
+    { name: "Vodafone", logo: "Vodafone_2017_logo-1.png" },
+    /* === Additional retailers (from partner list) === */
     { name: "EDEKA", logo: "retailers/edeka.png" },
     { name: "Coolblue", logo: "retailers/coolblue.png" },
     { name: "bol.com", logo: "retailers/bol-com.png" },
