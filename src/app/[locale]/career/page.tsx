@@ -110,6 +110,9 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
               <p>{t("career_113")}</p>
               <p>{t("career_114")}</p>
               <p>{t("career_115")}</p>
+              <p>{t("career_117")}</p>
+              <p>{t("career_118")}</p>
+              <p>{t("career_119")}</p>
               <p className="text-white font-semibold border-l-4 border-orange-500 pl-6 mt-8">{t("career_116")}</p>
             </div>
           </div>
@@ -150,27 +153,26 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      {/* How We Think & Decide */}
+      {/* How Culture Shows Up in Daily Work */}
       <section className="py-20 bg-gray-900">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-3xl mx-auto">
             <span className="text-sm font-medium tracking-wide uppercase text-orange-400 mb-3 block">{t("career_how_title")}</span>
             <div className="space-y-6 mt-8">
-              <div className="flex items-start gap-4">
-                <div className="w-1 h-full bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
-                <p className="text-lg text-gray-300">{t("career_how_1")}</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-1 h-full bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
-                <p className="text-lg text-gray-300">{t("career_how_2")}</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-1 h-full bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
-                <p className="text-lg text-gray-300">{t("career_how_3")}</p>
-              </div>
-              <div className="flex items-start gap-4">
-                <div className="w-1 h-full bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
-                <p className="text-lg text-gray-300">{t("career_how_4")}</p>
+              {["career_how_1", "career_how_2", "career_how_3", "career_how_4"].map((key) => (
+                <div key={key} className="flex items-start gap-4">
+                  <div className="w-1 bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
+                  <p className="text-lg text-gray-300">{t(key)}</p>
+                </div>
+              ))}
+            </div>
+
+            {/* Leadership & Management */}
+            <div className="mt-16 pt-12 border-t border-gray-700">
+              <span className="text-sm font-medium tracking-wide uppercase text-orange-400 mb-6 block">{t("career_lead_title")}</span>
+              <div className="space-y-4">
+                <p className="text-lg text-gray-300">{t("career_lead_1")}</p>
+                <p className="text-lg text-gray-300">{t("career_lead_2")}</p>
               </div>
             </div>
           </div>
