@@ -116,23 +116,27 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      {/* Values */}
+      {/* Values — How We Actually Work */}
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
             <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("career_27")}</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("career_28")}</h2>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("career_values_header")}</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("career_29")}</p>
           </div>
-          <div className="flex flex-wrap justify-center gap-4 max-w-3xl mx-auto">
+          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
             {valueKeys.map((v) => {
               const Icon = iconMap[v.iconName];
+              const descKey = v.key + "_desc";
               return (
-                <div key={v.key} className="bg-white rounded-xl px-6 py-4 shadow-sm flex items-center gap-3">
-                  <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
-                    {Icon && <Icon className="w-5 h-5 text-orange-600" />}
+                <div key={v.key} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                  <div className="flex items-center gap-3 mb-3">
+                    <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
+                      {Icon && <Icon className="w-5 h-5 text-orange-600" />}
+                    </div>
+                    <h3 className="font-semibold text-gray-900">{t(v.key)}</h3>
                   </div>
-                  <span className="font-medium text-gray-900">{t(v.key)}</span>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t(descKey)}</p>
                 </div>
               );
             })}
@@ -142,6 +146,33 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
           <div className="mt-16 max-w-2xl mx-auto text-center">
             <blockquote className="text-xl text-gray-700 italic mb-4">{t("career_37")}</blockquote>
             <p className="text-sm text-gray-500">{t("career_38")}</p>
+          </div>
+        </div>
+      </section>
+
+      {/* How We Think & Decide */}
+      <section className="py-20 bg-gray-900">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-400 mb-3 block">{t("career_how_title")}</span>
+            <div className="space-y-6 mt-8">
+              <div className="flex items-start gap-4">
+                <div className="w-1 h-full bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
+                <p className="text-lg text-gray-300">{t("career_how_1")}</p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-1 h-full bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
+                <p className="text-lg text-gray-300">{t("career_how_2")}</p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-1 h-full bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
+                <p className="text-lg text-gray-300">{t("career_how_3")}</p>
+              </div>
+              <div className="flex items-start gap-4">
+                <div className="w-1 h-full bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
+                <p className="text-lg text-gray-300">{t("career_how_4")}</p>
+              </div>
+            </div>
           </div>
         </div>
       </section>
