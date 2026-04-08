@@ -60,9 +60,9 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
         />
         <div className="absolute inset-0 bg-[#0a1628]/75" />
         <div className="relative container mx-auto px-4 md:px-6">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block"><Handshake className="w-4 h-4 inline mr-1" /> {t("become-a-partner_3")}</span>
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block"><Handshake className="w-4 h-4 inline mr-1" /> {t("become-a-partner_3")}</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            {t("become-a-partner_4")}<br /><span className="text-blue-300">{t("become-a-partner_5")}</span>
+            {t("become-a-partner_4")}<br /><span className="text-orange-300">{t("become-a-partner_5")}</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl mb-8">
             {t("become-a-partner_6")}
@@ -70,7 +70,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
           <a
             href="/downloads/trading-application-form.pdf"
             download
-            className="inline-flex items-center gap-2 bg-blue-500 hover:bg-blue-400 text-white h-14 px-8 font-semibold rounded-lg transition-colors text-lg"
+            className="inline-flex items-center gap-2 bg-orange-500 hover:bg-orange-400 text-white h-14 px-8 font-semibold rounded-lg transition-colors text-lg"
           >
             <Download className="w-5 h-5" /> {t("become-a-partner_7")}
           </a>
@@ -81,38 +81,38 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-3 block">{t("become-a-partner_8")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("become-a-partner_8")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("become-a-partner_9")}</h2>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 max-w-5xl mx-auto">
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-blue-600">{"\u2460"}</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-orange-600">{"\u2460"}</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{t("become-a-partner_10")}</h3>
               <p className="text-gray-600 mb-4">{t("become-a-partner_11")}</p>
               <a
                 href="/downloads/trading-application-form.pdf"
                 download
-                className="inline-flex items-center gap-2 text-blue-600 font-medium hover:text-blue-700"
+                className="inline-flex items-center gap-2 text-orange-600 font-medium hover:text-orange-700"
               >
                 <Download className="w-4 h-4" /> {t("become-a-partner_12")}
               </a>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-blue-600">{"\u2461"}</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-orange-600">{"\u2461"}</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{t("become-a-partner_13")}</h3>
               <p className="text-gray-600">{t("become-a-partner_14")}</p>
             </div>
             <div className="bg-gray-50 rounded-2xl p-8 text-center">
-              <div className="w-16 h-16 bg-blue-100 rounded-full flex items-center justify-center mx-auto mb-6">
-                <span className="text-2xl font-bold text-blue-600">{"\u2462"}</span>
+              <div className="w-16 h-16 bg-orange-100 rounded-full flex items-center justify-center mx-auto mb-6">
+                <span className="text-2xl font-bold text-orange-600">{"\u2462"}</span>
               </div>
               <h3 className="text-xl font-bold text-gray-900 mb-3">{t("become-a-partner_15")}</h3>
               <p className="text-gray-600 mb-2">{t("become-a-partner_16")}</p>
-              <p className="text-sm text-gray-500"><Mail className="w-4 h-4 inline mr-1" /> <a href="mailto:distribution@tekpoint.com" className="text-blue-600 hover:underline">distribution@tekpoint.com</a></p>
+              <p className="text-sm text-gray-500"><Mail className="w-4 h-4 inline mr-1" /> <a href="mailto:distribution@tekpoint.com" className="text-orange-600 hover:underline">distribution@tekpoint.com</a></p>
               <p className="text-sm text-gray-500"><Phone className="w-4 h-4 inline mr-1" /> +43/1/3616670-902</p>
             </div>
           </div>
@@ -123,7 +123,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-3 block">{t("become-a-partner_17")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("become-a-partner_17")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("become-a-partner_18")}</h2>
             <p className="text-lg text-gray-600 mt-4">{t("become-a-partner_19")}</p>
           </div>
@@ -150,7 +150,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-3 block">{t("become-a-partner_29")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("become-a-partner_29")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("become-a-partner_30")}</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -158,8 +158,8 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
               const Icon = formSectionIconMap[item.iconName];
               return (
                 <div key={item.titleKey} className="bg-gray-50 rounded-xl p-6">
-                  <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-3">
-                    {Icon && <Icon className="w-5 h-5 text-blue-600" />}
+                  <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-3">
+                    {Icon && <Icon className="w-5 h-5 text-orange-600" />}
                   </div>
                   <h3 className="font-semibold text-gray-900 mb-2">{t(item.titleKey)}</h3>
                   <p className="text-sm text-gray-600">{t(item.descKey)}</p>
@@ -171,17 +171,17 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("become-a-partner_39")}</h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-orange-100 mb-8 max-w-2xl mx-auto">
             {t("become-a-partner_40")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
               href="/downloads/trading-application-form.pdf"
               download
-              className="inline-flex items-center justify-center gap-2 bg-white text-blue-600 h-12 px-8 font-medium rounded-lg hover:bg-blue-50 transition-colors"
+              className="inline-flex items-center justify-center gap-2 bg-white text-orange-600 h-12 px-8 font-medium rounded-lg hover:bg-orange-50 transition-colors"
             >
               <Download className="w-5 h-5" /> {t("become-a-partner_41")}
             </a>
@@ -192,7 +192,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
               {t("become-a-partner_42")}
             </a>
           </div>
-          <p className="text-sm text-blue-200 mt-6">
+          <p className="text-sm text-orange-200 mt-6">
             <Mail className="w-4 h-4 inline mr-1" /> distribution@tekpoint.com &nbsp;|&nbsp; <Phone className="w-4 h-4 inline mr-1" /> +43/1/3616670 &nbsp;|&nbsp; <Phone className="w-4 h-4 inline mr-1" /> +43/1/3616670-902
           </p>
         </div>

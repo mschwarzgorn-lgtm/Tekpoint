@@ -180,7 +180,7 @@ export default function Header() {
                       setLangOpen(false);
                     }}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${
-                      l === locale ? "font-semibold text-blue-600 bg-blue-50" : "text-gray-700"
+                      l === locale ? "font-semibold text-orange-600 bg-orange-50" : "text-gray-700"
                     }`}
                   >
                     {langNames[l] || l}
@@ -192,7 +192,7 @@ export default function Header() {
 
           <Link
             href="/become-a-partner"
-            className="hidden md:inline-flex items-center bg-blue-600 hover:bg-blue-700 text-white h-10 px-6 text-sm font-medium rounded-lg transition-colors"
+            className="hidden md:inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white h-10 px-6 text-sm font-medium rounded-lg transition-colors"
           >
             {t("index_17")}
           </Link>
@@ -271,7 +271,7 @@ export default function Header() {
             <Link
               href="/become-a-partner"
               onClick={() => setMobileOpen(false)}
-              className="block px-4 py-3 text-blue-600 font-semibold min-h-[44px]"
+              className="block px-4 py-3 text-orange-600 font-semibold min-h-[44px]"
             >
               {t("index_17")} →
             </Link>

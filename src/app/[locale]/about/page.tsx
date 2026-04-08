@@ -31,9 +31,9 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">{t("about_24")}</span>
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">{t("about_24")}</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            {t("about_25")} <span className="text-blue-300">{t("about_26")}</span>
+            {t("about_25")} <span className="text-orange-300">{t("about_26")}</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">{t("about_27")}</p>
         </div>
@@ -48,7 +48,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">{t("about_29")}</p>
               <p className="text-gray-600 leading-relaxed mb-8">{t("about_30")}</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/vendors" className="inline-flex items-center justify-center bg-blue-600 hover:bg-blue-700 text-white h-12 px-8 font-medium rounded-lg transition-colors">
+                <Link href="/vendors" className="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white h-12 px-8 font-medium rounded-lg transition-colors">
                   {t("about_31")}
                 </Link>
                 <Link href="/contact" className="inline-flex items-center justify-center border border-gray-300 hover:bg-gray-50 text-gray-700 h-12 px-8 font-medium rounded-lg transition-colors">
@@ -74,7 +74,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               { top: t("about_45"), bottom: t("about_46") },
             ].map((s, i) => (
               <div key={i} className="text-center py-8">
-                <div className="text-lg sm:text-2xl md:text-3xl font-bold text-blue-600 break-words">{s.top}</div>
+                <div className="text-lg sm:text-2xl md:text-3xl font-bold text-orange-600 break-words">{s.top}</div>
                 <div className="text-xs sm:text-sm text-gray-600 mt-2">{s.bottom}</div>
               </div>
             ))}
@@ -91,8 +91,8 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[50, 51, 52, 53, 54].map((n) => (
-              <div key={n} className="bg-blue-50 rounded-2xl p-8 text-center">
-                <div className="text-lg font-semibold text-blue-700">{t(`about_${n}`)}</div>
+              <div key={n} className="bg-orange-50 rounded-2xl p-8 text-center">
+                <div className="text-lg font-semibold text-orange-700">{t(`about_${n}`)}</div>
               </div>
             ))}
           </div>

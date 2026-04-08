@@ -109,9 +109,9 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
     <>
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">{t("vendors_24")}</span>
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">{t("vendors_24")}</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            {t("vendors_25")} <span className="text-blue-300">{t("vendors_26")}</span>
+            {t("vendors_25")} <span className="text-orange-300">{t("vendors_26")}</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">{t("vendors_27")}</p>
         </div>
@@ -136,7 +136,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-4 block">{t("vendors_104")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-4 block">{t("vendors_104")}</span>
             <h2 className="text-3xl md:text-4xl lg:text-5xl font-bold tracking-tight text-gray-900 mb-4">
               {t("vendors_105")}
             </h2>

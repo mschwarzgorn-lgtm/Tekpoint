@@ -79,14 +79,14 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
             <span>/</span>
             <Link href="/services" className="hover:text-white transition-colors">{t("services-partner-connectivity_15")}</Link>
             <span>/</span>
-            <span className="text-blue-300">{t("services-partner-connectivity_17")}</span>
+            <span className="text-orange-300">{t("services-partner-connectivity_17")}</span>
           </nav>
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">
             {t("services-partner-connectivity_24")}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             {t("services-partner-connectivity_25")}{" "}
-            <span className="text-blue-300">{t("services-partner-connectivity_26")}</span>
+            <span className="text-orange-300">{t("services-partner-connectivity_26")}</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
             {t("services-partner-connectivity_27")}
@@ -119,8 +119,8 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
               const Icon = featureIconMap[feat.iconName];
               return (
                 <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mx-auto mb-4">
-                    {Icon && <Icon className="w-6 h-6 text-blue-600" />}
+                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                    {Icon && <Icon className="w-6 h-6 text-orange-600" />}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{t(feat.titleKey)}</h3>
                   <p className="text-sm text-gray-600 leading-relaxed">{t(feat.descKey)}</p>
@@ -184,7 +184,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
                 <div key={step.titleKey} className="relative flex gap-6 pb-12 last:pb-0">
                   {/* Timeline line */}
                   {i < ediSteps.length - 1 && (
-                    <div className="absolute left-6 top-14 w-0.5 h-[calc(100%-3.5rem)] bg-gradient-to-b from-[#1a6bc4] to-blue-200" />
+                    <div className="absolute left-6 top-14 w-0.5 h-[calc(100%-3.5rem)] bg-gradient-to-b from-[#1a6bc4] to-orange-200" />
                   )}
                   {/* Step number circle */}
                   <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1a6bc4] text-white flex items-center justify-center text-lg font-bold shadow-lg">
@@ -220,9 +220,9 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                <Package className="w-5 h-5 text-blue-600" />
+            <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
+              <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                <Package className="w-5 h-5 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-partner-connectivity_18")}
@@ -230,9 +230,9 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
               <p className="text-gray-600 leading-relaxed mb-4">{t("services-partner-connectivity_63")}</p>
               <span className="text-[#1a6bc4] font-medium text-sm">{t("services-partner-connectivity_64")}</span>
             </Link>
-            <Link href="/services/marketing" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                <Megaphone className="w-5 h-5 text-blue-600" />
+            <Link href="/services/marketing" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
+              <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                <Megaphone className="w-5 h-5 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-partner-connectivity_19")}
@@ -247,7 +247,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
       {/* CTA */}
       <section className="py-20 md:py-24 bg-gradient-to-b from-[#0a1628] via-[#0f2341] to-[#0a1628] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">
             {t("services-partner-connectivity_66")}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

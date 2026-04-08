@@ -64,7 +64,7 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         />
         <div className="absolute inset-0 bg-[#0a1628]/75" />
         <div className="relative container mx-auto px-4 md:px-6">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">{t("career_16")}</span>
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">{t("career_16")}</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             {t("career_18")}
           </h1>
@@ -77,16 +77,16 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-4xl mx-auto">
             <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-16 text-center">
-              <div className="bg-blue-50 rounded-2xl p-8">
-                <p className="text-4xl font-bold text-blue-600 mb-2">120+</p>
+              <div className="bg-orange-50 rounded-2xl p-8">
+                <p className="text-4xl font-bold text-orange-600 mb-2">120+</p>
                 <p className="text-gray-600 text-sm">{t("career_25")}</p>
               </div>
-              <div className="bg-blue-50 rounded-2xl p-8">
-                <p className="text-4xl font-bold text-blue-600 mb-2">23</p>
+              <div className="bg-orange-50 rounded-2xl p-8">
+                <p className="text-4xl font-bold text-orange-600 mb-2">23</p>
                 <p className="text-gray-600 text-sm">{t("career_39")}</p>
               </div>
-              <div className="bg-blue-50 rounded-2xl p-8">
-                <p className="text-4xl font-bold text-blue-600 mb-2">10+</p>
+              <div className="bg-orange-50 rounded-2xl p-8">
+                <p className="text-4xl font-bold text-orange-600 mb-2">10+</p>
                 <p className="text-gray-600 text-sm">{t("career_26")}</p>
               </div>
             </div>
@@ -103,7 +103,7 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-3 block">{t("career_27")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("career_27")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("career_28")}</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("career_29")}</p>
           </div>
@@ -112,8 +112,8 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
               const Icon = iconMap[v.iconName];
               return (
                 <div key={v.key} className="bg-white rounded-xl px-6 py-4 shadow-sm flex items-center gap-3">
-                  <div className="w-8 h-8 bg-blue-100 rounded-lg flex items-center justify-center">
-                    {Icon && <Icon className="w-5 h-5 text-blue-600" />}
+                  <div className="w-8 h-8 bg-orange-100 rounded-lg flex items-center justify-center">
+                    {Icon && <Icon className="w-5 h-5 text-orange-600" />}
                   </div>
                   <span className="font-medium text-gray-900">{t(v.key)}</span>
                 </div>
@@ -154,7 +154,7 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-3 block">{t("career_62")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("career_62")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("career_63")}</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 max-w-5xl mx-auto">
@@ -163,8 +163,8 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
               if (!text || text === `career_${n}`) return null;
               return (
                 <div key={n} className="bg-white rounded-xl p-6 shadow-sm">
-                  <div className="w-10 h-10 bg-blue-100 rounded-lg flex items-center justify-center mb-4">
-                    <svg className="w-5 h-5 text-blue-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                  <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center mb-4">
+                    <svg className="w-5 h-5 text-orange-600" fill="none" viewBox="0 0 24 24" stroke="currentColor">
                       <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
                     </svg>
                   </div>
@@ -180,7 +180,7 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-3 block">{t("career_73")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("career_73")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("career_74")}</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("career_75")}</p>
           </div>
@@ -194,10 +194,10 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
                 className="flex items-center justify-between bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow group"
               >
                 <div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-blue-600 transition-colors">{t(v.titleKey)}</h3>
+                  <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">{t(v.titleKey)}</h3>
                   <p className="text-sm text-gray-500 mt-1">{t(v.locationKey)}</p>
                 </div>
-                <span className="text-blue-600 font-medium shrink-0 ml-4">{t("career_78")}</span>
+                <span className="text-orange-600 font-medium shrink-0 ml-4">{t("career_78")}</span>
               </a>
             ))}
           </div>
@@ -208,13 +208,13 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-3 block">{t("career_81")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("career_81")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("career_82")}</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("career_83")}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-8 max-w-2xl mx-auto mb-12">
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
-              <p className="text-5xl font-bold text-blue-600 mb-2">{t("career_23")}</p>
+              <p className="text-5xl font-bold text-orange-600 mb-2">{t("career_23")}</p>
               <p className="text-gray-600">{t("career_84")}</p>
             </div>
             <div className="bg-white rounded-2xl p-8 text-center shadow-sm">
@@ -251,11 +251,11 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
       </section>
 
       {/* CTA */}
-      <section className="py-20 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+      <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("career_91")}</h2>
-          <p className="text-lg text-blue-100 mb-8 max-w-2xl mx-auto">{t("career_92")}</p>
-          <a href="mailto:jobs@tekpoint.com" className="inline-flex items-center justify-center bg-white text-blue-600 h-12 px-8 font-medium rounded-lg hover:bg-blue-50 transition-colors">
+          <p className="text-lg text-orange-100 mb-8 max-w-2xl mx-auto">{t("career_92")}</p>
+          <a href="mailto:jobs@tekpoint.com" className="inline-flex items-center justify-center bg-white text-orange-600 h-12 px-8 font-medium rounded-lg hover:bg-orange-50 transition-colors">
             {t("career_93")}
           </a>
         </div>

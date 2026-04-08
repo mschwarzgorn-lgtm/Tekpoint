@@ -110,14 +110,14 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
             <span>/</span>
             <Link href="/services" className="hover:text-white transition-colors">{t("services-marketing_15")}</Link>
             <span>/</span>
-            <span className="text-blue-300">{t("services-marketing_19")}</span>
+            <span className="text-orange-300">{t("services-marketing_19")}</span>
           </nav>
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">
             {t("services-marketing_24")}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             {t("services-marketing_25")}{" "}
-            <span className="text-blue-300">{t("services-marketing_26")}</span>
+            <span className="text-orange-300">{t("services-marketing_26")}</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
             {t("services-marketing_27")}
@@ -183,11 +183,11 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
               const Icon = iconMap[svc.iconName];
               return (
                 <div key={svc.titleKey} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
-                  <div className="w-12 h-12 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                    {Icon && <Icon className="w-6 h-6 text-blue-600" />}
+                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                    {Icon && <Icon className="w-6 h-6 text-orange-600" />}
                   </div>
                   <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(svc.titleKey)}</h3>
-                  <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-blue-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
+                  <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-orange-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
                     {t("services-marketing_39")} {t(svc.targetKey)}
                   </span>
 
@@ -198,8 +198,8 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
                   </div>
 
                   {/* Solution */}
-                  <div className="bg-blue-50 border-l-4 border-blue-400 rounded-r-lg p-4 mb-4">
-                    <p className="text-xs font-bold uppercase text-blue-700 mb-1">{t("services-marketing_43")}</p>
+                  <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-lg p-4 mb-4">
+                    <p className="text-xs font-bold uppercase text-orange-700 mb-1">{t("services-marketing_43")}</p>
                     <p className="text-sm text-gray-700">{t(svc.solutionKey)}</p>
                   </div>
 
@@ -230,9 +230,9 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                <Package className="w-5 h-5 text-blue-600" />
+            <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
+              <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                <Package className="w-5 h-5 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-marketing_18")}
@@ -240,9 +240,9 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
               <p className="text-gray-600 leading-relaxed mb-4">{t("services-marketing_80")}</p>
               <span className="text-[#1a6bc4] font-medium text-sm">{t("services-marketing_79")}</span>
             </Link>
-            <Link href="/services/partner-connectivity" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-blue-200 hover:shadow-xl transition-all">
-              <div className="w-10 h-10 bg-blue-100 rounded-xl flex items-center justify-center mb-4">
-                <Link2 className="w-5 h-5 text-blue-600" />
+            <Link href="/services/partner-connectivity" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
+              <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
+                <Link2 className="w-5 h-5 text-orange-600" />
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
                 {t("services-marketing_17")}
@@ -257,7 +257,7 @@ export default async function MarketingPage({ params }: { params: Promise<{ loca
       {/* CTA */}
       <section className="py-20 md:py-24 bg-gradient-to-b from-[#0a1628] via-[#0f2341] to-[#0a1628] text-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">
             {t("services-marketing_81")}
           </span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">

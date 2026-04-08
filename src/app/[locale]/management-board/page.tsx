@@ -65,7 +65,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
       {/* Hero Section */}
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-4 block">{t("management-board_24")}</span>
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">{t("management-board_24")}</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
             {t("management-board_25")}
           </h1>
@@ -88,7 +88,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
               <img src="/images/team/mark-schwarzgorn.png" alt={t("management-board_28")} className="w-full h-full object-cover" />
             </div>
             <div className="text-center md:text-left">
-              <p className="text-blue-600 font-semibold text-sm uppercase tracking-wide mb-2">{t("management-board_29")}</p>
+              <p className="text-orange-600 font-semibold text-sm uppercase tracking-wide mb-2">{t("management-board_29")}</p>
               <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-2">{t("management-board_28")}</h2>
               <p className="text-gray-500 font-medium text-sm mb-4">{t("management-board_30")}</p>
               <div className="flex items-center justify-center md:justify-start gap-4 mb-6">
@@ -96,7 +96,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
                   href="https://www.linkedin.com/in/markschwarzgorn"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
+                  className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-800 transition-colors"
                   aria-label="Mark Schwarzgorn on LinkedIn"
                 >
                   <LinkedInIcon className="w-5 h-5" />
@@ -118,7 +118,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
                   href="https://www.markschwarzgorn.com"
                   target="_blank"
                   rel="noopener noreferrer"
-                  className="inline-flex items-center gap-2 text-blue-600 hover:text-blue-800 transition-colors"
+                  className="inline-flex items-center gap-2 text-orange-600 hover:text-orange-800 transition-colors"
                   aria-label="Mark Schwarzgorn's Blog"
                 >
                   <GlobeIcon className="w-5 h-5" />
@@ -135,7 +135,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
       <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
-            <span className="text-sm font-medium tracking-wide uppercase text-blue-300 mb-2 block">{t("management-board_32")}</span>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-2 block">{t("management-board_32")}</span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900">{t("management-board_33")}</h2>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8">
@@ -144,7 +144,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
                 <div className="w-40 h-40 mx-auto rounded-full overflow-hidden bg-gray-100 mb-4 shadow-lg group-hover:shadow-xl transition-shadow">
                   <img src={m.img} alt={m.name} className="w-full h-full object-cover" />
                 </div>
-                <p className="text-blue-600 font-bold text-lg">{m.abbr}</p>
+                <p className="text-orange-600 font-bold text-lg">{m.abbr}</p>
                 <h3 className="text-lg font-semibold text-gray-900">{m.name}</h3>
                 <p className="text-gray-500 text-sm">{m.title}</p>
                 {m.linkedin && (
@@ -152,7 +152,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
                     href={m.linkedin}
                     target="_blank"
                     rel="noopener noreferrer"
-                    className="inline-flex items-center gap-1.5 text-blue-600 hover:text-blue-800 transition-colors mt-2"
+                    className="inline-flex items-center gap-1.5 text-orange-600 hover:text-orange-800 transition-colors mt-2"
                     aria-label={`${m.name} on LinkedIn`}
                   >
                     <LinkedInIcon className="w-4 h-4" />
@@ -166,12 +166,12 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
       </section>
 
       {/* CTA Section */}
-      <section className="py-16 md:py-24 bg-gradient-to-r from-blue-600 to-blue-700 text-white">
+      <section className="py-16 md:py-24 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-200 mb-4 block">{t("management-board_55")}</span>
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-200 mb-4 block">{t("management-board_55")}</span>
           <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("management-board_56")}</h2>
-          <p className="text-lg text-blue-100 max-w-2xl mx-auto mb-8">{t("management-board_57")}</p>
-          <Link href={`/${locale}/contact`} className="inline-block bg-white text-blue-600 font-semibold px-8 py-4 rounded-full hover:bg-blue-50 transition-colors text-lg">
+          <p className="text-lg text-orange-100 max-w-2xl mx-auto mb-8">{t("management-board_57")}</p>
+          <Link href={`/${locale}/contact`} className="inline-block bg-white text-orange-600 font-semibold px-8 py-4 rounded-full hover:bg-orange-50 transition-colors text-lg">
             {t("management-board_58")}
           </Link>
         </div>

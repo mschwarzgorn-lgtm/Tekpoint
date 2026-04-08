@@ -41,7 +41,7 @@ export default function ServicesSection() {
     <section className="py-24 md:py-32 bg-white">
       <div className="container mx-auto px-4 md:px-6">
         <div className="text-center max-w-3xl mx-auto mb-16">
-          <span className="text-sm font-medium tracking-wide uppercase text-blue-600 mb-4 block">
+          <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-4 block">
             {t("index_99")}
           </span>
           <h2 className="text-balance text-3xl md:text-4xl font-semibold tracking-tight text-gray-900 mb-4">
@@ -56,9 +56,9 @@ export default function ServicesSection() {
             <Link
               key={svc.href}
               href={svc.href}
-              className="group p-8 rounded-2xl border border-gray-200 hover:border-blue-200 hover:shadow-lg transition-all"
+              className="group p-8 rounded-2xl border border-gray-200 hover:border-orange-200 hover:shadow-lg transition-all"
             >
-              <div className="w-12 h-12 rounded-xl bg-blue-50 text-blue-600 flex items-center justify-center mb-6 group-hover:bg-blue-600 group-hover:text-white transition-colors">
+              <div className="w-12 h-12 rounded-xl bg-orange-50 text-orange-600 flex items-center justify-center mb-6 group-hover:bg-orange-600 group-hover:text-white transition-colors">
                 {svc.icon}
               </div>
               <h3 className="text-xl font-semibold text-gray-900 mb-3">{svc.title}</h3>
