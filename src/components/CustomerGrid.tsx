@@ -65,7 +65,7 @@ export default function CustomerGrid() {
             loading="lazy"
             width={130}
             height={64}
-            className="max-h-12 md:max-h-16 max-w-[100px] md:max-w-[130px] object-contain opacity-70 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
+            className="max-h-12 md:max-h-16 max-w-[100px] md:max-w-[130px] object-contain grayscale opacity-70 group-hover:grayscale-0 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300"
           />
         </div>
       ))}
