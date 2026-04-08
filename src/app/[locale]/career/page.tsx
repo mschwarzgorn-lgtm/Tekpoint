@@ -269,7 +269,7 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
       <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("career_91")}</h2>
-          <p className="text-lg text-orange-100 mb-8 max-w-2xl mx-auto">{t("career_92")}</p>
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">{t("career_92")}</p>
           <a href="mailto:jobs@tekpoint.com" className="inline-flex items-center justify-center bg-white text-orange-600 h-12 px-8 font-medium rounded-lg hover:bg-orange-50 transition-colors">
             {t("career_93")}
           </a>

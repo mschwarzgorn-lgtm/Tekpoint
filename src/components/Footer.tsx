@@ -63,6 +63,7 @@ export default function Footer() {
         {/* Bottom bar */}
         <div className="border-t border-gray-200 mt-12 pt-8 flex flex-col md:flex-row justify-between items-center gap-4">
           <p className="text-sm text-gray-500">{t("index_156")}</p>
+          <p className="text-xs text-gray-400 mt-1">All trademarks and logos are property of their respective owners.</p>
           <div className="flex gap-6 text-sm">
             <Link href="/privacy-policy" className="text-gray-500 hover:text-gray-700 transition-colors">{t("index_157")}</Link>
             <Link href="/terms-and-conditions" className="text-gray-500 hover:text-gray-700 transition-colors">{t("index_158")}</Link>

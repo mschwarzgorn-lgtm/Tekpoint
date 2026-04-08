@@ -174,7 +174,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
       <section className="py-20 bg-gradient-to-r from-orange-600 to-orange-700 text-white">
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("become-a-partner_39")}</h2>
-          <p className="text-lg text-orange-100 mb-8 max-w-2xl mx-auto">
+          <p className="text-lg text-white/90 mb-8 max-w-2xl mx-auto">
             {t("become-a-partner_40")}
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
@@ -192,7 +192,7 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
               {t("become-a-partner_42")}
             </a>
           </div>
-          <p className="text-sm text-orange-200 mt-6">
+          <p className="text-sm text-white/70 mt-6">
             <Mail className="w-4 h-4 inline mr-1" /> distribution@tekpoint.com &nbsp;|&nbsp; <Phone className="w-4 h-4 inline mr-1" /> +43/1/3616670 &nbsp;|&nbsp; <Phone className="w-4 h-4 inline mr-1" /> +43/1/3616670-902
           </p>
         </div>

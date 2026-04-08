@@ -44,7 +44,7 @@ export default function BrandGrid() {
             loading="lazy"
             width={120}
             height={60}
-            className="max-h-10 md:max-h-12 w-auto object-contain grayscale opacity-60 hover:grayscale-0 hover:opacity-100 transition-all duration-300"
+            className="max-h-10 md:max-h-12 w-auto object-contain opacity-80 hover:opacity-100 hover:scale-105 transition-all duration-300"
             onError={(e) => {
               const target = e.target as HTMLImageElement;
               target.style.display = "none";
