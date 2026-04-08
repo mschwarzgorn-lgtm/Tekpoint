@@ -44,8 +44,13 @@ export default function Footer() {
             <h4 className="font-semibold text-gray-900 mb-4">{t("index_13")}</h4>
             <ul className="space-y-3 text-sm">
               <li><Link href="/services" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_13")}</Link></li>
+              <li><Link href="/services/partner-connectivity" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_113")}</Link></li>
               <li><Link href="/services/logistics" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_154")}</Link></li>
               <li><Link href="/services/marketing" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_126")}</Link></li>
+              <li><Link href="/services/market-entry" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_1")}</Link></li>
+              <li><Link href="/services/eu-compliance" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_2")}</Link></li>
+              <li><Link href="/services/distribution" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_3")}</Link></li>
+              <li><Link href="/services/fulfillment" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_4")}</Link></li>
             </ul>
           </div>
 
