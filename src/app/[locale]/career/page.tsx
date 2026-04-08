@@ -30,9 +30,9 @@ const iconMap = {
 };
 
 const vacancies = [
-  { titleKey: "career_76", locationKey: "career_77", url: "https://tekpoint.com/de/career/account-manager-w-m-d-fur-baumarkte/" },
-  { titleKey: "career_79", locationKey: "career_77", url: "https://tekpoint.com/career/international-contract-procurement-manager-m-f-d/" },
-  { titleKey: "career_80", locationKey: "career_77", url: "https://tekpoint.com/career/it-operation-specialist-m-w-d/" },
+  { titleKey: "career_76", locationKey: "career_77" },
+  { titleKey: "career_79", locationKey: "career_77" },
+  { titleKey: "career_80", locationKey: "career_77" },
 ];
 
 const benefitKeys = [64, 65, 66, 67, 68, 69, 70, 72];
@@ -99,7 +99,24 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      {/* Values */}
+
+      {/* Why Tekpoint? */}
+      <section className="py-24 md:py-32 bg-[#0a1628] text-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-400 mb-3 block">{t("career_111")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold mb-8">{t("career_112")}</h2>
+            <div className="space-y-6 text-lg text-gray-300 leading-relaxed">
+              <p>{t("career_113")}</p>
+              <p>{t("career_114")}</p>
+              <p>{t("career_115")}</p>
+              <p className="text-white font-semibold border-l-4 border-orange-500 pl-6 mt-8">{t("career_116")}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Values */
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
@@ -187,10 +204,8 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
           <div className="max-w-3xl mx-auto space-y-4">
             {vacancies.map((v) => (
               <a
-                key={v.url}
-                href={v.url}
-                target="_blank"
-                rel="noopener noreferrer"
+                key={v.titleKey}
+                href={`mailto:jobs@tekpoint.com?subject=${encodeURIComponent(t(v.titleKey))}`}
                 className="flex items-center justify-between bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow group"
               >
                 <div>
