@@ -277,7 +277,7 @@ export default function Header() {
               onClick={() => setMobileOpen(false)}
               className="block px-4 py-3 text-orange-600 font-semibold min-h-[44px]"
             >
-              {t("index_17")} →
+              {t("index_17")}
             </Link>
           </nav>
         </div>
