@@ -180,7 +180,7 @@ export default function Header() {
                       setLangOpen(false);
                     }}
                     className={`w-full text-left px-4 py-2 text-sm hover:bg-gray-50 ${
-                      l === locale ? "font-semibold text-orange-600 bg-orange-50" : "text-gray-700"
+                      l === locale ? "font-semibold text-orange-600 bg-gray-100" : "text-gray-700"
                     }`}
                   >
                     {langNames[l] || l}

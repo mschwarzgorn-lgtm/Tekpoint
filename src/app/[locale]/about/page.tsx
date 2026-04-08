@@ -91,7 +91,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
           </div>
           <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
             {[50, 51, 52, 53, 54].map((n) => (
-              <div key={n} className="bg-orange-50 rounded-2xl p-8 text-center">
+              <div key={n} className="bg-white rounded-2xl p-8 text-center border border-orange-200">
                 <div className="text-lg font-semibold text-orange-700">{t(`about_${n}`)}</div>
               </div>
             ))}
