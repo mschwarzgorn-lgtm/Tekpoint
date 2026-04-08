@@ -99,6 +99,33 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
+      {/* Our Stance — Phase 6 */}
+      <section className="py-24 md:py-32 bg-[#0a1628] text-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <h2 className="text-3xl md:text-4xl font-semibold mb-8">{t("stance_title")}</h2>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed mb-12">
+              {t("stance_text")}
+            </p>
+
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {[1, 2, 3, 4].map((n) => (
+                <div key={n} className="border-l-4 border-orange-500 pl-6 py-2">
+                  <h3 className="text-lg font-semibold text-white mb-1">{t(`stance_p${n}_title`)}</h3>
+                  <p className="text-gray-400 leading-relaxed">{t(`stance_p${n}_text`)}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="border-t border-gray-700 pt-8">
+              <p className="text-gray-400 italic text-lg leading-relaxed">
+                {t("stance_closing")}
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Customers */}
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6 text-center">
