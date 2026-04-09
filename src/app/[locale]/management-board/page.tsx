@@ -60,6 +60,13 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
     { name: t("management-board_52"), abbr: t("management-board_53"), title: t("management-board_54"), img: "/images/team/suzana-bozovic.webp", linkedin: "https://www.linkedin.com/in/suzana-bozovic-40460592" },
   ];
 
+  const leadershipPrinciples = [
+    { icon: "📊", text: t("management-board_76") },
+    { icon: "⚡", text: t("management-board_77") },
+    { icon: "🎯", text: t("management-board_78") },
+    { icon: "🌍", text: t("management-board_79") },
+  ];
+
   return (
     <>
       {/* Hero Section */}
@@ -80,8 +87,37 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
         </div>
       </section>
 
-      {/* CEO Card */}
+      {/* Leadership Philosophy Section (Maggie's content) */}
       <section className="py-16 md:py-24 bg-gray-50">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-4xl mx-auto">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-4 block">{t("management-board_72")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">{t("management-board_73")}</h2>
+
+            <div className="space-y-6 mb-12">
+              <p className="text-lg text-gray-700 leading-relaxed">{t("management-board_74")}</p>
+              <p className="text-lg text-gray-700 leading-relaxed">{t("management-board_75")}</p>
+            </div>
+
+            <h3 className="text-xl font-semibold text-gray-900 mb-6">{t("management-board_80")}</h3>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-6 mb-12">
+              {leadershipPrinciples.map((p, i) => (
+                <div key={i} className="flex items-start gap-4 bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                  <span className="text-2xl flex-shrink-0">{p.icon}</span>
+                  <p className="text-gray-700 leading-relaxed">{p.text}</p>
+                </div>
+              ))}
+            </div>
+
+            <div className="border-l-4 border-orange-500 pl-6">
+              <p className="text-lg text-gray-700 italic leading-relaxed">{t("management-board_81")}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* CEO Card */}
+      <section className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-5xl mx-auto flex flex-col md:flex-row items-center gap-8 md:gap-12">
             <div className="w-64 h-64 md:w-80 md:h-80 rounded-full overflow-hidden bg-gray-200 flex-shrink-0 shadow-xl">
@@ -132,7 +168,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
       </section>
 
       {/* Team Section */}
-      <section className="py-16 md:py-24 bg-white">
+      <section className="py-16 md:py-24 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-12">
             <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-2 block">{t("management-board_32")}</span>
