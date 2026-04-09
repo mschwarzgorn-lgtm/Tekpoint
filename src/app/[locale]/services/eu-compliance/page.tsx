@@ -45,7 +45,7 @@ export default async function EuCompliancePage({ params }: { params: Promise<{ l
         <div className="relative container mx-auto px-4 md:px-6 max-w-4xl">
           <span className="text-sm font-medium tracking-widest uppercase text-orange-300 mb-4 block">{t("seo2_tag")}</span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">{t("seo2_title")}</h1>
-          <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">{t("seo2_subtitle")}</p>
+          <p className="text-lg md:text-xl text-gray-300 leading-relaxed">{t("seo2_subtitle")}</p>
         </div>
       </section>
 

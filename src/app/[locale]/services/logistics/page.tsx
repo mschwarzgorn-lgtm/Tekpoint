@@ -99,11 +99,10 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
               {t("services-logistics_24")}
             </span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-              {t("services-logistics_25")}{" "}
-              <span className="text-orange-300">{t("services-logistics_26")}</span>
+              <span className="text-orange-300">{t("services-logistics_25")}</span>
             </h1>
             <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
-              {t("services-logistics_27")}
+              {t("services-logistics_26")}
             </p>
           </div>
         </div>

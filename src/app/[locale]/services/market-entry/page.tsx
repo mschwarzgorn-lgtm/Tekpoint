@@ -56,7 +56,7 @@ export default async function MarketEntryPage({ params }: { params: Promise<{ lo
           <div className="max-w-2xl">
             <span className="text-sm font-medium tracking-widest uppercase text-orange-300 mb-4 block">{t("seo1_tag")}</span>
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6 leading-tight">{t("seo1_title")}</h1>
-            <p className="text-xl md:text-2xl text-gray-300 leading-relaxed">{t("seo1_subtitle")}</p>
+            <p className="text-lg md:text-xl text-gray-300 leading-relaxed">{t("seo1_subtitle")}</p>
           </div>
         </div>
       </section>

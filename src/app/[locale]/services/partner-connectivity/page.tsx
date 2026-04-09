@@ -85,11 +85,10 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
             {t("services-partner-connectivity_24")}
           </span>
           <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            {t("services-partner-connectivity_25")}{" "}
-            <span className="text-orange-300">{t("services-partner-connectivity_26")}</span>
+            <span className="text-orange-300">{t("services-partner-connectivity_25")}</span>
           </h1>
           <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
-            {t("services-partner-connectivity_27")}
+            {t("services-partner-connectivity_26")}
           </p>
         </div>
       </section>
