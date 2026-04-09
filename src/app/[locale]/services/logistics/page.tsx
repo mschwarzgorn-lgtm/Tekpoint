@@ -4,7 +4,7 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { generatePageMetadata } from "@/lib/seo";
 import Image from "next/image";
-import { Package, RefreshCcw, Gift, Wrench, Rocket, Zap, CheckCircle, Trophy, Megaphone, Link2 } from "lucide-react";
+import { Package, RefreshCcw, Gift, Wrench, Rocket, Zap, CheckCircle, Trophy, Megaphone, Link2, ArrowRight } from "lucide-react";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -85,7 +85,7 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
       {/* Hero */}
       <section className="relative text-white py-24 md:py-32 overflow-hidden">
         <Image src="/images/image_new24-scaled.webp" alt="" fill className="object-cover" priority />
-        <div className="absolute inset-0 bg-[#0a1628]/75" />
+        <div className="absolute inset-0 bg-gradient-to-r from-[#0a1628]/95 via-[#0a1628]/80 to-[#0a1628]/50" />
         <div className="relative max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-white transition-colors">{t("services-logistics_23")}</Link>
@@ -94,58 +94,64 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
             <span>/</span>
             <span className="text-orange-300">{t("services-logistics_18")}</span>
           </nav>
-          <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">
-            {t("services-logistics_24")}
-          </span>
-          <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
-            {t("services-logistics_25")}{" "}
-            <span className="text-orange-300">{t("services-logistics_26")}</span>
-          </h1>
-          <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
-            {t("services-logistics_27")}
-          </p>
+          <div className="max-w-2xl">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">
+              {t("services-logistics_24")}
+            </span>
+            <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight mb-6">
+              {t("services-logistics_25")}{" "}
+              <span className="text-orange-300">{t("services-logistics_26")}</span>
+            </h1>
+            <p className="text-lg md:text-xl text-gray-300 max-w-3xl leading-relaxed">
+              {t("services-logistics_27")}
+            </p>
+          </div>
         </div>
       </section>
 
-      {/* Intro + Stats */}
-      <section className="py-20 md:py-24 bg-white">
+      {/* Stats — Horizontal strip */}
+      <section className="py-8 bg-[#0a1628] border-t border-white/10">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-[#1a6bc4] mb-3 block">
-              {t("services-logistics_27")}
-            </span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
-              {t("services-logistics_28")} {t("services-logistics_29")}
-            </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
-              {t("services-logistics_30")}
-            </p>
-          </div>
-
-          {/* Stats Grid */}
-          <div className="grid grid-cols-2 md:grid-cols-4 gap-6 mb-8">
+          <div className="grid grid-cols-2 md:grid-cols-4 gap-6">
             {[
               { valueKey: "services-logistics_31", labelKey: "services-logistics_32" },
               { value: "23", labelKey: "services-logistics_33" },
               { valueKey: "services-logistics_34", labelKey: "services-logistics_35" },
               { valueKey: "services-logistics_36", labelKey: "services-logistics_37" },
             ].map((stat, i) => (
-              <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
-                <div className="text-3xl md:text-4xl font-bold text-[#1a6bc4] mb-2">
+              <div key={i} className="text-center py-4">
+                <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-1">
                   {"valueKey" in stat && stat.valueKey ? t(stat.valueKey) : stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{t(stat.labelKey)}</div>
+                <div className="text-sm text-gray-400 font-medium">{t(stat.labelKey)}</div>
               </div>
             ))}
           </div>
         </div>
       </section>
 
-      {/* Service Cards */}
+      {/* Intro */}
+      <section className="py-20 md:py-24 bg-white">
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+          <div className="max-w-3xl">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">
+              {t("services-logistics_27")}
+            </span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
+              {t("services-logistics_28")} {t("services-logistics_29")}
+            </h2>
+            <p className="text-lg text-gray-600 leading-relaxed">
+              {t("services-logistics_30")}
+            </p>
+          </div>
+        </div>
+      </section>
+
+      {/* Service Cards — Full-width before/after rows */}
       <section className="py-20 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-[#1a6bc4] mb-3 block">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">
               {t("services-logistics_39")}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -156,35 +162,47 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
             </p>
           </div>
 
-          <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          <div className="space-y-8">
             {logisticsServices.map((svc) => {
               const Icon = iconMap[svc.iconName];
               return (
-                <div key={svc.titleKey} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 flex flex-col">
-                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
-                    {Icon && <Icon className="w-6 h-6 text-orange-600" />}
+                <div key={svc.titleKey} className="bg-white rounded-2xl border border-gray-200 overflow-hidden shadow-sm">
+                  {/* Title bar */}
+                  <div className="flex items-center gap-4 px-6 py-4 border-b border-gray-100 bg-gray-50">
+                    <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center flex-shrink-0">
+                      {Icon && <Icon className="w-5 h-5 text-orange-600" />}
+                    </div>
+                    <h3 className="text-lg font-semibold text-gray-900">{t(svc.titleKey)}</h3>
+                    <span className="text-xs font-semibold uppercase tracking-wide bg-orange-100 text-orange-700 px-3 py-1 rounded-full ml-auto">
+                      {t(svc.targetKey)}
+                    </span>
                   </div>
-                  <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(svc.titleKey)}</h3>
-                  <span className="inline-block text-xs font-semibold uppercase tracking-wide bg-orange-100 text-[#1a6bc4] px-3 py-1 rounded-full mb-6 w-fit">
-                    {t(svc.targetKey)}
-                  </span>
-
-                  {/* Challenge */}
-                  <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-lg p-4 mb-4">
-                    <p className="text-xs font-bold uppercase text-orange-700 mb-1 flex items-center gap-1"><Zap className="w-3.5 h-3.5" /> {t("services-logistics_44")}</p>
-                    <p className="text-sm text-gray-700">{t(svc.challengeKey)}</p>
-                  </div>
-
-                  {/* Solution */}
-                  <div className="bg-orange-50 border-l-4 border-orange-400 rounded-r-lg p-4 mb-4">
-                    <p className="text-xs font-bold uppercase text-orange-700 mb-1 flex items-center gap-1"><CheckCircle className="w-3.5 h-3.5" /> {t("services-logistics_46")}</p>
-                    <p className="text-sm text-gray-700">{t(svc.solutionKey)}</p>
-                  </div>
-
-                  {/* Benefits */}
-                  <div className="bg-green-50 border-l-4 border-green-400 rounded-r-lg p-4">
-                    <p className="text-xs font-bold uppercase text-green-700 mb-1 flex items-center gap-1"><Trophy className="w-3.5 h-3.5" /> {t("services-logistics_48")}</p>
-                    <p className="text-sm text-gray-700">{t(svc.benefitsKey)}</p>
+                  {/* Challenge → Solution → Benefit — horizontal on desktop */}
+                  <div className="grid grid-cols-1 md:grid-cols-3 divide-y md:divide-y-0 md:divide-x divide-gray-100">
+                    <div className="p-6">
+                      <p className="text-xs font-bold uppercase text-orange-700 mb-2 flex items-center gap-1">
+                        <Zap className="w-3.5 h-3.5" /> {t("services-logistics_44")}
+                      </p>
+                      <p className="text-sm text-gray-700 leading-relaxed">{t(svc.challengeKey)}</p>
+                    </div>
+                    <div className="p-6 relative">
+                      <div className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-orange-500 rounded-full items-center justify-center z-10">
+                        <ArrowRight className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <p className="text-xs font-bold uppercase text-orange-700 mb-2 flex items-center gap-1">
+                        <CheckCircle className="w-3.5 h-3.5" /> {t("services-logistics_46")}
+                      </p>
+                      <p className="text-sm text-gray-700 leading-relaxed">{t(svc.solutionKey)}</p>
+                    </div>
+                    <div className="p-6 bg-green-50/50 relative">
+                      <div className="hidden md:flex absolute -left-3 top-1/2 -translate-y-1/2 w-6 h-6 bg-green-500 rounded-full items-center justify-center z-10">
+                        <ArrowRight className="w-3.5 h-3.5 text-white" />
+                      </div>
+                      <p className="text-xs font-bold uppercase text-green-700 mb-2 flex items-center gap-1">
+                        <Trophy className="w-3.5 h-3.5" /> {t("services-logistics_48")}
+                      </p>
+                      <p className="text-sm text-gray-700 leading-relaxed">{t(svc.benefitsKey)}</p>
+                    </div>
                   </div>
                 </div>
               );
@@ -197,7 +215,7 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-medium tracking-wide uppercase text-[#1a6bc4] mb-3 block">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">
               {t("services-logistics_68")}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -212,21 +230,21 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
               <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                 <Megaphone className="w-5 h-5 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
                 {t("services-logistics_71")}
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">{t("services-logistics_72")}</p>
-              <span className="text-[#1a6bc4] font-medium text-sm">{t("services-logistics_73")}</span>
+              <span className="text-orange-600 font-medium text-sm">{t("services-logistics_73")}</span>
             </Link>
             <Link href="/services/partner-connectivity" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
               <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                 <Link2 className="w-5 h-5 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
                 {t("services-logistics_17")}
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">{t("services-logistics_74")}</p>
-              <span className="text-[#1a6bc4] font-medium text-sm">{t("services-logistics_73")}</span>
+              <span className="text-orange-600 font-medium text-sm">{t("services-logistics_73")}</span>
             </Link>
           </div>
         </div>
@@ -247,7 +265,7 @@ export default async function LogisticsPage({ params }: { params: Promise<{ loca
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#E87C2A] hover:bg-[#d06b1f] text-white font-semibold rounded-lg transition-colors text-lg"
+              className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors text-lg"
             >
               {t("services-logistics_78")}
             </Link>

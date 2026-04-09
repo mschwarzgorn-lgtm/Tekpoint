@@ -94,32 +94,32 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
         </div>
       </section>
 
-      {/* Intro + Feature Highlights */}
+      {/* Intro + Feature Highlights — with left-aligned heading */}
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-[#1a6bc4] mb-3 block">
+          <div className="mb-16 max-w-3xl">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">
               {t("services-partner-connectivity_29")}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
               {t("services-partner-connectivity_27")}
             </h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto leading-relaxed">
+            <p className="text-lg text-gray-600 leading-relaxed">
               {t("services-partner-connectivity_28")}
             </p>
           </div>
 
-          {/* 3 Feature Highlights */}
+          {/* 3 Feature Highlights — alternating bg */}
           <div className="grid grid-cols-1 md:grid-cols-3 gap-8 mb-8">
             {[
-              { iconName: "refreshCw" as const, titleKey: "services-partner-connectivity_29", descKey: "services-partner-connectivity_30" },
-              { iconName: "settings" as const, titleKey: "services-partner-connectivity_31", descKey: "services-partner-connectivity_32" },
-              { iconName: "building" as const, titleKey: "services-partner-connectivity_34", descKey: "services-partner-connectivity_35" },
+              { iconName: "refreshCw" as const, titleKey: "services-partner-connectivity_29", descKey: "services-partner-connectivity_30", bg: "bg-orange-50 border-orange-200" },
+              { iconName: "settings" as const, titleKey: "services-partner-connectivity_31", descKey: "services-partner-connectivity_32", bg: "bg-white border-gray-200" },
+              { iconName: "building" as const, titleKey: "services-partner-connectivity_34", descKey: "services-partner-connectivity_35", bg: "bg-orange-50 border-orange-200" },
             ].map((feat, i) => {
               const Icon = featureIconMap[feat.iconName];
               return (
-                <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
-                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mx-auto mb-4">
+                <div key={i} className={`rounded-2xl border p-8 ${feat.bg}`}>
+                  <div className="w-12 h-12 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                     {Icon && <Icon className="w-6 h-6 text-orange-600" />}
                   </div>
                   <h3 className="text-lg font-semibold text-gray-900 mb-2">{t(feat.titleKey)}</h3>
@@ -131,14 +131,14 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
         </div>
       </section>
 
-      {/* Stats */}
-      <section className="py-20 md:py-24 bg-gray-50">
+      {/* Stats — Dark strip */}
+      <section className="py-16 md:py-20 bg-[#0a1628]">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="text-center mb-12">
-            <span className="text-sm font-medium tracking-wide uppercase text-[#1a6bc4] mb-3 block">
+          <div className="text-center mb-10">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-3 block">
               {t("services-partner-connectivity_36")}
             </span>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">
+            <p className="text-lg text-gray-300 max-w-3xl mx-auto">
               {t("services-partner-connectivity_37")}
             </p>
           </div>
@@ -150,11 +150,11 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
               { valueKey: "services-partner-connectivity_41", labelKey: "services-partner-connectivity_42" },
               { valueKey: "services-partner-connectivity_43", labelKey: "services-partner-connectivity_44" },
             ].map((stat, i) => (
-              <div key={i} className="bg-white rounded-2xl shadow-lg border border-gray-100 p-8 text-center">
-                <div className="text-3xl md:text-4xl font-bold text-[#1a6bc4] mb-2">
+              <div key={i} className="text-center py-6">
+                <div className="text-3xl md:text-4xl font-bold text-orange-400 mb-2">
                   {"valueKey" in stat && stat.valueKey ? t(stat.valueKey) : stat.value}
                 </div>
-                <div className="text-sm text-gray-600 font-medium">{t(stat.labelKey)}</div>
+                <div className="text-sm text-gray-400 font-medium">{t(stat.labelKey)}</div>
               </div>
             ))}
           </div>
@@ -165,7 +165,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
       <section className="py-20 md:py-24 bg-white">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-[#1a6bc4] mb-3 block">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">
               {t("services-partner-connectivity_45")}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -184,15 +184,15 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
                 <div key={step.titleKey} className="relative flex gap-6 pb-12 last:pb-0">
                   {/* Timeline line */}
                   {i < ediSteps.length - 1 && (
-                    <div className="absolute left-6 top-14 w-0.5 h-[calc(100%-3.5rem)] bg-gradient-to-b from-[#1a6bc4] to-orange-200" />
+                    <div className="absolute left-6 top-14 w-0.5 h-[calc(100%-3.5rem)] bg-gradient-to-b from-orange-400 to-orange-200" />
                   )}
                   {/* Step number circle */}
-                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-[#1a6bc4] text-white flex items-center justify-center text-lg font-bold shadow-lg">
+                  <div className="flex-shrink-0 w-12 h-12 rounded-full bg-orange-600 text-white flex items-center justify-center text-lg font-bold shadow-lg">
                     {Icon && <Icon className="w-6 h-6 text-white" />}
                   </div>
                   {/* Content */}
                   <div className="bg-white rounded-2xl shadow-lg border border-gray-100 p-6 flex-1">
-                    <span className="text-xs font-semibold uppercase tracking-wide text-[#1a6bc4] mb-1 block">
+                    <span className="text-xs font-semibold uppercase tracking-wide text-orange-600 mb-1 block">
                       {t(step.stepKey)}
                     </span>
                     <h3 className="text-xl font-semibold text-gray-900 mb-2">{t(step.titleKey)}</h3>
@@ -209,7 +209,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
       <section className="py-20 md:py-24 bg-gray-50">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
           <div className="text-center mb-12">
-            <span className="text-sm font-medium tracking-wide uppercase text-[#1a6bc4] mb-3 block">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">
               {t("services-partner-connectivity_60")}
             </span>
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">
@@ -224,21 +224,21 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
               <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                 <Package className="w-5 h-5 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
                 {t("services-partner-connectivity_18")}
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">{t("services-partner-connectivity_63")}</p>
-              <span className="text-[#1a6bc4] font-medium text-sm">{t("services-partner-connectivity_64")}</span>
+              <span className="text-orange-600 font-medium text-sm">{t("services-partner-connectivity_64")}</span>
             </Link>
             <Link href="/services/marketing" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
               <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                 <Megaphone className="w-5 h-5 text-orange-600" />
               </div>
-              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-[#1a6bc4] transition-colors">
+              <h3 className="text-xl font-semibold text-gray-900 mb-3 group-hover:text-orange-600 transition-colors">
                 {t("services-partner-connectivity_19")}
               </h3>
               <p className="text-gray-600 leading-relaxed mb-4">{t("services-partner-connectivity_65")}</p>
-              <span className="text-[#1a6bc4] font-medium text-sm">{t("services-partner-connectivity_64")}</span>
+              <span className="text-orange-600 font-medium text-sm">{t("services-partner-connectivity_64")}</span>
             </Link>
           </div>
         </div>
@@ -259,7 +259,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
               href="/contact"
-              className="inline-flex items-center justify-center px-8 py-4 bg-[#E87C2A] hover:bg-[#d06b1f] text-white font-semibold rounded-lg transition-colors text-lg"
+              className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors text-lg"
             >
               {t("services-partner-connectivity_69")}
             </Link>
