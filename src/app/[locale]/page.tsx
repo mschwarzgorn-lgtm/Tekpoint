@@ -1,13 +1,11 @@
-
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
-import BrandGrid from "@/components/BrandGrid";
+import BrandMarquee from "@/components/BrandMarquee";
 import CustomerGrid from "@/components/CustomerGrid";
 import StatsSection from "@/components/StatsSection";
 import ServicesSection from "@/components/ServicesSection";
 import CtaSection from "@/components/CtaSection";
-
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -25,7 +23,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
     fallbackDescription: "Tekpoint is a leading technology distributor across Western, Central & Eastern Europe.",
   });
 }
-
 
 export default async function HomePage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -115,10 +112,10 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
         </div>
       </section>
 
-      {/* Brand Portfolio */}
-      <section className="py-24 md:py-32 bg-gray-50">
+      {/* Brand Portfolio — Scrolling Marquee */}
+      <section className="py-20 md:py-28 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="text-center max-w-3xl mx-auto mb-16">
+          <div className="text-center max-w-3xl mx-auto mb-12">
             <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-4 block">
               {t("index_62")}
             </span>
@@ -129,12 +126,15 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
               {t("index_64")}
             </p>
           </div>
-          <BrandGrid />
         </div>
+        <BrandMarquee />
       </section>
 
+      {/* Services — Separated from customer logos to break pattern */}
+      <ServicesSection />
+
       {/* Customer Logos */}
-      <section className="py-24 md:py-32 bg-white">
+      <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-4 block">
@@ -147,9 +147,6 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
           <CustomerGrid />
         </div>
       </section>
-
-      {/* Services */}
-      <ServicesSection />
 
       {/* CTA */}
       <CtaSection />
