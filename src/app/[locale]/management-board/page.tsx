@@ -110,7 +110,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
             </div>
 
             <div className="border-l-4 border-orange-500 pl-6">
-              <p className="text-lg text-gray-700 italic leading-relaxed">{t("management-board_81")}</p>
+              <p className="text-lg text-gray-700 italic leading-relaxed">{t("mgmt_leadership_closing")}</p>
             </div>
           </div>
         </div>
