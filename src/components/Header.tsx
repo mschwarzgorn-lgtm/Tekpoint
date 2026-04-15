@@ -10,7 +10,8 @@ const langNames: Record<string, string> = {
   sr:"Srpski",da:"Dansk",sv:"Svenska",no:"Norsk",fi:"Suomi",is:"Íslenska",
   pl:"Polski",ro:"Română",cs:"Čeština",hu:"Magyar",hr:"Hrvatski",bg:"Български",
   sk:"Slovenčina",sl:"Slovenščina",pt:"Português",el:"Ελληνικά",et:"Eesti",
-  lv:"Latviešu",lt:"Lietuvių",ga:"Gaeilge",mt:"Malti",zh:"中文",ja:"日本語",ko:"한국어"
+  lv:"Latviešu",lt:"Lietuvių",ga:"Gaeilge",mt:"Malti",zh:"中文",ja:"日本語",ko:"한국어",
+  ru:"Русский"
 };
 
 interface DropdownItem { href: string; label: string; }
@@ -54,6 +55,7 @@ export default function Header() {
       ],
     },
     { href: "/career", label: t("index_153") },
+    { href: "/blog", label: "Blog" },
     { href: "/contact", label: t("index_16") },
   ];
 
