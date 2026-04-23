@@ -2,7 +2,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Image from "next/image";
-import { Rocket, Lightbulb, Handshake, Scale, Gem } from "lucide-react";
+import { Rocket, Lightbulb, Handshake, Scale, Gem, MapPin, Clock, Mail } from "lucide-react";
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -29,12 +29,6 @@ const iconMap = {
   gem: Gem,
 };
 
-const vacancies = [
-  { titleKey: "career_76", locationKey: "career_77" },
-  { titleKey: "career_79", locationKey: "career_77" },
-  { titleKey: "career_80", locationKey: "career_77" },
-];
-
 const benefitKeys = [64, 65, 66, 67, 68, 69, 70, 72];
 
 const countryKeys = Array.from({ length: 23 }, (_, i) => `career_${41 + i}`);
@@ -46,6 +40,10 @@ const valueKeys = [
   { key: "career_34", iconName: "scale" as const },
   { key: "career_35", iconName: "gem" as const },
 ];
+
+const taskKeys = ["career_jd_task_1", "career_jd_task_2", "career_jd_task_3", "career_jd_task_4", "career_jd_task_5"];
+const qualKeys = ["career_jd_qual_1", "career_jd_qual_2", "career_jd_qual_3", "career_jd_qual_4", "career_jd_qual_5", "career_jd_qual_6"];
+const offerKeys = ["career_jd_offer_1", "career_jd_offer_2", "career_jd_offer_3", "career_jd_offer_4"];
 
 export default async function CareerPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
@@ -179,6 +177,22 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
+      {/* How We Think & Decide */}
+      <section className="py-20 bg-white">
+        <div className="container mx-auto px-4 md:px-6">
+          <div className="max-w-3xl mx-auto">
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("career_think_tag")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">{t("career_think_heading")}</h2>
+            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
+              <p>{t("career_think_1")}</p>
+              <p>{t("career_think_2")}</p>
+              <p>{t("career_think_3")}</p>
+              <p className="text-gray-900 font-semibold border-l-4 border-orange-500 pl-6 mt-8">{t("career_think_4")}</p>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* Countries of Origin */}
       <section className="py-16 bg-white">
         <div className="container mx-auto px-4 md:px-6">
@@ -226,7 +240,7 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      {/* Open Positions */}
+      {/* Open Position — IT Operation Specialist */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
@@ -234,20 +248,111 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
             <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("career_74")}</h2>
             <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("career_75")}</p>
           </div>
-          <div className="max-w-3xl mx-auto space-y-4">
-            {vacancies.map((v) => (
-              <a
-                key={v.titleKey}
-                href={`mailto:jobs@tekpoint.com?subject=${encodeURIComponent(t(v.titleKey))}`}
-                className="flex items-center justify-between bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow group"
-              >
-                <div>
-                  <h3 className="font-semibold text-gray-900 group-hover:text-orange-600 transition-colors">{t(v.titleKey)}</h3>
-                  <p className="text-sm text-gray-500 mt-1">{t(v.locationKey)}</p>
+
+          {/* Job Listing Card */}
+          <div className="max-w-4xl mx-auto">
+            <div className="bg-white border border-gray-200 rounded-2xl shadow-sm overflow-hidden">
+              {/* Job Header */}
+              <div className="bg-[#0a1628] text-white p-8 md:p-10">
+                <h3 className="text-2xl md:text-3xl font-bold mb-4">{t("career_80")}</h3>
+                <div className="flex flex-wrap gap-4 text-sm">
+                  <span className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                    <MapPin className="w-4 h-4 text-orange-400" />
+                    {t("career_77")}
+                  </span>
+                  <span className="inline-flex items-center gap-2 bg-white/10 px-4 py-2 rounded-full">
+                    <Clock className="w-4 h-4 text-orange-400" />
+                    {t("career_jd_type")}
+                  </span>
                 </div>
-                <span className="text-orange-600 font-medium shrink-0 ml-4">{t("career_78")}</span>
-              </a>
-            ))}
+              </div>
+
+              {/* Job Description Body */}
+              <div className="p-8 md:p-10 space-y-10">
+                {/* Intro */}
+                <p className="text-gray-600 leading-relaxed">{t("career_jd_intro")}</p>
+
+                {/* Tasks */}
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="w-1 h-6 bg-orange-500 rounded-full"></span>
+                    {t("career_jd_tasks_title")}
+                  </h4>
+                  <ul className="space-y-3">
+                    {taskKeys.map((key) => (
+                      <li key={key} className="flex items-start gap-3 text-gray-600">
+                        <svg className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                        </svg>
+                        {t(key)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Qualifications */}
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="w-1 h-6 bg-orange-500 rounded-full"></span>
+                    {t("career_jd_qual_title")}
+                  </h4>
+                  <ul className="space-y-3">
+                    {qualKeys.map((key) => (
+                      <li key={key} className="flex items-start gap-3 text-gray-600">
+                        <svg className="w-5 h-5 text-orange-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {t(key)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* What We Offer */}
+                <div>
+                  <h4 className="text-lg font-bold text-gray-900 mb-4 flex items-center gap-2">
+                    <span className="w-1 h-6 bg-orange-500 rounded-full"></span>
+                    {t("career_jd_offer_title")}
+                  </h4>
+                  <ul className="space-y-3">
+                    {offerKeys.map((key) => (
+                      <li key={key} className="flex items-start gap-3 text-gray-600">
+                        <svg className="w-5 h-5 text-green-500 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                          <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M5 13l4 4L19 7" />
+                        </svg>
+                        {t(key)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+
+                {/* Work Details */}
+                <div className="bg-gray-50 rounded-xl p-6">
+                  <div className="grid grid-cols-1 sm:grid-cols-2 gap-4 text-sm">
+                    <div>
+                      <p className="font-semibold text-gray-900 mb-1">{t("career_jd_location_label")}</p>
+                      <p className="text-gray-600">{t("career_jd_location")}</p>
+                    </div>
+                    <div>
+                      <p className="font-semibold text-gray-900 mb-1">{t("career_jd_hours_label")}</p>
+                      <p className="text-gray-600">{t("career_jd_hours")}</p>
+                    </div>
+                  </div>
+                </div>
+
+                {/* Apply CTA */}
+                <div className="pt-4 border-t border-gray-100">
+                  <p className="text-gray-600 mb-6">{t("career_jd_apply_text")}</p>
+                  <a
+                    href="mailto:jobs@tekpoint.com?subject=IT%20Operation%20Specialist%20(m/w/d)%20%E2%80%93%20Bewerbung"
+                    className="inline-flex items-center gap-2 bg-orange-600 text-white h-12 px-8 font-medium rounded-lg hover:bg-orange-700 transition-colors"
+                  >
+                    <Mail className="w-5 h-5" />
+                    {t("career_78")}
+                  </a>
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>
