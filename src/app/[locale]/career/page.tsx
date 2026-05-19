@@ -2,7 +2,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import Image from "next/image";
-import { Rocket, Lightbulb, Handshake, Scale, Gem, MapPin, Clock, Mail } from "lucide-react";
+import { Shield, Scale, Users, Target, RefreshCw, Zap, MapPin, Clock, Mail } from "lucide-react";
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -21,24 +21,17 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
-const iconMap = {
-  rocket: Rocket,
-  lightbulb: Lightbulb,
-  handshake: Handshake,
-  scale: Scale,
-  gem: Gem,
-};
-
 const benefitKeys = [64, 65, 66, 67, 68, 69, 70, 72];
 
 const countryKeys = Array.from({ length: 23 }, (_, i) => `career_${41 + i}`);
 
-const valueKeys = [
-  { key: "career_30", iconName: "rocket" as const },
-  { key: "career_31", iconName: "lightbulb" as const },
-  { key: "career_32", iconName: "handshake" as const },
-  { key: "career_34", iconName: "scale" as const },
-  { key: "career_35", iconName: "gem" as const },
+const principleConfig = [
+  { key: "principle_1", icon: Shield },
+  { key: "principle_2", icon: Scale },
+  { key: "principle_3", icon: Users },
+  { key: "principle_4", icon: Target },
+  { key: "principle_5", icon: RefreshCw },
+  { key: "principle_6", icon: Zap },
 ];
 
 const taskKeys = ["career_jd_task_1", "career_jd_task_2", "career_jd_task_3", "career_jd_task_4", "career_jd_task_5"];
@@ -234,27 +227,26 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      {/* Values — How We Actually Work */}
+      {/* Our Principles — Official 6 Guiding Principles */}
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center mb-16">
-            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("career_27")}</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("career_values_header")}</h2>
-            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("career_29")}</p>
+            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("principle_tag")}</span>
+            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-4">{t("principle_heading")}</h2>
+            <p className="text-lg text-gray-600 max-w-3xl mx-auto">{t("principle_intro")}</p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-6 max-w-5xl mx-auto">
-            {valueKeys.map((v) => {
-              const Icon = iconMap[v.iconName];
-              const descKey = v.key + "_desc";
+            {principleConfig.map((p) => {
+              const Icon = p.icon;
               return (
-                <div key={v.key} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100">
+                <div key={p.key} className="bg-white rounded-xl p-6 shadow-sm border border-gray-100 hover:shadow-md transition-shadow">
                   <div className="flex items-center gap-3 mb-3">
                     <div className="w-10 h-10 bg-orange-100 rounded-lg flex items-center justify-center flex-shrink-0">
-                      {Icon && <Icon className="w-5 h-5 text-orange-600" />}
+                      <Icon className="w-5 h-5 text-orange-600" />
                     </div>
-                    <h3 className="font-semibold text-gray-900">{t(v.key)}</h3>
+                    <h3 className="font-semibold text-gray-900">{t(p.key)}</h3>
                   </div>
-                  <p className="text-sm text-gray-600 leading-relaxed">{t(descKey)}</p>
+                  <p className="text-sm text-gray-600 leading-relaxed">{t(`${p.key}_desc`)}</p>
                 </div>
               );
             })}
@@ -268,43 +260,93 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
         </div>
       </section>
 
-      {/* How Culture Shows Up in Daily Work */}
-      <section className="py-20 bg-gray-900">
+      {/* How These Principles Show Up in Daily Work — By Role */}
+      <section className="py-24 md:py-32 bg-[#0a1628] text-white">
         <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <span className="text-sm font-medium tracking-wide uppercase text-orange-400 mb-3 block">{t("career_how_title")}</span>
-            <div className="space-y-6 mt-8">
-              {["career_how_1", "career_how_2", "career_how_3", "career_how_4"].map((key) => (
-                <div key={key} className="flex items-start gap-4">
-                  <div className="w-1 bg-orange-500 rounded-full flex-shrink-0 mt-1" style={{minHeight: "2rem"}}></div>
-                  <p className="text-lg text-gray-300">{t(key)}</p>
+          <div className="max-w-5xl mx-auto">
+            <div className="text-center mb-16">
+              <span className="text-sm font-medium tracking-wide uppercase text-orange-400 mb-3 block">{t("daily_work_tag")}</span>
+              <h2 className="text-3xl md:text-4xl font-bold mb-4">{t("daily_work_heading")}</h2>
+            </div>
+
+            <div className="space-y-12">
+              {/* For Employees */}
+              <div className="bg-white/5 rounded-2xl p-8 md:p-10 border border-white/10">
+                <h3 className="text-xl font-bold text-orange-400 mb-6">{t("daily_emp_title")}</h3>
+                <ul className="space-y-4 mb-8">
+                  {["daily_emp_1", "daily_emp_2", "daily_emp_3", "daily_emp_4"].map((key) => (
+                    <li key={key} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span className="text-gray-300">{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-6">
+                  <p className="text-sm font-semibold text-orange-300 uppercase tracking-wide mb-3">{t("daily_emp_box_title")}</p>
+                  <ul className="space-y-2">
+                    {["daily_emp_box_1", "daily_emp_box_2"].map((key) => (
+                      <li key={key} className="flex items-center gap-2 text-sm text-gray-300">
+                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0"></span>
+                        {t(key)}
+                      </li>
+                    ))}
+                  </ul>
                 </div>
-              ))}
-            </div>
-
-            {/* Leadership & Management */}
-            <div className="mt-16 pt-12 border-t border-gray-700">
-              <span className="text-sm font-medium tracking-wide uppercase text-orange-400 mb-6 block">{t("career_lead_title")}</span>
-              <div className="space-y-4">
-                <p className="text-lg text-gray-300">{t("career_lead_1")}</p>
-                <p className="text-lg text-gray-300">{t("career_lead_2")}</p>
               </div>
-            </div>
-          </div>
-        </div>
-      </section>
 
-      {/* How We Think & Decide */}
-      <section className="py-20 bg-white">
-        <div className="container mx-auto px-4 md:px-6">
-          <div className="max-w-3xl mx-auto">
-            <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("career_think_tag")}</span>
-            <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-8">{t("career_think_heading")}</h2>
-            <div className="space-y-6 text-lg text-gray-600 leading-relaxed">
-              <p>{t("career_think_1")}</p>
-              <p>{t("career_think_2")}</p>
-              <p>{t("career_think_3")}</p>
-              <p className="text-gray-900 font-semibold border-l-4 border-orange-500 pl-6 mt-8">{t("career_think_4")}</p>
+              {/* For Team Leads */}
+              <div className="bg-white/5 rounded-2xl p-8 md:p-10 border border-white/10">
+                <h3 className="text-xl font-bold text-orange-400 mb-6">{t("daily_lead_title")}</h3>
+                <ul className="space-y-4 mb-8">
+                  {["daily_lead_1", "daily_lead_2", "daily_lead_3", "daily_lead_4", "daily_lead_5"].map((key) => (
+                    <li key={key} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span className="text-gray-300">{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-6">
+                  <p className="text-sm font-semibold text-orange-300 uppercase tracking-wide mb-3">{t("daily_lead_box_title")}</p>
+                  <ul className="space-y-2">
+                    {["daily_lead_box_1", "daily_lead_box_2", "daily_lead_box_3", "daily_lead_box_4"].map((key) => (
+                      <li key={key} className="flex items-center gap-2 text-sm text-gray-300">
+                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0"></span>
+                        {t(key)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
+
+              {/* For C-Level */}
+              <div className="bg-white/5 rounded-2xl p-8 md:p-10 border border-white/10">
+                <h3 className="text-xl font-bold text-orange-400 mb-6">{t("daily_clevel_title")}</h3>
+                <ul className="space-y-4 mb-8">
+                  {["daily_clevel_1", "daily_clevel_2", "daily_clevel_3", "daily_clevel_4", "daily_clevel_5"].map((key) => (
+                    <li key={key} className="flex items-start gap-3">
+                      <svg className="w-5 h-5 text-orange-400 flex-shrink-0 mt-0.5" fill="none" viewBox="0 0 24 24" stroke="currentColor">
+                        <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M9 5l7 7-7 7" />
+                      </svg>
+                      <span className="text-gray-300">{t(key)}</span>
+                    </li>
+                  ))}
+                </ul>
+                <div className="bg-orange-500/10 border border-orange-500/30 rounded-xl p-6">
+                  <p className="text-sm font-semibold text-orange-300 uppercase tracking-wide mb-3">{t("daily_clevel_box_title")}</p>
+                  <ul className="space-y-2">
+                    {["daily_clevel_box_1", "daily_clevel_box_2", "daily_clevel_box_3", "daily_clevel_box_4"].map((key) => (
+                      <li key={key} className="flex items-center gap-2 text-sm text-gray-300">
+                        <span className="w-1.5 h-1.5 bg-orange-400 rounded-full flex-shrink-0"></span>
+                        {t(key)}
+                      </li>
+                    ))}
+                  </ul>
+                </div>
+              </div>
             </div>
           </div>
         </div>

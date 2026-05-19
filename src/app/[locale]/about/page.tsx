@@ -82,15 +82,15 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      {/* Values */}
+      {/* Principles (updated from 5 values to 6 official principles) */}
       <section className="py-24 md:py-32 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           <div className="text-center max-w-3xl mx-auto mb-16">
             <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">{t("about_47")}</h2>
             <p className="text-lg text-gray-600">{t("about_49")}</p>
           </div>
-          <div className="grid grid-cols-2 md:grid-cols-5 gap-6">
-            {[50, 51, 52, 53, 54].map((n) => (
+          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-6 gap-6">
+            {[50, 51, 52, 53, 54, 55].map((n) => (
               <div key={n} className="bg-white rounded-2xl p-8 text-center border border-orange-200">
                 <div className="text-lg font-semibold text-orange-700">{t(`about_${n}`)}</div>
               </div>
@@ -117,9 +117,12 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               ))}
             </div>
 
-            <div className="border-t border-gray-700 pt-8">
+            <div className="border-t border-gray-700 pt-8 space-y-4">
               <p className="text-gray-400 italic text-lg leading-relaxed">
                 {t("stance_closing")}
+              </p>
+              <p className="text-gray-500 text-base">
+                {t("stance_principles_ref")}
               </p>
             </div>
           </div>
