@@ -129,20 +129,7 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
         </div>
       </section>
 
-      {/* Customers */}
-      <section className="py-24 md:py-32 bg-gray-50">
-        <div className="container mx-auto px-4 md:px-6 text-center">
-          <h2 className="text-3xl md:text-4xl font-semibold text-gray-900 mb-4">{t("about_57")}</h2>
-          <p className="text-lg text-gray-600 max-w-2xl mx-auto mb-12">{t("about_58")}</p>
-          <div className="grid grid-cols-2 sm:grid-cols-4 gap-6">
-            {[59, 60, 61, 62, 63, 64, 65, 66].map((n) => (
-              <div key={n} className="bg-white rounded-xl border border-gray-200 p-6 flex items-center justify-center h-20">
-                <span className="text-gray-500 font-medium">{t(`about_${n}`)}</span>
-              </div>
-            ))}
-          </div>
-        </div>
-      </section>
+
     </>
   );
 }
