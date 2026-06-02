@@ -49,6 +49,7 @@ const customers = [
   { name: "MobielWerkt", logo: "/images/retailers/mobielwerkt.png" },
   { name: "Sunny Europe", logo: "/images/retailers/sunny-europe.svg" },
   { name: "EP: (ElectronicPartner)", logo: "/images/retailers/ep-medimax.png" },
+  { name: "Medimax", logo: "/images/retailers/medimax.png" },
   { name: "Kaufland", logo: "/images/retailers/kaufland.svg" },
   { name: "OBI", logo: "/images/retailers/obi.svg" },
   { name: "Hornbach", logo: "/images/retailers/hornbach.svg" },
