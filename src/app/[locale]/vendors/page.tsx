@@ -102,6 +102,10 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
     { name: "Lanckriet", logo: "retailers/lanckriet.png" },
     { name: "MobielWerkt", logo: "retailers/mobielwerkt.png" },
     { name: "Sunny Europe", logo: "retailers/sunny-europe.svg" },
+    { name: "EP: (ElectronicPartner)", logo: "retailers/ep-medimax.png" },
+    { name: "Kaufland", logo: "retailers/kaufland.svg" },
+    { name: "OBI", logo: "retailers/obi.svg" },
+    { name: "Hornbach", logo: "retailers/hornbach.svg" },
   ];
 
   return (
