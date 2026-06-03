@@ -2,7 +2,7 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
-import { Mail, Handshake, Truck, Megaphone, Link2, ShoppingCart, Briefcase, MapPin, Phone, FilePenLine, RefreshCw } from "lucide-react";
+import { Mail, Handshake, Truck, Megaphone, Link2, ShoppingCart, Briefcase, MapPin, Phone, FilePenLine, RefreshCw, FileCheck } from "lucide-react";
 
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
@@ -30,6 +30,7 @@ const departments = [
   { icon: <Link2 className="w-5 h-5 text-orange-600" />, key: "contact_89", email: "partnerconnectivity@tekpoint.com" },
   { icon: <ShoppingCart className="w-5 h-5 text-orange-600" />, key: "contact_51", email: "d2c@tekpoint.com" },
   { icon: <Briefcase className="w-5 h-5 text-orange-600" />, key: "contact_52", email: "jobs@tekpoint.com" },
+  { icon: <FileCheck className="w-5 h-5 text-orange-600" />, key: "contact_90", email: "abe@tekpoint.com" },
 ];
 
 export default async function ContactPage({ params }: { params: Promise<{ locale: string }> }) {
