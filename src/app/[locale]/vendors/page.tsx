@@ -51,7 +51,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
     { name: "Navimow", logo: "brands/navimow.svg", bg: "brands/navimow-bg.webp" },
     { name: "NIU", logo: "brands/niu.svg", bg: "brands/niu-bg.webp" },
     { name: "eufy", logo: "brands/eufy.svg", bg: "brands/eufy-bg.webp" },
-    { name: "Zepp", logo: "zepp.png", bg: "brands/zepp-bg.webp" },
+    { name: "Rokid", logo: "brands/rokid.svg", bg: "brands/rokid-bg.webp" },
   ];
 
   const retailers = [
