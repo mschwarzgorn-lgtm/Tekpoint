@@ -26,7 +26,6 @@ const brands = [
   { name: "Anker", logo: "anker.png" },
   { name: "IMIKI", logo: "Imiki.svg" },
   { name: "eufy", logo: "brands/eufy.svg" },
-  { name: "Zepp", logo: "zepp.png" },
   { name: "Rokid", logo: "brands/rokid.svg" },
 ];
 
