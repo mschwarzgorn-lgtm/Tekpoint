@@ -25,7 +25,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
   setRequestLocale(locale);
   const t = await getTranslations();
 
-  const brands = [
+  const brands: { name: string; logo: string; bg: string; logoClass?: string }[] = [
     { name: "Xiaomi", logo: "Xiaomi-2.png", bg: "xiaomi_bg-jpg.webp" },
     { name: "OPPO", logo: "VI_PNG_OPPO-Logo_White_CMYK_20191204-01-2.png", bg: "oppo.png" },
     { name: "POCO", logo: "on-hover-2.png", bg: "poco-2.png" },
@@ -52,9 +52,9 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
     { name: "NIU", logo: "brands/niu.svg", bg: "brands/niu-bg.webp" },
     { name: "eufy", logo: "brands/eufy.svg", bg: "brands/eufy-bg.webp" },
     { name: "Rokid", logo: "brands/rokid.svg", bg: "brands/rokid-bg.webp" },
-    // Harmonix wordmark is very wide, so the banner image already contains the
-    // white logo baked in; the overlay uses a transparent placeholder.
-    { name: "Harmonix", logo: "brands/transparent.png", bg: "brands/harmonix-bg.webp" },
+    // Harmonix wordmark is very wide; render it a touch larger than the default
+    // and cap its width so the long wordmark fits cleanly inside the card.
+    { name: "Harmonix", logo: "brands/harmonix-wordmark.png", bg: "brands/harmonix-bg.webp", logoClass: "max-h-14 md:max-h-20 max-w-[85%]" },
   ];
 
   const retailers = [
@@ -156,7 +156,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
                 <img src={`/images/${brand.bg}`} alt={brand.name} className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
                 <div className="absolute inset-0 flex items-center justify-center p-4">
-                  <img src={`/images/${brand.logo}`} alt={brand.name} className="max-h-12 md:max-h-16 w-auto object-contain brightness-0 invert" />
+                  <img src={`/images/${brand.logo}`} alt={brand.name} className={`${brand.logoClass ?? "max-h-12 md:max-h-16"} w-auto object-contain brightness-0 invert`} />
                 </div>
               </div>
             ))}
