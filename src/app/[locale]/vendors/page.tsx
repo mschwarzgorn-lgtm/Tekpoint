@@ -52,6 +52,9 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
     { name: "NIU", logo: "brands/niu.svg", bg: "brands/niu-bg.webp" },
     { name: "eufy", logo: "brands/eufy.svg", bg: "brands/eufy-bg.webp" },
     { name: "Rokid", logo: "brands/rokid.svg", bg: "brands/rokid-bg.webp" },
+    // Harmonix wordmark is very wide, so the banner image already contains the
+    // white logo baked in; the overlay uses a transparent placeholder.
+    { name: "Harmonix", logo: "brands/transparent.png", bg: "brands/harmonix-bg.webp" },
   ];
 
   const retailers = [

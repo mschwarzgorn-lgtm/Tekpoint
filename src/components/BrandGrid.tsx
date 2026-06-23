@@ -27,6 +27,7 @@ const brands = [
   { name: "IMIKI", logo: "Imiki.svg" },
   { name: "eufy", logo: "brands/eufy.svg" },
   { name: "Rokid", logo: "brands/rokid.svg" },
+  { name: "Harmonix", logo: "brands/harmonix.png" },
 ];
 
 export default function BrandGrid() {

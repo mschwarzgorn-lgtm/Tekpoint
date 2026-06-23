@@ -26,11 +26,12 @@ const brands = [
   { name: "Anker", logo: "anker.png" },
   { name: "IMIKI", logo: "Imiki.svg" },
   { name: "eufy", logo: "brands/eufy.svg" },
-  { name: "Zepp", logo: "zepp.png" },
+  { name: "Rokid", logo: "brands/rokid.svg" },
+  { name: "Harmonix", logo: "brands/harmonix.png" },
 ];
 
-const row1 = brands.slice(0, 13);
-const row2 = brands.slice(13);
+const row1 = brands.slice(0, 14);
+const row2 = brands.slice(14);
 
 function MarqueeRow({
   items,
