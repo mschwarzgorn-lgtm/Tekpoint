@@ -1,5 +1,9 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  LocaleBreadcrumbJsonLd,
+  ServiceJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { generatePageMetadata } from "@/lib/seo";
@@ -69,6 +73,20 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
 
   return (
     <>
+      <ServiceJsonLd
+        locale={locale}
+        path="/services/partner-connectivity"
+        name={t("services-partner-connectivity_1")}
+        description={t("services-partner-connectivity_2")}
+        serviceType="System integration"
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[
+          { name: t("index_13"), path: "/services" },
+          { name: t("index_113"), path: "/services/partner-connectivity" },
+        ]}
+      />
       {/* Hero */}
       <section className="relative text-white py-24 md:py-32 overflow-hidden">
         <Image src="/images/image_new2-scaled.webp" alt="" fill className="object-cover" priority />
@@ -77,7 +95,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
           <nav className="flex items-center gap-2 text-sm text-gray-400 mb-8">
             <Link href="/" className="hover:text-white transition-colors">{t("services-partner-connectivity_23")}</Link>
             <span>/</span>
-            <Link href="/services" className="hover:text-white transition-colors">{t("services-partner-connectivity_15")}</Link>
+            <Link href="/services/" className="hover:text-white transition-colors">{t("services-partner-connectivity_15")}</Link>
             <span>/</span>
             <span className="text-orange-300">{t("services-partner-connectivity_17")}</span>
           </nav>
@@ -219,7 +237,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
             </p>
           </div>
           <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
-            <Link href="/services/logistics" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
+            <Link href="/services/logistics/" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
               <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                 <Package className="w-5 h-5 text-orange-600" />
               </div>
@@ -229,7 +247,7 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
               <p className="text-gray-600 leading-relaxed mb-4">{t("services-partner-connectivity_63")}</p>
               <span className="text-orange-600 font-medium text-sm">{t("services-partner-connectivity_64")}</span>
             </Link>
-            <Link href="/services/marketing" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
+            <Link href="/services/marketing/" className="group bg-white rounded-2xl shadow-lg border border-gray-100 p-8 hover:border-orange-200 hover:shadow-xl transition-all">
               <div className="w-10 h-10 bg-orange-100 rounded-xl flex items-center justify-center mb-4">
                 <Megaphone className="w-5 h-5 text-orange-600" />
               </div>
@@ -257,13 +275,13 @@ export default async function PartnerConnectivityPage({ params }: { params: Prom
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <Link
-              href="/contact"
+              href="/contact/"
               className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors text-lg"
             >
               {t("services-partner-connectivity_69")}
             </Link>
             <Link
-              href="/services"
+              href="/services/"
               className="inline-flex items-center justify-center px-8 py-4 bg-white/10 hover:bg-white/20 text-white font-semibold rounded-lg transition-colors text-lg border border-white/20"
             >
               {t("services-partner-connectivity_70")}

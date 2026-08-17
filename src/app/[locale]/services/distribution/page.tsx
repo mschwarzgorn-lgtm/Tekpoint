@@ -1,4 +1,8 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  LocaleBreadcrumbJsonLd,
+  ServiceJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
@@ -13,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   return generatePageMetadata({
     locale,
-    pagePath: "/distribution",
+    pagePath: "/services/distribution",
     titleKey: "seo3_title",
     descriptionKey: "seo3_meta_desc",
     fallbackTitle: "European Distribution for Technology Brands — Tekpoint",
@@ -41,6 +45,20 @@ export default async function DistributionPage({ params }: { params: Promise<{ l
   const t = await getTranslations();
   return (
     <>
+      <ServiceJsonLd
+        locale={locale}
+        path="/services/distribution"
+        name={t("seo3_title")}
+        description={t("seo3_meta_desc")}
+        serviceType="Wholesale distribution"
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[
+          { name: t("index_13"), path: "/services" },
+          { name: t("seo_nav_3"), path: "/services/distribution" },
+        ]}
+      />
       {/* Hero */}
       <section className="relative text-white py-24 md:py-36 overflow-hidden">
         <Image src="/images/image_new25-scaled.webp" alt="" fill className="object-cover" priority />
@@ -112,7 +130,7 @@ export default async function DistributionPage({ params }: { params: Promise<{ l
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold mb-6">{t("seo3_cta_title")}</h2>
           <p className="text-lg text-gray-300 max-w-3xl mx-auto mb-10">{t("seo3_cta_text")}</p>
-          <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors text-lg">
+          <Link href="/contact/" className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors text-lg">
             {t("seo3_cta_button")} →
           </Link>
         </div>

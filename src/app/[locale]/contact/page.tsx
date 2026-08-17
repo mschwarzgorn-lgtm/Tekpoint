@@ -1,5 +1,9 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  LocaleBreadcrumbJsonLd,
+  WebPageJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { Mail, Handshake, Truck, Megaphone, Link2, ShoppingCart, Briefcase, MapPin, Phone, FilePenLine, RefreshCw, FileCheck } from "lucide-react";
@@ -39,6 +43,17 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
   const t = await getTranslations();
   return (
     <>
+      <WebPageJsonLd
+        type="ContactPage"
+        locale={locale}
+        path="/contact"
+        name={t("contact_1")}
+        description={t("contact_2")}
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[{ name: t("index_16"), path: "/contact" }]}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
@@ -159,7 +174,7 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
             <p className="text-gray-600 max-w-2xl mx-auto">{t("contact_55")}</p>
           </div>
           <div className="grid grid-cols-1 sm:grid-cols-2 gap-6 max-w-2xl mx-auto">
-            <Link href="/become-a-partner" className="flex items-center gap-4 bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow group">
+            <Link href="/become-a-partner/" className="flex items-center gap-4 bg-gray-50 rounded-xl p-6 hover:shadow-md transition-shadow group">
               <div className="w-10 h-10 rounded-lg bg-orange-50 flex items-center justify-center shrink-0">
                 <FilePenLine className="w-5 h-5 text-orange-600" />
               </div>

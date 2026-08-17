@@ -1,5 +1,10 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  JobPostingJsonLd,
+  LocaleBreadcrumbJsonLd,
+  WebPageJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 import Image from "next/image";
 import { Shield, Scale, Users, Target, RefreshCw, Zap, MapPin, Clock, Mail } from "lucide-react";
@@ -21,9 +26,15 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   });
 }
 
+// Date the IT Operation Specialist vacancy was first published on tekpoint.com.
+// Update this when the posting is refreshed or replaced.
+const VACANCY_DATE_POSTED = "2026-03-24";
+
 const benefitKeys = [64, 65, 66, 67, 68, 69, 70, 72];
 
-const countryKeys = Array.from({ length: 23 }, (_, i) => `career_${41 + i}`);
+// career_41..career_61 are the 21 countries of origin. career_62/63 are the
+// "Benefits" headings — including them rendered them as country chips.
+const countryKeys = Array.from({ length: 21 }, (_, i) => `career_${41 + i}`);
 
 const principleConfig = [
   { key: "principle_1", icon: Shield },
@@ -44,6 +55,33 @@ export default async function CareerPage({ params }: { params: Promise<{ locale:
   const t = await getTranslations();
   return (
     <>
+      <WebPageJsonLd
+        locale={locale}
+        path="/career"
+        name={t("career_1")}
+        description={t("career_2")}
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[{ name: t("index_153"), path: "/career" }]}
+      />
+      <JobPostingJsonLd
+        title={t("career_80")}
+        description={[
+          t("career_jd_intro"),
+          `${t("career_jd_tasks_title")}: ${taskKeys.map((k) => t(k)).join("; ")}.`,
+          `${t("career_jd_qual_title")}: ${qualKeys.map((k) => t(k)).join("; ")}.`,
+          `${t("career_jd_offer_title")}: ${offerKeys.map((k) => t(k)).join("; ")}.`,
+        ].join(" ")}
+        datePosted={VACANCY_DATE_POSTED}
+        employmentType="FULL_TIME"
+        streetAddress="Airportstraße 3a, Unit 4"
+        postalCode="2401"
+        addressLocality="Fischamend"
+        addressCountry="AT"
+        applyEmail="jobs@tekpoint.com"
+        url={`https://tekpoint.com/${locale}/career/`}
+      />
       {/* Hero */}
       <section className="relative text-white py-24 md:py-32 overflow-hidden">
         <Image

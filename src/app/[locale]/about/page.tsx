@@ -1,5 +1,9 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  LocaleBreadcrumbJsonLd,
+  WebPageJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 
@@ -28,6 +32,17 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
   const t = await getTranslations();
   return (
     <>
+      <WebPageJsonLd
+        type="AboutPage"
+        locale={locale}
+        path="/about"
+        name={t("about_1")}
+        description={t("about_2")}
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[{ name: t("index_11"), path: "/about" }]}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
@@ -48,10 +63,10 @@ export default async function AboutPage({ params }: { params: Promise<{ locale: 
               <p className="text-gray-600 text-lg leading-relaxed mb-6">{t("about_29")}</p>
               <p className="text-gray-600 leading-relaxed mb-8">{t("about_30")}</p>
               <div className="flex flex-col sm:flex-row gap-4">
-                <Link href="/vendors" className="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white h-12 px-8 font-medium rounded-lg transition-colors">
+                <Link href="/vendors/" className="inline-flex items-center justify-center bg-orange-600 hover:bg-orange-700 text-white h-12 px-8 font-medium rounded-lg transition-colors">
                   {t("about_31")}
                 </Link>
-                <Link href="/contact" className="inline-flex items-center justify-center border border-gray-300 hover:bg-gray-50 text-gray-700 h-12 px-8 font-medium rounded-lg transition-colors">
+                <Link href="/contact/" className="inline-flex items-center justify-center border border-gray-300 hover:bg-gray-50 text-gray-700 h-12 px-8 font-medium rounded-lg transition-colors">
                   {t("about_32")}
                 </Link>
               </div>

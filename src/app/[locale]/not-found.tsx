@@ -35,7 +35,7 @@ export default function NotFound() {
           ← Back to Homepage
         </Link>
         <Link
-          href="/contact"
+          href="/contact/"
           className="inline-flex items-center justify-center px-6 py-3 border border-gray-300 text-gray-700 font-medium rounded-lg hover:bg-gray-50 transition-colors"
         >
           Contact Us
@@ -46,11 +46,11 @@ export default function NotFound() {
       <div className="mt-16 text-sm text-gray-500">
         <p className="mb-3 font-medium text-gray-700">Popular pages:</p>
         <div className="flex flex-wrap justify-center gap-x-6 gap-y-2">
-          <Link href="/about" className="hover:text-orange-600 transition-colors">About</Link>
-          <Link href="/services" className="hover:text-orange-600 transition-colors">Services</Link>
-          <Link href="/vendors" className="hover:text-orange-600 transition-colors">Brands</Link>
-          <Link href="/career" className="hover:text-orange-600 transition-colors">Career</Link>
-          <Link href="/become-a-partner" className="hover:text-orange-600 transition-colors">Become a Partner</Link>
+          <Link href="/about/" className="hover:text-orange-600 transition-colors">About</Link>
+          <Link href="/services/" className="hover:text-orange-600 transition-colors">Services</Link>
+          <Link href="/vendors/" className="hover:text-orange-600 transition-colors">Brands</Link>
+          <Link href="/career/" className="hover:text-orange-600 transition-colors">Career</Link>
+          <Link href="/become-a-partner/" className="hover:text-orange-600 transition-colors">Become a Partner</Link>
         </div>
       </div>
     </main>

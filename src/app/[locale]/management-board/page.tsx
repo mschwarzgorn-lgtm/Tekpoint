@@ -1,4 +1,9 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  LocaleBreadcrumbJsonLd,
+  PeopleJsonLd,
+  WebPageJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 import Link from "next/link";
 
@@ -68,6 +73,36 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
 
   return (
     <>
+      <WebPageJsonLd
+        type="AboutPage"
+        locale={locale}
+        path="/management-board"
+        name={t("management-board_1")}
+        description={t("management-board_2")}
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[
+          { name: t("index_11"), path: "/about" },
+          { name: t("index_151"), path: "/management-board" },
+        ]}
+      />
+      <PeopleJsonLd
+        people={[
+          {
+            name: t("management-board_28"),
+            jobTitle: t("management-board_29"),
+            image: "/images/team/mark-schwarzgorn.png",
+            linkedin: "https://www.linkedin.com/in/markschwarzgorn",
+          },
+          ...teamMembers.map((m) => ({
+            name: m.name,
+            jobTitle: `${m.abbr} ${m.title.replace(/^—\s*/, "")}`,
+            image: m.img,
+            linkedin: m.linkedin || undefined,
+          })),
+        ]}
+      />
       {/* Hero Section — asymmetric with orange accent line */}
       <section className="relative bg-[#0a1628] text-white py-24 md:py-36 overflow-hidden">
         {/* Decorative elements */}

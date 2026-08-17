@@ -197,7 +197,7 @@ export default function Header() {
           </div>
 
           <Link
-            href="/become-a-partner"
+            href="/become-a-partner/"
             className="hidden md:inline-flex items-center bg-orange-600 hover:bg-orange-700 text-white h-10 px-6 text-sm font-medium rounded-lg transition-colors"
           >
             {t("index_17")}
@@ -275,7 +275,7 @@ export default function Header() {
               </div>
             ))}
             <Link
-              href="/become-a-partner"
+              href="/become-a-partner/"
               onClick={() => setMobileOpen(false)}
               className="block px-4 py-3 text-orange-600 font-semibold min-h-[44px]"
             >

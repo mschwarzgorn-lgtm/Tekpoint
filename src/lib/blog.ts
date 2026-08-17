@@ -14,6 +14,20 @@ export interface BlogPost {
   author: string;
   content: string;
   readingTime: number;
+  /** Words of source markdown — used for BlogPosting.wordCount. */
+  wordCount: number;
+  /** Social/structured-data image, e.g. "/og/my-post.png". */
+  ogImage?: string;
+}
+
+/**
+ * Front matter dates may be parsed by gray-matter into Date objects when they
+ * are written unquoted. Normalise everything to YYYY-MM-DD so that <time>
+ * elements and schema.org datePublished always agree.
+ */
+function normaliseDate(value: unknown): string {
+  if (value instanceof Date) return value.toISOString().slice(0, 10);
+  return String(value ?? "").slice(0, 10);
 }
 
 export function getAllPosts(): BlogPost[] {
@@ -43,12 +57,14 @@ export function getPostBySlug(slug: string): BlogPost | null {
   return {
     slug,
     title: data.title,
-    date: data.date,
+    date: normaliseDate(data.date),
     excerpt: data.excerpt,
     category: data.category || "Insights",
     author: data.author || "Tekpoint Team",
     content: html,
     readingTime,
+    wordCount,
+    ogImage: data.ogImage || undefined,
   };
 }
 

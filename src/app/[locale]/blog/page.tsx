@@ -2,6 +2,7 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { getAllPosts } from "@/lib/blog";
 import { generatePageMetadata } from "@/lib/seo";
+import { BlogJsonLd, LocaleBreadcrumbJsonLd } from "@/components/JsonLd";
 
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -41,6 +42,11 @@ export default async function BlogPage({
 
   return (
     <>
+      <BlogJsonLd locale={locale} posts={posts} />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[{ name: "Blog", path: "/blog" }]}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
@@ -78,7 +84,7 @@ export default async function BlogPage({
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
               {posts.map((post) => (
                 <article key={post.slug} className="group">
-                  <a href={`/en/blog/${post.slug}`} className="block">
+                  <a href={`/en/blog/${post.slug}/`} className="block">
                     {/* Visual header */}
                     <div className="h-48 rounded-t-2xl bg-gradient-to-br from-[#0a1628] to-[#1a2d4a] relative overflow-hidden">
                       <div className="absolute inset-0 opacity-20 bg-gradient-to-br from-orange-500 to-transparent" />

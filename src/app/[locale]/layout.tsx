@@ -8,7 +8,11 @@ import Footer from "@/components/Footer";
 import PasswordGate from "@/components/PasswordGate";
 import SkipLink from "@/components/SkipLink";
 import CookieConsent from "@/components/CookieConsent";
-import { OrganizationJsonLd, WebsiteJsonLd } from "@/components/JsonLd";
+import {
+  FounderJsonLd,
+  OrganizationJsonLd,
+  WebsiteJsonLd,
+} from "@/components/JsonLd";
 
 const inter = Inter({
   subsets: ["latin", "latin-ext", "cyrillic", "greek"],
@@ -41,6 +45,7 @@ export default async function LocaleLayout({
           <PasswordGate>
             <SkipLink />
             <OrganizationJsonLd />
+            <FounderJsonLd />
             <WebsiteJsonLd />
             <Header />
             <div className="h-16" aria-hidden="true" />

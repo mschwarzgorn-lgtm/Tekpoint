@@ -52,13 +52,13 @@ export default async function HomePage({ params }: { params: Promise<{ locale: s
             </p>
             <div className="flex flex-col sm:flex-row gap-4">
               <Link
-                href="/become-a-partner"
+                href="/become-a-partner/"
                 className="inline-flex items-center justify-center bg-orange-500 hover:bg-orange-600 text-white h-14 px-10 text-lg font-semibold rounded-lg transition-colors"
               >
                 {t("index_17")}
               </Link>
               <Link
-                href="/about"
+                href="/about/"
                 className="inline-flex items-center justify-center border border-white/30 hover:bg-white/10 text-white h-14 px-10 text-lg font-semibold rounded-lg transition-colors"
               >
                 {t("index_39")}

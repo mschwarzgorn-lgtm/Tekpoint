@@ -1,5 +1,9 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  LocaleBreadcrumbJsonLd,
+  WebPageJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 import Image from "next/image";
 import { Handshake, Download, Mail, Phone, Lock, Building2, User, Briefcase, ScrollText } from "lucide-react";
@@ -49,6 +53,16 @@ export default async function BecomeAPartnerPage({ params }: { params: Promise<{
 
   return (
     <>
+      <WebPageJsonLd
+        locale={locale}
+        path="/become-a-partner"
+        name={t("become-a-partner_1")}
+        description={t("become-a-partner_2")}
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[{ name: t("index_17"), path: "/become-a-partner" }]}
+      />
       {/* Hero */}
       <section className="relative text-white py-24 md:py-32 overflow-hidden">
         <Image

@@ -4,6 +4,36 @@
       "source": "/",
       "destination": "/en/",
       "permanent": false
+    },
+    {
+      "source": "/brands",
+      "destination": "/en/vendors/",
+      "permanent": true
+    },
+    {
+      "source": "/brands/",
+      "destination": "/en/vendors/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/brands",
+      "destination": "/:locale/vendors/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/brands/",
+      "destination": "/:locale/vendors/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/partners",
+      "destination": "/:locale/vendors/",
+      "permanent": true
+    },
+    {
+      "source": "/:locale/partners/",
+      "destination": "/:locale/vendors/",
+      "permanent": true
     }
   ],
   "headers": [

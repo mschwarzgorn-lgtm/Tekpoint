@@ -31,11 +31,11 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">{t("index_150")}</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/about" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_11")}</Link></li>
-              <li><Link href="/management-board" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_151")}</Link></li>
-              <li><Link href="/career" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_153")}</Link></li>
-              <li><Link href="/blog" className="text-gray-600 hover:text-gray-900 transition-colors">Blog</Link></li>
-              <li><Link href="/contact" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_16")}</Link></li>
+              <li><Link href="/about/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_11")}</Link></li>
+              <li><Link href="/management-board/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_151")}</Link></li>
+              <li><Link href="/career/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_153")}</Link></li>
+              <li><Link href="/blog/" className="text-gray-600 hover:text-gray-900 transition-colors">Blog</Link></li>
+              <li><Link href="/contact/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_16")}</Link></li>
             </ul>
           </div>
 
@@ -43,14 +43,14 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">{t("index_13")}</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/services" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_13")}</Link></li>
-              <li><Link href="/services/partner-connectivity" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_113")}</Link></li>
-              <li><Link href="/services/logistics" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_154")}</Link></li>
-              <li><Link href="/services/marketing" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_126")}</Link></li>
-              <li><Link href="/services/market-entry" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_1")}</Link></li>
-              <li><Link href="/services/eu-compliance" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_2")}</Link></li>
-              <li><Link href="/services/distribution" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_3")}</Link></li>
-              <li><Link href="/services/fulfillment" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_4")}</Link></li>
+              <li><Link href="/services/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_13")}</Link></li>
+              <li><Link href="/services/partner-connectivity/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_113")}</Link></li>
+              <li><Link href="/services/logistics/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_154")}</Link></li>
+              <li><Link href="/services/marketing/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_126")}</Link></li>
+              <li><Link href="/services/market-entry/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_1")}</Link></li>
+              <li><Link href="/services/eu-compliance/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_2")}</Link></li>
+              <li><Link href="/services/distribution/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_3")}</Link></li>
+              <li><Link href="/services/fulfillment/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("seo_nav_4")}</Link></li>
             </ul>
           </div>
 
@@ -58,8 +58,8 @@ export default function Footer() {
           <div>
             <h4 className="font-semibold text-gray-900 mb-4">{t("index_14")}</h4>
             <ul className="space-y-3 text-sm">
-              <li><Link href="/become-a-partner" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_155")}</Link></li>
-              <li><Link href="/vendors" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_12")}</Link></li>
+              <li><Link href="/become-a-partner/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_155")}</Link></li>
+              <li><Link href="/vendors/" className="text-gray-600 hover:text-gray-900 transition-colors">{t("index_12")}</Link></li>
               <li><a href="mailto:info@tekpoint.com" className="text-gray-600 hover:text-gray-900 transition-colors">info@tekpoint.com</a></li>
             </ul>
           </div>
@@ -70,9 +70,9 @@ export default function Footer() {
           <p className="text-sm text-gray-500">{t("index_156")}</p>
           <p className="text-xs text-gray-400 mt-1">All trademarks and logos are property of their respective owners.</p>
           <div className="flex gap-6 text-sm">
-            <Link href="/privacy-policy" className="text-gray-500 hover:text-gray-700 transition-colors">{t("index_157")}</Link>
-            <Link href="/terms-and-conditions" className="text-gray-500 hover:text-gray-700 transition-colors">{t("index_158")}</Link>
-            <Link href="/impressum" className="text-gray-500 hover:text-gray-700 transition-colors">{t("index_159")}</Link>
+            <Link href="/privacy-policy/" className="text-gray-500 hover:text-gray-700 transition-colors">{t("index_157")}</Link>
+            <Link href="/terms-and-conditions/" className="text-gray-500 hover:text-gray-700 transition-colors">{t("index_158")}</Link>
+            <Link href="/impressum/" className="text-gray-500 hover:text-gray-700 transition-colors">{t("index_159")}</Link>
           </div>
         </div>
       </div>

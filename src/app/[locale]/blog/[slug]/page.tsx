@@ -2,6 +2,10 @@ import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
 import { notFound } from "next/navigation";
+import {
+  BlogPostingJsonLd,
+  BreadcrumbJsonLd,
+} from "@/components/JsonLd";
 import type { Metadata } from "next";
 
 const BASE_URL = "https://tekpoint.com";
@@ -30,21 +34,34 @@ export async function generateMetadata({
     title: `${post.title} — Tekpoint Blog`,
     description: post.excerpt,
     alternates: {
-      canonical: `${BASE_URL}/en/blog/${slug}`,
+      canonical: `${BASE_URL}/en/blog/${slug}/`,
     },
     openGraph: {
       title: post.title,
       description: post.excerpt,
-      url: `${BASE_URL}/en/blog/${slug}`,
+      url: `${BASE_URL}/en/blog/${slug}/`,
       siteName: "Tekpoint",
       type: "article",
       publishedTime: post.date,
       authors: [post.author],
+      ...(post.ogImage
+        ? {
+            images: [
+              {
+                url: `${BASE_URL}${post.ogImage}`,
+                width: 1200,
+                height: 630,
+                alt: post.title,
+              },
+            ],
+          }
+        : {}),
     },
     twitter: {
       card: "summary_large_image",
       title: post.title,
       description: post.excerpt,
+      ...(post.ogImage ? { images: [`${BASE_URL}${post.ogImage}`] } : {}),
     },
   };
 }
@@ -69,6 +86,23 @@ export default async function BlogPostPage({
 
   return (
     <>
+      <BlogPostingJsonLd
+        slug={post.slug}
+        title={post.title}
+        date={post.date}
+        excerpt={post.excerpt}
+        author={post.author}
+        category={post.category}
+        image={post.ogImage}
+        wordCount={post.wordCount}
+      />
+      <BreadcrumbJsonLd
+        items={[
+          { name: "Home", url: `${BASE_URL}/${locale}/` },
+          { name: "Blog", url: `${BASE_URL}/en/blog/` },
+          { name: post.title, url: `${BASE_URL}/en/blog/${post.slug}/` },
+        ]}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
@@ -145,7 +179,7 @@ export default async function BlogPostPage({
           {/* Back to blog */}
           <div className="mt-12 pt-8 border-t border-gray-200">
             <a
-              href="/en/blog"
+              href="/en/blog/"
               className="inline-flex items-center text-orange-600 hover:text-orange-700 font-medium transition-colors gap-2"
             >
               <svg

@@ -7,7 +7,7 @@ export const metadata: Metadata = {
     template: "%s",
   },
   description:
-    "Tekpoint is a leading B2B technology distributor covering Western, Central & Eastern Europe (WEU/CEE). Partners include retailers, e-tailers, and system integrators across 28+ countries.",
+    "Tekpoint GmbH is a B2B technology distributor headquartered in Vienna, Austria, supplying consumer electronics, smart home, mobility and wearable brands to retailers, e-tailers, marketplaces and telecom operators across Western, Central and Eastern Europe.",
   keywords: [
     "B2B technology distribution",
     "IT distribution Europe",
@@ -22,9 +22,8 @@ export const metadata: Metadata = {
   creator: "Tekpoint GmbH",
   publisher: "Tekpoint GmbH",
   metadataBase: new URL("https://tekpoint.com"),
-  alternates: {
-    canonical: "/",
-  },
+  // No site-wide canonical: every page sets its own in generatePageMetadata().
+  // A global canonical made error pages point at the homepage.
   openGraph: {
     type: "website",
     locale: "en_US",
@@ -35,10 +34,10 @@ export const metadata: Metadata = {
       "Leading B2B technology distributor covering Western, Central & Eastern Europe.",
     images: [
       {
-        url: "/images/tekpoint-logo.svg",
+        url: "/images/tekpoint-og.jpg",
         width: 1200,
         height: 630,
-        alt: "Tekpoint - Smart Technology Distribution",
+        alt: "Tekpoint — Smart Technology Distribution",
       },
     ],
   },
@@ -47,6 +46,7 @@ export const metadata: Metadata = {
     title: "Tekpoint — Smart Technology Distribution",
     description:
       "Leading B2B technology distributor covering Western, Central & Eastern Europe.",
+    images: ["/images/tekpoint-og.jpg"],
   },
   robots: {
     index: true,

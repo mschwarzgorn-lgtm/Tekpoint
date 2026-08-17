@@ -23,7 +23,7 @@ export default function ServicesSection() {
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-6">
           {/* Featured: Partner Connectivity — Orange gradient */}
           <Link
-            href="/services/partner-connectivity"
+            href="/services/partner-connectivity/"
             className="group lg:row-span-2 p-10 rounded-2xl bg-gradient-to-br from-orange-500 to-orange-600 text-white relative overflow-hidden flex flex-col justify-between min-h-[280px] lg:min-h-0"
           >
             <div className="absolute top-0 right-0 w-64 h-64 bg-white/5 rounded-full -translate-y-1/2 translate-x-1/2" />
@@ -48,7 +48,7 @@ export default function ServicesSection() {
 
           {/* Logistics — Dark bg */}
           <Link
-            href="/services/logistics"
+            href="/services/logistics/"
             className="group p-8 rounded-2xl bg-[#0a1628] text-white relative overflow-hidden"
           >
             <div className="absolute bottom-0 right-0 w-40 h-40 bg-orange-500/10 rounded-full translate-y-1/2 translate-x-1/2" />
@@ -67,7 +67,7 @@ export default function ServicesSection() {
 
           {/* Marketing — Light border */}
           <Link
-            href="/services/marketing"
+            href="/services/marketing/"
             className="group p-8 rounded-2xl border-2 border-gray-200 hover:border-orange-300 bg-white relative overflow-hidden transition-colors"
           >
             <div className="relative flex items-start gap-5">

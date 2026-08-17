@@ -1,4 +1,8 @@
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import {
+  LocaleBreadcrumbJsonLd,
+  ServiceJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import Image from "next/image";
@@ -13,7 +17,7 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
   const { locale } = await params;
   return generatePageMetadata({
     locale,
-    pagePath: "/market-entry",
+    pagePath: "/services/market-entry",
     titleKey: "seo1_title",
     descriptionKey: "seo1_meta_desc",
     fallbackTitle: "European Market Entry for Asian Technology Brands — Tekpoint",
@@ -42,6 +46,20 @@ export default async function MarketEntryPage({ params }: { params: Promise<{ lo
   const t = await getTranslations();
   return (
     <>
+      <ServiceJsonLd
+        locale={locale}
+        path="/services/market-entry"
+        name={t("seo1_title")}
+        description={t("seo1_meta_desc")}
+        serviceType="Market entry consulting and execution"
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[
+          { name: t("index_13"), path: "/services" },
+          { name: t("seo_nav_1"), path: "/services/market-entry" },
+        ]}
+      />
       {/* Hero — left-aligned, asymmetric */}
       <section className="relative text-white py-24 md:py-36 overflow-hidden">
         <Image
@@ -137,7 +155,7 @@ export default async function MarketEntryPage({ params }: { params: Promise<{ lo
         <div className="container mx-auto px-4 md:px-6 text-center">
           <h2 className="text-3xl md:text-4xl font-bold text-gray-900 mb-6">{t("seo1_cta_title")}</h2>
           <p className="text-lg text-gray-600 max-w-3xl mx-auto mb-10">{t("seo1_cta_text")}</p>
-          <Link href="/contact" className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors text-lg">
+          <Link href="/contact/" className="inline-flex items-center justify-center px-8 py-4 bg-orange-600 hover:bg-orange-700 text-white font-semibold rounded-lg transition-colors text-lg">
             {t("seo1_cta_button")} →
           </Link>
         </div>

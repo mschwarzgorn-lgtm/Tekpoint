@@ -1,5 +1,11 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
+import { BRANDS, RETAILERS } from "@/lib/brands";
+import {
+  BrandPortfolioJsonLd,
+  LocaleBreadcrumbJsonLd,
+  WebPageJsonLd,
+} from "@/components/JsonLd";
 import { routing } from "@/i18n/routing";
 
 import { generatePageMetadata } from "@/lib/seo";
@@ -25,95 +31,27 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
   setRequestLocale(locale);
   const t = await getTranslations();
 
-  const brands: { name: string; logo: string; bg: string; logoClass?: string }[] = [
-    { name: "Xiaomi", logo: "Xiaomi-2.png", bg: "xiaomi_bg-jpg.webp" },
-    { name: "OPPO", logo: "VI_PNG_OPPO-Logo_White_CMYK_20191204-01-2.png", bg: "oppo.png" },
-    { name: "POCO", logo: "on-hover-2.png", bg: "poco-2.png" },
-    { name: "Amazfit", logo: "amazfit-2.png", bg: "amazfit_bg-jpg.webp" },
-    { name: "Realme", logo: "realme-logo.png", bg: "realme_bg-jpg.webp" },
-    { name: "Oclean", logo: "oclean-logo.png", bg: "oclean_bg-jpg.webp" },
-    { name: "Anker", logo: "anker.png", bg: "Anker_bg-jpg.webp" },
-    { name: "Nothing", logo: "Nothing.png", bg: "nothing_bg-jpg.webp" },
-    { name: "Roborock", logo: "Group.svg", bg: "3eb9ca14b75698a5197a5d07ff87fd8b.png" },
-    { name: "Narwal", logo: "Narwal-1.svg", bg: "a8f131925ee4f759e636c99fdbcce4c6.png" },
-    { name: "IMIKI", logo: "Imiki.svg", bg: "bbbc240f453e5becc4098326ae851c48.jpeg" },
-    { name: "RENPHO", logo: "Renpro.svg", bg: "38a444420680af9adfa6751332370f11.png" },
-    { name: "DYU", logo: "DYU.svg", bg: "98999b50860f542d41d52d312ed1f333.png" },
-    { name: "Govee", logo: "Mask-group-2.svg", bg: "govee.png" },
-    { name: "SFP", logo: "SFP-1.svg", bg: "a11fae9e9c9f32debc8741029b36d3d9.png" },
-    { name: "DJI ROMO", logo: "DJI-ROMO.svg", bg: "170b377c572b948a8a66adbff97470f10963cef5.jpg" },
-    { name: "Mi Scooter", logo: "brands/mi-scooter.svg", bg: "brands/mi-scooter-bg.webp" },
-    { name: "Mi Eco", logo: "brands/mi-eco.svg", bg: "brands/mi-eco-bg.webp" },
-    { name: "ANTHBOT", logo: "brands/anthbot.svg", bg: "brands/anthbot-bg.webp" },
-    { name: "Honor", logo: "brands/honor.svg", bg: "brands/honor-bg.webp" },
-    { name: "Levoit", logo: "brands/levoit.svg", bg: "brands/levoit-bg.webp" },
-    { name: "Motorola", logo: "brands/motorola.svg", bg: "brands/motorola-bg.webp" },
-    { name: "Navimow", logo: "brands/navimow.svg", bg: "brands/navimow-bg.webp" },
-    { name: "NIU", logo: "brands/niu.svg", bg: "brands/niu-bg.webp" },
-    { name: "eufy", logo: "brands/eufy.svg", bg: "brands/eufy-bg.webp" },
-    { name: "Rokid", logo: "brands/rokid.svg", bg: "brands/rokid-bg.webp" },
-    // Harmonix wordmark is very wide; render it a touch larger than the default
-    // and cap its width so the long wordmark fits cleanly inside the card.
-    { name: "Harmonix", logo: "brands/harmonix-wordmark.png", bg: "brands/harmonix-bg.webp", logoClass: "max-h-14 md:max-h-20 max-w-[85%]" },
-  ];
-
-  const retailers = [
-    /* === Major retailers (from homepage) === */
-    { name: "Amazon", logo: "retailers-real/amazon.svg" },
-    { name: "eBay", logo: "retailers-real/ebay.svg" },
-    { name: "Metro", logo: "retailers-real/metro.png" },
-    { name: "Media Markt", logo: "retailers-real/mediamarkt.svg" },
-    { name: "A1", logo: "retailers-real/a1.png" },
-    { name: "Decathlon", logo: "retailers-real/decathlon.png" },
-    { name: "Lidl", logo: "retailers-real/lidl.svg" },
-    { name: "Otto", logo: "retailers-real/otto.png" },
-    { name: "Euronics", logo: "retailers-real/euronics.png" },
-    { name: "Mobilcom Debitel", logo: "retailers-real/mobilcom.png" },
-    { name: "Telefónica", logo: "retailers-real/telefonica.svg" },
-    { name: "Yettel", logo: "retailers-real/yettel.png" },
-    { name: "Notebooksbilliger.de", logo: "retailers-real/nbb.png" },
-    { name: "Expert", logo: "retailers-real/expert.png" },
-    { name: "Tink", logo: "retailers-real/tink.png" },
-    { name: "1&1", logo: "retailers-real/oneandone.png" },
-    { name: "Aldi Süd", logo: "retailers-real/aldisud.png" },
-    { name: "Aldi Nord", logo: "retailers-real/aldinord.png" },
-    { name: "Saturn", logo: "retailers-real/saturn.svg" },
-    { name: "Electronic4you", logo: "retailers-real/electronic4you.png" },
-    { name: "Vodafone", logo: "retailers-real/vodafone.png" },
-    /* === Additional retailers (from partner list) === */
-    { name: "EDEKA", logo: "retailers/edeka.png" },
-    { name: "Coolblue", logo: "retailers/coolblue.png" },
-    { name: "bol.com", logo: "retailers/bol-com.png" },
-    { name: "T-Mobile", logo: "retailers/t-mobile.png" },
-    { name: "BAUHAUS", logo: "retailers/bauhaus.png" },
-    { name: "Fnac Vanden Borre", logo: "retailers/vanden-borre.png" },
-    { name: "Cyberport", logo: "retailers/cyberport.png" },
-    { name: "Medion", logo: "retailers/medion.png" },
-    { name: "Freenet", logo: "retailers/freenet.svg" },
-    { name: "Galaxus", logo: "retailers/galaxus.svg" },
-    { name: "Printus", logo: "retailers/printus.svg" },
-    { name: "Büromarkt Böttcher", logo: "retailers/boettcher.svg" },
-    { name: "JD.com", logo: "retailers/jd-com.png" },
-    { name: "e-tec", logo: "retailers/e-tec.svg" },
-    { name: "Powwow", logo: "retailers/powwow.svg" },
-    { name: "Wortmann Telecom", logo: "retailers/wortmann-telecom.svg" },
-    { name: "Terra Home & Living", logo: "retailers/terra-home-living.png" },
-    { name: "Farkind", logo: "retailers/farkind.png" },
-    { name: "Motion TM", logo: "retailers/motion-tm.png" },
-    { name: "Michael Telecom", logo: "retailers/michael-telecom.png" },
-    { name: "Köhler Teledata", logo: "retailers/koehler-teledata.svg" },
-    { name: "Lanckriet", logo: "retailers/lanckriet.png" },
-    { name: "MobielWerkt", logo: "retailers/mobielwerkt.png" },
-    { name: "Sunny Europe", logo: "retailers/sunny-europe.svg" },
-    { name: "EP: (ElectronicPartner)", logo: "retailers/ep-medimax.png" },
-    { name: "Medimax", logo: "retailers/medimax.png" },
-    { name: "Kaufland", logo: "retailers/kaufland.svg" },
-    { name: "OBI", logo: "retailers/obi.svg" },
-    { name: "Hornbach", logo: "retailers/hornbach.svg" },
-  ];
+  const brands = BRANDS;
+  const retailers = RETAILERS;
 
   return (
     <>
+      <WebPageJsonLd
+        type="CollectionPage"
+        locale={locale}
+        path="/vendors"
+        name={t("eco_meta_title")}
+        description={t("eco_meta_desc")}
+      />
+      <LocaleBreadcrumbJsonLd
+        locale={locale}
+        trail={[{ name: t("index_12"), path: "/vendors" }]}
+      />
+      <BrandPortfolioJsonLd
+        locale={locale}
+        name={t("eco_brands_title")}
+        description={t("eco_brands_text")}
+      />
       {/* ===== SECTION 1: HERO — Our Ecosystem ===== */}
       <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6 max-w-5xl">
@@ -152,11 +90,11 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
           {/* Brand logos grid — original colors (Brands page rule) */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
             {brands.map((brand) => (
-              <div key={brand.name} className="relative aspect-[16/9] rounded-2xl overflow-hidden group cursor-pointer">
-                <img src={`/images/${brand.bg}`} alt={brand.name} className="w-full h-full object-cover" />
+              <div key={brand.name} id={`brand-${brand.slug}`} className="relative aspect-[16/9] rounded-2xl overflow-hidden group cursor-pointer">
+                <img src={`/images/${brand.bg}`} alt="" aria-hidden="true" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
                 <div className="absolute inset-0 flex items-center justify-center p-4">
-                  <img src={`/images/${brand.logo}`} alt={brand.name} className={`${brand.logoClass ?? "max-h-12 md:max-h-16"} w-auto object-contain brightness-0 invert`} />
+                  <img src={`/images/${brand.logo}`} alt={`${brand.name} logo`} className={`${brand.logoClass ?? "max-h-12 md:max-h-16"} w-auto object-contain brightness-0 invert`} />
                 </div>
               </div>
             ))}
@@ -221,10 +159,10 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
           <h2 className="text-3xl md:text-4xl font-bold text-white mb-4">{t("vendors_88")}</h2>
           <p className="text-lg text-white/90 max-w-2xl mx-auto mb-8">{t("vendors_89")}</p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a href={`/${locale}/become-a-partner`} className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-orange-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors">
+            <a href={`/${locale}/become-a-partner/`} className="inline-flex items-center justify-center px-8 py-3.5 bg-white text-orange-600 font-semibold rounded-xl hover:bg-gray-100 transition-colors">
               {t("vendors_90")}
             </a>
-            <a href={`/${locale}/services`} className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-semibold rounded-xl hover:bg-white/10 transition-colors">
+            <a href={`/${locale}/services/`} className="inline-flex items-center justify-center px-8 py-3.5 border-2 border-white text-white font-semibold rounded-xl hover:bg-white/10 transition-colors">
               {t("vendors_91")}
             </a>
           </div>
