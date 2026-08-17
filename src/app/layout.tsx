@@ -48,17 +48,8 @@ export const metadata: Metadata = {
       "Leading B2B technology distributor covering Western, Central & Eastern Europe.",
     images: ["/images/tekpoint-og.jpg"],
   },
-  robots: {
-    index: true,
-    follow: true,
-    googleBot: {
-      index: true,
-      follow: true,
-      "max-video-preview": -1,
-      "max-image-preview": "large",
-      "max-snippet": -1,
-    },
-  },
+  // No global robots directive: pages set their own in generatePageMetadata(),
+  // so error pages are left with Next's automatic noindex.
   icons: {
     icon: [
       { url: "/favicon.ico", sizes: "any" },

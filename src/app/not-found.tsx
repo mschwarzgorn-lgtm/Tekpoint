@@ -4,8 +4,6 @@ export default function NotFound() {
   return (
     <html lang="en">
       <body style={{ margin: 0, fontFamily: '-apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif' }}>
-        {/* Error pages must never enter a search or AI index. */}
-        <meta name="robots" content="noindex, follow" />
         <main style={{ minHeight: '100vh', display: 'flex', flexDirection: 'column', alignItems: 'center', justifyContent: 'center', padding: '1rem', textAlign: 'center', backgroundColor: '#fff' }}>
           {/* Logo */}
           <a href="/en/" style={{ marginBottom: '3rem' }}>
