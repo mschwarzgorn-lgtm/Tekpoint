@@ -6,6 +6,9 @@
 #
 # Machine-readable company summary: https://tekpoint.com/llms.txt
 # Full company dossier:             https://tekpoint.com/llms-full.txt
+#
+# Clean Markdown: replace the trailing slash of any English URL with ".md",
+# e.g. https://tekpoint.com/en/about.md or /en/blog/{slug}.md
 
 # ---------------------------------------------------------------------------
 # Default — everything is open except build internals

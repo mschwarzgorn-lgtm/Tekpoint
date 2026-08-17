@@ -1,0 +1,22 @@
+{
+  "_comment2": "dossierSections pulls the named sections of /llms-full.txt into that page's Markdown. The brands page shows its portfolio as logo images only, so without this the brand names and descriptions would be missing from the text a reader gets.",
+  "_comment": "Single source of truth for which English pages get a clean Markdown counterpart at <path>.md. Read by src/app/llms.txt/route.ts (to advertise them) and by scripts/generate-md.mjs (to write them). Legal pages and individual blog posts are deliberately absent: legal text is not useful to assistants, and blog posts are generated from their own Markdown source instead.",
+  "pages": [
+    { "path": "", "label": "Home" },
+    { "path": "/about", "label": "About" },
+    { "path": "/management-board", "label": "Leadership" },
+    { "path": "/vendors", "label": "Brands", "dossierSections": ["8", "9"] },
+    { "path": "/services", "label": "Services overview" },
+    { "path": "/services/market-entry", "label": "Market entry" },
+    { "path": "/services/distribution", "label": "Distribution" },
+    { "path": "/services/logistics", "label": "Logistics" },
+    { "path": "/services/fulfillment", "label": "Fulfillment" },
+    { "path": "/services/eu-compliance", "label": "EU compliance" },
+    { "path": "/services/marketing", "label": "Marketing" },
+    { "path": "/services/partner-connectivity", "label": "Partner connectivity" },
+    { "path": "/become-a-partner", "label": "Become a partner" },
+    { "path": "/career", "label": "Careers" },
+    { "path": "/contact", "label": "Contact" },
+    { "path": "/blog", "label": "Blog index" }
+  ]
+}

@@ -35,6 +35,8 @@ export async function generateMetadata({
     description: post.excerpt,
     alternates: {
       canonical: `${BASE_URL}/en/blog/${slug}/`,
+      // The article's Markdown source, for readers that want text not markup.
+      types: { "text/markdown": `${BASE_URL}/en/blog/${slug}.md` },
     },
     openGraph: {
       title: post.title,

@@ -1,6 +1,9 @@
 import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
+import mdPages from "../../data/md-pages.json";
+
+const MARKDOWN_PAGES: string[] = mdPages.pages.map((p) => p.path);
 
 const BASE_URL = "https://tekpoint.com";
 
@@ -48,12 +51,24 @@ export async function generatePageMetadata({
     languages[hreflang] = `${BASE_URL}/${l}${pagePath}`;
   }
 
+  // Pages with a clean Markdown counterpart advertise it, so a crawler that
+  // wants text rather than markup can find it from the page itself. English
+  // only — see data/md-pages.json.
+  const markdownPath = MARKDOWN_PAGES.includes(pagePath)
+    ? pagePath === ""
+      ? "/en.md"
+      : `/en${pagePath}.md`
+    : null;
+
   return {
     title,
     description,
     alternates: {
       canonical: canonicalUrl,
       languages,
+      ...(locale === "en" && markdownPath
+        ? { types: { "text/markdown": `${BASE_URL}${markdownPath}` } }
+        : {}),
     },
     openGraph: {
       title,

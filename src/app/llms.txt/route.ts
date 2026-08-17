@@ -8,6 +8,7 @@ import {
   CHANNELS,
 } from "@/lib/company";
 import { SERVICE_CATALOGUE } from "@/components/JsonLd";
+import mdPages from "../../../data/md-pages.json";
 
 /**
  * /llms.txt — a concise, machine-readable summary of what Tekpoint is and
@@ -94,6 +95,22 @@ ${CHANNELS.map((c) => `- ${c}`).join("\n")}
 ${posts
   .map((p) => `- [${p.title}](${BASE_URL}/en/blog/${p.slug}/) — ${p.date}`)
   .join("\n")}
+
+## Markdown versions
+
+Every English page listed above is also published as clean Markdown: take the
+page URL and replace the trailing slash with ".md". No navigation, no markup —
+just the content.
+
+${mdPages.pages
+  .map(
+    (p) =>
+      `- ${p.label}: ${BASE_URL}${p.path === "" ? "/en.md" : `/en${p.path}.md`}`
+  )
+  .join("\n")}
+
+Blog articles use the same rule: ${BASE_URL}/en/blog/{slug}.md — for example
+${BASE_URL}/en/blog/${posts[0]?.slug ?? "slug"}.md
 
 ## Languages
 

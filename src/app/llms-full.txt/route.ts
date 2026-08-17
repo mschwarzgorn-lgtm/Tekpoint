@@ -215,6 +215,10 @@ ${list
 - Blog articles exist in English only and canonicalise to /en/blog/{slug}/.
 - Legal pages (legal notice, privacy policy, cookie policy, terms) are
   published in English with a notice to that effect on non-English versions.
+- Every English page is also served as clean Markdown: replace the trailing
+  slash of any English URL with ".md" (for example ${BASE_URL}/en/about.md,
+  ${BASE_URL}/en/vendors.md, or ${BASE_URL}/en/blog/{slug}.md). The Markdown
+  carries the same content without navigation or markup.
 - Machine-readable index: ${BASE_URL}/llms.txt
 - Sitemap: ${BASE_URL}/sitemap.xml
 - schema.org JSON-LD is embedded in every page.
