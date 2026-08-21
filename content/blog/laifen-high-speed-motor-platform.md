@@ -3,6 +3,7 @@ title: "Laifen — Not a Dry Start"
 date: "2026-08-21"
 excerpt: "A hair dryer is a fan with a heater bolted to it. Laifen built the fan itself — a high-speed brushless motor developed in-house — and let six years of product grow off that one component."
 category: "Product & Distribution"
+ogImage: "/og/laifen-high-speed-motor-platform.png"
 ---
 
 A hair dryer is a fan with a heater bolted to it. Everything that matters in the category comes down to how fast you can spin that fan and how little it weighs in the hand.
@@ -35,4 +36,6 @@ Since this summer, Tekpoint has been distributing Laifen in Germany, and we are 
 
 Owning the motor is the slow way to build an appliance company. It is also why the growth compounds instead of resetting with every product cycle.
 
-*Tekpoint distributes Laifen in Germany. [Learn more about our brand partnerships](/en/brands).*
+---
+
+*Tekpoint is a leading distributor of smart technology products across Europe, shipping over 10,000 products daily. [Get in touch](https://www.tekpoint.com/en/contact/) to learn more about our brand partnerships.*
