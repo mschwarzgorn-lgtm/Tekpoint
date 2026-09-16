@@ -18,7 +18,7 @@
     {
       "name": "AGIBOT A2 Ultra",
       "tagline": "Der weltweit erste kommerziell skalierte, großformatige humanoide Roboter",
-      "description": "Intelligente Interaktion, autonomer Betrieb und ein zuverlässiger Körper für den großflächigen kommerziellen Einsatz. 169 cm, 40 Freiheitsgrade, Gehgeschwindigkeit bis zu 1,2 m/s und Inhaber des Guinness-Weltrekords für die längste von einem humanoiden Roboter zurückgelegte Strecke (106,286 km)."
+      "description": "Intelligente Interaktion, autonomer Betrieb und ein zuverlässiger Körper für den großflächigen kommerziellen Einsatz. 169 cm, 40 Freiheitsgrade und eine Gehgeschwindigkeit bis zu 1,2 m/s. AGIBOT bringt A2 Ultra mit seinem Gehstreckenrekord von 106,286 km in Verbindung; Guinness World Records bezeichnet den Rekordroboter als AgiBot A2."
     },
     {
       "name": "AGIBOT X2 Ultra",
@@ -28,7 +28,7 @@
     {
       "name": "AGIBOT G2",
       "tagline": "Interaktiver Embodied-Operation-Roboter in Industriequalität",
-      "description": "Nach Standards der Industriequalität entwickelt, mit 100 % Komponenten in Automobilqualität und IP42-Schutz. Ermöglicht eine Montage mit einer Präzision im Submillimeterbereich durch kraftgeregelte Arme sowie ausdrucksstarke Gesichtsanimation, menschenähnliche Bewegungen und Blickverfolgung für eine sichere Interaktion mit Menschen in der Fabrik."
+      "description": "Nach Standards der Industriequalität entwickelt, mit 100 % Komponenten in Automobilqualität und IP42-Schutz. Ermöglicht eine Montage mit einer Präzision im Submillimeterbereich durch kraftgeregelte Arme sowie ausdrucksstarke Gesichtsanimation, menschenähnliche Bewegungen und Blickverfolgung für die Interaktion mit Menschen."
     }
   ],
   "manufacturerSpecs": "Produktbeschreibungen und Spezifikationen wurden von AGIBOT bereitgestellt. Konfiguration und Eignung werden für jedes Projekt geprüft.",

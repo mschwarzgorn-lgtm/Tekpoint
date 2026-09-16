@@ -1,11 +1,12 @@
 import type { Metadata } from "next";
-import { getTranslations, setRequestLocale } from "next-intl/server";
+import { setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { LocaleBreadcrumbJsonLd } from "@/components/JsonLd";
 import EmailEnquiry from "@/components/EmailEnquiry";
 import en from "../../../../messages/robotics/en.json";
 import de from "../../../../messages/robotics/de.json";
+import availability from "../../../../messages/robotics/availability.json";
 import styles from "./robotics.module.css";
 
 const base = "https://tekpoint.com";
@@ -40,7 +41,6 @@ export async function generateMetadata({ params }: { params: Promise<{ locale: s
 export default async function RoboticsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const t = await getTranslations();
   const lang = locale === "de" ? "de" : "en";
   const c = lang === "de" ? de : en;
   const url = `${base}/${lang}/robotics/`;
@@ -54,7 +54,7 @@ export default async function RoboticsPage({ params }: { params: Promise<{ local
   return <div className={styles.page} lang={lang}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, "\\u003c") }} />
     <LocaleBreadcrumbJsonLd locale={lang} trail={[{ name: lang === "de" ? "Robotik" : "Robotics", path: "/robotics" }]} />
-    {locale !== "en" && locale !== "de" && <div className={styles.notice} lang={locale}>{t("legal_notice_1")} <Link href="/robotics/" locale="de">Deutsch</Link> · <Link href="/robotics/" locale="en">English</Link></div>}
+    {locale !== "en" && locale !== "de" && <div className={styles.notice} lang={locale}>{availability[locale as keyof typeof availability]} <Link href="/robotics/" locale="de">Deutsch</Link> · <Link href="/robotics/" locale="en">English</Link></div>}
     <section className={styles.hero}>
       <div className={styles.wrap}>
         <div className={styles.heroTop}><span className={styles.eyebrow}>{c.eyebrow}</span><img src={`${imageRoot}agibot-logo-dark.png`} width={243} height={58} alt="AGIBOT" className={styles.logo} /></div>

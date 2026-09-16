@@ -18,7 +18,7 @@
     {
       "name": "AGIBOT A2 Ultra",
       "tagline": "World's First Commercially Scaled Full-Size Humanoid",
-      "description": "Intelligent interaction, autonomous operation, and a reliable body built for large-scale commercial deployment. 169cm, 40 degrees of freedom, walking speed up to 1.2 m/s, and holder of the Guinness World Record for the longest distance walked by a humanoid robot (106.286 km)."
+      "description": "Intelligent interaction, autonomous operation, and a reliable body built for large-scale commercial deployment. 169cm, 40 degrees of freedom and walking speed up to 1.2 m/s. AGIBOT associates A2 Ultra with its 106.286 km walking record; Guinness World Records names the record-setting robot as AgiBot A2."
     },
     {
       "name": "AGIBOT X2 Ultra",
@@ -28,7 +28,7 @@
     {
       "name": "AGIBOT G2",
       "tagline": "Industrial-Grade Interactive Embodied Operation Robot",
-      "description": "Built to industrial-grade standards with 100% automotive-grade components and IP42 protection. Delivers sub-millimeter precision assembly with force-controlled arms, plus expressive facial animation, human-like movement, and eye-gaze tracking for people-safe interaction on the factory floor."
+      "description": "Built to industrial-grade standards with 100% automotive-grade components and IP42 protection. Delivers sub-millimeter precision assembly with force-controlled arms, plus expressive facial animation, human-like movement, and eye-gaze tracking for human interaction."
     }
   ],
   "manufacturerSpecs": "Product descriptions and specifications supplied by AGIBOT. Configuration and suitability are assessed for each project.",
