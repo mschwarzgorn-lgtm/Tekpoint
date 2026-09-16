@@ -269,6 +269,14 @@ export const BRANDS: Brand[] = [
     bg: "brands/harmonix-bg.webp",
     logoClass: "max-h-14 md:max-h-20 max-w-[85%]",
   },
+  {
+    name: "AGIBOT",
+    slug: "agibot",
+    category: "Humanoid & industrial robotics",
+    summary: "AGIBOT produces humanoid and industrial robots, including A2 Ultra, X2 Ultra and G2. Tekpoint is its regional distributor for Europe.",
+    logo: "robotics/agibot-logo-dark.png",
+    bg: "robotics/hero-agibot-robots.webp",
+  },
 ];
 
 export const BRAND_COUNT = BRANDS.length;

@@ -8,6 +8,7 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { Mail, Handshake, Truck, Megaphone, Link2, ShoppingCart, Briefcase, MapPin, Phone, FilePenLine, RefreshCw, FileCheck } from "lucide-react";
 
+import EmailEnquiry from "@/components/EmailEnquiry";
 import { generatePageMetadata } from "@/lib/seo";
 export function generateStaticParams() {
   return routing.locales.map((locale) => ({ locale }));
@@ -196,39 +197,16 @@ export default async function ContactPage({ params }: { params: Promise<{ locale
         </div>
       </section>
 
-      {/* Contact Form */}
+      {/* Direct email contact — no website submission */}
       <section className="py-24 md:py-32 bg-gray-50">
         <div className="container mx-auto px-4 md:px-6">
           <div className="max-w-2xl mx-auto">
             <div className="text-center mb-12">
               <span className="text-sm font-medium tracking-wide uppercase text-orange-600 mb-3 block">{t("contact_60")}</span>
               <h2 className="text-3xl font-bold text-gray-900 mb-4">{t("contact_61")}</h2>
-              <p className="text-gray-600">{t("contact_62")}</p>
             </div>
             <div className="bg-white rounded-2xl p-8 shadow-sm">
-              <form className="space-y-4">
-                <div className="grid grid-cols-1 sm:grid-cols-2 gap-4">
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact_63")}</label>
-                    <input type="text" placeholder={t("contact_64")} className="w-full h-12 px-4 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-white" />
-                  </div>
-                  <div>
-                    <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact_65")}</label>
-                    <input type="email" placeholder={t("contact_66")} className="w-full h-12 px-4 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-white" />
-                  </div>
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact_67")}</label>
-                  <input type="text" placeholder={t("contact_68")} className="w-full h-12 px-4 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-white" />
-                </div>
-                <div>
-                  <label className="block text-sm font-medium text-gray-700 mb-1">{t("contact_71")}</label>
-                  <textarea rows={5} placeholder={t("contact_72")} className="w-full px-4 py-3 rounded-lg border border-gray-300 focus:border-orange-500 focus:ring-1 focus:ring-orange-500 bg-white resize-none" />
-                </div>
-                <button type="submit" className="w-full h-12 bg-orange-600 hover:bg-orange-700 text-white font-medium rounded-lg transition-colors">
-                  {t("contact_73")}
-                </button>
-              </form>
+              <EmailEnquiry kind="main" locale={locale} buttonLabel={t("contact_77")} />
             </div>
           </div>
         </div>

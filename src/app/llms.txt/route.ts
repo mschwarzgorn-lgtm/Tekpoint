@@ -82,6 +82,7 @@ ${CHANNELS.map((c) => `- ${c}`).join("\n")}
 - [Home](${BASE_URL}/en/): overview of the distribution business
 - [About](${BASE_URL}/en/about/): history, operating model and guiding principles
 - [Brands](${BASE_URL}/en/vendors/): full brand portfolio and retail partner network
+- [Robotics](${BASE_URL}/en/robotics/): AGIBOT robots and European distribution; enquiries: robotics@tekpoint.com (English and German)
 - [Services](${BASE_URL}/en/services/): service overview
 - [Leadership](${BASE_URL}/en/management-board/): management team
 - [Become a partner](${BASE_URL}/en/become-a-partner/): for brands seeking European distribution
@@ -116,6 +117,7 @@ ${BASE_URL}/en/blog/${posts[0]?.slug ?? "slug"}.md
 
 The site is published in 31 languages. English (/en/) is the reference version
 and carries the x-default hreflang. Blog articles are published in English only.
+Robotics is available in English and German; other locale routes show an English fallback.
 
 ## Notes for assistants
 

@@ -40,6 +40,7 @@ export default function Header() {
       ],
     },
     { href: "/vendors", label: t("index_12") },
+    { href: "/robotics", label: locale === "de" ? "Robotik" : "Robotics" },
     {
       href: "/services",
       label: t("index_13"),
@@ -106,7 +107,7 @@ export default function Header() {
         </Link>
 
         {/* Desktop Nav */}
-        <nav className="hidden lg:flex items-center gap-1" aria-label="Main navigation">
+        <nav className="hidden xl:flex items-center gap-1" aria-label="Main navigation">
           {navItems.map((item) => (
             <div
               key={item.href + item.label}
@@ -205,7 +206,7 @@ export default function Header() {
 
           <button
             onClick={() => setMobileOpen(!mobileOpen)}
-            className="lg:hidden p-2 text-gray-600 hover:text-gray-900"
+            className="xl:hidden p-2 text-gray-600 hover:text-gray-900"
             aria-label={mobileOpen ? "Close navigation menu" : "Open navigation menu"}
             aria-expanded={mobileOpen}
             aria-controls="mobile-nav"
@@ -227,7 +228,7 @@ export default function Header() {
           ref={mobileMenuRef}
           role="navigation"
           aria-label="Mobile navigation"
-          className="lg:hidden border-t border-gray-200 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto"
+          className="xl:hidden border-t border-gray-200 bg-white max-h-[calc(100vh-4rem)] overflow-y-auto"
         >
           <nav className="container mx-auto px-4 py-4 space-y-1">
             {navItems.map((item) => (

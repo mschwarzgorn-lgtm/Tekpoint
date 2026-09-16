@@ -89,7 +89,12 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
 
           {/* Brand logos grid — original colors (Brands page rule) */}
           <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
-            {brands.map((brand) => (
+            {brands.map((brand) => brand.slug === "agibot" ? (
+              <a key={brand.name} id="brand-agibot" href={`/${locale}/robotics/`} className="relative aspect-[16/9] rounded-2xl border border-gray-200 bg-[#FEFEFE] flex flex-col items-center justify-center gap-4 p-6 hover:shadow-md transition-shadow" aria-label={locale === "de" ? "AGIBOT — Robotik entdecken" : "AGIBOT — explore Robotics"}>
+                <img src={`/images/${brand.logo}`} alt="AGIBOT" width={243} height={58} className="w-auto max-h-12 max-w-[85%] object-contain" />
+                <span className="text-sm text-[#2B2A29]">{locale === "de" ? "Robotik entdecken" : "Explore Robotics"} ↗</span>
+              </a>
+            ) : (
               <div key={brand.name} id={`brand-${brand.slug}`} className="relative aspect-[16/9] rounded-2xl overflow-hidden group cursor-pointer">
                 <img src={`/images/${brand.bg}`} alt="" aria-hidden="true" className="w-full h-full object-cover" />
                 <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />

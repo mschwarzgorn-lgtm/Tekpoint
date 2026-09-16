@@ -6,6 +6,8 @@ category: "Product & Distribution"
 ogImage: "/og/agibot-humanoid-robotics-ifa-2026.png"
 ---
 
+> **Archive note — 16 September 2026:** IFA Berlin 2026 took place on 4–8 September. The event invitation below is retained as originally published. For current product and project enquiries, visit our [Robotics page](/en/robotics/).
+
 For three years, humanoid robots have mostly been a video format. Impressive clips, staged demos, a lot of "coming soon."
 
 Then a set of flight cases turns up at your warehouse and the category stops being a video.
@@ -41,3 +43,7 @@ The demo era is ending. Come and see what ships.
 ---
 
 *Tekpoint is a leading distributor of smart technology products across Europe, shipping over 10,000 products daily. [Get in touch](https://www.tekpoint.com/en/contact/) to learn more about our brand partnerships.*
+
+## AGIBOT Robotics at Tekpoint
+
+Explore the [AGIBOT robot range and discuss your project with our Robotics team](/en/robotics/). Tekpoint is AGIBOT’s regional distributor for Europe.

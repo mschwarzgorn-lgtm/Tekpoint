@@ -17,6 +17,7 @@
     { "path": "/become-a-partner", "label": "Become a partner" },
     { "path": "/career", "label": "Careers" },
     { "path": "/contact", "label": "Contact" },
-    { "path": "/blog", "label": "Blog index" }
+    { "path": "/blog", "label": "Blog index" },
+    { "path": "/robotics", "label": "AGIBOT Robotics" }
   ]
 }

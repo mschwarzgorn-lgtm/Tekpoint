@@ -76,6 +76,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
     }
   }
 
+  // Robotics is translated into EN/DE only; other locale routes are English fallbacks.
+  for (const locale of ["en", "de"]) {
+    entries.push({ url: `${BASE_URL}/${locale}/robotics/`, changeFrequency: "monthly", priority: 0.8,
+      alternates: { languages: { en: `${BASE_URL}/en/robotics/`, de: `${BASE_URL}/de/robotics/`, "x-default": `${BASE_URL}/en/robotics/` } } });
+  }
+
   // Blog posts — English only, matching their canonical URLs.
   for (const post of getAllPosts()) {
     entries.push({

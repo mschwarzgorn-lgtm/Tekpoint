@@ -34,6 +34,16 @@
       "source": "/:locale/partners/",
       "destination": "/:locale/vendors/",
       "permanent": true
+    },
+    {
+      "source": "/robotics",
+      "destination": "/en/robotics/",
+      "permanent": true
+    },
+    {
+      "source": "/robotics/",
+      "destination": "/en/robotics/",
+      "permanent": true
     }
   ],
   "headers": [
