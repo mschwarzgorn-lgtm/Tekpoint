@@ -28,9 +28,17 @@ export default async function PrivacyPolicyPage({
   const t = await getTranslations();
 
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
+      {locale !== "en" && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+            ℹ️ {t("legal_notice_1")}
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
-      <section className="bg-gray-50 border-b border-gray-200">
+      <section lang="en" className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
             Privacy Policy
@@ -42,13 +50,9 @@ export default async function PrivacyPolicyPage({
       </section>
 
       {/* Content */}
-      <section className="py-12 md:py-16">
+      <section lang="en" className="py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-4 sm:px-6 lg:px-8">
-          {locale !== "en" && (
-            <div className="mb-6 rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-              ℹ️ {t("legal_notice_1")}
-            </div>
-          )}
+
           <div className="bg-white rounded-2xl shadow-sm border border-gray-100 p-8 md:p-12">
             <h2 className="text-xl font-bold text-gray-900 mb-4">
               Data Protection at Tekpoint GmbH
@@ -106,6 +110,6 @@ export default async function PrivacyPolicyPage({
           </div>
         </div>
       </section>
-    </main>
+    </div>
   );
 }

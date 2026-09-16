@@ -7,11 +7,11 @@
     "Tekpoint ist ein bewährter Technologiepartner für Unternehmen in Europa und verbindet sie mit führenden Herstellern und zukunftsweisenden Innovationen. Robotics ist unser jüngster Schwerpunkt: Während sich embodied AI aus Forschungslaboren in Fabriken, Lagerhäuser und Serviceumgebungen bewegt, ermöglichen wir europäischen Unternehmen den Zugang zu dieser Technologie über einen lokalen und zuverlässigen Partner.",
     "Als regionaler Distributor für AGIBOT bieten wir Vertrieb, Support und Integration für die humanoide Roboterplattform von AGIBOT — und geben Kunden in ganz Europa einen direkten Ansprechpartner, statt sie mit einem Hersteller im Ausland allein zu lassen."
   ],
-  "heroAction": "Projekt besprechen",
+  "heroAction": "Anwendung besprechen",
   "rangeAction": "Roboter entdecken",
   "manufacturerLink": "Mehr über AGIBOT",
-  "heroAlt": "Humanoide Roboter von AGIBOT — der 15.000-Roboter-Meilenstein des Herstellers",
-  "newsLink": "AGIBOT erreicht 15.000 Roboter: Lesen Sie die Geschichte",
+  "heroAlt": "Humanoide Roboter von AGIBOT anlässlich des Meilensteins von 15.000 Robotern",
+  "newsLink": "AGIBOT erreicht 15.000 Roboter: Lesen Sie den Beitrag",
   "productsTitle": "AGIBOT-Produktlinie",
   "productsIntro": "Eine Auswahl humanoider Roboter von AGIBOT, die über Tekpoint erhältlich sind.",
   "products": [
@@ -28,7 +28,7 @@
     {
       "name": "AGIBOT G2",
       "tagline": "Interaktiver Embodied-Operation-Roboter in Industriequalität",
-      "description": "Nach Standards der Industriequalität entwickelt, mit 100 % Komponenten in Automobilqualität und IP42-Schutz. Ermöglicht eine Montage mit einer Präzision im Submillimeterbereich durch kraftgeregelte Arme sowie ausdrucksstarke Gesichtsanimation, menschenähnliche Bewegungen und Blickverfolgung für die Interaktion mit Menschen."
+      "description": "Nach Industriestandards entwickelt, zu 100 % mit Komponenten in Automobilqualität ausgestattet und mit IP42-Schutz versehen. Kraftgeregelte Arme ermöglichen Montageaufgaben mit Submillimeterpräzision. Ausdrucksstarke Gesichtsanimationen, menschenähnliche Bewegungen und Blickverfolgung unterstützen die Interaktion mit Menschen."
     }
   ],
   "manufacturerSpecs": "Produktbeschreibungen und Spezifikationen wurden von AGIBOT bereitgestellt. Konfiguration und Eignung werden für jedes Projekt geprüft.",
@@ -50,11 +50,11 @@
     },
     {
       "title": "Forschung & Entwicklung",
-      "description": "Robotikforschung, Entwicklung im Bereich embodied AI, Hochschulen und Technologieevaluierung."
+      "description": "Robotikforschung, Entwicklung von Anwendungen für embodied AI, Hochschulen und Technologieevaluierung."
     }
   ],
   "whyTitle": "Warum Tekpoint?",
-  "whyIntro": "AGIBOT liefert die Robotics-Technologie. Tekpoint bietet die europäische kommerzielle Schnittstelle und den Zugang zum Markt.",
+  "whyIntro": "AGIBOT liefert die Robotics-Technologie. Tekpoint ist die geschäftliche Anlaufstelle in Europa und ermöglicht den Zugang zum Markt.",
   "reasons": [
     {
       "title": "Europäischer Vertrieb",
@@ -70,7 +70,7 @@
     },
     {
       "title": "Logistik & Support",
-      "description": "Europäische Logistik, Auftragsabwicklung, RMA-Koordination und eine lokale kommerzielle Schnittstelle."
+      "description": "Europäische Logistik, Auftragsabwicklung, RMA-Koordination und eine lokale Anlaufstelle."
     }
   ],
   "stepsEyebrow": "Vom Interesse zum Projekt",
@@ -87,7 +87,7 @@
     },
     {
       "title": "Evaluierung & Beschaffung starten",
-      "description": "Tekpoint koordiniert den kommerziellen Prozess, die europäische Versorgung und die erforderlichen Schnittstellen, um die Möglichkeit voranzubringen."
+      "description": "Tekpoint koordiniert den kommerziellen Prozess, die Lieferung in Europa und die erforderlichen Schnittstellen, um das Projekt voranzubringen."
     }
   ],
   "contactEyebrow": "Besprechen wir Ihr Projekt",

@@ -23,9 +23,17 @@ export default async function TermsAndConditionsPage({ params }: { params: Promi
   setRequestLocale(locale);
   const t = await getTranslations();
   return (
-    <main className="min-h-screen bg-white">
+    <div className="min-h-screen bg-white">
+      {locale !== "en" && (
+        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-4">
+          <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
+            ℹ️ {t("legal_notice_1")}
+          </div>
+        </div>
+      )}
+
       {/* Hero Section */}
-      <section className="bg-gray-50 border-b border-gray-200">
+      <section lang="en" className="bg-gray-50 border-b border-gray-200">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-16 md:py-20">
           <h1 className="text-3xl md:text-4xl font-extrabold text-gray-900 mb-2">
             Terms and Conditions
@@ -36,17 +44,9 @@ export default async function TermsAndConditionsPage({ params }: { params: Promi
         </div>
       </section>
 
-      {/* Notice for non-English */}
-      {locale !== "en" && (
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 pt-8">
-          <div className="rounded-lg border border-amber-200 bg-amber-50 px-4 py-3 text-sm text-amber-800">
-            ℹ️ {t("legal_notice_1")}
-          </div>
-        </div>
-      )}
 
       {/* Tabs */}
-      <TermsTabs />
-    </main>
+      <div lang="en"><TermsTabs /></div>
+    </div>
   );
 }
