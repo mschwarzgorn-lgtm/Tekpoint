@@ -7,4 +7,4 @@
 .page a:focus-visible{outline:2px solid var(--ink);outline-offset:4px;box-shadow:none}.dark a:focus-visible{outline-color:var(--paper)}
 
 /* Localized copy can contain longer words and labels than English. */
-.page h1,.page h2,.page h3,.page h4{overflow-wrap:anywhere;hyphens:auto}.heroGrid>*,.heroBottom>*,.contactGrid>*,.steps li,.team>div>div{min-width:0}.actions>a{max-width:100%;min-width:0;overflow-wrap:anywhere}.heroBottom a{white-space:normal;overflow-wrap:anywhere}.articleLanguage{font-size:.95em}.heroTop{gap:16px}.heroTop .eyebrow{min-width:0;overflow-wrap:anywhere}.logo{flex-shrink:0}
+.page h1,.page h2,.page h3,.page h4,.page p{overflow-wrap:anywhere;hyphens:auto}.heroGrid>*,.heroBottom>*,.contactGrid>*,.steps li,.team>div>div{min-width:0}.actions>a{max-width:100%;min-width:0;overflow-wrap:anywhere}.heroBottom a{white-space:normal;overflow-wrap:anywhere}.articleLanguage{font-size:.95em}.heroTop{gap:16px}.heroTop .eyebrow{min-width:0;overflow-wrap:anywhere}.logo{flex-shrink:0}
