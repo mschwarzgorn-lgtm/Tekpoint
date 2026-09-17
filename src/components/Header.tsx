@@ -1,4 +1,6 @@
 "use client";
+
+import roboticsNavigation from "../../messages/robotics/navigation.json";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
 import { useState, useRef, useEffect, useCallback, type KeyboardEvent as ReactKeyEvent } from "react";
@@ -72,7 +74,7 @@ export default function Header() {
       ],
     },
     { href: "/vendors", label: t("index_12") },
-    { href: "/robotics", label: locale === "de" ? "Robotik" : "Robotics" },
+    { href: "/robotics", label: roboticsNavigation[locale as keyof typeof roboticsNavigation] ?? roboticsNavigation.en },
     {
       href: "/services",
       label: t("index_13"),

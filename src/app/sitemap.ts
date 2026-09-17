@@ -32,6 +32,7 @@ const localisedRoutes: Route[] = [
   { path: "", priority: 1.0, changeFrequency: "weekly" },
   { path: "/about", priority: 0.9, changeFrequency: "monthly" },
   { path: "/vendors", priority: 0.9, changeFrequency: "weekly" },
+  { path: "/robotics", priority: 0.8, changeFrequency: "monthly" },
   { path: "/services", priority: 0.9, changeFrequency: "monthly" },
   { path: "/services/market-entry", priority: 0.8, changeFrequency: "monthly" },
   { path: "/services/distribution", priority: 0.8, changeFrequency: "monthly" },
@@ -74,12 +75,6 @@ export default function sitemap(): MetadataRoute.Sitemap {
         alternates: { languages },
       });
     }
-  }
-
-  // Robotics is translated into EN/DE only; other locale routes are English fallbacks.
-  for (const locale of ["en", "de"]) {
-    entries.push({ url: `${BASE_URL}/${locale}/robotics/`, changeFrequency: "monthly", priority: 0.8,
-      alternates: { languages: { en: `${BASE_URL}/en/robotics/`, de: `${BASE_URL}/de/robotics/`, "x-default": `${BASE_URL}/en/robotics/` } } });
   }
 
   // Blog posts — English only, matching their canonical URLs.

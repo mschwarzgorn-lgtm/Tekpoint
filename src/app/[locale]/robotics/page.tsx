@@ -4,9 +4,7 @@ import { routing } from "@/i18n/routing";
 import { Link } from "@/i18n/navigation";
 import { LocaleBreadcrumbJsonLd } from "@/components/JsonLd";
 import EmailEnquiry from "@/components/EmailEnquiry";
-import en from "../../../../messages/robotics/en.json";
-import de from "../../../../messages/robotics/de.json";
-import availability from "../../../../messages/robotics/availability.json";
+import { getRoboticsCopy, roboticsLocales, roboticsLanguageTags } from "@/lib/robotics";
 import styles from "./robotics.module.css";
 
 const base = "https://tekpoint.com";
@@ -26,41 +24,41 @@ const team = [
 export function generateStaticParams() { return routing.locales.map(locale => ({ locale })); }
 export async function generateMetadata({ params }: { params: Promise<{ locale: string }> }): Promise<Metadata> {
   const { locale } = await params;
-  const lang = locale === "de" ? "de" : "en";
-  const c = lang === "de" ? de : en;
-  const url = `${base}/${lang}/robotics/`;
-  const translated = locale === "en" || locale === "de";
+  const lang = roboticsLanguageTags[locale] ?? locale;
+  const c = getRoboticsCopy(locale);
+  const url = `${base}/${locale}/robotics/`;
+  const languages = Object.fromEntries(roboticsLocales.map(l => [roboticsLanguageTags[l] ?? l, `${base}/${l}/robotics/`]));
+  languages["x-default"] = `${base}/en/robotics/`;
   return {
     title: c.metaTitle, description: c.metaDescription,
-    alternates: { canonical: url, languages: { en: `${base}/en/robotics/`, de: `${base}/de/robotics/`, "x-default": `${base}/en/robotics/` }, ...(locale === "en" ? { types: { "text/markdown": `${base}/en/robotics.md` } } : {}) },
+    alternates: { canonical: url, languages, ...(locale === "en" ? { types: { "text/markdown": `${base}/en/robotics.md` } } : {}) },
     openGraph: { title: c.metaTitle, description: c.metaDescription, url, siteName: "Tekpoint", type: "website", locale: lang, images: [{ url: `${base}${imageRoot}hero-agibot-robots.webp`, width: 1600, height: 816, alt: c.heroAlt }] },
     twitter: { card: "summary_large_image", title: c.metaTitle, description: c.metaDescription, images: [`${base}${imageRoot}hero-agibot-robots.webp`] },
-    robots: { index: translated, follow: true },
+    robots: { index: true, follow: true },
   };
 }
 export default async function RoboticsPage({ params }: { params: Promise<{ locale: string }> }) {
   const { locale } = await params;
   setRequestLocale(locale);
-  const lang = locale === "de" ? "de" : "en";
-  const c = lang === "de" ? de : en;
-  const url = `${base}/${lang}/robotics/`;
+  const lang = roboticsLanguageTags[locale] ?? locale;
+  const c = getRoboticsCopy(locale);
+  const url = `${base}/${locale}/robotics/`;
   const graph = {
     "@context": "https://schema.org", "@graph": [
       { "@type": "WebPage", "@id": `${url}#webpage`, url, name: c.metaTitle, description: c.metaDescription, inLanguage: lang, isPartOf: { "@id": `${base}/#website` }, mainEntity: { "@id": `${url}#service` } },
-      { "@type": "Service", "@id": `${url}#service`, name: c.title, description: c.intro[1], serviceType: "Robotics distribution", provider: { "@id": `${base}/#organization` }, areaServed: { "@type": "Place", name: "Europe" }, url },
+      { "@type": "Service", "@id": `${url}#service`, name: c.title, description: c.intro[1], serviceType: c.serviceType, provider: { "@id": `${base}/#organization` }, areaServed: { "@type": "Place", name: c.regionName }, url },
       ...c.products.map((p, i) => ({ "@type": "Product", "@id": `${url}#product-${i + 1}`, name: p.name, description: p.description, brand: { "@type": "Brand", name: "AGIBOT" }, manufacturer: { "@type": "Organization", name: "AGIBOT", url: "https://www.agibot.com/" }, image: `${base}${imageRoot}${productMedia[i].image}`, url: `${url}#robot-${i + 1}` })),
     ],
   };
   return <div className={styles.page} lang={lang}>
     <script type="application/ld+json" dangerouslySetInnerHTML={{ __html: JSON.stringify(graph).replace(/</g, "\\u003c") }} />
-    <LocaleBreadcrumbJsonLd locale={lang} trail={[{ name: lang === "de" ? "Robotik" : "Robotics", path: "/robotics" }]} />
-    {locale !== "en" && locale !== "de" && <div className={styles.notice} lang={locale}>{availability[locale as keyof typeof availability]} <Link href="/robotics/" locale="de">Deutsch</Link> · <Link href="/robotics/" locale="en">English</Link></div>}
+    <LocaleBreadcrumbJsonLd locale={locale} trail={[{ name: c.navLabel, path: "/robotics" }]} />
     <section className={styles.hero}>
       <div className={styles.wrap}>
         <div className={styles.heroTop}><span className={styles.eyebrow}>{c.eyebrow}</span><img src={`${imageRoot}agibot-logo-dark.png`} width={243} height={58} alt="AGIBOT" className={styles.logo} /></div>
         <div className={styles.heroGrid}>
           <div><h1>{c.title}</h1><p className={styles.lead}>{c.intro[1]}</p><div className={styles.actions}><a className={styles.primary} href="#robotics-contact">{c.heroAction} <span aria-hidden="true">↗</span></a><a className={styles.secondary} href="#robotics-range">{c.rangeAction} <span aria-hidden="true">↓</span></a></div></div>
-          <Link href={blogPath} locale="en" className={styles.heroImageLink}><img src={`${imageRoot}hero-agibot-robots.webp`} alt={c.heroAlt} width={1600} height={816} fetchPriority="high" /><span>{c.newsLink} <span aria-hidden="true">↗</span></span></Link>
+          <Link href={blogPath} locale="en" className={styles.heroImageLink}><img src={`${imageRoot}hero-agibot-robots.webp`} alt={c.heroAlt} width={1600} height={816} fetchPriority="high" /><span><span>{c.newsLink}{locale !== "en" && <span className={styles.articleLanguage}> ({c.newsLanguage})</span>}</span> <span aria-hidden="true">↗</span></span></Link>
         </div>
         <div className={styles.heroBottom}><p>{c.intro[0]}</p><a href="https://www.agibot.com/" target="_blank" rel="noopener noreferrer">{c.manufacturerLink} <span aria-hidden="true">↗</span></a></div>
       </div>
@@ -73,7 +71,7 @@ export default async function RoboticsPage({ params }: { params: Promise<{ local
       </article>)}</div><p className={styles.caption}>{c.manufacturerSpecs}</p>
     </div></section>
     <section className={`${styles.section} ${styles.muted}`}><div className={styles.wrap}>
-      <div className={styles.sectionHeading}><span className={styles.eyebrow}>02 / {lang === "de" ? "Anwendungen" : "Applications"}</span><h2>{c.applicationsTitle}</h2><p>{c.applicationsIntro}</p></div>
+      <div className={styles.sectionHeading}><span className={styles.eyebrow}>02 / {c.applicationsEyebrow}</span><h2>{c.applicationsTitle}</h2><p>{c.applicationsIntro}</p></div>
       <div className={styles.applications}>{c.applications.map((a, i) => <article key={a.title}><div className={styles.applicationImage}><img src={`${imageRoot}${applicationImages[i]}`} alt={a.title} width={600} height={420} loading="lazy" /></div><h3>{a.title}</h3><p>{a.description}</p></article>)}</div>
     </div></section>
     <section className={`${styles.section} ${styles.dark}`}><div className={styles.wrap}>
@@ -85,7 +83,7 @@ export default async function RoboticsPage({ params }: { params: Promise<{ local
     </div></section>
     <section className={`${styles.section} ${styles.muted}`} id="robotics-contact"><div className={styles.wrap}>
       <div className={styles.contactGrid}><div><span className={styles.eyebrow}>{c.contactEyebrow}</span><h2>{c.contactTitle}</h2><p className={styles.contactIntro}>{c.contactIntro}</p><ul className={styles.topics}>{c.contactTopics.map(x => <li key={x}><span aria-hidden="true">↗</span> {x}</li>)}</ul><a className={styles.email} href="mailto:robotics@tekpoint.com">robotics@tekpoint.com <span aria-hidden="true">↗</span></a><h3 className={styles.teamHeading}>{c.teamTitle}</h3><div className={styles.team}>{team.map(person => <div key={person.name}><img src={`${imageRoot}${person.image}`} alt={person.name} width={person.width} height={person.height} loading="lazy" /><div><h4>{person.name}</h4><a href={`mailto:${person.email}`}>{person.email}</a></div></div>)}</div></div>
-      <div className={styles.formCard}><h3>{c.emailTitle}</h3><p>{c.emailIntro}</p><EmailEnquiry kind="robotics" locale={locale} /></div></div>
+      <div className={styles.formCard}><h3>{c.emailTitle}</h3><p>{c.emailIntro}</p><EmailEnquiry kind="robotics" locale={locale} buttonLabel={c.emailButton} /></div></div>
     </div></section>
   </div>;
 }
