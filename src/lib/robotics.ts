@@ -1,0 +1,41 @@
+import en from "../../messages/robotics/en.json";
+import de from "../../messages/robotics/de.json";
+import nl from "../../messages/robotics/nl.json";
+import fr from "../../messages/robotics/fr.json";
+import es from "../../messages/robotics/es.json";
+import it from "../../messages/robotics/it.json";
+import sr from "../../messages/robotics/sr.json";
+import da from "../../messages/robotics/da.json";
+import sv from "../../messages/robotics/sv.json";
+import no from "../../messages/robotics/no.json";
+import fi from "../../messages/robotics/fi.json";
+import is from "../../messages/robotics/is.json";
+import pl from "../../messages/robotics/pl.json";
+import ro from "../../messages/robotics/ro.json";
+import cs from "../../messages/robotics/cs.json";
+import hu from "../../messages/robotics/hu.json";
+import hr from "../../messages/robotics/hr.json";
+import bg from "../../messages/robotics/bg.json";
+import sk from "../../messages/robotics/sk.json";
+import sl from "../../messages/robotics/sl.json";
+import pt from "../../messages/robotics/pt.json";
+import el from "../../messages/robotics/el.json";
+import et from "../../messages/robotics/et.json";
+import lv from "../../messages/robotics/lv.json";
+import lt from "../../messages/robotics/lt.json";
+import ga from "../../messages/robotics/ga.json";
+import mt from "../../messages/robotics/mt.json";
+import zh from "../../messages/robotics/zh.json";
+import ja from "../../messages/robotics/ja.json";
+import ko from "../../messages/robotics/ko.json";
+import ru from "../../messages/robotics/ru.json";
+import { locales, type Locale } from "@/i18n/config";
+
+export type RoboticsCopy = typeof en;
+const content: Record<Locale, RoboticsCopy> = { en, de, nl, fr, es, it, sr, da, sv, no, fi, is, pl, ro, cs, hu, hr, bg, sk, sl, pt, el, et, lv, lt, ga, mt, zh, ja, ko, ru };
+export const roboticsLocales = locales;
+export const roboticsLanguageTags: Record<string, string> = { pt: "pt-PT", no: "nb", sr: "sr-Latn", zh: "zh-Hans" };
+export function getRoboticsCopy(locale: string): RoboticsCopy {
+  if (!Object.prototype.hasOwnProperty.call(content, locale)) throw new Error("Unsupported Robotics locale: " + locale);
+  return content[locale as Locale];
+}
