@@ -60,7 +60,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
     { name: t("management-board_40"), abbr: t("management-board_41"), title: t("management-board_42"), img: "/images/team/frank-roesner.jpeg", linkedin: "https://www.linkedin.com/in/frank-r%C3%B6sner-61a592145" },
     { name: t("management-board_43"), abbr: t("management-board_44"), title: t("management-board_45"), img: "/images/team/daniel-dorner.jpeg", linkedin: "https://www.linkedin.com/in/daniel-dorner" },
     { name: t("management-board_46"), abbr: t("management-board_47"), title: t("management-board_48"), img: "/images/team/gerhard-belousek.webp", linkedin: "https://www.linkedin.com/in/gerhard-belousek-42aa5729" },
-    { name: t("management-board_49"), abbr: t("management-board_50"), title: t("management-board_51"), img: "/images/team/gerhard-amtmann.webp", linkedin: "https://www.linkedin.com/in/gerhard-amtmann-5939123" },
+    { name: t("management-board_49"), abbr: t("management-board_50"), title: t("management-board_51"), img: "/images/team/gabriel-schuetz.webp", linkedin: "", email: "g.schuetz@tekpoint.com" },
     { name: t("management-board_52"), abbr: t("management-board_53"), title: t("management-board_54"), img: "/images/team/suzana-bozovic.webp", linkedin: "https://www.linkedin.com/in/suzana-bozovic-40460592" },
   ];
 
@@ -245,6 +245,11 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
                   <p className="text-orange-600 font-bold text-sm tracking-wide mb-0.5">{m.abbr}</p>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">{m.name}</h3>
                   <p className="text-gray-500 text-sm leading-snug">{m.title}</p>
+                  {m.email && (
+                    <a href={`mailto:${m.email}`} className="mt-3 inline-block max-w-full break-all text-sm text-gray-900 underline underline-offset-4 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900">
+                      {m.email}
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
@@ -278,6 +283,11 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
                   <p className="text-orange-600 font-bold text-sm tracking-wide mb-0.5">{m.abbr}</p>
                   <h3 className="text-lg font-semibold text-gray-900 mb-1">{m.name}</h3>
                   <p className="text-gray-500 text-sm leading-snug">{m.title}</p>
+                  {m.email && (
+                    <a href={`mailto:${m.email}`} className="mt-3 inline-block max-w-full break-all text-sm text-gray-900 underline underline-offset-4 hover:text-black focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-gray-900">
+                      {m.email}
+                    </a>
+                  )}
                 </div>
               </div>
             ))}
