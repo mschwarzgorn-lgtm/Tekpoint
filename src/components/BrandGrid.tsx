@@ -28,6 +28,8 @@ const brands = [
   { name: "eufy", logo: "brands/eufy.svg" },
   { name: "Rokid", logo: "brands/rokid.svg" },
   { name: "Harmonix", logo: "brands/harmonix.png" },
+  {"name":"Pure Electric","logo":"brands/pure-electric.png","cardTheme":"dark"},
+  {"name":"Laifen","logo":"brands/laifen.png"},
 ];
 
 export default function BrandGrid() {
@@ -37,7 +39,7 @@ export default function BrandGrid() {
         <div
           key={brand.name}
           role="listitem"
-          className="aspect-[3/2] bg-white rounded-xl border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all flex items-center justify-center p-4"
+          className={`aspect-[3/2] rounded-xl border border-gray-200 hover:shadow-lg hover:border-gray-300 transition-all flex items-center justify-center p-4 ${brand.cardTheme === "dark" ? "bg-[#2B2A29]" : "bg-white"}`}
         >
           <img
             src={`/images/${brand.logo}`}

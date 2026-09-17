@@ -28,6 +28,8 @@ const brands = [
   { name: "eufy", logo: "brands/eufy.svg" },
   { name: "Rokid", logo: "brands/rokid.svg" },
   { name: "Harmonix", logo: "brands/harmonix.png" },
+  {"name":"Pure Electric","logo":"brands/pure-electric.png","cardTheme":"dark"},
+  {"name":"Laifen","logo":"brands/laifen.png"},
 ];
 
 const row1 = brands.slice(0, 14);
@@ -55,7 +57,7 @@ function MarqueeRow({
         {doubled.map((brand, i) => (
           <div
             key={`${brand.name}-${i}`}
-            className="flex-shrink-0 w-36 h-20 bg-white rounded-xl border border-gray-100 flex items-center justify-center p-4"
+            className={`flex-shrink-0 w-36 h-20 rounded-xl border border-gray-100 flex items-center justify-center p-4 ${brand.cardTheme === "dark" ? "bg-[#2B2A29]" : "bg-white"}`}
           >
             <img
               src={`/images/${brand.logo}`}

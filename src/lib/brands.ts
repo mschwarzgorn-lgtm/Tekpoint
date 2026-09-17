@@ -20,6 +20,10 @@ export interface Brand {
   logo: string;
   bg: string;
   logoClass?: string;
+  /** Official brand website for linked portfolio cards. */
+  website?: string;
+  /** Keeps official light/dark artwork unaltered on a suitable background. */
+  cardTheme?: "light" | "dark";
 }
 
 export const BRANDS: Brand[] = [
@@ -276,6 +280,26 @@ export const BRANDS: Brand[] = [
     summary: "AGIBOT produces humanoid and industrial robots, including A2 Ultra, X2 Ultra and G2. Tekpoint is its regional distributor for Europe.",
     logo: "robotics/agibot-logo-dark.png",
     bg: "robotics/hero-agibot-robots.webp",
+  },
+  {
+    "name": "Pure Electric",
+    "slug": "pure-electric",
+    "category": "Electric scooters",
+    "summary": "Pure Electric produces electric scooters for urban mobility.",
+    "logo": "brands/pure-electric.png",
+    "bg": "brands/transparent.png",
+    "website": "https://www.pureelectric.com/",
+    "cardTheme": "dark"
+  },
+  {
+    "name": "Laifen",
+    "slug": "laifen",
+    "category": "Hair care & personal care",
+    "summary": "Laifen produces hair dryers, electric toothbrushes and electric shavers.",
+    "logo": "brands/laifen.png",
+    "bg": "brands/transparent.png",
+    "website": "https://www.laifentech.com/",
+    "cardTheme": "light"
   },
 ];
 

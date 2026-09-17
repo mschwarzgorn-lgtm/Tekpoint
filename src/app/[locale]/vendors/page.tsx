@@ -94,6 +94,11 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
                 <img src={`/images/${brand.logo}`} alt="AGIBOT" width={243} height={58} className="w-auto max-h-12 max-w-[85%] object-contain" />
                 <span className="text-sm text-[#2B2A29]">{locale === "de" ? "Robotik entdecken" : "Explore Robotics"} ↗</span>
               </a>
+            ) : brand.website ? (
+              <a key={brand.name} id={`brand-${brand.slug}`} href={brand.website} aria-label={brand.name} className={`relative aspect-[16/9] rounded-2xl border border-gray-200 flex flex-col items-center justify-center gap-3 p-4 md:p-6 hover:shadow-md transition-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2B2A29] ${brand.cardTheme === "dark" ? "bg-[#2B2A29] text-[#FEFEFE]" : "bg-[#FEFEFE] text-[#2B2A29]"}`}>
+                <img src={`/images/${brand.logo}`} alt={brand.name} loading="lazy" width={brand.cardTheme === "dark" ? 256 : 510} height={brand.cardTheme === "dark" ? 49 : 164} className="h-auto w-auto max-h-12 max-w-[85%] object-contain" />
+                <span className="text-sm text-center">{brand.name} <span aria-hidden="true">↗</span></span>
+              </a>
             ) : (
               <div key={brand.name} id={`brand-${brand.slug}`} className="relative aspect-[16/9] rounded-2xl overflow-hidden group cursor-pointer">
                 <img src={`/images/${brand.bg}`} alt="" aria-hidden="true" className="w-full h-full object-cover" />
