@@ -80,3 +80,10 @@
 .marquee-track:hover {
   animation-play-state: paused;
 }
+
+/* Accessible linked brand strip: pause while navigating and respect reduced motion. */
+.marquee-track:focus-within { animation-play-state: paused; }
+@media (prefers-reduced-motion: reduce) {
+  .marquee-track { animation: none !important; flex-wrap: wrap; width: 100%; justify-content: center; }
+  .marquee-track [aria-hidden="true"] { display: none; }
+}

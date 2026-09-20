@@ -1,6 +1,7 @@
 
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { BRANDS, RETAILERS } from "@/lib/brands";
+import BrandPortfolio, { RetailerPortfolio } from "@/components/BrandPortfolio";
 import {
   BrandPortfolioJsonLd,
   LocaleBreadcrumbJsonLd,
@@ -87,28 +88,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
           <h2 className="text-3xl md:text-4xl font-bold tracking-tight text-gray-900 mb-6">{t("eco_brands_title")}</h2>
           <p className="text-lg text-gray-700 leading-relaxed mb-12">{t("eco_brands_text")}</p>
 
-          {/* Brand logos grid — original colors (Brands page rule) */}
-          <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-6 mb-12">
-            {brands.map((brand) => brand.slug === "agibot" ? (
-              <a key={brand.name} id="brand-agibot" href={`/${locale}/robotics/`} className="relative aspect-[16/9] rounded-2xl border border-gray-200 bg-[#FEFEFE] flex flex-col items-center justify-center gap-4 p-6 hover:shadow-md transition-shadow" aria-label={locale === "de" ? "AGIBOT — Robotik entdecken" : "AGIBOT — explore Robotics"}>
-                <img src={`/images/${brand.logo}`} alt="AGIBOT" width={243} height={58} className="w-auto max-h-12 max-w-[85%] object-contain" />
-                <span className="text-sm text-[#2B2A29]">{locale === "de" ? "Robotik entdecken" : "Explore Robotics"} ↗</span>
-              </a>
-            ) : brand.website ? (
-              <a key={brand.name} id={`brand-${brand.slug}`} href={brand.website} aria-label={brand.name} className={`relative aspect-[16/9] rounded-2xl border border-gray-200 flex flex-col items-center justify-center gap-3 p-4 md:p-6 hover:shadow-md transition-shadow focus-visible:outline focus-visible:outline-2 focus-visible:outline-offset-4 focus-visible:outline-[#2B2A29] ${brand.cardTheme === "dark" ? "bg-[#2B2A29] text-[#FEFEFE]" : "bg-[#FEFEFE] text-[#2B2A29]"}`}>
-                <img src={`/images/${brand.logo}`} alt={brand.name} loading="lazy" width={brand.cardTheme === "dark" ? 256 : 510} height={brand.cardTheme === "dark" ? 49 : 164} className="h-auto w-auto max-h-12 max-w-[85%] object-contain" />
-                <span className="text-sm text-center">{brand.name} <span aria-hidden="true">↗</span></span>
-              </a>
-            ) : (
-              <div key={brand.name} id={`brand-${brand.slug}`} className="relative aspect-[16/9] rounded-2xl overflow-hidden group cursor-pointer">
-                <img src={`/images/${brand.bg}`} alt="" aria-hidden="true" className="w-full h-full object-cover" />
-                <div className="absolute inset-0 bg-black/40 group-hover:bg-black/50 transition-colors" />
-                <div className="absolute inset-0 flex items-center justify-center p-4">
-                  <img src={`/images/${brand.logo}`} alt={`${brand.name} logo`} className={`${brand.logoClass ?? "max-h-12 md:max-h-16"} w-auto object-contain brightness-0 invert`} />
-                </div>
-              </div>
-            ))}
-          </div>
+          <BrandPortfolio brands={brands} locale={locale} />
 
           <p className="text-gray-700 leading-relaxed mb-4">{t("eco_brands_context")}</p>
           <p className="text-gray-700 leading-relaxed font-medium">{t("eco_brands_closing")}</p>
@@ -130,14 +110,7 @@ export default async function VendorsPage({ params }: { params: Promise<{ locale
             ))}
           </ul>
 
-          {/* Retailer logos grid — original colors (Brands page rule) */}
-          <div className="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-6 mb-10">
-            {retailers.map((retailer) => (
-              <div key={retailer.name} className="bg-gray-50 rounded-xl border border-gray-100 p-5 flex items-center justify-center aspect-[3/2] hover:shadow-md transition-all group">
-                <img src={`/images/${retailer.logo}`} alt={retailer.name} className="max-h-12 max-w-full w-auto object-contain opacity-80 group-hover:opacity-100 group-hover:scale-105 transition-all duration-300" />
-              </div>
-            ))}
-          </div>
+          <div className="mb-10"><RetailerPortfolio retailers={retailers} /></div>
 
           <p className="text-gray-700 leading-relaxed">{t("eco_retail_closing")}</p>
         </div>
