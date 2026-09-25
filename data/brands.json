@@ -9,15 +9,6 @@
     "sort_order": 1
   },
   {
-    "id": 2,
-    "brand_name": "OPPO",
-    "description": "OPPO combines elegant design with industry-leading fast-charging technology (VOOC/SUPERVOOC) and advanced imaging – perfect for users seeking creative smartphone experiences and ultra-fast charging without overheating.",
-    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/03/VI_PNG_OPPO-Logo_White_CMYK_20191204-01-2.png",
-    "logo_hover_url": null,
-    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/oppo.png",
-    "sort_order": 2
-  },
-  {
     "id": 3,
     "brand_name": "POCO",
     "description": "POCO offers \"performance at a fair price\" – devices with top-tier chips, 120 Hz displays, and strong battery life, tailored especially for tech enthusiasts.",
@@ -25,24 +16,6 @@
     "logo_hover_url": null,
     "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/08/poco-2.png",
     "sort_order": 3
-  },
-  {
-    "id": 4,
-    "brand_name": "Amazfit",
-    "description": "Amazfit (by Zepp Health) is known for smart wearables packed with extensive health and fitness features – heart rate, SpO2, sleep tracking, and more.",
-    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/amazfit-2.png",
-    "logo_hover_url": null,
-    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/amazfit_bg-jpg.webp",
-    "sort_order": 4
-  },
-  {
-    "id": 5,
-    "brand_name": "Realme",
-    "description": "Realme delivers trendy, high-performance smartphones and smart products for a young community – growing rapidly and reaching millions of users worldwide.",
-    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/realme-logo.png",
-    "logo_hover_url": null,
-    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/realme_bg-jpg.webp",
-    "sort_order": 5
   },
   {
     "id": 6,
@@ -72,15 +45,6 @@
     "sort_order": 8
   },
   {
-    "id": 9,
-    "brand_name": "Nothing",
-    "description": "Nothing focuses on iconic transparent design and seamless smart experiences – from earbuds with adaptive ANC to smartphones with the unique Glyph Interface.",
-    "logo_url": "https://tekpoint.com/wp-content/uploads/2023/06/Nothing.png",
-    "logo_hover_url": null,
-    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2023/07/nothing_bg-jpg.webp",
-    "sort_order": 9
-  },
-  {
     "id": 10,
     "brand_name": "Roborock",
     "description": "Roborock stands for intelligent vacuum and mop robots with precise navigation, strong suction power, and clever docking solutions.",
@@ -88,24 +52,6 @@
     "logo_hover_url": null,
     "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/3eb9ca14b75698a5197a5d07ff87fd8b.png",
     "sort_order": 10
-  },
-  {
-    "id": 11,
-    "brand_name": "Narwal",
-    "description": "Narwal specializes in self-cleaning vacuum and mop robots that minimize tangling and simplify maintenance.",
-    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/Narwal-1.svg",
-    "logo_hover_url": null,
-    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/a8f131925ee4f759e636c99fdbcce4c6.png",
-    "sort_order": 11
-  },
-  {
-    "id": 12,
-    "brand_name": "IMIKI",
-    "description": "IMIKI offers stylish, affordable wearables – from smartwatches and earbuds to lightweight AR glasses.",
-    "logo_url": "https://tekpoint.com/wp-content/uploads/2024/08/Imiki.svg",
-    "logo_hover_url": null,
-    "bg_image_url": "https://tekpoint.com/wp-content/uploads/2024/08/bbbc240f453e5becc4098326ae851c48.jpeg",
-    "sort_order": 12
   },
   {
     "id": 13,
