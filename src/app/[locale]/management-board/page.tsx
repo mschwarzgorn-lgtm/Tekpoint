@@ -60,7 +60,7 @@ export default async function ManagementBoardPage({ params }: { params: Promise<
     { name: t("management-board_40"), abbr: t("management-board_41"), title: t("management-board_42"), img: "/images/team/frank-roesner.jpeg", linkedin: "https://www.linkedin.com/in/frank-r%C3%B6sner-61a592145" },
     { name: t("management-board_43"), abbr: t("management-board_44"), title: t("management-board_45"), img: "/images/team/daniel-dorner.jpeg", linkedin: "https://www.linkedin.com/in/daniel-dorner" },
     { name: t("management-board_46"), abbr: t("management-board_47"), title: t("management-board_48"), img: "/images/team/gerhard-belousek.webp", linkedin: "https://www.linkedin.com/in/gerhard-belousek-42aa5729" },
-    { name: t("management-board_49"), abbr: t("management-board_50"), title: t("management-board_51"), img: "/images/team/gabriel-schuetz.webp", linkedin: "", email: "g.schuetz@tekpoint.com" },
+    { name: t("management-board_49"), abbr: t("management-board_50"), title: t("management-board_51"), img: "/images/team/gabriel-schuetz.webp", linkedin: "", email: "" },
     { name: t("management-board_52"), abbr: t("management-board_53"), title: t("management-board_54"), img: "/images/team/suzana-bozovic.webp", linkedin: "https://www.linkedin.com/in/suzana-bozovic-40460592" },
   ];
 
