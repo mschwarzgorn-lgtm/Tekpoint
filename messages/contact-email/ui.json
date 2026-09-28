@@ -1,0 +1,126 @@
+{
+  "bg": {
+    "notice": "Този бутон отваря вашето приложение за електронна поща. Чрез този уебсайт не се изпраща запитване. Можете също да копирате адреса във вашата услуга за електронна поща.",
+    "privacyLink": "Политика за поверителност"
+  },
+  "cs": {
+    "notice": "Toto tlačítko otevře vaši e-mailovou aplikaci. Prostřednictvím tohoto webu se neodesílá žádná poptávka. Adresu můžete také zkopírovat do své e-mailové služby.",
+    "privacyLink": "Zásady ochrany osobních údajů"
+  },
+  "da": {
+    "notice": "Denne knap åbner dit e-mailprogram. Der sendes ingen forespørgsel via dette websted. Du kan også kopiere adressen ind i din e-mailtjeneste.",
+    "privacyLink": "Privatlivspolitik"
+  },
+  "de": {
+    "notice": "Diese Schaltfläche öffnet Ihr E-Mail-Programm. Über diese Website wird keine Anfrage versendet. Sie können die Adresse auch in Ihren E-Mail-Dienst kopieren.",
+    "privacyLink": "Datenschutzerklärung"
+  },
+  "el": {
+    "notice": "Αυτό το κουμπί ανοίγει την εφαρμογή ηλεκτρονικού ταχυδρομείου σας. Δεν υποβάλλεται αίτημα μέσω αυτού του ιστοτόπου. Μπορείτε επίσης να αντιγράψετε τη διεύθυνση στην υπηρεσία ηλεκτρονικού ταχυδρομείου σας.",
+    "privacyLink": "Πολιτική απορρήτου"
+  },
+  "en": {
+    "notice": "This button opens your email app. No enquiry is submitted through this website. You can also copy the address into your email service.",
+    "privacyLink": "Privacy policy"
+  },
+  "es": {
+    "notice": "Este botón abre su aplicación de correo electrónico. No se envía ninguna consulta a través de este sitio web. También puede copiar la dirección en su servicio de correo electrónico.",
+    "privacyLink": "Política de privacidad"
+  },
+  "et": {
+    "notice": "See nupp avab teie e-posti rakenduse. Selle veebisaidi kaudu ei esitata päringut. Võite aadressi ka oma e-posti teenusesse kopeerida.",
+    "privacyLink": "Privaatsuspoliitika"
+  },
+  "fi": {
+    "notice": "Tämä painike avaa sähköpostisovelluksesi. Tämän verkkosivuston kautta ei lähetetä tiedustelua. Voit myös kopioida osoitteen sähköpostipalveluusi.",
+    "privacyLink": "Tietosuojakäytäntö"
+  },
+  "fr": {
+    "notice": "Ce bouton ouvre votre application de messagerie. Aucune demande n’est envoyée via ce site web. Vous pouvez également copier l’adresse dans votre service de messagerie.",
+    "privacyLink": "Politique de confidentialité"
+  },
+  "ga": {
+    "notice": "Osclaíonn an cnaipe seo d’aip ríomhphoist. Ní chuirtear aon fhiosrúchán isteach tríd an suíomh gréasáin seo. Is féidir leat an seoladh a chóipeáil isteach i do sheirbhís ríomhphoist freisin.",
+    "privacyLink": "Beartas príobháideachais"
+  },
+  "hr": {
+    "notice": "Ovaj gumb otvara vašu aplikaciju za e-poštu. Putem ove web-stranice ne šalje se upit. Adresu možete i kopirati u svoju uslugu e-pošte.",
+    "privacyLink": "Pravila privatnosti"
+  },
+  "hu": {
+    "notice": "Ez a gomb megnyitja az Ön levelezőalkalmazását. Ezen a webhelyen keresztül nem küldhető be érdeklődés. A címet az e-mail-szolgáltatásába is bemásolhatja.",
+    "privacyLink": "Adatvédelmi irányelvek"
+  },
+  "is": {
+    "notice": "Þessi hnappur opnar tölvupóstforritið þitt. Engin fyrirspurn er send í gegnum þessa vefsíðu. Þú getur einnig afritað netfangið í tölvupóstþjónustuna þína.",
+    "privacyLink": "Persónuverndarstefna"
+  },
+  "it": {
+    "notice": "Questo pulsante apre la sua applicazione di posta elettronica. Nessuna richiesta viene inviata tramite questo sito web. Può anche copiare l’indirizzo nel suo servizio di posta elettronica.",
+    "privacyLink": "Informativa sulla privacy"
+  },
+  "ja": {
+    "notice": "このボタンを押すと、お使いのメールアプリが開きます。このウェブサイトを通じて問い合わせが送信されることはありません。アドレスをメールサービスにコピーすることもできます。",
+    "privacyLink": "プライバシーポリシー"
+  },
+  "ko": {
+    "notice": "이 버튼을 누르면 이메일 앱이 열립니다. 이 웹사이트를 통해 문의가 제출되지는 않습니다. 주소를 이메일 서비스에 복사할 수도 있습니다.",
+    "privacyLink": "개인정보 처리방침"
+  },
+  "lt": {
+    "notice": "Šis mygtukas atidaro jūsų el. pašto programą. Per šią svetainę užklausa nepateikiama. Adresą taip pat galite nukopijuoti į savo el. pašto paslaugą.",
+    "privacyLink": "Privatumo politika"
+  },
+  "lv": {
+    "notice": "Šī poga atver jūsu e-pasta lietotni. Izmantojot šo tīmekļa vietni, pieprasījums netiek nosūtīts. Adresi varat arī iekopēt savā e-pasta pakalpojumā.",
+    "privacyLink": "Privātuma politika"
+  },
+  "mt": {
+    "notice": "Din il-buttuna tiftaħ l-app tal-email tiegħek. L-ebda mistoqsija ma tintbagħat permezz ta’ din il-websajt. Tista’ wkoll tikkopja l-indirizz fis-servizz tal-email tiegħek.",
+    "privacyLink": "Politika tal-privatezza"
+  },
+  "nl": {
+    "notice": "Deze knop opent uw e-mailprogramma. Via deze website wordt geen aanvraag verzonden. U kunt het adres ook naar uw e-maildienst kopiëren.",
+    "privacyLink": "Privacybeleid"
+  },
+  "no": {
+    "notice": "Denne knappen åpner e-postprogrammet ditt. Det sendes ingen forespørsel via dette nettstedet. Du kan også kopiere adressen til e-posttjenesten din.",
+    "privacyLink": "Personvernerklæring"
+  },
+  "pl": {
+    "notice": "Ten przycisk otwiera aplikację pocztową. Za pośrednictwem tej strony internetowej nie jest wysyłane żadne zapytanie. Adres można również skopiować do usługi pocztowej.",
+    "privacyLink": "Polityka prywatności"
+  },
+  "pt": {
+    "notice": "Este botão abre a sua aplicação de e-mail. Não é enviado nenhum pedido através deste site. Também pode copiar o endereço para o seu serviço de e-mail.",
+    "privacyLink": "Política de privacidade"
+  },
+  "ro": {
+    "notice": "Acest buton deschide aplicația dumneavoastră de e-mail. Prin intermediul acestui site nu se trimite nicio solicitare. De asemenea, puteți copia adresa în serviciul dumneavoastră de e-mail.",
+    "privacyLink": "Politica de confidențialitate"
+  },
+  "ru": {
+    "notice": "Эта кнопка открывает ваше почтовое приложение. Запрос не отправляется через этот веб-сайт. Вы также можете скопировать адрес в свой почтовый сервис.",
+    "privacyLink": "Политика конфиденциальности"
+  },
+  "sk": {
+    "notice": "Toto tlačidlo otvorí vašu e-mailovú aplikáciu. Prostredníctvom tejto webovej stránky sa neposiela žiadny dopyt. Adresu môžete tiež skopírovať do svojej e-mailovej služby.",
+    "privacyLink": "Zásady ochrany osobných údajov"
+  },
+  "sl": {
+    "notice": "Ta gumb odpre vašo e-poštno aplikacijo. Prek tega spletnega mesta se ne pošlje nobeno povpraševanje. Naslov lahko tudi kopirate v svojo e-poštno storitev.",
+    "privacyLink": "Pravilnik o zasebnosti"
+  },
+  "sr": {
+    "notice": "Ovo dugme otvara vašu aplikaciju za e-poštu. Putem ove veb-lokacije ne šalje se upit. Adresu možete i kopirati u svoju uslugu za e-poštu.",
+    "privacyLink": "Politika privatnosti"
+  },
+  "sv": {
+    "notice": "Den här knappen öppnar ditt e-postprogram. Ingen förfrågan skickas via den här webbplatsen. Du kan också kopiera adressen till din e-posttjänst.",
+    "privacyLink": "Integritetspolicy"
+  },
+  "zh": {
+    "notice": "此按钮会打开您的电子邮件应用。不会通过本网站提交任何咨询。您也可以将地址复制到您的电子邮件服务中。",
+    "privacyLink": "隐私政策"
+  }
+}

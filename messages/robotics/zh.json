@@ -1,0 +1,112 @@
+{
+  "metaTitle": "AGIBOT 在欧洲的机器人业务 | Tekpoint",
+  "metaDescription": "Tekpoint 是 AGIBOT 在欧洲的区域分销商。探索 A2 Ultra、X2 Ultra 和 G2 机器人，并与我们的机器人团队讨论您的应用需求。",
+  "eyebrow": "机器人 / AGIBOT",
+  "title": "Tekpoint — AGIBOT 机器人的欧洲区域分销商",
+  "intro": [
+    "Tekpoint 一直是欧洲企业信赖的技术合作伙伴，帮助客户对接领先制造商和新兴创新技术。机器人业务是我们最新的重点领域：随着具身智能从研究实验室走向工厂、仓库和服务场景，我们通过本地可靠的合作伙伴，为欧洲企业获取这项技术提供支持。",
+    "作为 AGIBOT 的区域分销商，我们为 AGIBOT 人形机器人平台提供销售、支持和集成服务，让欧洲各地的客户拥有直接的联系窗口，无需独自与海外制造商沟通。"
+  ],
+  "heroAction": "讨论您的项目",
+  "rangeAction": "探索机器人",
+  "manufacturerLink": "进一步了解 AGIBOT",
+  "heroAlt": "AGIBOT 人形机器人 — 制造商第 15,000 台机器人的里程碑",
+  "newsLink": "AGIBOT 达到 15,000 台机器人：阅读报道",
+  "productsTitle": "AGIBOT 产品系列",
+  "productsIntro": "Tekpoint 提供的 AGIBOT 人形机器人精选。",
+  "products": [
+    {
+      "name": "AGIBOT A2 Ultra",
+      "tagline": "全球首款实现商业化规模应用的全尺寸人形机器人",
+      "description": "具备智能交互和自主运行能力，拥有为大规模商业部署打造的可靠机身。身高 169 cm，具备 40 个自由度，行走速度最高可达 1.2 m/s。AGIBOT 将 A2 Ultra 与 106.286 km 的行走纪录联系起来；吉尼斯世界纪录将创造该纪录的机器人称为 AgiBot A2。"
+    },
+    {
+      "name": "AGIBOT X2 Ultra",
+      "tagline": "全智能灵活机器人",
+      "description": "亲和、灵活且智能，支持视觉、语音、触觉和面部表情等多模态交互。身高约 1.31 m，最多具备 30 个自由度，行走速度最高可达 1.8 m/s，并具备自主导航和障碍物规避能力。"
+    },
+    {
+      "name": "AGIBOT G2",
+      "tagline": "工业级交互式具身操作机器人",
+      "description": "按照工业级标准打造，采用 100% 汽车级组件并具备 IP42 防护。通过力控机械臂实现亚毫米级精密装配，并配备富有表现力的面部动画、类人运动和用于人机互动的视线跟踪。"
+    }
+  ],
+  "manufacturerSpecs": "产品描述和规格由 AGIBOT 提供。我们会针对每个项目评估配置和适用性。",
+  "learnMore": "制造商详情",
+  "applicationsTitle": "典型应用",
+  "applicationsIntro": "每个机器人项目都始于具体使用场景。Tekpoint 帮助客户确定最符合所需环境、交互方式和运营目标的 AGIBOT 平台。",
+  "applications": [
+    {
+      "title": "客户互动与活动",
+      "description": "接待、引导、品牌体验、展览以及其他面向客户的环境。"
+    },
+    {
+      "title": "服务与交互",
+      "description": "人机交互、智能辅助以及全新的具身智能应用。"
+    },
+    {
+      "title": "制造与自动化",
+      "description": "精密作业、工业工作流程以及生产环境中的评估。"
+    },
+    {
+      "title": "研究与开发",
+      "description": "机器人研究、具身智能开发、大学及技术评估。"
+    }
+  ],
+  "whyTitle": "为什么选择 Tekpoint？",
+  "whyIntro": "AGIBOT 提供机器人技术。Tekpoint 提供欧洲商业对接和市场准入支持。",
+  "reasons": [
+    {
+      "title": "欧洲分销",
+      "description": "在欧洲各市场开展 AGIBOT 机器人解决方案的商业分销。"
+    },
+    {
+      "title": "市场开发",
+      "description": "在欧洲各地拓展经销商、集成商和企业客户机会。"
+    },
+    {
+      "title": "欧盟市场准入",
+      "description": "为欧洲产品要求、文档和市场进入流程提供支持。"
+    },
+    {
+      "title": "物流与支持",
+      "description": "提供欧洲物流、履约、RMA 协调以及本地商业对接。"
+    }
+  ],
+  "stepsEyebrow": "从兴趣到项目",
+  "stepsTitle": "如何与 Tekpoint 合作",
+  "stepsIntro": "在联系我们之前，您无需确定所需的机器人或配置。从您的使用场景开始，我们将帮助您梳理后续步骤。",
+  "steps": [
+    {
+      "title": "告诉我们您的使用场景",
+      "description": "向我们的机器人团队介绍您的应用、环境、目标市场、项目阶段和关键需求。"
+    },
+    {
+      "title": "确定合适的解决方案",
+      "description": "我们将帮助您评估适合项目的 AGIBOT 平台、配置和商业方案。"
+    },
+    {
+      "title": "进入评估与供应阶段",
+      "description": "Tekpoint 协调商业流程、欧洲供应以及推动项目机会向前发展的必要对接工作。"
+    }
+  ],
+  "contactEyebrow": "让我们讨论您的项目",
+  "contactTitle": "对 AGIBOT 机器人感兴趣？",
+  "contactIntro": "无论您是经销商、系统集成商、研究机构、技术合作伙伴还是企业客户，我们的机器人团队都可以帮助您评估适合您市场或应用的 AGIBOT 解决方案。",
+  "contactTopics": [
+    "产品信息与供应情况",
+    "经销商及分销合作",
+    "企业与工业项目",
+    "系统集成机会",
+    "研究与教育咨询"
+  ],
+  "teamTitle": "您的机器人联系人",
+  "emailTitle": "联系机器人团队",
+  "emailIntro": "给我们的机器人团队发送电子邮件。请简要介绍您的应用、公司和项目需求。",
+  "navLabel": "机器人",
+  "applicationsEyebrow": "应用",
+  "emailButton": "发送邮件给机器人团队",
+  "newsLanguage": "文章为英文",
+  "serviceType": "机器人分销",
+  "regionName": "欧洲"
+}
