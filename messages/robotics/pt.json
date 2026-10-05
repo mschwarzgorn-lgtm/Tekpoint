@@ -1,0 +1,112 @@
+{
+  "metaTitle": "Robótica AGIBOT na Europa | Tekpoint",
+  "metaDescription": "A Tekpoint é a distribuidora regional da AGIBOT para a Europa. Explore os robôs A2 Ultra, X2 Ultra e G2 e fale com a nossa equipa de Robótica sobre a sua aplicação.",
+  "eyebrow": "Robótica / AGIBOT",
+  "title": "Tekpoint — distribuidora regional europeia de robôs AGIBOT",
+  "intro": [
+    "A Tekpoint tem sido um parceiro tecnológico de confiança para empresas europeias, ligando-as a fabricantes de referência e a inovações emergentes. A Robótica é a nossa área de foco mais recente: à medida que a IA incorporada passa dos laboratórios de investigação para fábricas, armazéns e ambientes de serviços, ajudamos as empresas europeias a aceder a esta tecnologia através de um parceiro local e fiável.",
+    "Enquanto distribuidora regional da AGIBOT, asseguramos vendas, suporte e integração da plataforma de robôs humanoides da AGIBOT — proporcionando aos clientes em toda a Europa um ponto de contacto direto, sem terem de lidar sozinhos com um fabricante ultramarino."
+  ],
+  "heroAction": "Fale connosco sobre o seu projeto",
+  "rangeAction": "Explore os robôs",
+  "manufacturerLink": "Mais informações sobre a AGIBOT",
+  "heroAlt": "Robôs humanoides da AGIBOT — o marco do 15 000.º robô do fabricante",
+  "newsLink": "A AGIBOT chega aos 15 000 robôs: leia a história",
+  "productsTitle": "Gama de produtos AGIBOT",
+  "productsIntro": "Uma seleção de robôs humanoides da AGIBOT disponíveis através da Tekpoint.",
+  "products": [
+    {
+      "name": "AGIBOT A2 Ultra",
+      "tagline": "O Primeiro Humanoide de Tamanho Completo com Escala Comercial do Mundo",
+      "description": "Interação inteligente, operação autónoma e um corpo fiável concebido para implementação comercial em grande escala. 169 cm, 40 graus de liberdade e velocidade de marcha até 1,2 m/s. A AGIBOT associa o A2 Ultra ao seu recorde de marcha de 106,286 km; o Guinness World Records identifica o robô que estabeleceu o recorde como AgiBot A2."
+    },
+    {
+      "name": "AGIBOT X2 Ultra",
+      "tagline": "Robô Totalmente Inteligente e Ágil",
+      "description": "Amigável, ágil e inteligente, com interação multimodal através de visão, voz, toque e expressão facial. Aproximadamente 1,31 m de altura, até 30 graus de liberdade e velocidade de marcha até 1,8 m/s, com navegação autónoma e desvio de obstáculos."
+    },
+    {
+      "name": "AGIBOT G2",
+      "tagline": "Robô Industrial de Operação Incorporada e Interativa",
+      "description": "Construído segundo padrões industriais, com 100% de componentes de grau automóvel e proteção IP42. Permite uma montagem de precisão submilimétrica com braços controlados por força, além de animação facial expressiva, movimentos semelhantes aos humanos e seguimento do olhar para a interação com pessoas."
+    }
+  ],
+  "manufacturerSpecs": "As descrições e especificações dos produtos são fornecidas pela AGIBOT. A configuração e a adequação são avaliadas para cada projeto.",
+  "learnMore": "Detalhes do fabricante",
+  "applicationsTitle": "Aplicações típicas",
+  "applicationsIntro": "Todos os projetos de robótica começam pelo caso de utilização. A Tekpoint ajuda os clientes a identificar a plataforma AGIBOT que melhor se adequa ao ambiente, à interação e aos objetivos operacionais necessários.",
+  "applications": [
+    {
+      "title": "Interação com clientes e eventos",
+      "description": "Receção, orientação, experiências de marca, exposições e outros ambientes de contacto com clientes."
+    },
+    {
+      "title": "Serviços e interação",
+      "description": "Interação entre pessoas e robôs, assistência inteligente e novas aplicações de IA incorporada."
+    },
+    {
+      "title": "Produção e automação",
+      "description": "Operações de precisão, fluxos de trabalho industriais e avaliação em ambientes de produção."
+    },
+    {
+      "title": "Investigação e desenvolvimento",
+      "description": "Investigação em robótica, desenvolvimento de IA incorporada, universidades e avaliação tecnológica."
+    }
+  ],
+  "whyTitle": "Porquê a Tekpoint?",
+  "whyIntro": "A AGIBOT fornece a tecnologia robótica. A Tekpoint assegura a interface comercial europeia e o acesso ao mercado.",
+  "reasons": [
+    {
+      "title": "Distribuição europeia",
+      "description": "Distribuição comercial de soluções de robótica AGIBOT nos mercados europeus."
+    },
+    {
+      "title": "Desenvolvimento de mercado",
+      "description": "Desenvolvimento de oportunidades com revendedores, integradores e empresas em toda a Europa."
+    },
+    {
+      "title": "Acesso ao mercado da UE",
+      "description": "Apoio em requisitos europeus aplicáveis aos produtos, documentação e processos de entrada no mercado."
+    },
+    {
+      "title": "Logística e suporte",
+      "description": "Logística europeia, execução de encomendas, coordenação de autorizações de devolução (RMA) e uma interface comercial local."
+    }
+  ],
+  "stepsEyebrow": "Do interesse ao projeto",
+  "stepsTitle": "Como trabalhar com a Tekpoint",
+  "stepsIntro": "Não precisa de saber qual o robô ou a configuração de que necessita antes de nos contactar. Comece pelo seu caso de utilização — ajudaremos a estruturar os próximos passos.",
+  "steps": [
+    {
+      "title": "Fale-nos do seu caso de utilização",
+      "description": "Partilhe com a nossa equipa de Robótica a sua aplicação, ambiente, mercado-alvo, fase do projeto e principais requisitos."
+    },
+    {
+      "title": "Identifique a solução adequada",
+      "description": "Ajudamos a avaliar a plataforma AGIBOT, a configuração e a abordagem comercial relevantes para o seu projeto."
+    },
+    {
+      "title": "Avance para a avaliação e o fornecimento",
+      "description": "A Tekpoint coordena o processo comercial, o fornecimento europeu e as interfaces necessárias para fazer avançar a oportunidade."
+    }
+  ],
+  "contactEyebrow": "Fale connosco sobre o seu projeto",
+  "contactTitle": "Tem interesse na Robótica AGIBOT?",
+  "contactIntro": "Quer seja revendedor, integrador de sistemas, instituição de investigação, parceiro tecnológico ou cliente empresarial, a nossa equipa de Robótica pode ajudá-lo a avaliar as soluções AGIBOT para o seu mercado ou aplicação.",
+  "contactTopics": [
+    "Informações sobre produtos e disponibilidade",
+    "Cooperação com revendedores e na distribuição",
+    "Projetos empresariais e industriais",
+    "Oportunidades de integração de sistemas",
+    "Questões de investigação e educação"
+  ],
+  "teamTitle": "Os seus contactos de Robótica",
+  "emailTitle": "Fale com a nossa equipa de Robótica",
+  "emailIntro": "Envie um e-mail à nossa equipa de Robótica. Descreva brevemente a sua aplicação, empresa e requisitos do projeto.",
+  "navLabel": "Robótica",
+  "applicationsEyebrow": "Aplicações",
+  "emailButton": "Enviar e-mail à Robótica",
+  "newsLanguage": "Artigo em inglês",
+  "serviceType": "Distribuição de robótica",
+  "regionName": "Europa"
+}

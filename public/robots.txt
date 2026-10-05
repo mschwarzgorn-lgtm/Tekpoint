@@ -1,0 +1,116 @@
+# Tekpoint GmbH — https://tekpoint.com
+#
+# Tekpoint welcomes search crawlers and AI assistants. Both are explicitly
+# permitted below: search engines so pages can be indexed, and AI crawlers so
+# assistants can read, cite and recommend Tekpoint accurately.
+#
+# Machine-readable company summary: https://tekpoint.com/llms.txt
+# Full company dossier:             https://tekpoint.com/llms-full.txt
+#
+# Clean Markdown: replace the trailing slash of any English URL with ".md",
+# e.g. https://tekpoint.com/en/about.md or /en/blog/{slug}.md
+
+# ---------------------------------------------------------------------------
+# Default — everything is open except build internals
+# ---------------------------------------------------------------------------
+User-agent: *
+Allow: /
+Disallow: /api/
+Disallow: /_next/static/chunks/
+
+# ---------------------------------------------------------------------------
+# Search engines
+# ---------------------------------------------------------------------------
+User-agent: Googlebot
+Allow: /
+
+User-agent: Googlebot-Image
+Allow: /
+
+User-agent: Bingbot
+Allow: /
+
+User-agent: DuckDuckBot
+Allow: /
+
+User-agent: Applebot
+Allow: /
+
+User-agent: YandexBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# AI assistants — live retrieval and citation
+# These fetch a page when a user asks a question, then cite the source.
+# ---------------------------------------------------------------------------
+User-agent: OAI-SearchBot
+Allow: /
+
+User-agent: ChatGPT-User
+Allow: /
+
+User-agent: Claude-User
+Allow: /
+
+User-agent: Claude-SearchBot
+Allow: /
+
+User-agent: PerplexityBot
+Allow: /
+
+User-agent: Perplexity-User
+Allow: /
+
+User-agent: MistralAI-User
+Allow: /
+
+User-agent: DeepSeekBot
+Allow: /
+
+User-agent: YouBot
+Allow: /
+
+# ---------------------------------------------------------------------------
+# AI model and index crawlers
+# These build the corpora that assistants answer from without a live fetch.
+# Allowing them is what makes Tekpoint recommendable rather than merely
+# findable. Revoke a line here to opt out of that specific crawler.
+# ---------------------------------------------------------------------------
+User-agent: GPTBot
+Allow: /
+
+User-agent: ClaudeBot
+Allow: /
+
+User-agent: anthropic-ai
+Allow: /
+
+User-agent: Google-Extended
+Allow: /
+
+User-agent: Applebot-Extended
+Allow: /
+
+User-agent: Meta-ExternalAgent
+Allow: /
+
+User-agent: meta-externalagent
+Allow: /
+
+User-agent: Amazonbot
+Allow: /
+
+User-agent: CCBot
+Allow: /
+
+User-agent: cohere-ai
+Allow: /
+
+User-agent: Diffbot
+Allow: /
+
+User-agent: omgili
+Allow: /
+
+# ---------------------------------------------------------------------------
+Sitemap: https://tekpoint.com/sitemap.xml
