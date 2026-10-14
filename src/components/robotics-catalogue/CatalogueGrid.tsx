@@ -1,0 +1,10 @@
+"use client";
+import {useState,useEffect} from 'react';
+import {Link} from '@/i18n/navigation';
+import {products,categories,productIds} from '@/lib/robotics-catalogue';
+import s from './catalogue.module.css';
+export default function CatalogueGrid({locale}:{locale:string}){
+ const [filter,setFilter]=useState('all');const de=locale==='de';const lang=de?'de':'en';const filtered=products.filter(p=>filter==='all'||p.cat===filter);
+ useEffect(()=>{const sync=()=>{const query=location.hash.startsWith('#/')?(location.hash.split('?')[1]||'').split('#')[0]:location.search;const requested=new URLSearchParams(query).get('category');setFilter(categories.some(c=>c.id===requested)?requested!:'all');};sync();window.addEventListener('popstate',sync);return()=>window.removeEventListener('popstate',sync)},[]);
+ return <><div className={s.filterBar}><label htmlFor="catalogue-category">{de?'Produktkategorie':'Product category'}</label><select id="catalogue-category" value={filter} onChange={e=>{const value=e.target.value;setFilter(value);const url=new URL(window.location.href);if(value==='all')url.searchParams.delete('category');else url.searchParams.set('category',value);history.replaceState(null,'',url)}}><option value="all">{de?'Alle Produkte':'All products'} ({products.length})</option>{categories.map(c=><option key={c.id} value={c.id}>{c.label[lang]}</option>)}</select><p role="status">{filtered.length} {de?'Produkte · Alle Detailseiten verfügbar':'products · All detail pages available'}</p></div><div className={s.grid}>{filtered.map(p=><article className={s.card} key={p.id}><Link className={s.cardMedia} href={`/robotics/agibot/${p.id}/`} aria-label={`${de?'Produkt ansehen':'Explore'} ${p.name}`}><img src={`/images/robotics-catalogue/products/${p.id}.webp`} alt={p.name} width={600} height={480} loading="lazy"/></Link><div className={s.cardBody}><span className={s.category}>{categories.find(c=>c.id===p.cat)?.label[lang]}</span><h2>{p.name}</h2><p>{p.tagline[lang]}</p><Link className={s.cardLink} href={`/robotics/agibot/${p.id}/`}>{de?'Produkt ansehen':'Explore product'} <span aria-hidden="true">↗</span></Link></div></article>)}</div></>;
+}

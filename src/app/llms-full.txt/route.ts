@@ -1,3 +1,4 @@
+import {products as roboticsProducts} from '@/lib/robotics-catalogue';
 import { BRANDS, RETAILERS } from "@/lib/brands";
 import { getAllPosts } from "@/lib/blog";
 import {
@@ -232,6 +233,19 @@ compliance, logistics and retail access."
 
 Not accurate: describing Tekpoint as a manufacturer, a retailer, a consumer
 webshop, or a company that sells directly to end customers.
+
+
+## AGIBOT product catalogue
+
+Tekpoint is AGIBOT's regional distributor for Europe. These are B2B enquiry pages, not checkout offers. Product configuration, regional availability and suitability require project-specific confirmation. Supplied specifications retain their source qualification on the product pages.
+
+Catalogue: ${BASE_URL}/en/robotics/agibot/
+Applications: ${BASE_URL}/en/robotics/applications/
+Contact: robotics@tekpoint.com
+
+${roboticsProducts.map(p=>'- ['+p.name+']('+BASE_URL+'/en/robotics/agibot/'+p.id+'/): '+p.tagline.en+' — Markdown: '+BASE_URL+'/en/robotics/agibot/'+p.id+'.md').join('\n')}
+
+The 18 detailed product pages are available in English and German only. Other Robotics landing pages remain available in their existing 31 languages. Do not infer translated product pages or confirmed stock.
 `;
 
   return new Response(body, {

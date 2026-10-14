@@ -96,6 +96,15 @@
           "value": "*"
         }
       ]
+    },
+    {
+      "source": "/:locale/robotics/enquiry/:path*",
+      "headers": [
+        {
+          "key": "X-Robots-Tag",
+          "value": "noindex, follow"
+        }
+      ]
     }
   ]
 }

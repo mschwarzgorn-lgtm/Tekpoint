@@ -1,0 +1,42 @@
+{
+  "a3-ultra": {
+    "en": "The manufacturer’s up-to-8-hour runtime uses equal time walking and standing. Actual runtime depends on the task, battery condition and operating environment.",
+    "de": "Die Herstellerangabe von bis zu 8 Stunden Laufzeit gilt bei gleichen Geh- und Stehanteilen. Die tatsächliche Laufzeit hängt von Aufgabe, Akkuzustand und Einsatzumgebung ab."
+  },
+  "x2-ultra": {
+    "en": "Battery capacity differs between reference documents and is not quoted here as a confirmed value. Confirm the applicable battery and charging configuration with Tekpoint.",
+    "de": "Die Akkukapazität weicht zwischen Referenzunterlagen ab und wird hier nicht als bestätigter Wert genannt. Akku- und Ladekonfiguration bitte mit Tekpoint abstimmen."
+  },
+  "x2": {
+    "en": "The linked manufacturer reference also uses the name X2 Neo. The exact model variant must be specified in the quotation. Laboratory maximum speed is not a normal operating-speed guarantee.",
+    "de": "Die verlinkte Herstellerreferenz verwendet auch den Namen X2 Neo. Die genaue Modellvariante muss im Angebot festgelegt werden. Eine Laborhöchstgeschwindigkeit ist keine Zusage für den normalen Betrieb."
+  },
+  "d1-maxpro": {
+    "en": "Battery-rating references use different bases; the applicable capacity is confirmed with the quotation. Runtime figures are manufacturer references, not a guarantee for every load or environment.",
+    "de": "Die Akkuangaben in den Referenzen verwenden unterschiedliche Bezugsgrundlagen; die Kapazität wird mit dem Angebot bestätigt. Laufzeiten sind Herstellerreferenzen, keine Zusage für jede Last oder Umgebung."
+  },
+  "d1-max": {
+    "en": "Conflicting runtime and speed figures are withheld pending configuration confirmation. Rated payload is 25 kg according to the manufacturer reference; range and terrain performance depend on operating conditions.",
+    "de": "Abweichende Laufzeit- und Geschwindigkeitsangaben werden bis zur Konfigurationsbestätigung nicht genannt. Die Nenntraglast beträgt laut Herstellerreferenz 25 kg; Reichweite und Geländeleistung hängen von den Einsatzbedingungen ab."
+  },
+  "omnihand-pro": {
+    "en": "Manufacturer references identify a 2025 variant and differ from supplied weight figures. Weight and robot compatibility must be confirmed for the exact variant.",
+    "de": "Herstellerreferenzen nennen eine Variante von 2025 und weichen bei den Gewichtsangaben von gelieferten Unterlagen ab. Gewicht und Roboterkompatibilität müssen für die genaue Variante bestätigt werden."
+  },
+  "omnihand": {
+    "en": "Weight and tactile-sensor counts differ between reference documents and configurations. These values are withheld until the exact variant and options are confirmed.",
+    "de": "Gewicht und Anzahl der Tastsensorpunkte unterscheiden sich zwischen Referenzunterlagen und Konfigurationen. Diese Werte werden erst nach Bestätigung der genauen Variante und Optionen genannt."
+  },
+  "omnihand-3-lite": {
+    "en": "These are preliminary supplier-provided reference specifications. The linked AGIBOT overview is not a model-specific datasheet; request the current model documentation before selecting a configuration.",
+    "de": "Dies sind vorläufige, vom Lieferanten bereitgestellte Referenzdaten. Die verlinkte AGIBOT-Übersicht ist kein modellspezifisches Datenblatt; bitte vor der Konfigurationsauswahl aktuelle Modellunterlagen anfordern."
+  },
+  "omnipicker-3": {
+    "en": "These are preliminary supplier-provided reference specifications. The linked AGIBOT overview is not a model-specific datasheet; request current documentation and integration requirements.",
+    "de": "Dies sind vorläufige, vom Lieferanten bereitgestellte Referenzdaten. Die verlinkte AGIBOT-Übersicht ist kein modellspezifisches Datenblatt; bitte aktuelle Unterlagen und Integrationsanforderungen anfordern."
+  },
+  "vr-kit": {
+    "en": "The linked manufacturer reference describes A2 teleoperation, not independently verified compatibility across other robot families. Confirm kit contents, supported robot model, latency and operating limits before ordering.",
+    "de": "Die verlinkte Herstellerreferenz beschreibt A2-Teleoperation, keine unabhängig bestätigte Kompatibilität mit anderen Roboterfamilien. Lieferumfang, unterstütztes Robotermodell, Latenz und Betriebsgrenzen bitte vor Bestellung bestätigen."
+  }
+}

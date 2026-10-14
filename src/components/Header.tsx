@@ -240,7 +240,7 @@ export default function Header() {
                 {locales.map((l) => (
                   <Link
                     key={l}
-                    href={pathname}
+                    href={(pathname.startsWith("/robotics/agibot") || pathname.startsWith("/robotics/enquiry") || pathname.startsWith("/robotics/applications") || pathname.startsWith("/robotics/contact")) && !["en", "de"].includes(l) ? "/robotics/" : pathname}
                     locale={l}
                     hrefLang={l}
                     aria-current={l === locale ? "true" : undefined}

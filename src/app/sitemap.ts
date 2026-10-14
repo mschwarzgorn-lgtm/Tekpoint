@@ -1,3 +1,4 @@
+import {products} from '@/lib/robotics-catalogue';
 import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
 import { getAllPosts } from "@/lib/blog";
@@ -87,5 +88,7 @@ export default function sitemap(): MetadataRoute.Sitemap {
     });
   }
 
+  const roboticsPaths=['/robotics/agibot','/robotics/applications','/robotics/contact',...products.map(p=>'/robotics/agibot/'+p.id)];
+  for(const page of roboticsPaths)for(const locale of ['en','de'])entries.push({url:BASE_URL+'/'+locale+page+'/',changeFrequency:'monthly',priority:0.7,alternates:{languages:{en:BASE_URL+'/en'+page+'/',de:BASE_URL+'/de'+page+'/','x-default':BASE_URL+'/en'+page+'/'}}});
   return entries;
 }

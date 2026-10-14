@@ -2,22 +2,161 @@
   "_comment2": "dossierSections pulls the named sections of /llms-full.txt into that page's Markdown. The brands page shows its portfolio as logo images only, so without this the brand names and descriptions would be missing from the text a reader gets.",
   "_comment": "Single source of truth for which English pages get a clean Markdown counterpart at <path>.md. Read by src/app/llms.txt/route.ts (to advertise them) and by scripts/generate-md.mjs (to write them). Legal pages and individual blog posts are deliberately absent: legal text is not useful to assistants, and blog posts are generated from their own Markdown source instead.",
   "pages": [
-    { "path": "", "label": "Home" },
-    { "path": "/about", "label": "About" },
-    { "path": "/management-board", "label": "Leadership" },
-    { "path": "/vendors", "label": "Brands", "dossierSections": ["8", "9"] },
-    { "path": "/services", "label": "Services overview" },
-    { "path": "/services/market-entry", "label": "Market entry" },
-    { "path": "/services/distribution", "label": "Distribution" },
-    { "path": "/services/logistics", "label": "Logistics" },
-    { "path": "/services/fulfillment", "label": "Fulfillment" },
-    { "path": "/services/eu-compliance", "label": "EU compliance" },
-    { "path": "/services/marketing", "label": "Marketing" },
-    { "path": "/services/partner-connectivity", "label": "Partner connectivity" },
-    { "path": "/become-a-partner", "label": "Become a partner" },
-    { "path": "/career", "label": "Careers" },
-    { "path": "/contact", "label": "Contact" },
-    { "path": "/blog", "label": "Blog index" },
-    { "path": "/robotics", "label": "AGIBOT Robotics" }
+    {
+      "path": "",
+      "label": "Home"
+    },
+    {
+      "path": "/about",
+      "label": "About"
+    },
+    {
+      "path": "/management-board",
+      "label": "Leadership"
+    },
+    {
+      "path": "/vendors",
+      "label": "Brands",
+      "dossierSections": [
+        "8",
+        "9"
+      ]
+    },
+    {
+      "path": "/services",
+      "label": "Services overview"
+    },
+    {
+      "path": "/services/market-entry",
+      "label": "Market entry"
+    },
+    {
+      "path": "/services/distribution",
+      "label": "Distribution"
+    },
+    {
+      "path": "/services/logistics",
+      "label": "Logistics"
+    },
+    {
+      "path": "/services/fulfillment",
+      "label": "Fulfillment"
+    },
+    {
+      "path": "/services/eu-compliance",
+      "label": "EU compliance"
+    },
+    {
+      "path": "/services/marketing",
+      "label": "Marketing"
+    },
+    {
+      "path": "/services/partner-connectivity",
+      "label": "Partner connectivity"
+    },
+    {
+      "path": "/become-a-partner",
+      "label": "Become a partner"
+    },
+    {
+      "path": "/career",
+      "label": "Careers"
+    },
+    {
+      "path": "/contact",
+      "label": "Contact"
+    },
+    {
+      "path": "/blog",
+      "label": "Blog index"
+    },
+    {
+      "path": "/robotics",
+      "label": "AGIBOT Robotics"
+    },
+    {
+      "path": "/robotics/agibot",
+      "label": "AGIBOT product catalogue"
+    },
+    {
+      "path": "/robotics/applications",
+      "label": "Robotics applications"
+    },
+    {
+      "path": "/robotics/contact",
+      "label": "Robotics contacts"
+    },
+    {
+      "path": "/robotics/agibot/a3-ultra",
+      "label": "AGIBOT A3 Ultra"
+    },
+    {
+      "path": "/robotics/agibot/a3",
+      "label": "AGIBOT A3"
+    },
+    {
+      "path": "/robotics/agibot/a2-ultra",
+      "label": "AGIBOT A2 Ultra"
+    },
+    {
+      "path": "/robotics/agibot/a2-lite",
+      "label": "AGIBOT A2 Lite"
+    },
+    {
+      "path": "/robotics/agibot/x2-ultra",
+      "label": "AGIBOT X2 Ultra"
+    },
+    {
+      "path": "/robotics/agibot/x2",
+      "label": "AGIBOT X2"
+    },
+    {
+      "path": "/robotics/agibot/g2",
+      "label": "AGIBOT G2"
+    },
+    {
+      "path": "/robotics/agibot/d1-maxpro",
+      "label": "AGIBOT D1 MaxPro"
+    },
+    {
+      "path": "/robotics/agibot/d1-max",
+      "label": "AGIBOT D1 Max"
+    },
+    {
+      "path": "/robotics/agibot/d1-ultra",
+      "label": "AGIBOT D1 Ultra"
+    },
+    {
+      "path": "/robotics/agibot/d1-pro",
+      "label": "AGIBOT D1 Pro"
+    },
+    {
+      "path": "/robotics/agibot/d1-edu",
+      "label": "AGIBOT D1 Edu"
+    },
+    {
+      "path": "/robotics/agibot/c5",
+      "label": "AGIBOT C5"
+    },
+    {
+      "path": "/robotics/agibot/omnihand-pro",
+      "label": "AGIBOT OmniHand Pro"
+    },
+    {
+      "path": "/robotics/agibot/omnihand",
+      "label": "AGIBOT OmniHand"
+    },
+    {
+      "path": "/robotics/agibot/omnihand-3-lite",
+      "label": "AGIBOT OmniHand 3 Lite"
+    },
+    {
+      "path": "/robotics/agibot/omnipicker-3",
+      "label": "AGIBOT OmniPicker 3"
+    },
+    {
+      "path": "/robotics/agibot/vr-kit",
+      "label": "VR Teleoperation Kit"
+    }
   ]
 }

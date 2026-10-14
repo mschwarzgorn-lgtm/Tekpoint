@@ -1,0 +1,8 @@
+"use client";
+import {useRef,useState} from 'react';
+import s from './catalogue.module.css';
+export default function ProductGallery({id,name,count,locale}:{id:string;name:string;count:number;locale:string}){
+ const [active,setActive]=useState(0);const dialog=useRef<HTMLDialogElement>(null);const opener=useRef<HTMLButtonElement>(null);const closeButton=useRef<HTMLButtonElement>(null);const de=locale==='de';
+ const images=[`/images/robotics-catalogue/products/${id}.webp`,...Array.from({length:count},(_,i)=>`/images/robotics-catalogue/gallery/${id}-${i+1}.webp`)];
+ return <div><button ref={opener} className={s.galleryMain} aria-label={`${de?'Bild vergrößern':'Enlarge image'}: ${name}`} onClick={()=>dialog.current?.showModal()}><img src={images[active]} alt={`${name} — ${de?'Produktansicht':'product view'} ${active+1}`} width={900} height={800} fetchPriority="high"/><span>{de?'Vergrößern':'Enlarge'} ↗</span></button><div className={s.thumbnails} aria-label={de?'Produktbilder':'Product images'}>{images.map((src,i)=><button key={src} onClick={()=>setActive(i)} aria-label={`${de?'Bild':'Image'} ${i+1}: ${name}`} aria-pressed={active===i}><img src={src} alt="" width={120} height={100} loading="lazy"/></button>)}</div><dialog className={s.dialog} ref={dialog} aria-label={`${name} — ${de?'Bildansicht':'image viewer'}`} onClose={()=>opener.current?.focus()} onKeyDown={e=>{if(e.key==='Tab'){e.preventDefault();closeButton.current?.focus();}}} onClick={e=>{if(e.target===e.currentTarget)dialog.current?.close()}}><button ref={closeButton} autoFocus className={s.dialogClose} onClick={()=>dialog.current?.close()}>{de?'Schließen':'Close'} ×</button><img src={images[active]} alt={`${name} — ${de?'Produktansicht':'product view'} ${active+1}`}/></dialog></div>;
+}
