@@ -30,6 +30,7 @@ export default function Header() {
   const dropdownTimeout = useRef<NodeJS.Timeout | null>(null);
   const mobileMenuRef = useRef<HTMLDivElement>(null);
   const mobileToggleRef = useRef<HTMLButtonElement>(null);
+  const mobileRoboticsRef = useRef<HTMLButtonElement>(null);
   const langToggleRef = useRef<HTMLButtonElement>(null);
   const langPanelRef = useRef<HTMLDivElement>(null);
   const dropdownTriggers = useRef<Record<string, HTMLButtonElement | null>>({});
@@ -61,7 +62,7 @@ export default function Header() {
     pendingNavFocus.current = null;
   }, [activeDropdown]);
   useEffect(() => () => { if (dropdownTimeout.current) clearTimeout(dropdownTimeout.current); }, []);
-  useEffect(() => { setMobileOpen(false); setLangOpen(false); setActiveDropdown(null); }, [pathname, locale]);
+  useEffect(() => { setMobileOpen(false); setLangOpen(false); setActiveDropdown(null); setMobileExpanded(null); }, [pathname, locale]);
 
   const navItems: NavItem[] = [
     {
@@ -74,7 +75,14 @@ export default function Header() {
       ],
     },
     { href: "/vendors", label: t("index_12") },
-    { href: "/robotics", label: roboticsNavigation[locale as keyof typeof roboticsNavigation] ?? roboticsNavigation.en },
+    { href: "/robotics", label: roboticsNavigation[locale as keyof typeof roboticsNavigation] ?? roboticsNavigation.en,
+      children: ["en", "de"].includes(locale) ? [
+        { href: "/robotics/", label: locale === "de" ? "Übersicht" : "Overview" },
+        { href: "/robotics/agibot/", label: locale === "de" ? "Produkte — AGIBOT-Katalog" : "Products — AGIBOT catalogue" },
+        { href: "/robotics/#applications", label: locale === "de" ? "Anwendungen" : "Applications" },
+        { href: "/robotics/#how-it-works", label: locale === "de" ? "Zusammenarbeit" : "How we work" },
+        { href: "/robotics/#contacts", label: locale === "de" ? "Kontakt" : "Contacts" },
+      ] : undefined },
     {
       href: "/services",
       label: t("index_13"),
@@ -109,10 +117,12 @@ export default function Header() {
       e.preventDefault(); setLangOpen(false); langToggleRef.current?.focus();
     } else if (activeDropdown) {
       e.preventDefault(); dropdownTriggers.current[activeDropdown]?.focus(); setActiveDropdown(null);
+    } else if (mobileOpen && mobileExpanded === (roboticsNavigation[locale as keyof typeof roboticsNavigation] ?? roboticsNavigation.en)) {
+      e.preventDefault(); setMobileExpanded(null); mobileRoboticsRef.current?.focus();
     } else if (mobileOpen) {
       e.preventDefault(); setMobileOpen(false); mobileToggleRef.current?.focus();
     }
-  }, [langOpen, activeDropdown, mobileOpen]);
+  }, [langOpen, activeDropdown, mobileOpen, mobileExpanded, locale]);
 
   useEffect(() => {
     document.addEventListener("keydown", handleKeyDown);
@@ -154,11 +164,22 @@ export default function Header() {
             <div
               key={item.href + item.label}
               className="relative"
-              onMouseEnter={() => item.children ? handleMouseEnter(item.href.slice(1)) : undefined}
+              onMouseEnter={() => item.children && item.href !== "/robotics" ? handleMouseEnter(item.href.slice(1)) : undefined}
               onBlur={(e) => { if (!e.currentTarget.contains(e.relatedTarget)) setActiveDropdown(null); }}
-              onMouseLeave={item.children ? handleMouseLeave : undefined}
+              onMouseLeave={item.children && item.href !== "/robotics" ? handleMouseLeave : undefined}
             >
-              {item.children ? (
+              {item.children && item.href === "/robotics" ? (
+                <div className={styles.roboticsSplit} data-main-robotics="desktop">
+                  <Link href="/robotics/" className={styles.roboticsParent} aria-current={pathname === "/robotics" ? "page" : undefined} onClick={() => setActiveDropdown(null)}>{item.label}</Link>
+                  <button type="button" ref={node => { dropdownTriggers.current.robotics = node; }}
+                    aria-label={locale === "de" ? "Robotik-Untermenü" : "Robotics submenu"} aria-expanded={activeDropdown === "robotics"} aria-controls="nav-robotics"
+                    className={styles.roboticsToggle}
+                    onClick={e => { e.stopPropagation(); setLangOpen(false); setActiveDropdown(activeDropdown === "robotics" ? null : "robotics"); }}
+                    onKeyDown={e => { if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); const position = e.key === "ArrowDown" ? "first" : "last"; if (activeDropdown === "robotics") focusLink(document.getElementById("nav-robotics"), position); else { setLangOpen(false); pendingNavFocus.current = position; setActiveDropdown("robotics"); } } }}>
+                    <svg width="14" height="14" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m6 9 6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                  </button>
+                </div>
+              ) : item.children ? (
                 <button
                   ref={(node) => { dropdownTriggers.current[item.href.slice(1)] = node; }}
                   onClick={(e) => { e.stopPropagation(); setLangOpen(false); setActiveDropdown(activeDropdown === item.href.slice(1) ? null : item.href.slice(1)); }}
@@ -192,14 +213,15 @@ export default function Header() {
                 <div
                   id={"nav-" + item.href.slice(1)}
                   onKeyDown={navigateLinks}
-                  className="absolute left-0 top-full mt-0.5 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1.5 z-50"
-                  onMouseEnter={() => handleMouseEnter(item.href.slice(1))}
-                  onMouseLeave={handleMouseLeave}
+                  className={`absolute left-0 top-full mt-0.5 w-56 bg-white rounded-lg shadow-lg border border-gray-200 py-1.5 z-50 ${item.href === "/robotics" ? styles.roboticsPanel : ""}`}
+                  onMouseEnter={() => item.href !== "/robotics" && handleMouseEnter(item.href.slice(1))}
+                  onMouseLeave={item.href !== "/robotics" ? handleMouseLeave : undefined}
                 >
                   {item.children.map((child, i) => (
                     <Link
                       key={i}
                       href={child.href}
+                      onClick={() => setActiveDropdown(null)}
                       className="block px-4 py-2.5 text-sm text-gray-700 hover:bg-gray-50 hover:text-gray-900 transition-colors"
                     >
                       {child.label}
@@ -296,7 +318,18 @@ export default function Header() {
               <div key={item.href + item.label}>
                 {item.children ? (
                   <>
-                    <button
+                    {item.href === "/robotics" ? (
+                      <div className={styles.roboticsMobileRow} data-main-robotics="mobile">
+                        <Link href="/robotics/" onClick={() => { setMobileOpen(false); setMobileExpanded(null); }} className={styles.roboticsMobileParent}>{item.label}</Link>
+                        <button type="button" ref={mobileRoboticsRef} className={styles.roboticsMobileToggle}
+                          aria-label={locale === "de" ? "Robotik-Untermenü" : "Robotics submenu"}
+                          aria-controls="mobile-robotics" aria-expanded={mobileExpanded === item.label}
+                          onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
+                          onKeyDown={e => { if (e.key === "ArrowDown") { e.preventDefault(); setMobileExpanded(item.label); requestAnimationFrame(() => focusLink(document.getElementById("mobile-robotics"), "first")); } }}>
+                          <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" aria-hidden="true"><path d="m6 9 6 6 6-6" strokeWidth="2" strokeLinecap="round" strokeLinejoin="round"/></svg>
+                        </button>
+                      </div>
+                    ) : <button
                       onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
                       aria-expanded={mobileExpanded === item.label}
                       aria-controls={"mobile-" + item.href.slice(1)}
@@ -309,14 +342,14 @@ export default function Header() {
                       >
                         <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 9l-7 7-7-7" />
                       </svg>
-                    </button>
+                    </button>}
                     {mobileExpanded === item.label && (
-                      <div id={"mobile-" + item.href.slice(1)} className="ml-4 border-l-2 border-gray-200 pl-2 space-y-0.5">
+                      <div id={"mobile-" + item.href.slice(1)} onKeyDown={navigateLinks} className="ml-4 border-l-2 border-gray-200 pl-2 space-y-0.5">
                         {item.children.map((child, i) => (
                           <Link
                             key={i}
                             href={child.href}
-                            onClick={() => setMobileOpen(false)}
+                            onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}
                             className="block px-4 py-2.5 text-sm text-gray-600 hover:bg-gray-50 hover:text-gray-900 rounded-lg min-h-[44px] flex items-center"
                           >
                             {child.label}
@@ -328,7 +361,7 @@ export default function Header() {
                 ) : (
                   <Link
                     href={item.href}
-                    onClick={() => setMobileOpen(false)}
+                    onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}
                     className="block px-4 py-3 text-gray-700 hover:bg-gray-50 rounded-lg font-medium min-h-[44px]"
                   >
                     {item.label}
@@ -338,7 +371,7 @@ export default function Header() {
             ))}
             <Link
               href="/become-a-partner/"
-              onClick={() => setMobileOpen(false)}
+              onClick={() => { setMobileOpen(false); setMobileExpanded(null); }}
               className="block px-4 py-3 text-[#2B2A29] underline decoration-[#DE6123] underline-offset-4 font-semibold min-h-[44px]"
             >
               {t("index_17")}

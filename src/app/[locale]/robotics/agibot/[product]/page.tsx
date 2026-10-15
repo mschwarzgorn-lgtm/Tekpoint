@@ -6,7 +6,6 @@ import {setRequestLocale} from 'next-intl/server';
 import {notFound} from 'next/navigation';
 import {Link} from '@/i18n/navigation';
 import {products,productIds,categories} from '@/lib/robotics-catalogue';
-import CatalogueNav from '@/components/robotics-catalogue/CatalogueNav';
 import ProductGallery from '@/components/robotics-catalogue/ProductGallery';
 import AddToEnquiry from '@/components/robotics-catalogue/AddToEnquiry';
 import SectionJump from '@/components/robotics-catalogue/SectionJump';
@@ -16,7 +15,7 @@ export const dynamicParams=false;
 export async function generateMetadata({params}:{params:Promise<{locale:string;product:string}>}):Promise<Metadata>{const {locale,product}=await params;const p=products.find(p=>p.id===product);if(!p||!['en','de'].includes(locale))notFound();return productMetadata(locale,p);}
 export default async function ProductPage({params}:{params:Promise<{locale:string;product:string}>}){
  const {locale,product}=await params;const p=products.find(p=>p.id===product);if(!p||!productIds.includes(product)||!['en','de'].includes(locale))notFound();setRequestLocale(locale);const de=locale==='de';const lang=de?'de':'en';const related=products.filter(q=>q.id!==p.id&&q.cat===p.cat).slice(0,3);
- return <div className={s.page}><CatalogueNav locale={locale}/><CatalogueBreadcrumb locale={locale} kind="product" product={p}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(productGraph(locale,p)).replace(/</g,"\\u003c")}}/><div className={s.wrap}>
+ return <div className={s.page}><CatalogueBreadcrumb locale={locale} kind="product" product={p}/><script type="application/ld+json" dangerouslySetInnerHTML={{__html:JSON.stringify(productGraph(locale,p)).replace(/</g,"\\u003c")}}/><div className={s.wrap}>
  <Link className={s.backLink} href="/robotics/agibot/">← {de?'Alle Produkte':'All products'}</Link>
  <section className={s.productIntro}><div><span className={s.eyebrow}>{categories.find(c=>c.id===p.cat)?.label[lang]}</span><h1>{p.name}</h1><p className={s.tagline}>{p.tagline[lang]}</p></div><div className={s.productAction}><AddToEnquiry id={p.id} locale={locale}/><p className={s.caption}>{de?'Unverbindlich · kein Checkout':'Non-binding · no checkout'}</p></div></section>
  <nav className={s.productJumps} aria-label={de?'Auf dieser Produktseite':'On this product page'}><SectionJump target="gallery">{de?'Galerie':'Gallery'}</SectionJump><SectionJump target="highlights">Highlights</SectionJump><SectionJump target="specifications">{de?'Technische Daten':'Specifications'}</SectionJump><SectionJump target="applications">{de?'Anwendungen':'Applications'}</SectionJump></nav>
