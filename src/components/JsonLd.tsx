@@ -1,3 +1,4 @@
+import {LANGUAGE_TAGS,isEnglishOnly} from "@/lib/search-policy";
 /**
  * Structured data (schema.org JSON-LD).
  *
@@ -34,7 +35,7 @@ function Script({ data }: { data: unknown }) {
   return (
     <script
       type="application/ld+json"
-      dangerouslySetInnerHTML={{ __html: JSON.stringify(data) }}
+      dangerouslySetInnerHTML={{ __html: JSON.stringify(data).replace(/</g, "\\u003c") }}
     />
   );
 }
@@ -255,7 +256,7 @@ export function WebsiteJsonLd() {
     name: "Tekpoint",
     url: BASE_URL,
     description: COMPANY.description,
-    inLanguage: [...locales],
+    inLanguage: locales.map(l => LANGUAGE_TAGS[l] ?? l),
     publisher: { "@id": ORG_ID },
   };
   return <Script data={jsonLd} />;
@@ -323,7 +324,7 @@ export function WebPageJsonLd({
   name: string;
   description: string;
 }) {
-  const url = `${BASE_URL}/${locale}${path}/`;
+  const url = `${BASE_URL}/${isEnglishOnly(path) ? "en" : locale}${path}/`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": type,
@@ -331,7 +332,7 @@ export function WebPageJsonLd({
     url,
     name,
     description,
-    inLanguage: locale,
+    inLanguage: isEnglishOnly(path) ? "en" : (LANGUAGE_TAGS[locale] ?? locale),
     isPartOf: { "@id": WEBSITE_ID },
     about: { "@id": ORG_ID },
     publisher: { "@id": ORG_ID },
@@ -430,7 +431,7 @@ export function BlogJsonLd({
   locale: string;
   posts: { slug: string; title: string; date: string; excerpt: string }[];
 }) {
-  const url = `${BASE_URL}/${locale}/blog/`;
+  const url = `${BASE_URL}/en/blog/`;
   const jsonLd = {
     "@context": "https://schema.org",
     "@type": "Blog",
@@ -457,6 +458,7 @@ export function BlogPostingJsonLd({
   slug,
   title,
   date,
+  modifiedDate,
   excerpt,
   author,
   category,
@@ -466,6 +468,7 @@ export function BlogPostingJsonLd({
   slug: string;
   title: string;
   date: string;
+  modifiedDate?: string;
   excerpt: string;
   author: string;
   category: string;
@@ -482,7 +485,7 @@ export function BlogPostingJsonLd({
     url,
     mainEntityOfPage: url,
     datePublished: date,
-    dateModified: date,
+    dateModified: modifiedDate ?? date,
     inLanguage: "en",
     articleSection: category,
     ...(wordCount ? { wordCount } : {}),

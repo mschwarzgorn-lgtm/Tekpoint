@@ -24,4 +24,4 @@ For us at Tekpoint, distributing Laifen in Germany means explaining these differ
 
 The opportunity is not simply more products on a shelf. It is a stronger reason for customers to choose each one.
 
-*Explore [Laifen and our other brands](/en/brands/) or contact our team to discuss Laifen distribution in Germany.*
+*Explore [Laifen and our other brands](/en/vendors/) or contact our team to discuss Laifen distribution in Germany.*

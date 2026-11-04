@@ -1,0 +1,11 @@
+{
+  "heading": "Planiranje AGIBOT projekta",
+  "intro": "Praktični odgovori pre izbora robota ili slanja zahteva za ponudu.",
+  "items": [
+    {"q": "Koja je uloga kompanije Tekpoint?", "a": "Tekpoint je regionalni distributer kompanije AGIBOT za Evropu. Ovaj katalog objedinjuje robote i komponente namenjene poslovnim upitima. O ciljnom tržištu, primeni i konfiguraciji razgovarajte s timom za robotiku; navođenje proizvoda ne znači da je dostupan u svakoj zemlji."},
+    {"q": "Kako da izaberem odgovarajući model?", "a": "Počnite od predviđenog zadatka i radnog okruženja. Uporedite navedene specifikacije, a zatim s kompanijom Tekpoint razmotrite nosivost, mobilnost, interfejse, bezbednost i zahteve za integraciju. Primeri primene služe kao polazna osnova za procenu, a ne kao garancija da je model odgovarajući."},
+    {"q": "Da li su navedeni proizvodi na zalihama?", "a": "Navođenje proizvoda u katalogu ne potvrđuje stanje zaliha, rok isporuke niti dostupnost u određenom regionu. Dostupnost i ponuđena konfiguracija moraju se posebno potvrditi za konkretan projekat pre izrade ponude."},
+    {"q": "Kako mogu da zatražim cenu?", "a": "Dodajte željene modele na listu za upit, a zatim pripremite imejl za robotics@tekpoint.com. Navedite predviđenu primenu, zemlju odredišta, količine i željeni rok. Upiti nisu obavezujući; ovaj katalog nema mogućnost kupovine putem interneta."},
+    {"q": "Kako treba da tumačim specifikacije?", "a": "Na stranicama proizvoda navedene su referentne informacije proizvođača ili dobavljača i napomene o konfiguraciji. Ovi podaci nisu nezavisno provereni. Konačna konfiguracija, usaglašenost s propisima EU, bezbedna integracija i prikladnost moraju se potvrditi za konkretan projekat pre izrade ponude."}
+  ]
+}

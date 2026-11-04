@@ -1,6 +1,7 @@
 ---
 title: "CARE PRO — A unique technology coming from Japan to Europe"
 date: 2026-10-09
+excerpt: "Meet CARE PRO DEEP, a Japanese ultrasonic hair-treatment device expected in Europe in 2027. A preview of its purpose, not a current-availability announcement."
 category: "Product & Distribution"
 ogImage: "/og/care-pro-deep-ultrasonic-hair-care.png"
 ---
@@ -23,4 +24,4 @@ For retailers and distributors, meaningful innovation needs a clear explanation.
 
 ![CARE PRO DEEP upright in its charging stand on a bathroom vanity.](/og/care-pro-deep-home-setting.png)
 
-Explore [Tekpoint’s brand portfolio](https://tekpoint.com/en/) to learn more about our approach to smart technology and distribution.
+Explore [Tekpoint’s brand portfolio](https://tekpoint.com/en/vendors/) to learn more about our approach to smart technology and distribution.

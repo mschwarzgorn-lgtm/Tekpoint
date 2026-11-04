@@ -1,6 +1,7 @@
 ---
 title: "Beauty technology, thoughtfully chosen"
 date: 2026-10-05
+excerpt: "A retailer-focused look at Ulike Air 10, an at-home IPL handset: product features, suitability considerations and the importance of model-specific guidance."
 category: "Product & Distribution"
 ogImage: "/og/ulike-air-10-beauty-tech-q4.png"
 ---
@@ -11,4 +12,4 @@ Paris Fashion Week’s womenswear Spring/Summer 2027 calendar is in its final da
 
 Ulike Air 10 is an at-home IPL handset. The brand associates it with Dual Lights and SkinSensor. Those are product features, not a guarantee of suitability or results: IPL is not suitable for everyone, and skin tone, hair colour and precautions matter. Users should consult the model-specific guidance and patch-test as instructed.
 
-For retailers and distributors, the useful story is both the technology and the routine it requires. Explore Tekpoint’s brand portfolio to learn about the brands and products in our portfolio.
+For retailers and distributors, the useful story is both the technology and the routine it requires. Explore [Tekpoint’s brand portfolio](https://tekpoint.com/en/vendors/) to learn about the brands and products in our portfolio.

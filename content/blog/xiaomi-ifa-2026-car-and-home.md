@@ -18,4 +18,4 @@ Xiaomi also says it signed memoranda of understanding with eight German automoti
 
 For smart-tech distribution, the work after the showcase matters: local service, clear compatibility and a dependable customer experience. The car may attract attention, but making the whole experience work is what earns trust.
 
-These product and market plans are presented here as Xiaomi’s own account, not as independent confirmation of launch readiness or feature availability. Explore [Tekpoint’s brand portfolio](/en/brands/) to see the wider range of brands we work with.
+These product and market plans are presented here as Xiaomi’s own account, not as independent confirmation of launch readiness or feature availability. Explore [Tekpoint’s brand portfolio](/en/vendors/) to see the wider range of brands we work with.

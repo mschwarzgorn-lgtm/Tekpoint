@@ -1,0 +1,26 @@
+{
+  "heading": "Tionscadal AGIBOT a phleanáil",
+  "intro": "Freagraí praiticiúla sula roghnaíonn tú róbat nó sula n-iarrann tú luachan.",
+  "items": [
+    {
+      "q": "Cén ról atá ag Tekpoint?",
+      "a": "Is é Tekpoint dáileoir réigiúnach AGIBOT don Eoraip. Tugann an chatalóg seo róbait agus comhpháirteanna le chéile le haghaidh fiosrúcháin ghnó. Pléigh do spriocmhargadh, d'fheidhmchlár agus do chumraíocht leis an bhfoireann Robotics; ní dheimhníonn liostú sa chatalóg go bhfuil táirge ar fáil i ngach tír."
+    },
+    {
+      "q": "Conas a roghnaím samhail oiriúnach?",
+      "a": "Tosaigh leis an tasc atá beartaithe agus leis an timpeallacht oibriúcháin. Cuir na sonraíochtaí atá liostaithe i gcomparáid, agus pléigh ansin le Tekpoint na riachtanais maidir le hualach pálasta, soghluaisteacht, comhéadain, sábháilteacht agus comhtháthú. Is pointe tosaigh don mheasúnú iad samplaí feidhmchlár; ní ráthaíonn siad oiriúnacht."
+    },
+    {
+      "q": "An bhfuil na táirgí atá liostaithe i stoc?",
+      "a": "Ní dheimhníonn liostú sa chatalóg stoc, am seachadta ná infhaighteacht réigiúnach. Ní mór infhaighteacht agus an chumraíocht atá á tairiscint a dheimhniú don tionscadal sonrach sula n-eisítear luachan."
+    },
+    {
+      "q": "Conas is féidir liom praghsanna a iarraidh?",
+      "a": "Cuir na samhlacha atá uait leis an liosta fiosrúcháin agus ullmhaigh ríomhphost chuig robotics@tekpoint.com ansin. Luaigh an feidhmchlár atá beartaithe, an tír chinn scríbe, na cainníochtaí agus an tréimhse ama atá uait. Níl fiosrúcháin ina gceangal; ní féidir ceannach ar líne a dhéanamh tríd an gcatalóg seo."
+    },
+    {
+      "q": "Conas ba cheart dom na sonraíochtaí a léamh?",
+      "a": "Tugtar ar leathanaigh na dtáirgí sonraí tagartha ón monaróir nó ón soláthróir agus nótaí cumraíochta. Níor fíoraíodh na sonraí sin go neamhspleách. Ní mór an chumraíocht deiridh, comhréireacht le ceanglais an Aontais Eorpaigh, comhtháthú sábháilte agus oiriúnacht a dheimhniú don tionscadal sonrach sula n-eisítear luachan."
+    }
+  ]
+}

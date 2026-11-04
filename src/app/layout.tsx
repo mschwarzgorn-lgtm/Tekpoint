@@ -1,7 +1,9 @@
+import {searchRobots} from "@/lib/search-policy";
 import type { Metadata, Viewport } from "next";
 import "./globals.css";
 
 export const metadata: Metadata = {
+  ...(process.env.NEXT_PUBLIC_ROBOTICS_PREVIEW === "1" ? {robots:searchRobots(false)} : {}),
   title: {
     default: "Tekpoint — Smart Technology Distribution",
     template: "%s",

@@ -27,4 +27,4 @@ The home robotics revolution isn't coming. It's already mopping your floors.
 
 ---
 
-*Tekpoint is the official distribution partner for Roborock across Austria, Germany, and the BeNeLux region. [Learn more about our brand partnerships](/en/brands).*
+*Tekpoint is the official distribution partner for Roborock across Austria, Germany, and the BeNeLux region. [Learn more about our brand partnerships](/en/vendors/).*

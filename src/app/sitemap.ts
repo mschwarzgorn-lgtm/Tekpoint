@@ -1,3 +1,4 @@
+import {isEnglishOnly} from "@/lib/search-policy";
 import {products} from '@/lib/robotics-catalogue';
 import type { MetadataRoute } from "next";
 import { locales } from "@/i18n/config";
@@ -68,12 +69,12 @@ export default function sitemap(): MetadataRoute.Sitemap {
       languages[hreflangMap[l] || l] = `${BASE_URL}/${l}${route.path}/`;
     }
 
-    for (const locale of locales) {
+    for (const locale of isEnglishOnly(route.path) ? ["en"] : locales) {
       entries.push({
         url: `${BASE_URL}/${locale}${route.path}/`,
         changeFrequency: route.changeFrequency,
         priority: route.priority,
-        alternates: { languages },
+        ...(isEnglishOnly(route.path) ? {} : {alternates: { languages }}),
       });
     }
   }
@@ -82,13 +83,13 @@ export default function sitemap(): MetadataRoute.Sitemap {
   for (const post of getAllPosts()) {
     entries.push({
       url: `${BASE_URL}/en/blog/${post.slug}/`,
-      lastModified: post.date,
+      lastModified: post.modifiedDate ?? post.date,
       changeFrequency: "yearly",
       priority: 0.6,
     });
   }
 
   const roboticsPaths=['/robotics/agibot','/robotics/applications','/robotics/contact',...products.map(p=>'/robotics/agibot/'+p.id)];
-  for(const page of roboticsPaths)for(const locale of ['en','de'])entries.push({url:BASE_URL+'/'+locale+page+'/',changeFrequency:'monthly',priority:0.7,alternates:{languages:{en:BASE_URL+'/en'+page+'/',de:BASE_URL+'/de'+page+'/','x-default':BASE_URL+'/en'+page+'/'}}});
+  for(const page of roboticsPaths)for(const locale of locales)entries.push({url:BASE_URL+'/'+locale+page+'/',changeFrequency:'monthly',priority:0.7,alternates:{languages:{...Object.fromEntries(locales.map(l=>[hreflangMap[l]??l,BASE_URL+'/'+l+page+'/'])),'x-default':BASE_URL+'/en'+page+'/'}}});
   return entries;
 }

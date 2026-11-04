@@ -15,8 +15,9 @@ export default function BrandPortfolio({brands, locale}: {brands: Brand[]; local
       </span>
       {href && <span className={styles.cue} aria-hidden="true"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth={2} strokeLinecap="round" strokeLinejoin="round"><path d={internal ? "M5 12h14m-6-6 6 6-6 6" : "M7 17 17 7M7 7h10v10"}/></svg></span>}
     </>;
-    return <li key={brand.slug} className={styles.item}>
+    return <li key={brand.slug} className={`${styles.item} ${styles.withCaption}`}>
       {href ? <a id={`brand-${brand.slug}`} href={href} aria-label={brand.name} className={`${styles.card} ${brand.assetPending ? styles.pending : ""}`}>{artwork}</a> : <div id={`brand-${brand.slug}`} className={`${styles.card} ${styles.pending}`}>{artwork}</div>}
+      <span className={styles.brandName}>{brand.name}</span>
     </li>;
   })}</ul>;
 }

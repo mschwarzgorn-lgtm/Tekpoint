@@ -1,5 +1,6 @@
 "use client";
 
+import {tr} from '@/lib/robotics-menu-i18n';
 import roboticsNavigation from "../../messages/robotics/navigation.json";
 import { useTranslations, useLocale } from "next-intl";
 import { Link, usePathname } from "@/i18n/navigation";
@@ -76,13 +77,13 @@ export default function Header() {
     },
     { href: "/vendors", label: t("index_12") },
     { href: "/robotics", label: roboticsNavigation[locale as keyof typeof roboticsNavigation] ?? roboticsNavigation.en,
-      children: ["en", "de"].includes(locale) ? [
-        { href: "/robotics/", label: locale === "de" ? "Übersicht" : "Overview" },
-        { href: "/robotics/agibot/", label: locale === "de" ? "Produkte — AGIBOT-Katalog" : "Products — AGIBOT catalogue" },
-        { href: "/robotics/#applications", label: locale === "de" ? "Anwendungen" : "Applications" },
-        { href: "/robotics/#how-it-works", label: locale === "de" ? "Zusammenarbeit" : "How we work" },
-        { href: "/robotics/#contacts", label: locale === "de" ? "Kontakt" : "Contacts" },
-      ] : undefined },
+      children: [
+        { href: "/robotics/", label: tr(locale,"Overview","Übersicht") },
+        { href: "/robotics/agibot/", label: tr(locale,"Products — AGIBOT catalogue","Produkte — AGIBOT-Katalog") },
+        { href: "/robotics/#applications", label: tr(locale,"Applications","Anwendungen") },
+        { href: "/robotics/#how-it-works", label: tr(locale,"How we work","Zusammenarbeit") },
+        { href: "/robotics/#contacts", label: tr(locale,"Contacts","Kontakt") },
+      ] },
     {
       href: "/services",
       label: t("index_13"),
@@ -172,7 +173,7 @@ export default function Header() {
                 <div className={styles.roboticsSplit} data-main-robotics="desktop">
                   <Link href="/robotics/" className={styles.roboticsParent} aria-current={pathname === "/robotics" ? "page" : undefined} onClick={() => setActiveDropdown(null)}>{item.label}</Link>
                   <button type="button" ref={node => { dropdownTriggers.current.robotics = node; }}
-                    aria-label={locale === "de" ? "Robotik-Untermenü" : "Robotics submenu"} aria-expanded={activeDropdown === "robotics"} aria-controls="nav-robotics"
+                    aria-label={tr(locale,"Robotics submenu","Robotik-Untermenü")} aria-expanded={activeDropdown === "robotics"} aria-controls="nav-robotics"
                     className={styles.roboticsToggle}
                     onClick={e => { e.stopPropagation(); setLangOpen(false); setActiveDropdown(activeDropdown === "robotics" ? null : "robotics"); }}
                     onKeyDown={e => { if (e.key === "ArrowDown" || e.key === "ArrowUp") { e.preventDefault(); const position = e.key === "ArrowDown" ? "first" : "last"; if (activeDropdown === "robotics") focusLink(document.getElementById("nav-robotics"), position); else { setLangOpen(false); pendingNavFocus.current = position; setActiveDropdown("robotics"); } } }}>
@@ -262,7 +263,7 @@ export default function Header() {
                 {locales.map((l) => (
                   <Link
                     key={l}
-                    href={(pathname.startsWith("/robotics/agibot") || pathname.startsWith("/robotics/enquiry") || pathname.startsWith("/robotics/applications") || pathname.startsWith("/robotics/contact")) && !["en", "de"].includes(l) ? "/robotics/" : pathname}
+                    href={pathname}
                     locale={l}
                     hrefLang={l}
                     aria-current={l === locale ? "true" : undefined}
@@ -322,7 +323,7 @@ export default function Header() {
                       <div className={styles.roboticsMobileRow} data-main-robotics="mobile">
                         <Link href="/robotics/" onClick={() => { setMobileOpen(false); setMobileExpanded(null); }} className={styles.roboticsMobileParent}>{item.label}</Link>
                         <button type="button" ref={mobileRoboticsRef} className={styles.roboticsMobileToggle}
-                          aria-label={locale === "de" ? "Robotik-Untermenü" : "Robotics submenu"}
+                          aria-label={tr(locale,"Robotics submenu","Robotik-Untermenü")}
                           aria-controls="mobile-robotics" aria-expanded={mobileExpanded === item.label}
                           onClick={() => setMobileExpanded(mobileExpanded === item.label ? null : item.label)}
                           onKeyDown={e => { if (e.key === "ArrowDown") { e.preventDefault(); setMobileExpanded(item.label); requestAnimationFrame(() => focusLink(document.getElementById("mobile-robotics"), "first")); } }}>

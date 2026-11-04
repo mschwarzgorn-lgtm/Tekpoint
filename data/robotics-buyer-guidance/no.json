@@ -1,0 +1,26 @@
+{
+  "heading": "Planlegge et AGIBOT-prosjekt",
+  "intro": "Praktiske svar før du velger en robot eller ber om et tilbud.",
+  "items": [
+    {
+      "q": "Hvilken rolle har Tekpoint?",
+      "a": "Tekpoint er AGIBOTs regionale distributør for Europa. Denne katalogen samler roboter og komponenter for henvendelser fra bedrifter. Snakk med Robotics-teamet om målmarkedet, bruksområdet og konfigurasjonen din; en oppføring i katalogen bekrefter ikke at produktet er tilgjengelig i alle land."
+    },
+    {
+      "q": "Hvordan velger jeg en passende modell?",
+      "a": "Ta utgangspunkt i den planlagte oppgaven og driftsmiljøet. Sammenlign de oppførte spesifikasjonene, og drøft deretter krav til nyttelast, mobilitet, grensesnitt, sikkerhet og integrasjon med Tekpoint. Eksempler på bruksområder er et utgangspunkt for vurdering, ikke en garanti for egnethet."
+    },
+    {
+      "q": "Er produktene som er oppført, på lager?",
+      "a": "En oppføring i katalogen bekrefter verken lagerstatus, leveringstid eller regional tilgjengelighet. Tilgjengelighet og tilbudt konfigurasjon må bekreftes for det enkelte prosjektet før et tilbud gis."
+    },
+    {
+      "q": "Hvordan kan jeg be om priser?",
+      "a": "Legg til modellene du ønsker i forespørselslisten, og klargjør deretter en e-post til robotics@tekpoint.com. Oppgi planlagt bruksområde, destinasjonsland, antall og ønsket tidsplan. Henvendelser er ikke bindende; katalogen tilbyr ikke netthandel."
+    },
+    {
+      "q": "Hvordan skal jeg lese spesifikasjonene?",
+      "a": "Produktsidene oppgir referanseinformasjon fra produsenten eller leverandøren samt merknader om konfigurasjonen. Opplysningene er ikke uavhengig verifisert. Endelig konfigurasjon, EU-samsvar, sikker integrasjon og egnethet må bekreftes for det konkrete prosjektet før et tilbud gis."
+    }
+  ]
+}

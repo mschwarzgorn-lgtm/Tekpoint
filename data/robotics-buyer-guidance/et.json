@@ -1,0 +1,11 @@
+{
+  "heading": "AGIBOTi projekti kavandamine",
+  "intro": "Praktilised vastused enne roboti valimist või hinnapakkumise küsimist.",
+  "items": [
+    {"q": "Milline on Tekpointi roll?", "a": "Tekpoint on AGIBOTi piirkondlik turustaja Euroopas. See kataloog koondab äripäringute jaoks roboteid ja komponente. Arutage sihtturgu, rakendust ja konfiguratsiooni robootikameeskonnaga; toote kataloogis loetlemine ei tähenda, et see oleks saadaval igas riigis."},
+    {"q": "Kuidas valida sobiv mudel?", "a": "Alustage kavandatud ülesandest ja töökeskkonnast. Võrrelge loetletud tehnilisi andmeid ning arutage seejärel Tekpointiga kandevõimet, liikuvust, liideseid, ohutust ja integreerimisnõudeid. Rakendusnäited on hindamise lähtepunktid, mitte sobivuse garantii."},
+    {"q": "Kas loetletud tooted on laos?", "a": "Toote kataloogis loetlemine ei kinnita laoseisu, tarneaega ega piirkondlikku saadavust. Saadavus ja pakutav konfiguratsioon tuleb konkreetse projekti jaoks enne hinnapakkumise koostamist kinnitada."},
+    {"q": "Kuidas saan hinda küsida?", "a": "Lisage soovitud mudelid päringute loendisse ja koostage seejärel e-kiri aadressile robotics@tekpoint.com. Lisage kavandatud rakendus, sihtriik, kogused ja soovitud ajakava. Päringud ei ole siduvad; selles kataloogis ei saa veebis ostu sooritada."},
+    {"q": "Kuidas peaksin tehnilisi andmeid tõlgendama?", "a": "Tootelehtedel on esitatud tootja või tarnija võrdlusandmed ja konfiguratsioonimärkused. Neid andmeid ei ole sõltumatult kontrollitud. Lõplik konfiguratsioon, ELi nõuetele vastavus, ohutu integreerimine ja sobivus tuleb konkreetse projekti jaoks enne hinnapakkumise koostamist kinnitada."}
+  ]
+}

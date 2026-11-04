@@ -1,0 +1,26 @@
+{
+  "heading": "Planear um projeto AGIBOT",
+  "intro": "Respostas práticas antes de selecionar um robô ou pedir um orçamento.",
+  "items": [
+    {
+      "q": "Qual é o papel da Tekpoint?",
+      "a": "A Tekpoint é o distribuidor regional da AGIBOT para a Europa. Este catálogo reúne robôs e componentes para consultas empresariais. Fale com a equipa de Robotics sobre o mercado de destino, a aplicação e a configuração; a inclusão de um produto no catálogo não confirma a sua disponibilidade em todos os países."
+    },
+    {
+      "q": "Como escolho um modelo adequado?",
+      "a": "Comece pela tarefa prevista e pelo ambiente de funcionamento. Compare as especificações indicadas e, em seguida, discuta com a Tekpoint os requisitos de carga útil, mobilidade, interfaces, segurança e integração. Os exemplos de aplicação são um ponto de partida para avaliação, não uma garantia de adequação."
+    },
+    {
+      "q": "Os produtos indicados estão em stock?",
+      "a": "A inclusão de um produto no catálogo não confirma a existência de stock, o prazo de entrega nem a disponibilidade regional. A disponibilidade e a configuração proposta têm de ser confirmadas para cada projeto antes da apresentação de um orçamento."
+    },
+    {
+      "q": "Como posso pedir preços?",
+      "a": "Adicione os modelos pretendidos à lista de consulta e, em seguida, prepare um e-mail para robotics@tekpoint.com. Indique a aplicação prevista, o país de destino, as quantidades e o prazo pretendido. As consultas não são vinculativas; este catálogo não permite efetuar compras online."
+    },
+    {
+      "q": "Como devo interpretar as especificações?",
+      "a": "As páginas dos produtos identificam informações de referência do fabricante ou fornecedor e notas sobre a configuração. Estes dados não foram verificados de forma independente. Antes da apresentação de um orçamento, é necessário confirmar para o projeto específico a configuração final, a conformidade com os requisitos da UE, a integração segura e a adequação."
+    }
+  ]
+}

@@ -1,0 +1,26 @@
+{
+  "heading": "Planificar un proyecto AGIBOT",
+  "intro": "Respuestas prácticas antes de elegir un robot o solicitar un presupuesto.",
+  "items": [
+    {
+      "q": "¿Cuál es la función de Tekpoint?",
+      "a": "Tekpoint es el distribuidor regional de AGIBOT para Europa. Este catálogo reúne robots y componentes para consultas empresariales. Comente con el equipo de Robotics su mercado objetivo, aplicación y configuración; la inclusión de un producto en el catálogo no confirma su disponibilidad en todos los países."
+    },
+    {
+      "q": "¿Cómo elijo un modelo adecuado?",
+      "a": "Empiece por definir la tarea prevista y el entorno de funcionamiento. Compare las especificaciones indicadas y, a continuación, consulte con Tekpoint los requisitos de carga útil, movilidad, interfaces, seguridad e integración. Los ejemplos de aplicación son un punto de partida para la evaluación, no una garantía de idoneidad."
+    },
+    {
+      "q": "¿Hay existencias de los productos indicados?",
+      "a": "La inclusión de un producto en el catálogo no confirma que haya existencias, ni el plazo de entrega ni la disponibilidad regional. La disponibilidad y la configuración ofrecida deben confirmarse para cada proyecto antes de emitir un presupuesto."
+    },
+    {
+      "q": "¿Cómo puedo solicitar precios?",
+      "a": "Añada los modelos que le interesen a la lista de consulta y, después, prepare un correo electrónico para robotics@tekpoint.com. Incluya la aplicación prevista, el país de destino, las cantidades y el plazo deseado. Las consultas no son vinculantes; este catálogo no permite realizar compras en línea."
+    },
+    {
+      "q": "¿Cómo debo interpretar las especificaciones?",
+      "a": "Las páginas de producto indican datos de referencia del fabricante o proveedor y notas sobre la configuración. Estos datos no se han verificado de forma independiente. Antes de emitir un presupuesto, deben confirmarse para el proyecto concreto la configuración final, la conformidad con los requisitos de la UE, la integración segura y la idoneidad."
+    }
+  ]
+}

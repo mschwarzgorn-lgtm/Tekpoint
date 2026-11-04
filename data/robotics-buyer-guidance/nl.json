@@ -1,0 +1,26 @@
+{
+  "heading": "Een AGIBOT-project plannen",
+  "intro": "Praktische antwoorden voordat u een robot kiest of een offerte aanvraagt.",
+  "items": [
+    {
+      "q": "Wat is de rol van Tekpoint?",
+      "a": "Tekpoint is de regionale distributeur van AGIBOT voor Europa. Deze catalogus bundelt robots en componenten voor zakelijke aanvragen. Bespreek uw doelmarkt, toepassing en configuratie met het Robotics-team; een vermelding betekent niet dat het product in elk land beschikbaar is."
+    },
+    {
+      "q": "Hoe kies ik een geschikt model?",
+      "a": "Begin met de beoogde taak en werkomgeving. Vergelijk de vermelde specificaties en bespreek vervolgens met Tekpoint de vereisten voor draagvermogen, mobiliteit, interfaces, veiligheid en integratie. Toepassingsvoorbeelden zijn een uitgangspunt voor beoordeling en garanderen niet dat een model geschikt is."
+    },
+    {
+      "q": "Zijn de vermelde producten op voorraad?",
+      "a": "Een vermelding in de catalogus bevestigt geen voorraad, levertijd of regionale beschikbaarheid. Beschikbaarheid en de aangeboden configuratie moeten vóór een offerte projectspecifiek worden bevestigd."
+    },
+    {
+      "q": "Hoe kan ik prijzen aanvragen?",
+      "a": "Voeg de gewenste modellen toe aan de aanvraaglijst en stel vervolgens een e-mail op aan robotics@tekpoint.com. Vermeld de beoogde toepassing, het land van bestemming, de aantallen en de gewenste planning. Aanvragen zijn vrijblijvend; deze catalogus biedt geen online afrekenen."
+    },
+    {
+      "q": "Hoe moet ik de specificaties lezen?",
+      "a": "De productpagina's vermelden referentiegegevens van de fabrikant of leverancier en configuratieopmerkingen. Deze gegevens zijn niet onafhankelijk geverifieerd. De definitieve configuratie, EU-conformiteit, veilige integratie en geschiktheid moeten vóór een offerte voor het specifieke project worden bevestigd."
+    }
+  ]
+}

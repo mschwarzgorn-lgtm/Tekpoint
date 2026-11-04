@@ -31,4 +31,4 @@ Outdoor robotics is following the exact trajectory we saw with indoor cleaning r
 
 ---
 
-*Tekpoint is the European distribution partner for ANTHBOT. [Learn more about our brand partnerships](/en/brands).*
+*Tekpoint is the European distribution partner for ANTHBOT. [Learn more about our brand partnerships](/en/vendors/).*

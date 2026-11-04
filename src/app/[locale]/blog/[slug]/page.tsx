@@ -1,3 +1,4 @@
+import {searchRobots} from "@/lib/search-policy";
 import { setRequestLocale, getTranslations } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import { getPostBySlug, getAllSlugs } from "@/lib/blog";
@@ -33,6 +34,7 @@ export async function generateMetadata({
   return {
     title: `${post.title} — Tekpoint Blog`,
     description: post.excerpt,
+    robots: searchRobots(),
     alternates: {
       canonical: `${BASE_URL}/en/blog/${slug}/`,
       // The article's Markdown source, for readers that want text not markup.
@@ -45,6 +47,7 @@ export async function generateMetadata({
       siteName: "Tekpoint",
       type: "article",
       publishedTime: post.date,
+      ...(post.modifiedDate ? {modifiedTime:post.modifiedDate} : {}),
       authors: [post.author],
       ...(post.ogImage
         ? {
@@ -92,6 +95,7 @@ export default async function BlogPostPage({
         slug={post.slug}
         title={post.title}
         date={post.date}
+        modifiedDate={post.modifiedDate}
         excerpt={post.excerpt}
         author={post.author}
         category={post.category}
@@ -106,7 +110,7 @@ export default async function BlogPostPage({
         ]}
       />
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-20 md:py-28">
+      <section lang="en" className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-20 md:py-28">
         <div className="container mx-auto px-4 md:px-6 max-w-4xl">
           {/* Breadcrumb */}
           <nav
@@ -114,14 +118,14 @@ export default async function BlogPostPage({
             aria-label="Breadcrumb"
           >
             <a
-              href={`/${locale}`}
+              href={`/${locale}/`}
               className="hover:text-white transition-colors"
             >
               Home
             </a>
             <span className="mx-2">/</span>
             <a
-              href={`/en/blog`}
+              href="/en/blog/"
               className="hover:text-white transition-colors"
             >
               Blog
@@ -165,7 +169,7 @@ export default async function BlogPostPage({
       )}
 
       {/* Content */}
-      <article className="py-12 md:py-16">
+      <article lang="en" className="py-12 md:py-16">
         <div className="max-w-3xl mx-auto px-4 md:px-6">
           <div
             className="prose prose-lg prose-gray max-w-none
@@ -178,6 +182,7 @@ export default async function BlogPostPage({
             dangerouslySetInnerHTML={{ __html: post.content }}
           />
 
+          {post.slug.startsWith("agibot-") && <aside className="mt-10 rounded-xl border border-gray-200 p-6" aria-label="Explore AGIBOT products"><h2 className="text-xl font-semibold mb-3">Explore AGIBOT with Tekpoint</h2><p className="text-gray-700 mb-4">Compare the current catalogue, specifications and application examples. Availability and configuration require project-specific confirmation.</p><a className="underline text-gray-900" href="/en/robotics/agibot/">View the AGIBOT product catalogue →</a></aside>}
           {/* Back to blog */}
           <div className="mt-12 pt-8 border-t border-gray-200">
             <a

@@ -1,0 +1,11 @@
+{
+  "heading": "Planowanie projektu AGIBOT",
+  "intro": "Praktyczne odpowiedzi przed wyborem robota lub poproszeniem o wycenę.",
+  "items": [
+    {"q": "Jaka jest rola firmy Tekpoint?", "a": "Tekpoint jest regionalnym dystrybutorem AGIBOT w Europie. Ten katalog zawiera roboty i komponenty przeznaczone do zapytań biznesowych. Omów z zespołem ds. robotyki rynek docelowy, zastosowanie i konfigurację; obecność produktu w katalogu nie oznacza jego dostępności w każdym kraju."},
+    {"q": "Jak wybrać odpowiedni model?", "a": "Zacznij od określenia zadania i środowiska pracy. Porównaj podane specyfikacje, a następnie omów z Tekpoint udźwig, mobilność, interfejsy, bezpieczeństwo i wymagania dotyczące integracji. Przykłady zastosowań są punktem wyjścia do oceny, a nie gwarancją przydatności."},
+    {"q": "Czy wymienione produkty są dostępne w magazynie?", "a": "Obecność produktu w katalogu nie potwierdza stanu magazynowego, terminu dostawy ani dostępności w danym regionie. Dostępność i oferowaną konfigurację trzeba potwierdzić dla konkretnego projektu przed przygotowaniem wyceny."},
+    {"q": "Jak poprosić o wycenę?", "a": "Dodaj wybrane modele do listy zapytań, a następnie przygotuj wiadomość e-mail na adres robotics@tekpoint.com. Podaj planowane zastosowanie, kraj docelowy, ilości i oczekiwany termin. Zapytania nie są wiążące; katalog nie umożliwia zakupu online."},
+    {"q": "Jak interpretować specyfikacje?", "a": "Na stronach produktów podano informacje referencyjne producenta lub dostawcy oraz uwagi dotyczące konfiguracji. Dane te nie zostały niezależnie zweryfikowane. Ostateczną konfigurację, zgodność z wymogami UE, bezpieczną integrację i przydatność należy potwierdzić dla konkretnego projektu przed przygotowaniem wyceny."}
+  ]
+}

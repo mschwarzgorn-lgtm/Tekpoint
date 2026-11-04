@@ -1,0 +1,11 @@
+{
+  "heading": "AGIBOT projekto planavimas",
+  "intro": "Praktiniai atsakymai prieš pasirenkant robotą arba prašant pateikti pasiūlymą.",
+  "items": [
+    {"q": "Koks yra „Tekpoint“ vaidmuo?", "a": "„Tekpoint“ yra regioninis „AGIBOT“ platintojas Europoje. Šiame kataloge pateikiami verslo užklausoms skirti robotai ir komponentai. Su robotikos komanda aptarkite tikslinę rinką, taikymą ir konfigūraciją; produkto įtraukimas į katalogą nereiškia, kad jis prieinamas kiekvienoje šalyje."},
+    {"q": "Kaip pasirinkti tinkamą modelį?", "a": "Pradėkite nuo numatomos užduoties ir darbo aplinkos. Palyginkite nurodytas specifikacijas, tada su „Tekpoint“ aptarkite keliamąją galią, mobilumą, sąsajas, saugą ir integravimo reikalavimus. Pritaikymo pavyzdžiai yra vertinimo pradžios taškas, o ne tinkamumo garantija."},
+    {"q": "Ar kataloge nurodyti produktai yra sandėlyje?", "a": "Produkto įtraukimas į katalogą nepatvirtina atsargų, pristatymo termino ar regioninio prieinamumo. Prieinamumą ir siūlomą konfigūraciją būtina patvirtinti konkrečiam projektui prieš parengiant pasiūlymą."},
+    {"q": "Kaip galiu paprašyti kainos?", "a": "Įtraukite norimus modelius į užklausų sąrašą, tada parenkite el. laišką adresu robotics@tekpoint.com. Nurodykite numatomą taikymą, paskirties šalį, kiekius ir pageidaujamą terminą. Užklausos nėra įpareigojančios; šiame kataloge nėra galimybės pirkti internetu."},
+    {"q": "Kaip turėčiau suprasti specifikacijas?", "a": "Produktų puslapiuose pateikiama gamintojo arba tiekėjo informacija ir konfigūracijos pastabos. Šie duomenys nėra nepriklausomai patikrinti. Galutinę konfigūraciją, atitiktį ES reikalavimams, saugų integravimą ir tinkamumą būtina patvirtinti konkrečiam projektui prieš parengiant pasiūlymą."}
+  ]
+}

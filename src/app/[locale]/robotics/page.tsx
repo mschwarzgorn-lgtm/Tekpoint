@@ -2,5 +2,5 @@ import LegacyRobotics,{generateMetadata as legacyMetadata,generateStaticParams} 
 import MergedRobotics from '@/components/robotics-merged/MergedRobotics';
 import {roboticsMetadata} from '@/lib/robotics-seo';
 export {generateStaticParams};
-export async function generateMetadata(props:{params:Promise<{locale:string}>}){const {locale}=await props.params;const existing=await legacyMetadata(props);if(!['en','de'].includes(locale))return existing;const updated=roboticsMetadata(locale,'landing');return {...updated,alternates:{...updated.alternates,languages:existing.alternates?.languages}};}
-export default async function RoboticsPage(props:{params:Promise<{locale:string}>}){const {locale}=await props.params;return ['en','de'].includes(locale)?<MergedRobotics {...props}/>:<LegacyRobotics {...props}/>;}
+export async function generateMetadata(props:{params:Promise<{locale:string}>}){const {locale}=await props.params;const existing=await legacyMetadata(props);const updated=roboticsMetadata(locale,'landing');return {...updated,alternates:{...updated.alternates,languages:existing.alternates?.languages}};}
+export default async function RoboticsPage(props:{params:Promise<{locale:string}>}){const {locale}=await props.params;return <MergedRobotics {...props}/>;}

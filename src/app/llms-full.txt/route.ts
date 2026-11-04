@@ -1,3 +1,4 @@
+import {locales} from "@/i18n/config";
 import {products as roboticsProducts} from '@/lib/robotics-catalogue';
 import { BRANDS, RETAILERS } from "@/lib/brands";
 import { getAllPosts } from "@/lib/blog";
@@ -162,8 +163,9 @@ Service overview page: ${BASE_URL}/en/services/
 
 ## 8. Brand portfolio (${BRANDS.length} brands)
 
-Tekpoint is an authorised European distributor for the following brands. Each
-entry lists the product category Tekpoint distributes the brand in.
+The following brands appear in Tekpoint’s portfolio. Each entry lists its
+product category. Brand-specific territory rights and current product availability
+require confirmation; this list does not imply every brand is available in every market.
 
 ${BRANDS.map(
   (b) => `### ${b.name}
@@ -216,10 +218,10 @@ ${list
 - Blog articles exist in English only and canonicalise to /en/blog/{slug}/.
 - Legal pages (legal notice, privacy policy, cookie policy, terms) are
   published in English with a notice to that effect on non-English versions.
-- Every English page is also served as clean Markdown: replace the trailing
-  slash of any English URL with ".md" (for example ${BASE_URL}/en/about.md,
-  ${BASE_URL}/en/vendors.md, or ${BASE_URL}/en/blog/{slug}.md). The Markdown
-  carries the same content without navigation or markup.
+- Selected English pages and blog articles have Markdown counterparts, listed
+  in /llms.txt. Replace the trailing slash only for those listed routes. Legal
+  and enquiry pages are excluded. The HTML page remains canonical. These files
+  are optional reading aids, not a prerequisite for AI-search inclusion.
 - Machine-readable index: ${BASE_URL}/llms.txt
 - Sitemap: ${BASE_URL}/sitemap.xml
 - schema.org JSON-LD is embedded in every page.
@@ -241,11 +243,12 @@ Tekpoint is AGIBOT's regional distributor for Europe. These are B2B enquiry page
 
 Catalogue: ${BASE_URL}/en/robotics/agibot/
 Applications: ${BASE_URL}/en/robotics/applications/
+Project planning and buying guidance: ${BASE_URL}/en/robotics/#project-questions
 Contact: robotics@tekpoint.com
 
 ${roboticsProducts.map(p=>'- ['+p.name+']('+BASE_URL+'/en/robotics/agibot/'+p.id+'/): '+p.tagline.en+' — Markdown: '+BASE_URL+'/en/robotics/agibot/'+p.id+'.md').join('\n')}
 
-The 18 detailed product pages are available in English and German only. Other Robotics landing pages remain available in their existing 31 languages. Do not infer translated product pages or confirmed stock.
+The ${roboticsProducts.length} detailed product pages, catalogue, applications and Robotics contacts are available in ${locales.length} website languages. Each translated page has its own canonical URL and reciprocal language alternatives. A catalogue listing does not confirm stock or country-specific availability.
 `;
 
   return new Response(body, {

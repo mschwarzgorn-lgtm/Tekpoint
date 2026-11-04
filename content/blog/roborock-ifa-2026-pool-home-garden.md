@@ -22,4 +22,4 @@ Roborock rates the mower for lawns up to 800 m². It uses LiDAR and vision-based
 
 Tekpoint distributes Roborock in Germany, Austria and BeNeLux. As the range broadens, the role is to explain each category clearly: where it fits, what setup it needs and what support ownership involves. A product presentation at IFA should not be confused with confirmed local availability.
 
-The opportunity is not simply more robots. It is less routine work — inside the home, on the lawn and in the pool. Explore [Tekpoint’s brand portfolio](/en/brands/) for more about the brands we distribute.
+The opportunity is not simply more robots. It is less routine work — inside the home, on the lawn and in the pool. Explore [Tekpoint’s brand portfolio](/en/vendors/) for more about the brands we distribute.

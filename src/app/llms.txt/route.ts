@@ -1,3 +1,4 @@
+import {locales} from "@/i18n/config";
 import {products as roboticsProducts} from '@/lib/robotics-catalogue';
 import { BRANDS } from "@/lib/brands";
 import { getAllPosts } from "@/lib/blog";
@@ -16,7 +17,7 @@ import mdPages from "../../../data/md-pages.json";
  * where the authoritative pages live, following the llms.txt convention.
  *
  * Generated at build time from the same source of truth as the JSON-LD and
- * the sitemap, so it can never drift from the rest of the site.
+ * the sitemap, and checked against generated pages.
  */
 export const dynamic = "force-static";
 
@@ -62,11 +63,11 @@ ${SERVICE_CATALOGUE.map(
 
 ## Brands distributed
 
-Tekpoint distributes the following ${BRANDS.length} brands in Europe:
+The following ${BRANDS.length} brands appear in Tekpoint’s portfolio. Brand-specific territory rights and current availability require confirmation:
 
 ${BRANDS.map((b) => `- ${b.name} — ${b.category}`).join("\n")}
 
-Full portfolio with descriptions: ${BASE_URL}/en/vendors/
+Full portfolio and retail partners: ${BASE_URL}/en/vendors/
 
 ## Markets
 
@@ -88,7 +89,7 @@ ${CHANNELS.map((c) => `- ${c}`).join("\n")}
 - [Leadership](${BASE_URL}/en/management-board/): management team
 - [Become a partner](${BASE_URL}/en/become-a-partner/): for brands seeking European distribution
 - [Careers](${BASE_URL}/en/career/): open vacancies
-- [Contact](${BASE_URL}/en/contact/): contact details and enquiry form
+- [Contact](${BASE_URL}/en/contact/): contact details and enquiry options
 - [Blog](${BASE_URL}/en/blog/): industry analysis and brand news (English only)
 - [Legal notice](${BASE_URL}/en/impressum/): registration and regulatory details
 
@@ -100,9 +101,10 @@ ${posts
 
 ## Markdown versions
 
-Every English page listed above is also published as clean Markdown: take the
-page URL and replace the trailing slash with ".md". No navigation, no markup —
-just the content.
+The English pages explicitly listed below have clean Markdown counterparts.
+For those pages only, replace the trailing slash with ".md". Legal and enquiry
+pages are not included. HTML remains the canonical source; these optional files
+are a reading convenience, not a requirement for search indexing or AI citations.
 
 ${mdPages.pages
   .map(
@@ -136,11 +138,12 @@ Tekpoint is AGIBOT's regional distributor for Europe. These are B2B enquiry page
 
 Catalogue: ${BASE_URL}/en/robotics/agibot/
 Applications: ${BASE_URL}/en/robotics/applications/
+Project planning and buying guidance: ${BASE_URL}/en/robotics/#project-questions
 Contact: robotics@tekpoint.com
 
 ${roboticsProducts.map(p=>'- ['+p.name+']('+BASE_URL+'/en/robotics/agibot/'+p.id+'/): '+p.tagline.en+' — Markdown: '+BASE_URL+'/en/robotics/agibot/'+p.id+'.md').join('\n')}
 
-The 18 detailed product pages are available in English and German only. Other Robotics landing pages remain available in their existing 31 languages. Do not infer translated product pages or confirmed stock.
+The ${roboticsProducts.length} detailed product pages, catalogue, applications and Robotics contacts are available in ${locales.length} website languages. Each translated page has its own canonical URL and reciprocal language alternatives. A catalogue listing does not confirm stock or country-specific availability.
 `;
 
   return new Response(body, {

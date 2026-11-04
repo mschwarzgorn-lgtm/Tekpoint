@@ -2,6 +2,7 @@ import type { Metadata } from "next";
 import { getTranslations, setRequestLocale } from "next-intl/server";
 import { routing } from "@/i18n/routing";
 import mdPages from "../../data/md-pages.json";
+import {isEnglishOnly, LANGUAGE_TAGS, searchRobots} from "./search-policy";
 
 const MARKDOWN_PAGES: string[] = mdPages.pages.map((p) => p.path);
 
@@ -40,15 +41,16 @@ export async function generatePageMetadata({
     if (descriptionKey) description = t(descriptionKey);
   }
 
-  const canonicalUrl = `${BASE_URL}/${locale}${pagePath}`;
+  const canonicalLocale = isEnglishOnly(pagePath) ? "en" : locale;
+  const canonicalUrl = `${BASE_URL}/${canonicalLocale}${pagePath}/`;
 
   // Build alternates with hreflang
   const languages: Record<string, string> = {
-    "x-default": `${BASE_URL}/en${pagePath}`,
+    "x-default": `${BASE_URL}/en${pagePath}/`,
   };
   for (const l of routing.locales) {
     const hreflang = hreflangMap[l] || l;
-    languages[hreflang] = `${BASE_URL}/${l}${pagePath}`;
+    languages[hreflang] = `${BASE_URL}/${l}${pagePath}/`;
   }
 
   // Pages with a clean Markdown counterpart advertise it, so a crawler that
@@ -65,7 +67,7 @@ export async function generatePageMetadata({
     description,
     alternates: {
       canonical: canonicalUrl,
-      languages,
+      ...(isEnglishOnly(pagePath) ? {} : {languages}),
       ...(locale === "en" && markdownPath
         ? { types: { "text/markdown": `${BASE_URL}${markdownPath}` } }
         : {}),
@@ -75,8 +77,8 @@ export async function generatePageMetadata({
       description,
       url: canonicalUrl,
       siteName: "Tekpoint",
-      locale: locale,
-      type: pagePath === "" ? "website" : "article",
+      locale: canonicalLocale === "en" ? "en_GB" : `${canonicalLocale}_${new Intl.Locale(LANGUAGE_TAGS[canonicalLocale] ?? canonicalLocale).maximize().region}`,
+      type: "website",
       images: [
         {
           url: `${BASE_URL}/images/tekpoint-og.jpg`,
@@ -92,16 +94,6 @@ export async function generatePageMetadata({
       description,
       images: [`${BASE_URL}/images/tekpoint-og.jpg`],
     },
-    robots: {
-      index: true,
-      follow: true,
-      googleBot: {
-        index: true,
-        follow: true,
-        "max-video-preview": -1,
-        "max-image-preview": "large",
-        "max-snippet": -1,
-      },
-    },
+    robots: searchRobots(),
   };
 }

@@ -2,3 +2,6 @@
 
 /* Optically balanced marks: reserved for the four reviewed, undersized logos. */
 .logoStage.opticalLogoStage{inset:24% 12%;padding:0}.opticalLogoStage .logo{width:100%;height:100%;object-fit:contain}
+
+/* A visible text label makes the brand identifiable without relying on its logo. */
+.withCaption{aspect-ratio:auto;padding-bottom:0}.withCaption .card{position:relative;inset:auto;aspect-ratio:16/9}.brandName{display:block;padding:10px 2px 2px;font-size:14px;line-height:1.45;font-weight:600;color:#2B2A29;overflow-wrap:anywhere}

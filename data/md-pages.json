@@ -1,6 +1,5 @@
 {
-  "_comment2": "dossierSections pulls the named sections of /llms-full.txt into that page's Markdown. The brands page shows its portfolio as logo images only, so without this the brand names and descriptions would be missing from the text a reader gets.",
-  "_comment": "Single source of truth for which English pages get a clean Markdown counterpart at <path>.md. Read by src/app/llms.txt/route.ts (to advertise them) and by scripts/generate-md.mjs (to write them). Legal pages and individual blog posts are deliberately absent: legal text is not useful to assistants, and blog posts are generated from their own Markdown source instead.",
+  "_comment": "Explicit manifest of English Markdown counterparts; HTML is canonical. Blog counterparts are generated separately. Legal/enquiry pages deliberately omitted. Do not imply every URL has a Markdown counterpart.",
   "pages": [
     {
       "path": "",
@@ -16,11 +15,7 @@
     },
     {
       "path": "/vendors",
-      "label": "Brands",
-      "dossierSections": [
-        "8",
-        "9"
-      ]
+      "label": "Brands"
     },
     {
       "path": "/services",

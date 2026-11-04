@@ -48,7 +48,7 @@ export default async function BlogPage({
         trail={[{ name: "Blog", path: "/blog" }]}
       />
       {/* Hero */}
-      <section className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
+      <section lang="en" className="bg-gradient-to-b from-[#0a1628] to-[#1a2d4a] text-white py-24 md:py-32">
         <div className="container mx-auto px-4 md:px-6">
           <span className="text-sm font-medium tracking-wide uppercase text-orange-300 mb-4 block">
             INSIGHTS &amp; UPDATES
@@ -72,7 +72,7 @@ export default async function BlogPage({
       )}
 
       {/* Posts Grid */}
-      <section className="py-16 md:py-24 bg-white">
+      <section lang="en" className="py-16 md:py-24 bg-white">
         <div className="container mx-auto px-4 md:px-6">
           {posts.length === 0 ? (
             <div className="text-center py-16">

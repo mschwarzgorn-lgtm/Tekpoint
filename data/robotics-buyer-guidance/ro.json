@@ -1,0 +1,11 @@
+{
+  "heading": "Planificarea unui proiect AGIBOT",
+  "intro": "Răspunsuri practice înainte de a alege un robot sau de a solicita o ofertă.",
+  "items": [
+    {"q": "Care este rolul Tekpoint?", "a": "Tekpoint este distribuitorul regional AGIBOT pentru Europa. Acest catalog reunește roboți și componente destinate solicitărilor comerciale. Discutați cu echipa de robotică despre piața vizată, aplicație și configurație; includerea unui produs în catalog nu înseamnă că acesta este disponibil în fiecare țară."},
+    {"q": "Cum aleg un model potrivit?", "a": "Începeți cu sarcina prevăzută și mediul de operare. Comparați specificațiile prezentate, apoi discutați cu Tekpoint despre sarcina utilă, mobilitate, interfețe, siguranță și cerințele de integrare. Exemplele de aplicații sunt puncte de pornire pentru evaluare, nu o garanție a adecvării."},
+    {"q": "Produsele listate sunt în stoc?", "a": "Listarea în catalog nu confirmă stocul, termenul de livrare sau disponibilitatea regională. Disponibilitatea și configurația oferită trebuie confirmate pentru proiectul concret înainte de emiterea unei oferte."},
+    {"q": "Cum pot solicita prețuri?", "a": "Adăugați modelele dorite în lista de solicitări, apoi pregătiți un e-mail către robotics@tekpoint.com. Includeți aplicația prevăzută, țara de destinație, cantitățile și termenul dorit. Solicitările nu sunt obligatorii; acest catalog nu oferă posibilitatea de cumpărare online."},
+    {"q": "Cum ar trebui să interpretez specificațiile?", "a": "Paginile produselor indică informații de referință ale producătorului sau furnizorului și note privind configurația. Aceste date nu sunt verificate independent. Configurația finală, conformitatea cu cerințele UE, integrarea în siguranță și adecvarea trebuie confirmate pentru proiectul concret înainte de emiterea unei oferte."}
+  ]
+}

@@ -11,7 +11,7 @@
  *   /en/        ->  out/en.md and out/en/index.md
  *   blog posts  ->  out/en/blog/<slug>.md    (from content/blog/<slug>.md source)
  *
- * English only, by design: 31 localised copies would be near-duplicate noise.
+ * English Markdown is an optional reading format; translated HTML remains canonical for each language.
  */
 import fs from "node:fs";
 import path from "node:path";
@@ -132,6 +132,8 @@ function htmlToMarkdown(html) {
     .replace(/<li\b[^>]*>/gi, "\n- ")
     .replace(/<\/li>/gi, "\n")
     .replace(/<br\s*\/?>/gi, "\n")
+    .replace(/<\/th>\s*<td\b[^>]*>/gi, ": ")
+    .replace(/<\/td>\s*<td\b[^>]*>/gi, " | ")
     // A closing </div> is one line break, not a paragraph break: card layouts
     // split a single sentence across nested divs, and joining those lines is
     // what turns "Major" + "brands" back into one readable statement.
@@ -280,6 +282,10 @@ for (const slug of slugs) {
       : String(data.date ?? "").slice(0, 10);
   const url = `${BASE_URL}/en/blog/${slug}/`;
 
+  const builtHtml = fs.readFileSync(path.join(OUT, "en/blog", slug, "index.html"), "utf8");
+  const article = (builtHtml.match(/<article\b[^>]*>([\s\S]*?)<\/article>/i)||[])[1];
+  if (!article) throw new Error("No built blog article: "+slug);
+  const articleBody = htmlToMarkdown(article);
   const doc =
     frontMatter({
       title: data.title,
@@ -292,7 +298,7 @@ for (const slug of slugs) {
       site: SITE,
       language: "en",
     }) +
-    `${content.trim()}\n\n---\n\nPublished by ${SITE} — ${url}\nCompany dossier for assistants: ${BASE_URL}/llms-full.txt\n`;
+    `# ${data.title}\n\n${articleBody}\n\n---\n\nPublished by ${SITE} — ${url}\nCompany dossier for assistants: ${BASE_URL}/llms-full.txt\n`;
 
   bytes += write(`en/blog/${slug}.md`, doc);
   files += 1;

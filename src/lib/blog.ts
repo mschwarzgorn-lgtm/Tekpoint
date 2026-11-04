@@ -9,6 +9,7 @@ export interface BlogPost {
   slug: string;
   title: string;
   date: string;
+  modifiedDate?: string;
   excerpt: string;
   category: string;
   author: string;
@@ -49,7 +50,12 @@ export function getPostBySlug(slug: string): BlogPost | null {
 
   const fileContent = fs.readFileSync(filePath, "utf8");
   const { data, content } = matter(fileContent);
-  const html = marked(content) as string;
+  // The page template already renders the title. Preserve the prose without a second H1.
+  const body = content.replace(/^\s*# [^\n]+\n+/, "");
+  const html = (marked(body) as string).replace(/<h1([ >])/g, '<h2$1').replace(/<\/h1>/g, '</h2>');
+  const fallbackExcerpt = body.split(/\n\s*\n/).map(p => p.trim()).find(p => p && !/^(#|!|<|[-*] )/.test(p))?.replace(/\[([^\]]+)\]\([^)]*\)/g, '$1').replace(/[*_~\x60]/g, '').replace(/\s+/g, ' ') ?? data.title;
+  const rawExcerpt = String(data.excerpt || data.description || fallbackExcerpt).trim();
+  const excerpt = rawExcerpt.length <= 165 ? rawExcerpt : rawExcerpt.slice(0, 165).replace(/\s+\S*$/, '').trim();
 
   const wordCount = content.split(/\s+/).length;
   const readingTime = Math.max(1, Math.ceil(wordCount / 200));
@@ -58,7 +64,8 @@ export function getPostBySlug(slug: string): BlogPost | null {
     slug,
     title: data.title,
     date: normaliseDate(data.date),
-    excerpt: data.excerpt,
+    excerpt: data.excerpt || data.description || excerpt,
+    ...(data.updated ? {modifiedDate: normaliseDate(data.updated)} : {}),
     category: data.category || "Insights",
     author: data.author || "Tekpoint Team",
     content: html,
