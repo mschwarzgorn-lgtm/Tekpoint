@@ -110,6 +110,10 @@
       "label": "AGIBOT G2"
     },
     {
+      "path": "/robotics/agibot/g2-max",
+      "label": "AGIBOT G2 Max"
+    },
+    {
       "path": "/robotics/agibot/d1-maxpro",
       "label": "AGIBOT D1 MaxPro"
     },

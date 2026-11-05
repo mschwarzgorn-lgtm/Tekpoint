@@ -38,5 +38,9 @@
   "vr-kit": {
     "en": "The linked manufacturer reference describes A2 teleoperation, not independently verified compatibility across other robot families. Confirm kit contents, supported robot model, latency and operating limits before ordering.",
     "de": "Die verlinkte Herstellerreferenz beschreibt A2-Teleoperation, keine unabhängig bestätigte Kompatibilität mit anderen Roboterfamilien. Lieferumfang, unterstütztes Robotermodell, Latenz und Betriebsgrenzen bitte vor Bestellung bestätigen."
+  },
+  "g2-max": {
+    "en": "Detailed configuration, EU conformity and European availability require project-specific confirmation. Do not apply the G2 specifications to G2 Max.",
+    "de": "Detaillierte Konfiguration, EU-Konformität und Verfügbarkeit in Europa erfordern eine projektbezogene Bestätigung. Die technischen Daten des G2 gelten nicht für den G2 Max."
   }
 }

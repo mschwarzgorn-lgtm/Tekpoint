@@ -7,6 +7,7 @@ export const productIds:string[]=[
   "x2-ultra",
   "x2",
   "g2",
+  "g2-max",
   "d1-maxpro",
   "d1-max",
   "d1-ultra",
@@ -967,6 +968,72 @@ export const products=[
       "de": "AGIBOT G2 Benutzerhandbuch (EN, August 2026), Spezifikationstabelle; AGIBOT G2 SPECS Datenblatt (IP42, Laden, Kommunikation)."
     },
     "gal": 8
+  },
+  {
+    "id": "g2-max",
+    "cat": "industrial",
+    "name": "AGIBOT G2 Max",
+    "badge": null,
+    "tagline": {
+      "en": "Heavy-duty wheeled robot for industrial handling and palletizing",
+      "de": "Schwerlast-Radroboter für industriellen Materialtransport und Palettierung"
+    },
+    "desc": {
+      "en": "AGIBOT G2 Max is a heavy-duty industrial robot for material handling and palletizing in manufacturing and logistics. It combines force-controlled arms, adjustable working height and omnidirectional wheeled mobility. G2 Max is a separate model from G2; the figures below are manufacturer references, not independently verified.",
+      "de": "AGIBOT G2 Max ist ein Schwerlast-Industrieroboter für Materialtransport und Palettierung in Fertigung und Logistik. Er verbindet kraftgeregelte Arme, eine einstellbare Arbeitshöhe und ein omnidirektionales Radfahrwerk. G2 Max ist ein eigenständiges Modell neben G2; die folgenden Werte sind Herstellerangaben und wurden nicht unabhängig verifiziert."
+    },
+    "highlights": {
+      "en": [
+        "Manufacturer reference: up to 40 kg handling capacity using both arms.",
+        "Adjustable working height: 0.1–2.5 m.",
+        "Force-controlled arms and omnidirectional wheeled mobility."
+      ],
+      "de": [
+        "Herstellerangabe: bis zu 40 kg Handhabungslast mit beiden Armen.",
+        "Einstellbare Arbeitshöhe: 0,1–2,5 m.",
+        "Kraftgeregelte Arme und omnidirektionales Radfahrwerk."
+      ]
+    },
+    "specs": [
+      [
+        "Degrees of freedom",
+        "Freiheitsgrade",
+        "21",
+        "21"
+      ],
+      [
+        "Dual-arm handling capacity",
+        "Handhabungslast mit beiden Armen",
+        "Up to 40 kg",
+        "Bis zu 40 kg"
+      ],
+      [
+        "Working height",
+        "Arbeitshöhe",
+        "0.1–2.5 m",
+        "0,1–2,5 m"
+      ],
+      [
+        "Detailed configuration",
+        "Detaillierte Konfiguration",
+        "To be confirmed with quotation",
+        "Wird mit dem Angebot bestätigt"
+      ]
+    ],
+    "apps": {
+      "en": [
+        "Manufacturing & logistics"
+      ],
+      "de": [
+        "Fertigung & Logistik"
+      ]
+    },
+    "link": "https://www.agibot.com/article/231/detail/131.html",
+    "src": {
+      "en": "AGIBOT Innovation Day, 2026-10-29; AGIBOT WAIC, 2026-07-18.",
+      "de": "AGIBOT Innovation Day, 29.10.2026; AGIBOT WAIC, 18.07.2026."
+    },
+    "gal": 2
   },
   {
     "id": "d1-maxpro",
