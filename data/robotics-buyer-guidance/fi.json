@@ -1,0 +1,26 @@
+{
+  "heading": "AGIBOT-projektin suunnittelu",
+  "intro": "Käytännön vastauksia ennen robotin valintaa tai tarjouspyyntöä.",
+  "items": [
+    {
+      "q": "Mikä Tekpointin rooli on?",
+      "a": "Tekpoint on AGIBOTin alueellinen jakelija Euroopassa. Tämä luettelo kokoaa robotit ja komponentit yritysten tiedusteluja varten. Keskustele Robotics-tiimin kanssa kohdemarkkinastasi, käyttökohteesta ja kokoonpanosta; tuotteen sisältyminen luetteloon ei vahvista sen saatavuutta kaikissa maissa."
+    },
+    {
+      "q": "Miten valitsen sopivan mallin?",
+      "a": "Aloita suunnitellusta tehtävästä ja toimintaympäristöstä. Vertaa ilmoitettuja teknisiä tietoja ja keskustele sen jälkeen Tekpointin kanssa hyötykuormaa, liikkuvuutta, liitäntöjä, turvallisuutta ja integrointia koskevista vaatimuksista. Käyttökohde-esimerkit ovat arvioinnin lähtökohta, eivät takuu soveltuvuudesta."
+    },
+    {
+      "q": "Onko luettelossa olevia tuotteita varastossa?",
+      "a": "Tuotteen sisältyminen luetteloon ei vahvista varastotilannetta, toimitusaikaa eikä alueellista saatavuutta. Saatavuus ja tarjottava kokoonpano on vahvistettava projektikohtaisesti ennen tarjouksen antamista."
+    },
+    {
+      "q": "Miten voin pyytää hintatietoja?",
+      "a": "Lisää haluamasi mallit tiedusteluluetteloon ja valmistele sitten sähköpostiviesti osoitteeseen robotics@tekpoint.com. Ilmoita suunniteltu käyttökohde, kohdemaa, määrät ja tavoiteaikataulu. Tiedustelut eivät sido; tässä luettelossa ei voi tehdä ostoksia verkossa."
+    },
+    {
+      "q": "Miten teknisiä tietoja tulee tulkita?",
+      "a": "Tuotesivuilla ilmoitetaan valmistajan tai toimittajan viitetiedot ja kokoonpanoa koskevat huomautukset. Tietoja ei ole riippumattomasti varmennettu. Lopullinen kokoonpano, EU-vaatimustenmukaisuus, turvallinen integrointi ja soveltuvuus on vahvistettava kyseistä projektia varten ennen tarjouksen antamista."
+    }
+  ]
+}

@@ -1,0 +1,112 @@
+{
+  "metaTitle": "AGIBOT robotika Europoje | Tekpoint",
+  "metaDescription": "„Tekpoint“ yra regioninis AGIBOT platintojas Europoje. Susipažinkite su A2 Ultra, X2 Ultra ir G2 robotais ir aptarkite savo taikymą su mūsų robotikos komanda.",
+  "eyebrow": "Robotika / AGIBOT",
+  "title": "„Tekpoint“ — regioninis AGIBOT robotų platintojas Europoje",
+  "intro": [
+    "„Tekpoint“ yra patikimas Europos įmonių technologijų partneris, padedantis joms susisiekti su pirmaujančiais gamintojais ir susipažinti su naujomis inovacijomis. Robotika yra naujausia mūsų veiklos kryptis: įkūnytajam dirbtiniam intelektui iš tyrimų laboratorijų persikeliant į gamyklas, sandėlius ir paslaugų aplinką, padedame Europos įmonėms pasiekti šią technologiją per vietinį ir patikimą partnerį.",
+    "Kaip regioninis AGIBOT platintojas, teikiame AGIBOT humanoidinių robotų platformos pardavimo, palaikymo ir integravimo paslaugas — klientams visoje Europoje suteikiame tiesioginį kontaktą, kad jiems nereikėtų savarankiškai bendrauti su užsienio gamintoju."
+  ],
+  "heroAction": "Aptarkite savo projektą",
+  "rangeAction": "Susipažinkite su robotais",
+  "manufacturerLink": "Daugiau apie AGIBOT",
+  "heroAlt": "AGIBOT humanoidiniai robotai — gamintojo 15 000-ojo roboto pasiekimas",
+  "newsLink": "AGIBOT pasiekė 15 000 robotų ribą: skaitykite istoriją",
+  "productsTitle": "AGIBOT produktų linija",
+  "productsIntro": "„Tekpoint“ siūlomas AGIBOT humanoidinių robotų pasirinkimas.",
+  "products": [
+    {
+      "name": "AGIBOT A2 Ultra",
+      "tagline": "Pirmasis pasaulyje komerciniu mastu gaminamas viso dydžio humanoidinis robotas",
+      "description": "Išmani sąveika, autonominis veikimas ir patikimas korpusas, sukurtas plataus masto komerciniam diegimui. 169 cm, 40 laisvės laipsnių ir iki 1,2 m/s ėjimo greitis. AGIBOT sieja A2 Ultra su savo 106,286 km ėjimo rekordu; „Guinness World Records“ rekordinį robotą įvardija kaip AgiBot A2."
+    },
+    {
+      "name": "AGIBOT X2 Ultra",
+      "tagline": "Visiškai išmanus ir vikrus robotas",
+      "description": "Draugiškas, vikrus ir išmanus robotas, užtikrinantis daugiarūšę sąveiką per regą, balsą, lietimą ir veido išraiškas. Maždaug 1,31 m ūgio, iki 30 laisvės laipsnių ir iki 1,8 m/s ėjimo greitis, taip pat autonominė navigacija ir kliūčių vengimas."
+    },
+    {
+      "name": "AGIBOT G2",
+      "tagline": "Pramoninio lygio interaktyvus įkūnyto veikimo robotas",
+      "description": "Sukurtas pagal pramoninius standartus, su 100 % automobilių pramonės lygio komponentų ir IP42 apsauga. Užtikrina submilimetrinį surinkimo tikslumą jėga valdomomis rankomis, taip pat išraiškingą veido animaciją, žmogui būdingus judesius ir žvilgsnio sekimą sąveikai su žmonėmis."
+    }
+  ],
+  "manufacturerSpecs": "Produktų aprašus ir specifikacijas pateikė AGIBOT. Konfigūracija ir tinkamumas vertinami kiekvienam projektui atskirai.",
+  "learnMore": "Gamintojo informacija",
+  "applicationsTitle": "Tipiniai taikymai",
+  "applicationsIntro": "Kiekvienas robotikos projektas prasideda nuo naudojimo atvejo. „Tekpoint“ padeda klientams nustatyti AGIBOT platformą, kuri geriausiai atitinka reikiamą aplinką, sąveiką ir veiklos tikslus.",
+  "applications": [
+    {
+      "title": "Sąveika su klientais ir renginiai",
+      "description": "Registratūra, orientavimas, prekės ženklo patirtys, parodos ir kita aplinka, kurioje bendraujama su klientais."
+    },
+    {
+      "title": "Paslaugos ir sąveika",
+      "description": "Žmogaus ir roboto sąveika, išmani pagalba ir nauji įkūnyto dirbtinio intelekto taikymai."
+    },
+    {
+      "title": "Gamyba ir automatizavimas",
+      "description": "Tikslumo reikalaujančios operacijos, pramoniniai darbo procesai ir vertinimas gamybos aplinkoje."
+    },
+    {
+      "title": "Tyrimai ir plėtra",
+      "description": "Robotikos tyrimai, įkūnyto dirbtinio intelekto plėtra, universitetai ir technologijų vertinimas."
+    }
+  ],
+  "whyTitle": "Kodėl „Tekpoint“?",
+  "whyIntro": "AGIBOT teikia robotikos technologiją. „Tekpoint“ užtikrina Europos komercinę sąsają ir prieigą prie rinkos.",
+  "reasons": [
+    {
+      "title": "Platinimas Europoje",
+      "description": "AGIBOT robotikos sprendimų komercinis platinimas Europos rinkose."
+    },
+    {
+      "title": "Rinkos plėtra",
+      "description": "Pardavėjų, integratorių ir įmonių galimybių plėtra visoje Europoje."
+    },
+    {
+      "title": "Prieiga prie ES rinkos",
+      "description": "Pagalba sprendžiant Europos produktų reikalavimus, dokumentaciją ir patekimo į rinką procesus."
+    },
+    {
+      "title": "Logistika ir palaikymas",
+      "description": "Europos logistika, užsakymų vykdymas, grąžinimo leidimų (RMA) koordinavimas ir vietinė komercinė sąsaja."
+    }
+  ],
+  "stepsEyebrow": "Nuo susidomėjimo iki projekto",
+  "stepsTitle": "Kaip bendradarbiauti su „Tekpoint“",
+  "stepsIntro": "Prieš susisiekdami su mumis neprivalote žinoti, kokio roboto ar konfigūracijos jums reikia. Pradėkite nuo savo naudojimo atvejo — padėsime suplanuoti tolesnius veiksmus.",
+  "steps": [
+    {
+      "title": "Papasakokite apie savo naudojimo atvejį",
+      "description": "Pasidalykite su mūsų robotikos komanda informacija apie savo taikymą, aplinką, tikslinę rinką, projekto etapą ir pagrindinius reikalavimus."
+    },
+    {
+      "title": "Nustatykite tinkamą sprendimą",
+      "description": "Padėsime įvertinti jūsų projektui tinkamą AGIBOT platformą, konfigūraciją ir komercinį požiūrį."
+    },
+    {
+      "title": "Pereikite prie vertinimo ir tiekimo",
+      "description": "„Tekpoint“ koordinuoja komercinį procesą, tiekimą Europoje ir sąsajas, reikalingas galimybei įgyvendinti."
+    }
+  ],
+  "contactEyebrow": "Aptarkime jūsų projektą",
+  "contactTitle": "Domitės AGIBOT robotika?",
+  "contactIntro": "Nesvarbu, ar esate perpardavėjas, sistemų integratorius, mokslinių tyrimų institucija, technologijų partneris ar verslo klientas, mūsų robotikos komanda gali padėti įvertinti AGIBOT sprendimus jūsų rinkai ar taikymui.",
+  "contactTopics": [
+    "Informacija apie produktus ir jų prieinamumas",
+    "Bendradarbiavimas su perpardavėjais ir platinimo srityje",
+    "Įmonių ir pramonės projektai",
+    "Sistemų integravimo galimybės",
+    "Mokslinių tyrimų ir švietimo užklausos"
+  ],
+  "teamTitle": "Jūsų robotikos kontaktai",
+  "emailTitle": "Pasikalbėkite su mūsų robotikos komanda",
+  "emailIntro": "Parašykite mūsų robotikos komandai el. paštu. Trumpai aprašykite savo taikymą, įmonę ir projekto reikalavimus.",
+  "navLabel": "Robotika",
+  "applicationsEyebrow": "Taikymai",
+  "emailButton": "Rašyti robotikos komandai",
+  "newsLanguage": "Straipsnis anglų kalba",
+  "serviceType": "Robotikos platinimas",
+  "regionName": "Europa"
+}

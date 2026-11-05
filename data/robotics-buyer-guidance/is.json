@@ -1,0 +1,26 @@
+{
+  "heading": "Að skipuleggja AGIBOT-verkefni",
+  "intro": "Hagnýt svör áður en vélmenni er valið eða óskað eftir tilboði.",
+  "items": [
+    {
+      "q": "Hvert er hlutverk Tekpoint?",
+      "a": "Tekpoint er svæðisbundinn dreifingaraðili AGIBOT í Evrópu. Þessi vörulisti tekur saman vélmenni og íhluti fyrir fyrirspurnir fyrirtækja. Ræddu við Robotics-teymið um markaðssvæðið þitt, notkun og uppsetningu; skráning vöru í vörulistanum staðfestir ekki að hún sé fáanleg í öllum löndum."
+    },
+    {
+      "q": "Hvernig vel ég hentuga gerð?",
+      "a": "Byrjaðu á fyrirhuguðu verkefni og rekstrarumhverfi. Berðu saman tilgreindar tæknilýsingar og ræddu síðan við Tekpoint um kröfur varðandi burðargetu, hreyfanleika, tengi, öryggi og samþættingu. Dæmi um notkun eru upphafspunktur mats en tryggja ekki að gerðin henti."
+    },
+    {
+      "q": "Eru vörurnar á listanum til á lager?",
+      "a": "Skráning vöru í vörulistanum staðfestir hvorki lagerstöðu, afhendingartíma né svæðisbundið framboð. Staðfesta þarf framboð og þá uppsetningu sem boðin er fyrir hvert verkefni áður en tilboð er gert."
+    },
+    {
+      "q": "Hvernig get ég óskað eftir verði?",
+      "a": "Bættu þeim gerðum sem þú hefur áhuga á við fyrirspurnalistann og útbúðu síðan tölvupóst til robotics@tekpoint.com. Taktu fram fyrirhugaða notkun, ákvörðunarland, magn og æskilegan tímaramma. Fyrirspurnir eru ekki bindandi; ekki er hægt að ganga frá kaupum á netinu í þessum vörulista."
+    },
+    {
+      "q": "Hvernig á ég að lesa tæknilýsingarnar?",
+      "a": "Á vörusíðunum koma fram viðmiðunarupplýsingar frá framleiðanda eða birgi og athugasemdir um uppsetningu. Upplýsingarnar hafa ekki verið sannreyndar óháð. Staðfesta þarf endanlega uppsetningu, samræmi við kröfur ESB, örugga samþættingu og hæfi fyrir viðkomandi verkefni áður en tilboð er gert."
+    }
+  ]
+}

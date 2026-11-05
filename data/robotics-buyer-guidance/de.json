@@ -1,0 +1,26 @@
+{
+  "heading": "Ein AGIBOT-Projekt planen",
+  "intro": "Praktische Antworten, bevor Sie einen Roboter auswählen oder ein Angebot anfordern.",
+  "items": [
+    {
+      "q": "Welche Rolle hat Tekpoint?",
+      "a": "Tekpoint ist der regionale Vertriebspartner von AGIBOT für Europa. Dieser Katalog bündelt Roboter und Komponenten für geschäftliche Anfragen. Besprechen Sie mit dem Robotics-Team Ihre Zielmärkte, Anwendung und Konfiguration; ein Produkteintrag bestätigt nicht die Verfügbarkeit in jedem Land."
+    },
+    {
+      "q": "Wie wähle ich ein geeignetes Modell aus?",
+      "a": "Beginnen Sie mit der vorgesehenen Aufgabe und der Einsatzumgebung. Vergleichen Sie die aufgeführten technischen Daten und besprechen Sie anschließend Anforderungen an Nutzlast, Mobilität, Schnittstellen, Sicherheit und Integration mit Tekpoint. Anwendungsbeispiele dienen als Ausgangspunkt für eine Bewertung und sind keine Garantie für die Eignung."
+    },
+    {
+      "q": "Sind die aufgeführten Produkte auf Lager?",
+      "a": "Ein Produkteintrag im Katalog bestätigt weder Lagerbestand noch Lieferzeit oder regionale Verfügbarkeit. Verfügbarkeit und angebotene Konfiguration müssen vor einem Angebot projektspezifisch bestätigt werden."
+    },
+    {
+      "q": "Wie kann ich Preise anfragen?",
+      "a": "Fügen Sie die gewünschten Modelle der Anfrageliste hinzu und bereiten Sie anschließend eine E-Mail an robotics@tekpoint.com vor. Geben Sie die vorgesehene Anwendung, das Zielland, die Mengen und den gewünschten Zeitrahmen an. Anfragen sind unverbindlich; dieser Katalog bietet keinen Online-Kaufabschluss."
+    },
+    {
+      "q": "Wie sind die technischen Daten zu verstehen?",
+      "a": "Auf den Produktseiten sind Referenzangaben des Herstellers oder Lieferanten sowie Konfigurationshinweise aufgeführt. Diese Angaben wurden nicht unabhängig überprüft. Die endgültige Konfiguration, die EU-Konformität, die sichere Integration und die Eignung müssen vor einem Angebot für das jeweilige Projekt bestätigt werden."
+    }
+  ]
+}

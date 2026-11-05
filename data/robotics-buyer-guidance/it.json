@@ -1,0 +1,26 @@
+{
+  "heading": "Pianificare un progetto AGIBOT",
+  "intro": "Risposte pratiche prima di scegliere un robot o richiedere un preventivo.",
+  "items": [
+    {
+      "q": "Qual è il ruolo di Tekpoint?",
+      "a": "Tekpoint è il distributore regionale di AGIBOT per l’Europa. Questo catalogo riunisce robot e componenti per richieste aziendali. Parlate con il team Robotics del vostro mercato di riferimento, dell’applicazione e della configurazione; la presenza di un prodotto nel catalogo non ne conferma la disponibilità in ogni Paese."
+    },
+    {
+      "q": "Come scelgo un modello adatto?",
+      "a": "Partite dall’attività prevista e dall’ambiente operativo. Confrontate le specifiche riportate, quindi discutete con Tekpoint i requisiti relativi a carico utile, mobilità, interfacce, sicurezza e integrazione. Gli esempi applicativi sono un punto di partenza per la valutazione e non garantiscono l’idoneità."
+    },
+    {
+      "q": "I prodotti indicati sono disponibili a magazzino?",
+      "a": "La presenza di un prodotto nel catalogo non conferma la disponibilità a magazzino, i tempi di consegna o la disponibilità regionale. La disponibilità e la configurazione offerta devono essere confermate per il singolo progetto prima del preventivo."
+    },
+    {
+      "q": "Come posso richiedere i prezzi?",
+      "a": "Aggiungete i modelli desiderati all’elenco delle richieste e preparate quindi un’e-mail da inviare a robotics@tekpoint.com. Indicate l’applicazione prevista, il Paese di destinazione, le quantità e le tempistiche desiderate. Le richieste non sono vincolanti; questo catalogo non offre acquisti online."
+    },
+    {
+      "q": "Come devo interpretare le specifiche?",
+      "a": "Le pagine dei prodotti riportano dati di riferimento del produttore o del fornitore e note sulla configurazione. Questi dati non sono stati verificati in modo indipendente. Prima di un preventivo, per il progetto specifico è necessario confermare la configurazione finale, la conformità ai requisiti UE, l’integrazione sicura e l’idoneità."
+    }
+  ]
+}

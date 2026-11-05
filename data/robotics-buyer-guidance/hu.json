@@ -1,0 +1,11 @@
+{
+  "heading": "AGIBOT-projekt tervezése",
+  "intro": "Gyakorlati válaszok a robot kiválasztása vagy árajánlat kérése előtt.",
+  "items": [
+    {"q": "Mi a Tekpoint szerepe?", "a": "A Tekpoint az AGIBOT regionális európai forgalmazója. Ez a katalógus üzleti megkeresésekhez gyűjti össze a robotokat és alkatrészeket. A célpiacról, az alkalmazásról és a konfigurációról egyeztessen a robotikai csapattal; a termék feltüntetése nem jelenti azt, hogy minden országban elérhető."},
+    {"q": "Hogyan válasszak megfelelő modellt?", "a": "Induljon ki a tervezett feladatból és a működési környezetből. Hasonlítsa össze a feltüntetett műszaki adatokat, majd egyeztessen a Tekpointtal a teherbírásról, a mobilitásról, az interfészekről, a biztonságról és az integrációs követelményekről. Az alkalmazási példák az értékelés kiindulópontjai, nem pedig az alkalmasság garanciái."},
+    {"q": "Raktáron vannak a felsorolt termékek?", "a": "A termék katalógusbeli feltüntetése nem igazolja a készletet, a szállítási időt vagy a regionális elérhetőséget. Az elérhetőséget és a felajánlott konfigurációt a konkrét projektre vonatkozóan, az árajánlat elkészítése előtt meg kell erősíteni."},
+    {"q": "Hogyan kérhetek árat?", "a": "Adja hozzá a kívánt modelleket az ajánlatkérési listához, majd készítsen e-mailt a robotics@tekpoint.com címre. Adja meg a tervezett alkalmazást, a célországot, a mennyiségeket és a kívánt időzítést. A megkeresések nem kötelező érvényűek; a katalógusban nincs online vásárlási lehetőség."},
+    {"q": "Hogyan értelmezzem a műszaki adatokat?", "a": "A termékoldalak a gyártó vagy a beszállító referenciaadatait, valamint a konfigurációra vonatkozó megjegyzéseket tüntetik fel. Ezeket az adatokat nem ellenőrizték függetlenül. A végleges konfigurációt, az EU-előírásoknak való megfelelést, a biztonságos integrációt és az alkalmasságot a konkrét projektre vonatkozóan, az árajánlat elkészítése előtt meg kell erősíteni."}
+  ]
+}

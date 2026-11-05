@@ -1,0 +1,26 @@
+{
+  "heading": "Préparer un projet AGIBOT",
+  "intro": "Des réponses pratiques avant de choisir un robot ou de demander un devis.",
+  "items": [
+    {
+      "q": "Quel est le rôle de Tekpoint ?",
+      "a": "Tekpoint est le distributeur régional d’AGIBOT pour l’Europe. Ce catalogue rassemble des robots et des composants destinés aux demandes professionnelles. Échangez avec l’équipe Robotics au sujet de votre marché cible, de votre application et de la configuration souhaitée ; la présence d’un produit dans le catalogue ne signifie pas qu’il est disponible dans chaque pays."
+    },
+    {
+      "q": "Comment choisir un modèle adapté ?",
+      "a": "Commencez par définir la tâche prévue et l’environnement d’utilisation. Comparez les caractéristiques indiquées, puis discutez avec Tekpoint des exigences en matière de charge utile, de mobilité, d’interfaces, de sécurité et d’intégration. Les exemples d’applications constituent un point de départ pour l’évaluation et ne garantissent pas l’adéquation du modèle."
+    },
+    {
+      "q": "Les produits répertoriés sont-ils en stock ?",
+      "a": "La présence d’un produit dans le catalogue ne confirme ni son stock, ni son délai de livraison, ni sa disponibilité régionale. La disponibilité et la configuration proposée doivent être confirmées pour chaque projet avant l’établissement d’un devis."
+    },
+    {
+      "q": "Comment demander un prix ?",
+      "a": "Ajoutez les modèles souhaités à la liste de demande, puis préparez un e-mail à envoyer à robotics@tekpoint.com. Indiquez l’application envisagée, le pays de destination, les quantités et le calendrier souhaité. Les demandes ne vous engagent pas ; ce catalogue ne propose pas d’achat en ligne."
+    },
+    {
+      "q": "Comment interpréter les caractéristiques techniques ?",
+      "a": "Les pages des produits indiquent des données de référence du fabricant ou du fournisseur ainsi que des remarques sur la configuration. Ces données n’ont pas fait l’objet d’une vérification indépendante. La configuration finale, la conformité aux exigences de l’UE, la sécurité de l’intégration et l’adéquation doivent être confirmées pour le projet concerné avant l’établissement d’un devis."
+    }
+  ]
+}

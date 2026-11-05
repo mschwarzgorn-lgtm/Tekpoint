@@ -1,0 +1,11 @@
+{
+  "heading": "Plánovanie projektu AGIBOT",
+  "intro": "Praktické odpovede pred výberom robota alebo žiadosťou o cenovú ponuku.",
+  "items": [
+    {"q": "Aká je úloha spoločnosti Tekpoint?", "a": "Tekpoint je regionálnym distribútorom AGIBOT pre Európu. Tento katalóg zhromažďuje roboty a komponenty určené na obchodné dopyty. S tímom robotiky prediskutujte cieľový trh, použitie a konfiguráciu; uvedenie produktu v katalógu neznamená, že je dostupný v každej krajine."},
+    {"q": "Ako si vybrať vhodný model?", "a": "Začnite zamýšľanou úlohou a pracovným prostredím. Porovnajte uvedené špecifikácie a potom so spoločnosťou Tekpoint prediskutujte nosnosť, mobilitu, rozhrania, bezpečnosť a požiadavky na integráciu. Príklady použitia sú východiskom na posúdenie, nie zárukou vhodnosti."},
+    {"q": "Sú uvedené produkty na sklade?", "a": "Uvedenie produktu v katalógu nepotvrdzuje stav zásob, dodaciu lehotu ani regionálnu dostupnosť. Dostupnosť a ponúkanú konfiguráciu treba potvrdiť pre konkrétny projekt pred vypracovaním ponuky."},
+    {"q": "Ako môžem požiadať o cenu?", "a": "Pridajte požadované modely do zoznamu dopytov a potom pripravte e-mail na adresu robotics@tekpoint.com. Uveďte zamýšľané použitie, cieľovú krajinu, množstvá a požadovaný termín. Dopyty sú nezáväzné; tento katalóg neumožňuje nákup online."},
+    {"q": "Ako mám čítať špecifikácie?", "a": "Stránky produktov uvádzajú referenčné informácie výrobcu alebo dodávateľa a poznámky ku konfigurácii. Tieto údaje nie sú nezávisle overené. Konečnú konfiguráciu, súlad s požiadavkami EÚ, bezpečnú integráciu a vhodnosť treba potvrdiť pre konkrétny projekt pred vypracovaním ponuky."}
+  ]
+}

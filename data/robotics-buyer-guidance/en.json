@@ -1,0 +1,11 @@
+{
+  "heading": "Planning an AGIBOT project",
+  "intro": "Practical answers before selecting a robot or requesting a quotation.",
+  "items": [
+    {"q": "What is Tekpoint’s role?", "a": "Tekpoint is AGIBOT’s regional distributor for Europe. This catalogue brings together robots and components for business enquiries. Discuss your target market, application and configuration with the Robotics team; a listing does not establish availability in every country."},
+    {"q": "How do I choose a suitable model?", "a": "Start with the intended task and operating environment. Compare the listed specifications, then discuss payload, mobility, interfaces, safety and integration requirements with Tekpoint. Application examples are starting points for assessment, not a guarantee of suitability."},
+    {"q": "Are the listed products in stock?", "a": "A catalogue listing does not confirm stock, delivery time or regional availability. Availability and the offered configuration require project-specific confirmation before quotation."},
+    {"q": "How can I request pricing?", "a": "Add the models you want to the enquiry list, then prepare an email to robotics@tekpoint.com. Include the intended application, destination country, quantities and target timing. Enquiries are non-binding; this catalogue has no online checkout."},
+    {"q": "How should I read the specifications?", "a": "The product pages identify manufacturer or supplier reference information and configuration notes. These figures are not independently verified. Final configuration, EU conformity, safe integration and suitability must be confirmed for the specific project before quotation."}
+  ]
+}

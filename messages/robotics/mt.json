@@ -1,0 +1,112 @@
+{
+  "metaTitle": "Robotika ta’ AGIBOT fl-Ewropa | Tekpoint",
+  "metaDescription": "Tekpoint huwa d-distributur reġjonali ta’ AGIBOT għall-Ewropa. Skopri r-robots A2 Ultra, X2 Ultra u G2 u ddiskuti l-applikazzjoni tiegħek mat-tim tar-Robotika tagħna.",
+  "eyebrow": "Robotika / AGIBOT",
+  "title": "Tekpoint — distributur reġjonali Ewropew għar-robots ta’ AGIBOT",
+  "intro": [
+    "Tekpoint ilu sieħeb teknoloġiku fdat għan-negozji Ewropej, jgħaqqadhom ma’ manifatturi ewlenin u innovazzjonijiet emerġenti. Ir-robotika hija l-aktar qasam ġdid tagħna: hekk kif l-intelliġenza artifiċjali inkorporata tgħaddi mil-laboratorji tar-riċerka għall-fabbriki, l-imħażen u l-ambjenti tas-servizzi, ngħinu lill-kumpaniji Ewropej jaċċessaw din it-teknoloġija permezz ta’ sieħeb lokali u affidabbli.",
+    "Bħala d-distributur reġjonali ta’ AGIBOT, nipprovdu bejgħ, appoġġ u integrazzjoni għall-pjattaforma ta’ robots umanojdi ta’ AGIBOT — u b’hekk nagħtu lill-klijenti madwar l-Ewropa punt ta’ kuntatt dirett, minflok ma jkollhom jinnavigaw waħedhom ma’ manifattur barrani."
+  ],
+  "heroAction": "Iddiskuti l-proġett tiegħek",
+  "rangeAction": "Esplora r-robots",
+  "manufacturerLink": "Aktar dwar AGIBOT",
+  "heroAlt": "Robots umanojdi ta’ AGIBOT — il-mument importanti tal-15,000 robot tal-manifattur",
+  "newsLink": "AGIBOT jilħaq il-15,000 robot: aqra l-istorja",
+  "productsTitle": "Il-linja ta’ prodotti ta’ AGIBOT",
+  "productsIntro": "Għażla ta’ robots umanojdi ta’ AGIBOT disponibbli permezz ta’ Tekpoint.",
+  "products": [
+    {
+      "name": "AGIBOT A2 Ultra",
+      "tagline": "L-ewwel robot umanojdi ta’ daqs sħiħ fid-dinja li laħaq skala kummerċjali",
+      "description": "Interazzjoni intelliġenti, tħaddim awtonomu u korp affidabbli mibni għal skjerament kummerċjali fuq skala kbira. 169 cm, 40 grad ta’ libertà u veloċità tal-mixi sa 1.2 m/s. AGIBOT torbot lil A2 Ultra mar-rekord tal-mixi ta’ 106.286 km; Guinness World Records issemmi r-robot li stabbilixxa r-rekord bħala AgiBot A2."
+    },
+    {
+      "name": "AGIBOT X2 Ultra",
+      "tagline": "Robot kompletament intelliġenti u b’aġilità",
+      "description": "Ħbiberija, b’aġilità u intelliġenti, b’interazzjoni multimodali permezz tal-vista, tal-vuċi, tal-mess u tal-espressjoni tal-wiċċ. Għoli madwar 1.31 m, sa 30 grad ta’ libertà u veloċità tal-mixi sa 1.8 m/s, b’navigazzjoni awtonoma u evitazzjoni tal-ostakli."
+    },
+    {
+      "name": "AGIBOT G2",
+      "tagline": "Robot interattiv għall-operazzjonijiet inkorporati ta’ grad industrijali",
+      "description": "Mibni skont standards ta’ grad industrijali, b’100% komponenti ta’ grad awtomobilistiku u protezzjoni IP42. Jagħti assemblaġġ bi preċiżjoni taħt il-millimetru permezz ta’ dirgħajn ikkontrollati bil-forza, flimkien ma’ animazzjoni espressiva tal-wiċċ, moviment bħal tal-bniedem u traċċar tal-ħarsa tal-għajnejn għall-interazzjoni mal-bniedem."
+    }
+  ],
+  "manufacturerSpecs": "Id-deskrizzjonijiet u l-ispeċifikazzjonijiet tal-prodotti huma pprovduti minn AGIBOT. Il-konfigurazzjoni u l-adegwatezza jiġu vvalutati għal kull proġett.",
+  "learnMore": "Dettalji mill-manifattur",
+  "applicationsTitle": "Applikazzjonijiet tipiċi",
+  "applicationsIntro": "Kull proġett tar-robotika jibda mill-każ ta’ użu. Tekpoint tgħin lill-klijenti jidentifikaw il-pjattaforma ta’ AGIBOT li taqbel l-aħjar mal-ambjent, l-interazzjoni u l-għanijiet operattivi meħtieġa.",
+  "applications": [
+    {
+      "title": "Interazzjoni mal-klijenti u avvenimenti",
+      "description": "Riċeviment, gwida, esperjenzi tal-marka, wirjiet u ambjenti oħra li jiffukaw fuq il-klijenti."
+    },
+    {
+      "title": "Servizz u interazzjoni",
+      "description": "Interazzjoni bejn il-bniedem u r-robot, assistenza intelliġenti u applikazzjonijiet ġodda tal-intelliġenza artifiċjali inkorporata."
+    },
+    {
+      "title": "Manifattura u awtomazzjoni",
+      "description": "Operazzjonijiet ta’ preċiżjoni, flussi tax-xogħol industrijali u evalwazzjoni f’ambjenti ta’ produzzjoni."
+    },
+    {
+      "title": "Riċerka u żvilupp",
+      "description": "Riċerka fir-robotika, żvilupp tal-intelliġenza artifiċjali inkorporata, universitajiet u evalwazzjoni tat-teknoloġija."
+    }
+  ],
+  "whyTitle": "Għaliex Tekpoint?",
+  "whyIntro": "AGIBOT tipprovdi t-teknoloġija tar-robotika. Tekpoint tipprovdi l-interfaċċa kummerċjali Ewropea u l-aċċess għas-suq.",
+  "reasons": [
+    {
+      "title": "Distribuzzjoni Ewropea",
+      "description": "Distribuzzjoni kummerċjali ta’ soluzzjonijiet tar-robotika ta’ AGIBOT fis-swieq Ewropej."
+    },
+    {
+      "title": "Żvilupp tas-suq",
+      "description": "Żvilupp ta’ opportunitajiet għal bejjiegħa mill-ġdid, integraturi u intrapriżi madwar l-Ewropa."
+    },
+    {
+      "title": "Aċċess għas-suq tal-UE",
+      "description": "Appoġġ fir-rigward tar-rekwiżiti tal-prodotti Ewropej, id-dokumentazzjoni u l-proċessi tad-dħul fis-suq."
+    },
+    {
+      "title": "Loġistika u appoġġ",
+      "description": "Loġistika Ewropea, twettiq tal-ordnijiet, koordinazzjoni tal-RMA u interfaċċa kummerċjali lokali."
+    }
+  ],
+  "stepsEyebrow": "Mill-interess sal-proġett",
+  "stepsTitle": "Kif taħdem ma’ Tekpoint",
+  "stepsIntro": "M’għandekx għalfejn tkun taf liema robot jew konfigurazzjoni għandek bżonn qabel tikkuntattjana. Ibda mill-każ ta’ użu tiegħek — aħna ngħinuk tistruttura l-passi li jmiss.",
+  "steps": [
+    {
+      "title": "Għidilna dwar il-każ ta’ użu tiegħek",
+      "description": "Aqsam mat-tim tar-Robotika tagħna l-applikazzjoni, l-ambjent, is-suq fil-mira, l-istadju tal-proġett u r-rekwiżiti ewlenin tiegħek."
+    },
+    {
+      "title": "Identifika s-soluzzjoni t-tajba",
+      "description": "Ngħinuk tevalwa l-pjattaforma, il-konfigurazzjoni u l-approċċ kummerċjali rilevanti ta’ AGIBOT għall-proġett tiegħek."
+    },
+    {
+      "title": "Għaddi għall-evalwazzjoni u l-provvista",
+      "description": "Tekpoint tikkoordina l-proċess kummerċjali, il-provvista Ewropea u l-interfaċċi meħtieġa biex l-opportunità timxi ’l quddiem."
+    }
+  ],
+  "contactEyebrow": "Niddiskutu l-proġett tiegħek",
+  "contactTitle": "Interessat fir-Robotika ta’ AGIBOT?",
+  "contactIntro": "Kemm jekk int bejjiegħ mill-ġdid, integratur tas-sistemi, istituzzjoni ta’ riċerka, sieħeb teknoloġiku jew klijent intraprenditorjali, it-tim tar-Robotika tagħna jista’ jgħinek tevalwa s-soluzzjonijiet ta’ AGIBOT għas-suq jew l-applikazzjoni tiegħek.",
+  "contactTopics": [
+    "Informazzjoni dwar il-prodotti u d-disponibbiltà",
+    "Kooperazzjoni mal-bejjiegħa mill-ġdid u d-distribuzzjoni",
+    "Proġetti intraprenditorjali u industrijali",
+    "Opportunitajiet għall-integrazzjoni tas-sistemi",
+    "Mistoqsijiet dwar ir-riċerka u l-edukazzjoni"
+  ],
+  "teamTitle": "Il-kuntatti tiegħek fir-Robotika",
+  "emailTitle": "Kellem lit-tim tar-Robotika tagħna",
+  "emailIntro": "Ibgħat email lit-tim tar-Robotika tagħna. Iddeskrivi fil-qosor l-applikazzjoni, il-kumpanija u r-rekwiżiti tal-proġett tiegħek.",
+  "navLabel": "Robotika",
+  "applicationsEyebrow": "Applikazzjonijiet",
+  "emailButton": "Ibgħat email lir-Robotika",
+  "newsLanguage": "L-artiklu huwa bl-Ingliż",
+  "serviceType": "Distribuzzjoni tar-robotika",
+  "regionName": "Ewropa"
+}

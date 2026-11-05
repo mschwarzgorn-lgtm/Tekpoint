@@ -1,0 +1,26 @@
+{
+  "heading": "Ippjanar ta’ proġett AGIBOT",
+  "intro": "Tweġibiet prattiċi qabel tagħżel robot jew titlob kwotazzjoni.",
+  "items": [
+    {
+      "q": "X’inhu r-rwol ta’ Tekpoint?",
+      "a": "Tekpoint huwa d-distributur reġjonali ta’ AGIBOT għall-Ewropa. Dan il-katalgu jiġbor robots u komponenti għal inkjesti kummerċjali. Iddiskuti mat-tim ta’ Robotics is-suq fil-mira, l-applikazzjoni u l-konfigurazzjoni tiegħek; il-fatt li prodott jidher fil-katalgu ma jikkonfermax li huwa disponibbli f’kull pajjiż."
+    },
+    {
+      "q": "Kif nagħżel mudell xieraq?",
+      "a": "Ibda mill-kompitu maħsub u mill-ambjent operattiv. Qabbel l-ispeċifikazzjonijiet elenkati, imbagħad iddiskuti ma’ Tekpoint ir-rekwiżiti dwar it-tagħbija utli, il-mobbiltà, l-interfaċċi, is-sikurezza u l-integrazzjoni. Eżempji ta’ applikazzjonijiet huma punt tat-tluq għall-valutazzjoni u mhux garanzija ta’ kemm il-mudell ikun xieraq."
+    },
+    {
+      "q": "Il-prodotti elenkati huma disponibbli fl-istokk?",
+      "a": "L-elenkar ta’ prodott fil-katalgu ma jikkonfermax l-istokk, iż-żmien tal-kunsinna jew id-disponibbiltà reġjonali. Id-disponibbiltà u l-konfigurazzjoni offruta jridu jiġu kkonfermati għall-proġett speċifiku qabel tinħareġ kwotazzjoni."
+    },
+    {
+      "q": "Kif nista’ nitlob il-prezzijiet?",
+      "a": "Żid il-mudelli li tixtieq mal-lista tal-inkjesti u mbagħad ħejji email lil robotics@tekpoint.com. Inkludi l-applikazzjoni maħsuba, il-pajjiż tad-destinazzjoni, il-kwantitajiet u l-iskeda mixtieqa. L-inkjesti mhumiex vinkolanti; dan il-katalgu ma joffrix xiri online."
+    },
+    {
+      "q": "Kif għandi nifhem l-ispeċifikazzjonijiet?",
+      "a": "Il-paġni tal-prodotti jidentifikaw informazzjoni ta’ referenza mingħand il-manifattur jew il-fornitur u noti dwar il-konfigurazzjoni. Din l-informazzjoni ma ġietx ivverifikata b’mod indipendenti. Il-konfigurazzjoni finali, il-konformità mar-rekwiżiti tal-UE, l-integrazzjoni sikura u l-adegwatezza jridu jiġu kkonfermati għall-proġett speċifiku qabel tinħareġ kwotazzjoni."
+    }
+  ]
+}

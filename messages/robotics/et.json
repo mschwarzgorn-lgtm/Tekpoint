@@ -1,0 +1,112 @@
+{
+  "metaTitle": "AGIBOT robootika Euroopas | Tekpoint",
+  "metaDescription": "Tekpoint on AGIBOT Euroopa piirkondlik edasimüüja. Tutvuge robotitega A2 Ultra, X2 Ultra ja G2 ning arutage oma rakendust meie robootikameeskonnaga.",
+  "eyebrow": "Robootika / AGIBOT",
+  "title": "Tekpoint — AGIBOT robotite Euroopa piirkondlik edasimüüja",
+  "intro": [
+    "Tekpoint on olnud Euroopa ettevõtete usaldusväärne tehnoloogiapartner, viies neid kokku juhtivate tootjate ja uute innovatsioonidega. Robootika on meie uusim fookusvaldkond: kui kehastatud tehisintellekt liigub teaduslaboritest tehastesse, ladudesse ja teeninduskeskkondadesse, aitame Euroopa ettevõtetel sellele tehnoloogiale ligi pääseda kohaliku ja usaldusväärse partneri kaudu.",
+    "AGIBOT piirkondliku edasimüüjana pakume AGIBOT humanoidrobotite platvormi müüki, tuge ja integreerimist — anname klientidele kogu Euroopas otse kontaktpunkti, selle asemel et nad peaksid välismaise tootjaga üksi suhtlema."
+  ],
+  "heroAction": "Arutage oma projekti",
+  "rangeAction": "Tutvuge robotitega",
+  "manufacturerLink": "Lisateave AGIBOT kohta",
+  "heroAlt": "AGIBOT humanoidrobotid — tootja 15 000. roboti verstapost",
+  "newsLink": "AGIBOT jõuab 15 000 robotini: lugege lugu",
+  "productsTitle": "AGIBOT tootesari",
+  "productsIntro": "Valik AGIBOT humanoidroboteid, mis on saadaval Tekpointi kaudu.",
+  "products": [
+    {
+      "name": "AGIBOT A2 Ultra",
+      "tagline": "Maailma esimene kaubanduslikus mahus toodetud täissuuruses humanoidrobot",
+      "description": "Arukas suhtlus, autonoomne töö ja töökindel kere, mis on loodud laiaulatuslikuks kommertskasutuseks. 169 cm, 40 vabadusastet ja kõndimiskiirus kuni 1,2 m/s. AGIBOT seostab A2 Ultra oma 106,286 km pikkuse kõndimisrekordiga; Guinness World Records nimetab rekordi püstitanud robotit nimega AgiBot A2."
+    },
+    {
+      "name": "AGIBOT X2 Ultra",
+      "tagline": "Täiesti arukas ja väle robot",
+      "description": "Sõbralik, väle ja arukas, multimodaalse suhtlusega nägemise, kõne, puudutuse ja näoilmete kaudu. Ligikaudu 1,31 m pikk, kuni 30 vabadusastet ja kõndimiskiirus kuni 1,8 m/s, samuti autonoomne navigeerimine ja takistuste vältimine."
+    },
+    {
+      "name": "AGIBOT G2",
+      "tagline": "Tööstusliku kvaliteediga interaktiivne kehastatud töö robot",
+      "description": "Ehitatud tööstuslike standardite kohaselt, 100% autotööstuse tasemel komponentide ja IP42-kaitsega. Võimaldab alla millimeetri täpsusega koostamist jõukontrolliga haaratsite abil ning pakub väljendusrikast näoanimatsiooni, inimlaadset liikumist ja pilgu jälgimist inimestega suhtlemiseks."
+    }
+  ],
+  "manufacturerSpecs": "Tootekirjeldused ja spetsifikatsioonid on esitanud AGIBOT. Konfiguratsiooni ja sobivust hinnatakse iga projekti puhul eraldi.",
+  "learnMore": "Tootja üksikasjad",
+  "applicationsTitle": "Tüüpilised rakendused",
+  "applicationsIntro": "Iga robootikaprojekt algab kasutusjuhtumist. Tekpoint aitab klientidel leida AGIBOT platvormi, mis sobib kõige paremini nõutava keskkonna, suhtluse ja tööeesmärkidega.",
+  "applications": [
+    {
+      "title": "Kliendisuhtlus ja üritused",
+      "description": "Vastuvõtt, juhendamine, brändikogemused, näitused ja muud kliendisuhtluse keskkonnad."
+    },
+    {
+      "title": "Teenused ja suhtlus",
+      "description": "Inimese ja roboti suhtlus, arukas abi ning uued kehastatud tehisintellekti rakendused."
+    },
+    {
+      "title": "Tootmine ja automatiseerimine",
+      "description": "Täppistoimingud, tööstuslikud töövood ja hindamine tootmiskeskkondades."
+    },
+    {
+      "title": "Teadus- ja arendustegevus",
+      "description": "Robootikauuringud, kehastatud tehisintellekti arendus, ülikoolid ja tehnoloogia hindamine."
+    }
+  ],
+  "whyTitle": "Miks Tekpoint?",
+  "whyIntro": "AGIBOT pakub robootikatehnoloogiat. Tekpoint pakub Euroopa äriliidest ja juurdepääsu turule.",
+  "reasons": [
+    {
+      "title": "Euroopa edasimüük",
+      "description": "AGIBOT robootikalahenduste kaubanduslik edasimüük Euroopa turgudel."
+    },
+    {
+      "title": "Turu arendamine",
+      "description": "Edasimüüjate, integraatorite ja ettevõtete võimaluste arendamine kogu Euroopas."
+    },
+    {
+      "title": "Juurdepääs ELi turule",
+      "description": "Tugi Euroopa turunõuete, dokumentatsiooni ja turule sisenemise protsessidega."
+    },
+    {
+      "title": "Logistika ja tugi",
+      "description": "Euroopa logistika, tellimuste täitmine, tagastuslubade koordineerimine (RMA) ja kohalik äriliides."
+    }
+  ],
+  "stepsEyebrow": "Huvi tekkimisest projektini",
+  "stepsTitle": "Kuidas Tekpointiga koostööd teha",
+  "stepsIntro": "Enne meiega ühenduse võtmist ei pea te teadma, millist robotit või konfiguratsiooni vajate. Alustage oma kasutusjuhtumist — aitame teil järgmised sammud paika panna.",
+  "steps": [
+    {
+      "title": "Rääkige meile oma kasutusjuhtumist",
+      "description": "Jagage meie robootikameeskonnaga oma rakendust, keskkonda, sihtturgu, projekti etappi ja peamisi nõudeid."
+    },
+    {
+      "title": "Leidke sobiv lahendus",
+      "description": "Aitame hinnata teie projekti jaoks asjakohast AGIBOT platvormi, konfiguratsiooni ja ärilist lähenemist."
+    },
+    {
+      "title": "Liikuge hindamise ja tarneni",
+      "description": "Tekpoint koordineerib äriprotsessi, Euroopa tarnet ja vajalikke liideseid, et võimalusega edasi liikuda."
+    }
+  ],
+  "contactEyebrow": "Arutame teie projekti",
+  "contactTitle": "Kas tunnete huvi AGIBOT robootika vastu?",
+  "contactIntro": "Olenemata sellest, kas olete edasimüüja, süsteemiintegraator, teadusasutus, tehnoloogiapartner või äriklient, saab meie robootikameeskond aidata teil hinnata AGIBOT lahendusi teie turu või rakenduse jaoks.",
+  "contactTopics": [
+    "Tooteteave ja saadavus",
+    "Koostöö edasimüüjate ja turustuspartneritega",
+    "Ettevõtete ja tööstuse projektid",
+    "Süsteemiintegratsiooni võimalused",
+    "Teadus- ja hariduspäringud"
+  ],
+  "teamTitle": "Teie robootikakontaktid",
+  "emailTitle": "Rääkige meie robootikameeskonnaga",
+  "emailIntro": "Saatke meie robootikameeskonnale e-kiri. Kirjeldage lühidalt oma rakendust, ettevõtet ja projekti nõudeid.",
+  "navLabel": "Robootika",
+  "applicationsEyebrow": "Rakendused",
+  "emailButton": "Saada e-kiri robootikameeskonnale",
+  "newsLanguage": "Artikkel on inglise keeles",
+  "serviceType": "Robootika edasimüük",
+  "regionName": "Euroopa"
+}
